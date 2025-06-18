@@ -1,9 +1,10 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 
 import { MenuComponent } from './menu.component';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('MenuComponent', () => {
     let component: MenuComponent;
@@ -11,12 +12,11 @@ describe('MenuComponent', () => {
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
-            imports: [
-                MenuComponent,
-                NoopAnimationsModule,
-                RouterTestingModule,
-                HttpClientTestingModule]
-        }).compileComponents();
+    imports: [MenuComponent,
+        NoopAnimationsModule,
+        RouterTestingModule],
+    providers: [provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+}).compileComponents();
     }));
 
     beforeEach(() => {
