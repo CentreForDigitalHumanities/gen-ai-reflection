@@ -1,28 +1,30 @@
-import { TestBed, waitForAsync } from '@angular/core/testing';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { TestBed, waitForAsync } from "@angular/core/testing";
+import { NoopAnimationsModule } from "@angular/platform-browser/animations";
+import { provideHttpClientTesting } from "@angular/common/http/testing";
 
-import { AppComponent } from './app.component';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
+import { AppComponent } from "./app.component";
+import {
+    provideHttpClient,
+    withInterceptorsFromDi,
+} from "@angular/common/http";
+import { ActivatedRoute } from "@angular/router";
 
-describe('AppComponent', () => {
+describe("AppComponent", () => {
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
-    imports: [AppComponent, NoopAnimationsModule],
+            imports: [AppComponent, NoopAnimationsModule],
             providers: [
                 provideHttpClient(withInterceptorsFromDi()),
                 provideHttpClientTesting(),
                 {
                     provide: ActivatedRoute,
-                    useValue: {}
-                }
-            ]
-}).compileComponents();
+                    useValue: {},
+                },
+            ],
+        }).compileComponents();
     }));
 
-
-    it('should create the app', () => {
+    it("should create the app", () => {
         const fixture = TestBed.createComponent(AppComponent);
         const app = fixture.debugElement.componentInstance;
         expect(app).toBeTruthy();
@@ -34,10 +36,12 @@ describe('AppComponent', () => {
         expect(app.title).toEqual(`GenAI Reflection`);
     });
 
-    it('should render title', () => {
+    it("should render title", () => {
         const fixture = TestBed.createComponent(AppComponent);
         fixture.detectChanges();
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('.navbar-brand').textContent).toContain('GenAI Reflection');
+        expect(compiled.querySelector(".navbar-brand").textContent).toContain(
+            "GenAI Reflection",
+        );
     });
 });

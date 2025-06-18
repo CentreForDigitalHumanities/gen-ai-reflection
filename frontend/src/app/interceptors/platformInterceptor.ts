@@ -22,7 +22,7 @@ import { isPlatformServer } from "@angular/common";
  */
 export function platformInterceptor(
     req: HttpRequest<any>,
-    next: HttpHandlerFn
+    next: HttpHandlerFn,
 ) {
     const platformId = inject(PLATFORM_ID);
 
