@@ -7,7 +7,6 @@ import { DarkModeService } from './services/dark-mode.service';
 
 @Component({
     selector: 'gr-root',
-    standalone: true,
     imports: [
         RouterOutlet,
         MenuComponent,

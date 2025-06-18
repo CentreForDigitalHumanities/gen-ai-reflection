@@ -6,10 +6,9 @@ import { map } from "rxjs";
 import { DarkModeService } from "../services/dark-mode.service";
 @Component({
     selector: "gr-dark-mode-toggle",
-    standalone: true,
     imports: [FontAwesomeModule, CommonModule],
     templateUrl: "./dark-mode-toggle.component.html",
-    styleUrl: "./dark-mode-toggle.component.scss",
+    styleUrl: "./dark-mode-toggle.component.scss"
 })
 export class DarkModeToggleComponent {
     faSun = faSun;

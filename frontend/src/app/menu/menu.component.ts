@@ -18,7 +18,6 @@ import { NgbCollapseModule, NgbDropdownModule } from "@ng-bootstrap/ng-bootstrap
     selector: "gr-menu",
     templateUrl: "./menu.component.html",
     styleUrls: ["./menu.component.scss"],
-    standalone: true,
     imports: [
         CommonModule,
         RouterLink,
