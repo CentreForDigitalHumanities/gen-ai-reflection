@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: 'GenAI Reflection'
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - name: 'Portal Development, Centre for Digital Humanities, Utrecht University'
+    website: 'https://cdh.uu.nl/about/humanities-it-services/'
+repository-code: 'https://github.com/CentreForDigitalHumanities/gen-ai-reflection'
+abstract: >-
+  A reflection tool about the use of generative AI by students and instructors, aimed at instructors at Utrecht University.
+license: BSD-3

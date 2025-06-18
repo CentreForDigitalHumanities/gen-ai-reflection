@@ -1,0 +1,17 @@
+@use "bootstrap";
+
+@media print {
+    .is-hidden-print,
+    .is-hidden-print * {
+        display: none !important;
+    }
+
+    .is-print-paddingless {
+        padding: 0 !important;
+    }
+}
+
+// Overrides Bootstraps's `display: none;` for `.invalid-feedback` elements.
+.always-block {
+    display: block !important;
+}
