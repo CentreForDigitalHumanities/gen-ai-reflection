@@ -6,7 +6,7 @@ import {
     OnInit
 } from "@angular/core";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
-import { CommonModule } from "@angular/common";
+
 import { RouterLink, RouterModule } from "@angular/router";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
@@ -19,14 +19,13 @@ import { NgbCollapseModule, NgbDropdownModule } from "@ng-bootstrap/ng-bootstrap
     templateUrl: "./menu.component.html",
     styleUrls: ["./menu.component.scss"],
     imports: [
-        CommonModule,
-        RouterLink,
-        FontAwesomeModule,
-        DarkModeToggleComponent,
-        NgbCollapseModule,
-        RouterModule,
-        NgbDropdownModule,
-    ]
+    RouterLink,
+    FontAwesomeModule,
+    DarkModeToggleComponent,
+    NgbCollapseModule,
+    RouterModule,
+    NgbDropdownModule
+]
 })
 export class MenuComponent implements OnInit {
     burgerActive = false;
