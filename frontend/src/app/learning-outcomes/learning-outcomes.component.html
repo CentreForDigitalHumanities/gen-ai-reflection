@@ -1,0 +1,88 @@
+@let challenges = challengeData(); @let opportunities = opportunityData();
+<article>
+    <h1 i18n>Step 1: Learning Outcomes</h1>
+
+    <form>
+        <table class="table table-primary">
+            <thead>
+                <tr>
+                    <th i18n>Intended Outcome</th>
+                    <th i18n>Dublin Indicator</th>
+                    <th i18n>AI Challenges</th>
+                    <th i18n>AI Opportunities</th>
+                    <th i18n>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for ( subForm of form.controls.learningOutcomes.controls; track
+                $index ) { @let dublinValue =
+                subForm.controls.dublinIndicator.value;
+                <tr [formGroup]="subForm">
+                    <td class="my-4">
+                        <input
+                            class="form-control"
+                            [formControl]="subForm.controls.intendedOutcome"
+                        />
+                    </td>
+                    <td>
+                        <select
+                            class="form-select"
+                            [formControl]="subForm.controls.dublinIndicator"
+                        >
+                            @for ( option of dublinIndicatorOptions; track
+                            $index ) {
+                            <option [value]="option.value">
+                                {{ option.label }}
+                            </option>
+                            }
+                        </select>
+                    </td>
+                    <td>
+                        @if (challenges && dublinValue) {
+                        <ul>
+                            @for ( challenge of challenges[dublinValue]; track
+                            $index ) {
+                            <li>{{ challenge }}</li>
+                            }
+                        </ul>
+                        }
+                    </td>
+                    <td>
+                        @if (opportunities && dublinValue) {
+                        <ul>
+                            @for ( opportunity of opportunities[ dublinValue ];
+                            track $index ) {
+                            <li>{{ opportunity }}</li>
+                            }
+                        </ul>
+                        }
+                    </td>
+                    <td>
+                        <button
+                            type="button"
+                            class="btn btn-outline-secondary small btn-small"
+                            (click)="removeLearningOutcome($index)"
+                            [disabled]="
+                                form.controls.learningOutcomes.length <= 1
+                            "
+                            i18n
+                        >
+                            Remove
+                        </button>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </form>
+
+    <button
+        class="btn btn-outline-secondary"
+        (click)="addLearningOutcome()"
+        i18n
+    >
+        Add new intended learning outcome
+    </button>
+</article>
+
+<gr-nav-buttons [navButtons]="navButtons"></gr-nav-buttons>

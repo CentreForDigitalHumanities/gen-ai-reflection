@@ -1,7 +1,5 @@
 import { Component, Inject, afterEveryRender, DOCUMENT } from "@angular/core";
 import { CommonModule } from "@angular/common";
-
-    let } from "@angular/router";
 import { MenuComponent } from "./menu/menu.component";
 import { DarkModeService } from "./services/dark-mode.service";
 import { FooterComponent } from "./footer/footer.component";
