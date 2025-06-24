@@ -39,9 +39,6 @@ export class MenuComponent implements OnInit {
      */
     languages?: LanguageInfo["supported"];
 
-    /** Inserted by Angular inject() migration for backwards compatibility */
-    constructor(...args: unknown[]);
-
     constructor() {
         this.currentLanguage = this.localeId;
     }

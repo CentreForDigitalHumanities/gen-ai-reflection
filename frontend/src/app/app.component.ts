@@ -30,12 +30,8 @@ export class AppComponent {
     private darkModeService = inject(DarkModeService);
     private navigation = inject(NavigationService);
 
-    title = "GenAI Reflection Tool";
-    Step = Step;
-    currentStep = this.navigation.currentStep;
-
-    /** Inserted by Angular inject() migration for backwards compatibility */
-    constructor(...args: unknown[]);
+    public Step = Step;
+    public currentStep = this.navigation.currentStep;
 
     constructor() {
         // Using the DOM API to only render on the browser instead of on the server
