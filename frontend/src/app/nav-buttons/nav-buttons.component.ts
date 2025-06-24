@@ -19,7 +19,8 @@ export class NavButtonsComponent {
 
     // Make sure the buttons are sorted so 'back' comes before 'next'.
     public sorted = computed(() => {
-        return this.navButtons().sort((a, b) => {
+        const buttons = structuredClone(this.navButtons());
+        return buttons.sort((a, b) => {
             if (a.direction === "back" && b.direction === "next") {
                 return -1;
             } else if (a.direction === "next" && b.direction === "back") {
