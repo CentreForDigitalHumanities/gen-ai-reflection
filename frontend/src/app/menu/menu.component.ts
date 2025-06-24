@@ -7,7 +7,7 @@ import {
 } from "@angular/core";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 
-import { RouterLink, RouterModule } from "@angular/router";
+import { RouterModule } from "@angular/router";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { DarkModeToggleComponent } from "../dark-mode-toggle/dark-mode-toggle.component";
@@ -22,7 +22,6 @@ import {
     templateUrl: "./menu.component.html",
     styleUrls: ["./menu.component.scss"],
     imports: [
-        RouterLink,
         FontAwesomeModule,
         DarkModeToggleComponent,
         NgbCollapseModule,

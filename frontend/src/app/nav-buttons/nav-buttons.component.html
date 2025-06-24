@@ -1,0 +1,22 @@
+<div
+    class="d-flex align-items-center gap-2 mt-5"
+    [class]="
+        sorted().length === 1
+            ? 'justify-content-center'
+            : 'justify-content-between'
+    "
+>
+    @for (navButton of sorted(); track $index) {
+        <button
+            class="btn btn-secondary"
+            [class]="
+                navButton.direction === 'next'
+                    ? 'btn-arrow-right'
+                    : 'btn-arrow-left'
+            "
+            (click)="navButton.direction === 'next' ? next() : back()"
+        >
+            {{ navButton.label }}
+        </button>
+    }
+</div>

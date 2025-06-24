@@ -1,11 +1,9 @@
 <nav
-    class="navbar navbar-expand-lg bg-body-tertiary"
+    class="navbar navbar-expand-lg bg-transparent"
     aria-label="main navigation"
-    data-bs-theme="dark"
+    data-bs-theme="light"
 >
     <div class="container-fluid">
-        <div class="navbar-brand" i18n>GenAI Reflection</div>
-
         <button
             class="navbar-toggler"
             type="button"
@@ -23,20 +21,7 @@
             class="navbar-collapse"
             [ngbCollapse]="!burgerActive"
         >
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a
-                        [routerLink]="['/home']"
-                        routerLinkActive="active"
-                        class="nav-link"
-                        i18n
-                    >
-                        Home
-                    </a>
-                </li>
-            </ul>
-
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto text-secondary">
                 <li class="nav-item">
                     <gr-dark-mode-toggle role="listitem" class="nav-item" />
                 </li>
