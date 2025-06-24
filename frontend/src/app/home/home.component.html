@@ -1,8 +1,15 @@
-<h1 class="title" i18n>Home</h1>
-<p>NOICE! It works!</p>
-<figure class="image" style="width: 480px; height: 401px">
+<div class="d-flex flex-column align-items-center justify-content-center gap-3">
     <img
-        src="{{ hooray }}"
-        alt="Although? If you are seeing this (and not a happy GIF), something is wrong... :("
+        ngOptimizedImage
+        ngSrc="assets/home.jpg"
+        alt="Three Step Reflection Tool"
+        class="img-fluid mb-4"
+        width="500"
+        height="333"
     />
-</figure>
+
+    <h1 class="title" i18n>Generative AI - A three-step reflection tool</h1>
+
+    <h2>🌍 🚀 🌙</h2>
+    <button class="btn btn-outline-secondary" (click)="start()">Start</button>
+</div>
