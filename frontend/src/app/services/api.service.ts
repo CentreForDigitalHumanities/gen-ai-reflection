@@ -11,8 +11,6 @@ import {
     providedIn: "root",
 })
 export class ApiService {
-    constructor() {}
-
     serverData = resource<ApiResponse, undefined>({
         // TODO: Replace with actual API call.
         loader: () =>
