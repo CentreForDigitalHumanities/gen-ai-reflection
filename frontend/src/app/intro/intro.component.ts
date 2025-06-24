@@ -12,7 +12,7 @@ import {
     imports: [NavButtonsComponent],
 })
 export class IntroComponent {
-    navButtons: NavButton[] = [
+    public navButtons: NavButton[] = [
         { label: $localize`Go to Step 1`, direction: "next" },
     ];
 }

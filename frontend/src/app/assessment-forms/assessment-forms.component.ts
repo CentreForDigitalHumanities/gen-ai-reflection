@@ -1,4 +1,4 @@
-import { Component, computed } from "@angular/core";
+import { Component, computed, inject } from "@angular/core";
 import {
     NavButton,
     NavButtonsComponent,
@@ -18,20 +18,23 @@ import { AIUse } from "../../types";
     imports: [NavButtonsComponent, CommonModule, ReactiveFormsModule],
 })
 export class AssessmentFormsComponent {
-    navButtons: NavButton[] = [
+    private formService = inject(FormService);
+    private apiService = inject(ApiService);
+
+    private formChanges = toSignal(this.formService.form.valueChanges);
+
+    public navButtons: NavButton[] = [
         { label: $localize`Go to Step 3`, direction: "next" },
         { label: $localize`Back to Step 1`, direction: "back" },
     ];
 
-    form = this.formService.form;
+    public form = this.formService.form;
 
-    formChanges = toSignal(this.formService.form.valueChanges);
-
-    assessmentFormOptions = computed(
+    public assessmentFormOptions = computed(
         () => this.apiService.serverData.value()?.assessmentForms ?? [],
     );
 
-    aiUseOptions = computed(() => {
+    public aiUseOptions = computed<AIUse[]>(() => {
         const formValue = this.formChanges();
         const selectedAssessmentForm = formValue?.assessmentForm;
         const assessmentFormOptions = this.assessmentFormOptions();
@@ -42,7 +45,7 @@ export class AssessmentFormsComponent {
         return this.findAiUses(selectedAssessmentForm);
     });
 
-    exampleOptions = computed<string[]>(() => {
+    public exampleOptions = computed<string[]>(() => {
         const formValue = this.formChanges();
         const selectedAiUse = formValue?.aiUse;
 
@@ -51,11 +54,6 @@ export class AssessmentFormsComponent {
         }
         return this.findExamples(selectedAiUse);
     });
-
-    constructor(
-        private formService: FormService,
-        private apiService: ApiService,
-    ) {}
 
     public selectAiUse(aiUseId: string): void {
         this.form.controls.aiUse.setValue(aiUseId);

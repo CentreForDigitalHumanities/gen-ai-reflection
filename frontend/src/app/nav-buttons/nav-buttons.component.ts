@@ -1,4 +1,4 @@
-import { Component, computed, input } from "@angular/core";
+import { Component, computed, input, inject } from "@angular/core";
 import { NavigationService, Step } from "../services/navigation.service";
 
 export interface NavButton {
@@ -13,10 +13,12 @@ export interface NavButton {
     styleUrl: "./nav-buttons.component.scss",
 })
 export class NavButtonsComponent {
-    navButtons = input<NavButton[]>([]);
+    private navigation = inject(NavigationService);
+
+    public navButtons = input<NavButton[]>([]);
 
     // Make sure the buttons are sorted so 'back' comes before 'next'.
-    sorted = computed(() => {
+    public sorted = computed(() => {
         return this.navButtons().sort((a, b) => {
             if (a.direction === "back" && b.direction === "next") {
                 return -1;
@@ -26,8 +28,6 @@ export class NavButtonsComponent {
             return 0;
         });
     });
-
-    constructor(private navigation: NavigationService) {}
 
     public next(): void {
         this.navigation.navigateForward();

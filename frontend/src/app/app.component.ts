@@ -1,4 +1,4 @@
-import { Component, Inject, afterEveryRender, DOCUMENT } from "@angular/core";
+import { Component, afterEveryRender, DOCUMENT, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { MenuComponent } from "./menu/menu.component";
 import { DarkModeService } from "./services/dark-mode.service";
@@ -26,15 +26,18 @@ import { CourseIntegrationComponent } from "./course-integration/course-integrat
     styleUrl: "./app.component.scss",
 })
 export class AppComponent {
+    private document = inject<Document>(DOCUMENT);
+    private darkModeService = inject(DarkModeService);
+    private navigation = inject(NavigationService);
+
     title = "GenAI Reflection Tool";
     Step = Step;
     currentStep = this.navigation.currentStep;
 
-    constructor(
-        @Inject(DOCUMENT) private document: Document,
-        private darkModeService: DarkModeService,
-        private navigation: NavigationService,
-    ) {
+    /** Inserted by Angular inject() migration for backwards compatibility */
+    constructor(...args: unknown[]);
+
+    constructor() {
         // Using the DOM API to only render on the browser instead of on the server
         afterEveryRender(() => {
             const style = this.document.createElement("link");

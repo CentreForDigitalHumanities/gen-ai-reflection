@@ -12,7 +12,7 @@ import {
     imports: [NavButtonsComponent],
 })
 export class CourseIntegrationComponent {
-    navButtons: NavButton[] = [
+    public navButtons: NavButton[] = [
         {
             label: $localize`Back to Step 2`,
             direction: "back",

@@ -1,10 +1,4 @@
-import {
-    Component,
-    DestroyRef,
-    LOCALE_ID,
-    Inject,
-    OnInit,
-} from "@angular/core";
+import { Component, DestroyRef, LOCALE_ID, OnInit, inject } from "@angular/core";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 
 import { RouterModule } from "@angular/router";
@@ -30,6 +24,10 @@ import {
     ],
 })
 export class MenuComponent implements OnInit {
+    private localeId = inject(LOCALE_ID);
+    private destroyRef = inject(DestroyRef);
+    private languageService = inject(LanguageService);
+
     burgerActive = false;
     currentLanguage: string;
     loading = false;
@@ -41,11 +39,10 @@ export class MenuComponent implements OnInit {
      */
     languages?: LanguageInfo["supported"];
 
-    constructor(
-        @Inject(LOCALE_ID) private localeId: string,
-        private destroyRef: DestroyRef,
-        private languageService: LanguageService,
-    ) {
+    /** Inserted by Angular inject() migration for backwards compatibility */
+    constructor(...args: unknown[]);
+
+    constructor() {
         this.currentLanguage = this.localeId;
     }
 

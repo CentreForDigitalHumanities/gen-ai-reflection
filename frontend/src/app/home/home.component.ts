@@ -1,5 +1,5 @@
 import { NgOptimizedImage } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { NavigationService, Step } from "../services/navigation.service";
 
 @Component({
@@ -10,9 +10,9 @@ import { NavigationService, Step } from "../services/navigation.service";
     standalone: true,
 })
 export class HomeComponent {
-    constructor(private navigation: NavigationService) {}
+    private navigation = inject(NavigationService);
 
-    start(): void {
+    public start(): void {
         this.navigation.navigateTo(Step.Intro);
     }
 }

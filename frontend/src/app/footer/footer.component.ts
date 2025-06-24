@@ -1,4 +1,4 @@
-import { Component, Inject, LOCALE_ID, OnDestroy } from "@angular/core";
+import { Component, LOCALE_ID, OnDestroy, inject } from "@angular/core";
 import { formatDate } from "@angular/common";
 import { Subscription } from "rxjs";
 import { environment } from "../../environments/environment";
@@ -16,10 +16,10 @@ export class FooterComponent implements OnDestroy {
     dark = false;
     subscriptions!: Subscription[];
 
-    constructor(
-        @Inject(LOCALE_ID) localeId: string,
-        darkModeService: DarkModeService,
-    ) {
+    constructor() {
+        const localeId = inject(LOCALE_ID);
+        const darkModeService = inject(DarkModeService);
+
         this.buildTime = formatDate(
             new Date(environment.buildTime),
             $localize`:@@dateFormat:MMMM dd, yyyy`,

@@ -1,4 +1,4 @@
-import { Component, computed } from "@angular/core";
+import { Component, computed, inject } from "@angular/core";
 import {
     NavButton,
     NavButtonsComponent,
@@ -22,21 +22,24 @@ interface DublinIndicatorOption {
     imports: [NavButtonsComponent, ReactiveFormsModule, CommonModule],
 })
 export class LearningOutcomesComponent {
-    navButtons: NavButton[] = [
+    private apiService = inject(ApiService);
+    private formService = inject(FormService);
+
+    public navButtons: NavButton[] = [
         { label: $localize`Go to Step 2`, direction: "next" },
         { label: $localize`Back to Introduction`, direction: "back" },
     ];
 
-    form = this.formService.form;
+    public form = this.formService.form;
 
-    challengeData = computed<Challenges | null>(
+    public challengeData = computed<Challenges | null>(
         () => this.apiService.serverData.value()?.challenges ?? null
     );
-    opportunityData = computed<Opportunities | null>(
+    public opportunityData = computed<Opportunities | null>(
         () => this.apiService.serverData.value()?.opportunities ?? null
     );
 
-    dublinIndicatorOptions: DublinIndicatorOption[] = [
+    public dublinIndicatorOptions: DublinIndicatorOption[] = [
         { value: null, label: $localize`Select an option` },
         {
             value: DublinIndicator.KNOWLEDGE_AND_UNDERSTANDING,
@@ -59,11 +62,6 @@ export class LearningOutcomesComponent {
             label: $localize`Lifelong Learning Skills`,
         },
     ];
-
-    constructor(
-        private apiService: ApiService,
-        private formService: FormService
-    ) {}
 
     public addLearningOutcome = this.formService.addNewLearningOutcome;
 
