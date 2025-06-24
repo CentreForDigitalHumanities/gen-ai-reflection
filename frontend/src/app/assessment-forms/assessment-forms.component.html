@@ -1,0 +1,62 @@
+<article>
+    <h1 i18n>Step 2: Assessment Forms</h1>
+
+    <p i18n>
+        Here, you learn how to reflect on the various ways students can make use
+        of GenAI for different assessment forms.
+    </p>
+
+    <p i18n>
+        You are invited to reflect on the extent to which this is a problem in
+        the light of the intended learning outcomes you have provided in step 1.
+    </p>
+
+    <form>
+        <div class="mt-4">
+            <label class="form-label h2" for="assessment-form" i18n
+                >Assessment form</label
+            >
+            <select
+                id="assessment-form"
+                class="form-select"
+                [formControl]="form.controls.assessmentForm"
+            >
+                <option [value]="null" disabled selected i18n>
+                    Select an assessment form
+                </option>
+                @for (form of assessmentFormOptions(); track $index) {
+                    <option [value]="form.id">
+                        {{ form.name }}
+                    </option>
+                }
+            </select>
+        </div>
+
+        @if (aiUseOptions().length > 0) {
+            <div class="list-group mt-4">
+                <h2>Use of GenAI</h2>
+                @for (use of aiUseOptions(); track $index) {
+                    <div
+                        class="list-group-item list-group-item-action cursor-pointer ai-use-item"
+                        (click)="selectAiUse(use.id)"
+                    >
+                        {{ use.name }}
+                    </div>
+                }
+            </div>
+        }
+
+        @if (exampleOptions().length > 0) {
+            <div class="list-group mt-4">
+                <h2>Examples</h2>
+                @for (example of exampleOptions(); track $index) {
+                    <div class="list-group-item">
+                        {{ example }}
+                    </div>
+                }
+            </div>
+        }
+    </form>
+</article>
+
+<gr-nav-buttons [navButtons]="navButtons" />
