@@ -44,6 +44,15 @@
                                 "inject": false
                             }
                         ],
+                        "stylePreprocessorOptions": {
+                            "includePaths": [
+                                "node_modules/bootstrap",
+                                "node_modules/uu-bootstrap"
+                            ],
+                            "sass": {
+                                "silenceDeprecations": ["import"]
+                            }
+                        },
                         "scripts": [],
                         "server": "src/main.server.ts",
                         "prerender": true,

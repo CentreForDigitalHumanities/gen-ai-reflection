@@ -1,5 +1,11 @@
 @use "bootstrap";
 
+// Import UU-Bootstrap (except for "fonts")
+@import "bootstrap/scss/mixins/banner";
+@include bsBanner("");
+@import "uu-bootstrap/scss/configuration";
+@import "uu-bootstrap/scss/components";
+
 @media print {
     .is-hidden-print,
     .is-hidden-print * {
@@ -14,4 +20,9 @@
 // Overrides Bootstraps's `display: none;` for `.invalid-feedback` elements.
 .always-block {
     display: block !important;
+}
+
+body {
+    margin: 0;
+    background-color: $primary;
 }
