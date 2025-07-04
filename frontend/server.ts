@@ -29,7 +29,7 @@ export function app(): express.Express {
         "*.*",
         express.static(staticDistFolder, {
             maxAge: "1y",
-        })
+        }),
     );
 
     // All regular routes use the Angular engine
@@ -57,7 +57,7 @@ function run(): void {
     const server = app();
     server.listen(port, () => {
         console.log(
-            `Node Express server listening on http://localhost:${port}`
+            `Node Express server listening on http://localhost:${port}`,
         );
     });
 }

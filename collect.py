@@ -1,6 +1,6 @@
-""" Settings overrides to quickly enable production mode.
+"""Settings overrides to quickly enable production mode.
 
-    Magic glue; this is NOT the place for customizations.
+Magic glue; this is NOT the place for customizations.
 """
 
 import os
@@ -12,13 +12,13 @@ from glue import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '::1']
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "::1"]
 
 
-STATICFILES_DIRS = [op.join(here, 'frontend', 'dist', 'browser')]
+STATICFILES_DIRS = [op.join(here, "frontend", "dist", "browser")]
 
 
-STATIC_ROOT = op.join(here, 'static')
+STATIC_ROOT = op.join(here, "static")
 
 if not op.exists(STATIC_ROOT):
     os.mkdir(STATIC_ROOT)

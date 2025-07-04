@@ -1,4 +1,10 @@
-import { DestroyRef, Inject, Injectable, OnInit, DOCUMENT } from "@angular/core";
+import {
+    DestroyRef,
+    Inject,
+    Injectable,
+    OnInit,
+    DOCUMENT,
+} from "@angular/core";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import {
     BehaviorSubject,
@@ -35,12 +41,12 @@ export class DarkModeService implements OnInit {
     public theme$ = this.user.pipe(
         combineLatestWith(this.systemTheme$),
         distinctUntilChanged(),
-        map(([user, system]) => user ?? system ?? DefaultTheme)
+        map(([user, system]) => user ?? system ?? DefaultTheme),
     );
 
     constructor(
         @Inject(DOCUMENT) private document: Document,
-        private destroyRef: DestroyRef
+        private destroyRef: DestroyRef,
     ) {}
 
     ngOnInit(): void {
@@ -66,7 +72,7 @@ export class DarkModeService implements OnInit {
         const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
         return fromEvent<MediaQueryList>(mediaQuery, "change").pipe(
             startWith(mediaQuery),
-            map((list: MediaQueryList) => (list.matches ? "dark" : "light"))
+            map((list: MediaQueryList) => (list.matches ? "dark" : "light")),
         );
     }
 

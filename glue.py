@@ -1,7 +1,7 @@
-""" This is magic glue for integrating the frontend and backend.
+"""This is magic glue for integrating the frontend and backend.
 
-    This is NOT the place for backend customizations. Go to
-    backend/gen_ai_reflection/settings.py instead.
+This is NOT the place for backend customizations. Go to
+backend/gen_ai_reflection/settings.py instead.
 """
 
 import os.path as op
@@ -18,8 +18,8 @@ here = op.dirname(op.abspath(__file__))
 import sys
 from importlib import util, machinery
 
-settings_name = 'settings'
-settings_path = op.join(here, 'backend', 'gen_ai_reflection', 'settings.py')
+settings_name = "settings"
+settings_path = op.join(here, "backend", "gen_ai_reflection", "settings.py")
 
 if sys.version_info >= (3, 5):
     spec = util.spec_from_file_location(settings_name, settings_path)
@@ -36,8 +36,5 @@ from settings import *
 
 # Expose assets from static, everything else will be proxied to
 # the Angular frontend server
-STATICFILES_DIRS += [
-    op.join(here, 'frontend', 'src')
-]
+STATICFILES_DIRS += [op.join(here, "frontend", "src")]
 PROXY_FRONTEND = "http://localhost:4200"
-

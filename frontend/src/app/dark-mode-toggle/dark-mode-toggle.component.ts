@@ -8,7 +8,7 @@ import { DarkModeService } from "../services/dark-mode.service";
     selector: "gr-dark-mode-toggle",
     imports: [FontAwesomeModule, CommonModule],
     templateUrl: "./dark-mode-toggle.component.html",
-    styleUrl: "./dark-mode-toggle.component.scss"
+    styleUrl: "./dark-mode-toggle.component.scss",
 })
 export class DarkModeToggleComponent {
     faSun = faSun;

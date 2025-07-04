@@ -3,7 +3,7 @@ import {
     DestroyRef,
     LOCALE_ID,
     Inject,
-    OnInit
+    OnInit,
 } from "@angular/core";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 
@@ -12,20 +12,23 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { DarkModeToggleComponent } from "../dark-mode-toggle/dark-mode-toggle.component";
 import { LanguageInfo, LanguageService } from "../services/language.service";
-import { NgbCollapseModule, NgbDropdownModule } from "@ng-bootstrap/ng-bootstrap";
+import {
+    NgbCollapseModule,
+    NgbDropdownModule,
+} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
     selector: "gr-menu",
     templateUrl: "./menu.component.html",
     styleUrls: ["./menu.component.scss"],
     imports: [
-    RouterLink,
-    FontAwesomeModule,
-    DarkModeToggleComponent,
-    NgbCollapseModule,
-    RouterModule,
-    NgbDropdownModule
-]
+        RouterLink,
+        FontAwesomeModule,
+        DarkModeToggleComponent,
+        NgbCollapseModule,
+        RouterModule,
+        NgbDropdownModule,
+    ],
 })
 export class MenuComponent implements OnInit {
     burgerActive = false;
@@ -42,7 +45,8 @@ export class MenuComponent implements OnInit {
     constructor(
         @Inject(LOCALE_ID) private localeId: string,
         private destroyRef: DestroyRef,
-        private languageService: LanguageService) {
+        private languageService: LanguageService,
+    ) {
         this.currentLanguage = this.localeId;
     }
 

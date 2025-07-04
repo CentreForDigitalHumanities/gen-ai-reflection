@@ -30,7 +30,7 @@ export class LanguageService {
                     code,
                     name,
                 })),
-            }))
+            })),
         );
 
     public set(language: string): Observable<void> {
@@ -38,7 +38,7 @@ export class LanguageService {
             catchError((error) => {
                 console.error(error.error);
                 return EMPTY;
-            })
+            }),
         );
     }
 }
