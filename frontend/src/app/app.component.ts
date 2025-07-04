@@ -1,5 +1,5 @@
-import { Component, Inject, afterRender } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Component, Inject, afterEveryRender, DOCUMENT } from '@angular/core';
+
 import { RouterOutlet } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
@@ -7,7 +7,6 @@ import { DarkModeService } from './services/dark-mode.service';
 
 @Component({
     selector: 'gr-root',
-    standalone: true,
     imports: [
         RouterOutlet,
         MenuComponent,
@@ -21,7 +20,7 @@ export class AppComponent {
 
     constructor(@Inject(DOCUMENT) private document: Document, private darkModeService: DarkModeService) {
         // Using the DOM API to only render on the browser instead of on the server
-        afterRender(() => {
+        afterEveryRender(() => {
             const style = this.document.createElement('link');
             style.rel = 'stylesheet';
             this.document.head.append(style);

@@ -1,5 +1,4 @@
-import { DOCUMENT } from "@angular/common";
-import { DestroyRef, Inject, Injectable, OnInit } from "@angular/core";
+import { DestroyRef, Inject, Injectable, OnInit, DOCUMENT } from "@angular/core";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import {
     BehaviorSubject,
