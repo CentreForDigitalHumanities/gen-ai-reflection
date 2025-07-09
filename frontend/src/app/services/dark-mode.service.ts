@@ -1,9 +1,9 @@
 import {
     DestroyRef,
-    Inject,
     Injectable,
     OnInit,
     DOCUMENT,
+    inject,
 } from "@angular/core";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import {
@@ -28,6 +28,9 @@ const DefaultTheme: Theme = "light";
     providedIn: "root",
 })
 export class DarkModeService implements OnInit {
+    private document = inject<Document>(DOCUMENT);
+    private destroyRef = inject(DestroyRef);
+
     /**
      * Whether the user's system is set to use dark or light mode.
      */
@@ -41,13 +44,8 @@ export class DarkModeService implements OnInit {
     public theme$ = this.user.pipe(
         combineLatestWith(this.systemTheme$),
         distinctUntilChanged(),
-        map(([user, system]) => user ?? system ?? DefaultTheme),
+        map(([user, system]) => user ?? system ?? DefaultTheme)
     );
-
-    constructor(
-        @Inject(DOCUMENT) private document: Document,
-        private destroyRef: DestroyRef,
-    ) {}
 
     ngOnInit(): void {
         this.observeSystem$()
@@ -72,7 +70,7 @@ export class DarkModeService implements OnInit {
         const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
         return fromEvent<MediaQueryList>(mediaQuery, "change").pipe(
             startWith(mediaQuery),
-            map((list: MediaQueryList) => (list.matches ? "dark" : "light")),
+            map((list: MediaQueryList) => (list.matches ? "dark" : "light"))
         );
     }
 

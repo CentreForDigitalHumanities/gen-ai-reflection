@@ -1,5 +1,5 @@
 import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
+import { Injectable, inject } from "@angular/core";
 import { catchError, EMPTY, map, Observable } from "rxjs";
 
 export interface LanguageInfo {
@@ -19,7 +19,7 @@ interface LanguageInfoResponse {
     providedIn: "root",
 })
 export class LanguageService {
-    constructor(private http: HttpClient) {}
+    private http = inject(HttpClient);
 
     public languageInfo$ = this.http
         .get<LanguageInfoResponse>("/api/i18n/")

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
@@ -11,11 +11,11 @@ import { DarkModeService } from "../services/dark-mode.service";
     styleUrl: "./dark-mode-toggle.component.scss",
 })
 export class DarkModeToggleComponent {
+    private darkModeService = inject(DarkModeService);
+
     faSun = faSun;
     faMoon = faMoon;
     dark$ = this.darkModeService.theme$.pipe(map((theme) => theme === "dark"));
-
-    constructor(private darkModeService: DarkModeService) {}
 
     toggle() {
         this.darkModeService.toggle();

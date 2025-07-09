@@ -1,23 +1,39 @@
-import { Component, Inject, afterEveryRender, DOCUMENT } from "@angular/core";
-
-import { RouterOutlet } from "@angular/router";
+import { Component, afterEveryRender, DOCUMENT, inject } from "@angular/core";
+import { CommonModule } from "@angular/common";
 import { MenuComponent } from "./menu/menu.component";
-import { FooterComponent } from "./footer/footer.component";
 import { DarkModeService } from "./services/dark-mode.service";
+import { FooterComponent } from "./footer/footer.component";
+import { NavigationService, Step } from "./services/navigation.service";
+import { HomeComponent } from "./home/home.component";
+import { IntroComponent } from "./intro/intro.component";
+import { LearningOutcomesComponent } from "./learning-outcomes/learning-outcomes.component";
+import { AssessmentFormsComponent } from "./assessment-forms/assessment-forms.component";
+import { CourseIntegrationComponent } from "./course-integration/course-integration.component";
 
 @Component({
     selector: "gr-root",
-    imports: [RouterOutlet, MenuComponent, FooterComponent],
+    imports: [
+        CommonModule,
+        MenuComponent,
+        FooterComponent,
+        HomeComponent,
+        IntroComponent,
+        LearningOutcomesComponent,
+        AssessmentFormsComponent,
+        CourseIntegrationComponent,
+    ],
     templateUrl: "./app.component.html",
     styleUrl: "./app.component.scss",
 })
 export class AppComponent {
-    title = "GenAI Reflection";
+    private document = inject<Document>(DOCUMENT);
+    private darkModeService = inject(DarkModeService);
+    private navigation = inject(NavigationService);
 
-    constructor(
-        @Inject(DOCUMENT) private document: Document,
-        private darkModeService: DarkModeService,
-    ) {
+    public Step = Step;
+    public currentStep = this.navigation.currentStep;
+
+    constructor() {
         // Using the DOM API to only render on the browser instead of on the server
         afterEveryRender(() => {
             const style = this.document.createElement("link");

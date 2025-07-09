@@ -29,19 +29,4 @@ describe("AppComponent", () => {
         const app = fixture.debugElement.componentInstance;
         expect(app).toBeTruthy();
     });
-
-    it(`should have as title 'GenAI Reflection'`, () => {
-        const fixture = TestBed.createComponent(AppComponent);
-        const app = fixture.debugElement.componentInstance;
-        expect(app.title).toEqual(`GenAI Reflection`);
-    });
-
-    it("should render title", () => {
-        const fixture = TestBed.createComponent(AppComponent);
-        fixture.detectChanges();
-        const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector(".navbar-brand").textContent).toContain(
-            "GenAI Reflection",
-        );
-    });
 });

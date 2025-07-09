@@ -1,27 +1,18 @@
-import { HttpClient } from "@angular/common/http";
-import { Component, OnInit } from "@angular/core";
-import { map } from "rxjs";
+import { NgOptimizedImage } from "@angular/common";
+import { Component, inject } from "@angular/core";
+import { NavigationService, Step } from "../services/navigation.service";
 
 @Component({
     selector: "gr-home",
     templateUrl: "./home.component.html",
     styleUrls: ["./home.component.scss"],
+    imports: [NgOptimizedImage],
     standalone: true,
 })
-export class HomeComponent implements OnInit {
-    public hooray?: string;
+export class HomeComponent {
+    private navigation = inject(NavigationService);
 
-    constructor(private http: HttpClient) {}
-
-    ngOnInit(): void {
-        // This call is executed on the server and in the browser.
-        this.http
-            .get<{ message: string }[]>(`/api/example/`)
-            .pipe(map((hoorays) => hoorays[0].message))
-            .subscribe((hooray) => {
-                if (!this.hooray) {
-                    this.hooray = hooray;
-                }
-            });
+    public start(): void {
+        this.navigation.navigateTo(Step.Intro);
     }
 }

@@ -1,0 +1,18 @@
+import { Component } from "@angular/core";
+import {
+    NavButton,
+    NavButtonsComponent,
+} from "../nav-buttons/nav-buttons.component";
+
+@Component({
+    selector: "gr-intro",
+    templateUrl: "./intro.component.html",
+    styleUrls: ["./intro.component.scss"],
+    standalone: true,
+    imports: [NavButtonsComponent],
+})
+export class IntroComponent {
+    public navButtons: NavButton[] = [
+        { label: $localize`Go to Step 1`, direction: "next" },
+    ];
+}

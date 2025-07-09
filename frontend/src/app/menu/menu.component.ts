@@ -1,13 +1,7 @@
-import {
-    Component,
-    DestroyRef,
-    LOCALE_ID,
-    Inject,
-    OnInit,
-} from "@angular/core";
+import { Component, DestroyRef, LOCALE_ID, OnInit, inject } from "@angular/core";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 
-import { RouterLink, RouterModule } from "@angular/router";
+import { RouterModule } from "@angular/router";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { DarkModeToggleComponent } from "../dark-mode-toggle/dark-mode-toggle.component";
@@ -22,7 +16,6 @@ import {
     templateUrl: "./menu.component.html",
     styleUrls: ["./menu.component.scss"],
     imports: [
-        RouterLink,
         FontAwesomeModule,
         DarkModeToggleComponent,
         NgbCollapseModule,
@@ -31,6 +24,10 @@ import {
     ],
 })
 export class MenuComponent implements OnInit {
+    private localeId = inject(LOCALE_ID);
+    private destroyRef = inject(DestroyRef);
+    private languageService = inject(LanguageService);
+
     burgerActive = false;
     currentLanguage: string;
     loading = false;
@@ -42,11 +39,7 @@ export class MenuComponent implements OnInit {
      */
     languages?: LanguageInfo["supported"];
 
-    constructor(
-        @Inject(LOCALE_ID) private localeId: string,
-        private destroyRef: DestroyRef,
-        private languageService: LanguageService,
-    ) {
+    constructor() {
         this.currentLanguage = this.localeId;
     }
 
