@@ -5,6 +5,7 @@ import {
     provideHttpClient,
     withInterceptorsFromDi,
 } from "@angular/common/http";
+import { provideRouter } from "@angular/router";
 
 describe("HomeComponent", () => {
     let component: HomeComponent;
@@ -16,6 +17,7 @@ describe("HomeComponent", () => {
             providers: [
                 provideHttpClient(withInterceptorsFromDi()),
                 provideHttpClientTesting(),
+                provideRouter([])
             ],
         }).compileComponents();
     }));

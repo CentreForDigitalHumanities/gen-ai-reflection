@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { CourseIntegrationComponent } from "./course-integration.component";
+import { provideRouter } from "@angular/router";
 
 describe("CourseIntegrationComponent", () => {
     let component: CourseIntegrationComponent;
@@ -9,6 +10,7 @@ describe("CourseIntegrationComponent", () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [CourseIntegrationComponent],
+            providers: [provideRouter([])],
         }).compileComponents();
 
         fixture = TestBed.createComponent(CourseIntegrationComponent);

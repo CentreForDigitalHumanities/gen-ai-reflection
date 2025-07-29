@@ -6,13 +6,9 @@ import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule } from "@angular/forms";
 import { NavButtonsComponent } from "../nav-buttons/nav-buttons.component";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
-import { resource, signal } from "@angular/core";
-import {
-    ApiResponse,
-    AssessmentForm,
-    Challenges,
-    Opportunities,
-} from "../../types";
+import { signal } from "@angular/core";
+import { AssessmentForm, Challenges, Opportunities } from "../../types";
+import { provideRouter, RouterLink } from "@angular/router";
 
 const mockAssessmentForms: AssessmentForm[] = [
     {
@@ -67,6 +63,7 @@ describe("AssessmentFormsComponent", () => {
             providers: [
                 FormService,
                 { provide: ApiService, useValue: mockApiService },
+                provideRouter([]),
             ],
         }).compileComponents();
 

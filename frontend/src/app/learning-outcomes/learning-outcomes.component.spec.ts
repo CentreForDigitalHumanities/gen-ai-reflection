@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { LearningOutcomesComponent } from "./learning-outcomes.component";
+import { provideRouter, RouterLink } from "@angular/router";
 
 describe("LearningOutcomesComponent", () => {
     let component: LearningOutcomesComponent;
@@ -9,6 +10,7 @@ describe("LearningOutcomesComponent", () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [LearningOutcomesComponent],
+            providers: [provideRouter([])],
         }).compileComponents();
 
         fixture = TestBed.createComponent(LearningOutcomesComponent);
