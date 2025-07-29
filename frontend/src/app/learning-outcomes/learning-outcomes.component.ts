@@ -8,6 +8,13 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { Challenges, DublinIndicator, Opportunities } from "../../types";
 import { ApiService } from "../services/api.service";
+import {
+    trigger,
+    state,
+    style,
+    transition,
+    animate,
+} from "@angular/animations";
 
 interface DublinIndicatorOption {
     value: DublinIndicator | null;
@@ -20,6 +27,24 @@ interface DublinIndicatorOption {
     styleUrls: ["./learning-outcomes.component.scss"],
     standalone: true,
     imports: [NavButtonsComponent, ReactiveFormsModule, CommonModule],
+    animations: [
+        trigger("expandIn", [
+            transition(":enter", [
+                style({
+                    height: 0,
+                    opacity: 0,
+                    "transform-origin": "top",
+                }),
+                animate(
+                    "400ms ease-in-out",
+                    style({
+                        height: "*",
+                        opacity: 1,
+                    })
+                ),
+            ]),
+        ]),
+    ],
 })
 export class LearningOutcomesComponent {
     private apiService = inject(ApiService);

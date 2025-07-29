@@ -68,9 +68,9 @@
                     </td>
                 </tr>
                 @if (challenges && dublinValue) {
-                <tr>
+                <tr [@expandIn] class="animated-row">
                     <td>
-                        @if (dublinValue) {
+                        @if (challenges && dublinValue) {
                         <strong i18n>AI Challenges:</strong>
                         <ul>
                             @for ( challenge of challenges[dublinValue]; track
