@@ -6,7 +6,7 @@
         In this step, you will map the Intended Learning Outcomes (ILOs) for
         your course and link each one to the most relevant Dublin Descriptor.
     </p>
-    
+
     <p i18n>
         The Dublin Descriptors are internationally recognized criterias to
         classify learning outcomes, and used on a program-level in our
@@ -26,8 +26,6 @@
                 <tr>
                     <th i18n>Intended Outcome</th>
                     <th i18n>Dublin Indicator</th>
-                    <th i18n>AI Challenges</th>
-                    <th i18n>AI Opportunities</th>
                     <th i18n>Actions</th>
                 </tr>
             </thead>
@@ -56,26 +54,6 @@
                         </select>
                     </td>
                     <td>
-                        @if (challenges && dublinValue) {
-                        <ul>
-                            @for ( challenge of challenges[dublinValue]; track
-                            $index ) {
-                            <li>{{ challenge }}</li>
-                            }
-                        </ul>
-                        }
-                    </td>
-                    <td>
-                        @if (opportunities && dublinValue) {
-                        <ul>
-                            @for ( opportunity of opportunities[dublinValue];
-                            track $index ) {
-                            <li>{{ opportunity }}</li>
-                            }
-                        </ul>
-                        }
-                    </td>
-                    <td>
                         <button
                             type="button"
                             class="btn btn-outline-secondary small btn-small"
@@ -89,7 +67,33 @@
                         </button>
                     </td>
                 </tr>
-                }
+                @if (challenges && dublinValue) {
+                <tr>
+                    <td>
+                        @if (dublinValue) {
+                        <strong i18n>AI Challenges:</strong>
+                        <ul>
+                            @for ( challenge of challenges[dublinValue]; track
+                            $index ) {
+                            <li>{{ challenge }}</li>
+                            }
+                        </ul>
+                        }
+                    </td>
+                    <td>
+                        @if (opportunities && dublinValue) {
+                        <strong i18n>AI Opportunities:</strong>
+                        <ul>
+                            @for ( opportunity of opportunities[dublinValue];
+                            track $index ) {
+                            <li>{{ opportunity }}</li>
+                            }
+                        </ul>
+                        }
+                    </td>
+                    <td></td>
+                </tr>
+                } }
             </tbody>
         </table>
     </form>
