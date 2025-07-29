@@ -3,35 +3,17 @@ import { CommonModule } from "@angular/common";
 import { MenuComponent } from "./menu/menu.component";
 import { DarkModeService } from "./services/dark-mode.service";
 import { FooterComponent } from "./footer/footer.component";
-import { NavigationService, Step } from "./services/navigation.service";
-import { HomeComponent } from "./home/home.component";
-import { IntroComponent } from "./intro/intro.component";
-import { LearningOutcomesComponent } from "./learning-outcomes/learning-outcomes.component";
-import { AssessmentFormsComponent } from "./assessment-forms/assessment-forms.component";
-import { CourseIntegrationComponent } from "./course-integration/course-integration.component";
+import { RouterOutlet } from "@angular/router";
 
 @Component({
     selector: "gr-root",
-    imports: [
-        CommonModule,
-        MenuComponent,
-        FooterComponent,
-        HomeComponent,
-        IntroComponent,
-        LearningOutcomesComponent,
-        AssessmentFormsComponent,
-        CourseIntegrationComponent,
-    ],
+    imports: [CommonModule, MenuComponent, FooterComponent, RouterOutlet],
     templateUrl: "./app.component.html",
     styleUrl: "./app.component.scss",
 })
 export class AppComponent {
     private document = inject<Document>(DOCUMENT);
     private darkModeService = inject(DarkModeService);
-    private navigation = inject(NavigationService);
-
-    public Step = Step;
-    public currentStep = this.navigation.currentStep;
 
     constructor() {
         // Using the DOM API to only render on the browser instead of on the server
@@ -43,7 +25,7 @@ export class AppComponent {
             this.darkModeService.theme$.subscribe((theme) => {
                 this.document.documentElement.setAttribute(
                     "data-bs-theme",
-                    theme,
+                    theme
                 );
                 style.href = `${theme}.css`;
             });

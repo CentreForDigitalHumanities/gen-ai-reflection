@@ -2,13 +2,7 @@
     <gr-menu role="banner" />
     <main class="main-content mt-5 mb-5">
         <div class="container">
-            <div [ngSwitch]="currentStep()">
-                <gr-home *ngSwitchCase="Step.Home" />
-                <gr-intro *ngSwitchCase="Step.Intro" />
-                <gr-learning-outcomes *ngSwitchCase="Step.LearningOutcomes" />
-                <gr-assessment-forms *ngSwitchCase="Step.AssessmentForms" />
-                <gr-course-integration *ngSwitchCase="Step.CourseIntegration" />
-            </div>
+            <router-outlet />
         </div>
     </main>
     <gr-footer role="contentinfo" />
