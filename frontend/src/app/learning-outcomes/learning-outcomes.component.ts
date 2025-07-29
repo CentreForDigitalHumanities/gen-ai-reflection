@@ -26,8 +26,16 @@ export class LearningOutcomesComponent {
     private formService = inject(FormService);
 
     public navButtons: NavButton[] = [
-        { label: $localize`Go to Step 2`, direction: "next" },
-        { label: $localize`Back to Introduction`, direction: "back" },
+        {
+            label: $localize`Go to Step 2`,
+            direction: "next",
+            link: "/assessment-forms",
+        },
+        {
+            label: $localize`Back to Introduction`,
+            direction: "back",
+            link: "/intro",
+        },
     ];
 
     public form = this.formService.form;

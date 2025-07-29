@@ -24,14 +24,22 @@ export class AssessmentFormsComponent {
     private formChanges = toSignal(this.formService.form.valueChanges);
 
     public navButtons: NavButton[] = [
-        { label: $localize`Go to Step 3`, direction: "next" },
-        { label: $localize`Back to Step 1`, direction: "back" },
+        {
+            label: $localize`Go to Step 3`,
+            direction: "next",
+            link: "/course-integration",
+        },
+        {
+            label: $localize`Back to Step 1`,
+            direction: "back",
+            link: "/learning-outcomes",
+        },
     ];
 
     public form = this.formService.form;
 
     public assessmentFormOptions = computed(
-        () => this.apiService.serverData.value()?.assessmentForms ?? [],
+        () => this.apiService.serverData.value()?.assessmentForms ?? []
     );
 
     public aiUseOptions = computed<AIUse[]>(() => {
@@ -61,14 +69,14 @@ export class AssessmentFormsComponent {
 
     private findAiUses(assessmentFormId: string): AIUse[] {
         const assessmentFormRecord = this.assessmentFormOptions().find(
-            (form) => form.id === assessmentFormId,
+            (form) => form.id === assessmentFormId
         );
         return assessmentFormRecord?.aiUses ?? [];
     }
 
     private findExamples(aiUseId: string): string[] {
         const aiUseRecord = this.aiUseOptions().find(
-            (use) => use.id === aiUseId,
+            (use) => use.id === aiUseId
         );
         return aiUseRecord?.examples ?? [];
     }

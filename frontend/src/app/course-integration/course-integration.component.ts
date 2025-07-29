@@ -16,10 +16,12 @@ export class CourseIntegrationComponent {
         {
             label: $localize`Back to Step 2`,
             direction: "back",
+            link: "/assessment-forms",
         },
         {
             label: $localize`Go to Summary`,
             direction: "next",
+            link: "/summary",
         },
     ];
 }
