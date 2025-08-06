@@ -18,7 +18,7 @@ export class ApiService {
                 resolve({
                     challenges: mockChallenges,
                     opportunities: mockOpportunities,
-                    assessmentForms: mockAssessments,
+                    assessments: mockAssessments,
                 });
             }),
     });

@@ -10,18 +10,25 @@
     <p i18n>
         The Dublin Descriptors are internationally recognized criterias to
         classify learning outcomes, and used on a program-level in our
-        department. They are organized into five categories: Knowledge and
-        understanding; Applying knowledge and understanding; Making judgments;
-        Communication; Lifelong learning skills.
+        department. They are organized into five categories:
     </p>
+
+    <ul>
+        <li i18n>Knowledge and understanding</li>
+        <li i18n>Applying knowledge and understanding</li>
+        <li i18n>Making judgments</li>
+        <li i18n>Communication</li>
+        <li i18n>Lifelong learning skills</li>
+    </ul>
 
     <p i18n>
         For each ILO you enter, please select the Dublin Descriptor that best
         aligns.
     </p>
 
+    @if (form.controls.learningOutcomes.length > 0) {
     <form>
-        <table class="table table-primary">
+        <table class="table table-primary gr-table">
             <thead>
                 <tr>
                     <th i18n>Intended Outcome</th>
@@ -97,6 +104,7 @@
             </tbody>
         </table>
     </form>
+    }
 
     <button
         class="btn btn-outline-secondary"
