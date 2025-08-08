@@ -64,7 +64,9 @@
                         <button
                             type="button"
                             class="btn btn-outline-secondary small btn-small"
-                            (click)="removeLearningOutcome($index)"
+                            (click)="
+                                removeLearningOutcome(subForm.controls.id.value)
+                            "
                             [disabled]="
                                 form.controls.learningOutcomes.length <= 1
                             "
