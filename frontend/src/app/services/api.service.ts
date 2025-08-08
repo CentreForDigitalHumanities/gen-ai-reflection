@@ -1,11 +1,10 @@
 import { Injectable, resource } from "@angular/core";
-import { ApiResponse } from "../../types";
-import { Observable, of } from "rxjs";
+import { ApiResponse } from "../shared/types";
 import {
     mockAssessments,
     mockChallenges,
     mockOpportunities,
-} from "../../mockData";
+} from "../shared/mockData";
 
 @Injectable({
     providedIn: "root",
