@@ -2,61 +2,168 @@
     <h1 i18n>Step 2: Assessment Forms</h1>
 
     <p i18n>
-        Here, you learn how to reflect on the various ways students can make use
-        of GenAI for different assessment forms.
+        In this step, you will receive information on how students can make use
+        of GenAI for the assessment forms in your course.
     </p>
 
     <p i18n>
-        You are invited to reflect on the extent to which this is a problem in
-        the light of the intended learning outcomes you have provided in step 1.
+        After adding an assessment form, you decide whether the use of GenAI is
+        a problem in this context, based on the ILOs that are tested. If you
+        consider the use of GenAI in the assessment a problem, the tool suggests
+        alternatives.
     </p>
 
+    <p i18n>
+        Next, pick one or more intended learning outcomes that are assessed in
+        this way and whose assessment could be affected by the use of GenAI.
+    </p>
+
+    @if (form.controls.assessmentForms.length > 0) {
     <form>
-        <div class="mt-4">
-            <label class="form-label h2" for="assessment-form" i18n
-                >Assessment form</label
-            >
-            <select
-                id="assessment-form"
-                class="form-select"
-                [formControl]="form.controls.assessmentForm"
-            >
-                <option [value]="null" disabled selected i18n>
-                    Select an assessment form
-                </option>
-                @for (form of assessmentFormOptions(); track $index) {
-                    <option [value]="form.id">
-                        {{ form.name }}
-                    </option>
-                }
-            </select>
-        </div>
-
-        @if (aiUseOptions().length > 0) {
-            <div class="list-group mt-4">
-                <h2 i18n>Use of GenAI</h2>
-                @for (use of aiUseOptions(); track $index) {
-                    <div
-                        class="list-group-item list-group-item-action cursor-pointer ai-use-item"
-                        (click)="selectAiUse(use.id)"
-                    >
-                        {{ use.name }}
-                    </div>
-                }
-            </div>
-        }
-
-        @if (exampleOptions().length > 0) {
-            <div class="list-group mt-4">
-                <h2 i18n>Examples</h2>
-                @for (example of exampleOptions(); track $index) {
-                    <div class="list-group-item">
-                        {{ example }}
-                    </div>
-                }
-            </div>
-        }
+        <table class="table table-primary gr-table">
+            <thead>
+                <tr>
+                    <th i18n>Assessment form</th>
+                    <th i18n>Affected by GenAI?</th>
+                    <th i18n>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (subForm of form.controls.assessmentForms.controls; track
+                subForm.controls.assessmentId) {
+                <tr [formGroup]="subForm">
+                    <td class="my-4">
+                        <select
+                            id="assessment-form-{{ $index }}"
+                            class="form-select"
+                            [formControl]="subForm.controls.assessmentId"
+                        >
+                            @if (availableOptionsFor($index).length === 0) {
+                            <option value="" disabled i18n>
+                                No assessment forms available
+                            </option>
+                            } @else {
+                            <option value="" disabled i18n>
+                                Select an assessment form
+                            </option>
+                            } @for (form of availableOptionsFor($index); track
+                            form.id) {
+                            <option [ngValue]="form.id">{{ form.name }}</option>
+                            }
+                        </select>
+                    </td>
+                    <td>
+                        <div class="form-check">
+                            <input
+                                id="affected-true-{{ $index }}"
+                                class="form-check-input"
+                                type="radio"
+                                name="affected-{{ $index }}"
+                                [value]="true"
+                                [formControl]="subForm.controls.affected"
+                            />
+                            <label
+                                for="affected-true-{{ $index }}"
+                                class="form-check-label"
+                                i18n
+                            >
+                                Yes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input
+                                id="affected-false-{{ $index }}"
+                                class="form-check-input"
+                                type="radio"
+                                name="affected-{{ $index }}"
+                                [value]="false"
+                                [formControl]="subForm.controls.affected"
+                            />
+                            <label
+                                for="affected-false-{{ $index }}"
+                                class="form-check-label"
+                                i18n
+                            >
+                                No
+                            </label>
+                        </div>
+                    </td>
+                    <td>
+                        <button
+                            type="button"
+                            class="btn btn-outline-secondary small btn-small"
+                            (click)="removeAssessmentForm($index)"
+                            i18n
+                        >
+                            Remove
+                        </button>
+                    </td>
+                </tr>
+                @if (subForm.controls.affected.value === true) {
+                <tr [@expandIn] class="animated-row">
+                    <td>
+                        <label for="ilo-select-{{ $index }}" i18n>
+                            Select one or multiple affected ILOs
+                        </label>
+                        @for ( iloCtrl of
+                        form.controls.learningOutcomes.controls; track
+                        iloCtrl.controls.id.value ) {
+                        <div class="form-check">
+                            <input
+                                id="ilo-{{ $index }}-{{
+                                    iloCtrl.controls.id.value
+                                }}"
+                                class="form-check-input"
+                                type="checkbox"
+                                [value]="iloCtrl.controls.id.value"
+                                [checked]="
+                                    subForm.controls.iloIds.value.includes(
+                                        iloCtrl.controls.id.value
+                                    )
+                                "
+                                (change)="
+                                    onIloToggle(
+                                        subForm,
+                                        iloCtrl.controls.id.value,
+                                        $any($event.target).checked
+                                    )
+                                "
+                            />
+                            <label
+                                for="ilo-{{ $index }}-{{
+                                    iloCtrl.controls.id.value
+                                }}"
+                                class="form-check-label"
+                            >
+                                {{ iloCtrl.controls.intendedOutcome.value }}
+                            </label>
+                        </div>
+                        }
+                    </td>
+                    <td colspan="2">
+                        <strong>Adjustments</strong>
+                        <ul>
+                            @for (adjustment of
+                            getAdjustments(subForm.controls.assessmentId.value);
+                            track $index) {
+                            <li>{{ adjustment }}</li>
+                            }
+                        </ul>
+                    </td>
+                </tr>
+                } }
+            </tbody>
+        </table>
     </form>
+    }
+
+    <button
+        class="btn btn-outline-secondary"
+        (click)="addAssessmentForm()"
+        i18n
+    >
+        Add an assessment form
+    </button>
 </article>
 
 <gr-nav-buttons [navButtons]="navButtons" />

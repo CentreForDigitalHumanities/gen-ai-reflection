@@ -4,11 +4,11 @@ import {
     NavButtonsComponent,
 } from "../nav-buttons/nav-buttons.component";
 import { ApiService } from "../services/api.service";
-import { FormService } from "../services/form.service";
+import { AssessmentForm, FormService } from "../services/form.service";
 import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule } from "@angular/forms";
-import { toSignal } from "@angular/core/rxjs-interop";
-import { AIUse } from "../../types";
+import { Assessment } from "../shared/types";
+import { expandIn } from "../shared/animations";
 
 @Component({
     selector: "gr-assessment-forms",
@@ -16,12 +16,11 @@ import { AIUse } from "../../types";
     styleUrls: ["./assessment-forms.component.scss"],
     standalone: true,
     imports: [NavButtonsComponent, CommonModule, ReactiveFormsModule],
+    animations: [expandIn],
 })
 export class AssessmentFormsComponent {
     private formService = inject(FormService);
     private apiService = inject(ApiService);
-
-    private formChanges = toSignal(this.formService.form.valueChanges);
 
     public navButtons: NavButton[] = [
         {
@@ -38,46 +37,41 @@ export class AssessmentFormsComponent {
 
     public form = this.formService.form;
 
-    public assessmentFormOptions = computed(
-        () => this.apiService.serverData.value()?.assessmentForms ?? []
-    );
+    private allAssessmentFormOptions = computed(() => this.apiService.serverData.value()?.assessments ?? []);
 
-    public aiUseOptions = computed<AIUse[]>(() => {
-        const formValue = this.formChanges();
-        const selectedAssessmentForm = formValue?.assessmentForm;
-        const assessmentFormOptions = this.assessmentFormOptions();
+    public availableOptionsFor(selectedIndex: number): Assessment[] {
+        const allOptions = this.allAssessmentFormOptions();
+        const assessmentFormControls = this.form.controls.assessmentForms.controls;
+        const currentValue = assessmentFormControls[selectedIndex]?.controls.assessmentId.value;
+        const selectedIdsExcludingCurrent = assessmentFormControls
+            .map((form, index) => (index === selectedIndex ? null : form.controls.assessmentId.value))
+            .filter((value) => value !== null);
 
-        if (!assessmentFormOptions || !selectedAssessmentForm) {
-            return [];
-        }
-        return this.findAiUses(selectedAssessmentForm);
-    });
-
-    public exampleOptions = computed<string[]>(() => {
-        const formValue = this.formChanges();
-        const selectedAiUse = formValue?.aiUse;
-
-        if (!selectedAiUse) {
-            return [];
-        }
-        return this.findExamples(selectedAiUse);
-    });
-
-    public selectAiUse(aiUseId: string): void {
-        this.form.controls.aiUse.setValue(aiUseId);
+        return allOptions.filter(opt => opt.id === currentValue || !selectedIdsExcludingCurrent.includes(opt.id));
     }
 
-    private findAiUses(assessmentFormId: string): AIUse[] {
-        const assessmentFormRecord = this.assessmentFormOptions().find(
-            (form) => form.id === assessmentFormId
-        );
-        return assessmentFormRecord?.aiUses ?? [];
+    public getAdjustments(assessmentId: string | null): string[] {
+        if (!assessmentId) {
+            return [];
+        }
+        const assessmentInfo = this.allAssessmentFormOptions();
+        const adjustments = assessmentInfo.find(assessment => assessment.id === assessmentId)?.adjustments ?? [];
+        return adjustments;
     }
 
-    private findExamples(aiUseId: string): string[] {
-        const aiUseRecord = this.aiUseOptions().find(
-            (use) => use.id === aiUseId
-        );
-        return aiUseRecord?.examples ?? [];
+    public addAssessmentForm = this.formService.addAssessmentForm;
+    public removeAssessmentForm = this.formService.removeAssessmentForm;
+
+    public onIloToggle(subForm: AssessmentForm, iloId: string, checked: boolean): void {
+        const current = subForm.controls.iloIds.value ?? [];
+        let next: string[];
+        if (checked) {
+            next = current.includes(iloId) ? current : [...current, iloId];
+        } else {
+            next = current.filter(id => id !== iloId);
+        }
+        subForm.controls.iloIds.setValue(next);
+        subForm.controls.iloIds.markAsDirty();
+        subForm.controls.iloIds.markAsTouched();
     }
 }

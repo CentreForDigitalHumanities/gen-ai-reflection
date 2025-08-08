@@ -7,10 +7,10 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { NavButtonsComponent } from "../nav-buttons/nav-buttons.component";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { signal } from "@angular/core";
-import { AssessmentForm, Challenges, Opportunities } from "../../types";
+import { Assessment, Challenges, Opportunities } from "../shared/types";
 import { provideRouter, RouterLink } from "@angular/router";
 
-const mockAssessmentForms: AssessmentForm[] = [
+const mockAssessmentForms: Assessment[] = [
     {
         id: "form1",
         name: "Form 1",
@@ -78,10 +78,10 @@ describe("AssessmentFormsComponent", () => {
     });
 
     it("should load assessment form options on init", () => {
-        expect(component.assessmentFormOptions().length).toBe(
+        expect(component.availableAssessmentFormOptions().length).toBe(
             mockAssessmentForms.length
         );
-        expect(component.assessmentFormOptions()[0].name).toBe(
+        expect(component.availableAssessmentFormOptions()[0].name).toBe(
             mockAssessmentForms[0].name
         );
     });
