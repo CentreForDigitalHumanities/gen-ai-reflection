@@ -9,13 +9,15 @@ import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule } from "@angular/forms";
 import { Assessment } from "../shared/types";
 import { expandIn } from "../shared/animations";
+import { AssessmentFormSelectComponent } from "./assessment-form-select/assessment-form-select.component";
+import { IloSelectComponent } from "./ilo-select/ilo-select.component";
 
 @Component({
     selector: "gr-assessment-forms",
     templateUrl: "./assessment-forms.component.html",
     styleUrls: ["./assessment-forms.component.scss"],
     standalone: true,
-    imports: [NavButtonsComponent, CommonModule, ReactiveFormsModule],
+    imports: [NavButtonsComponent, CommonModule, ReactiveFormsModule, AssessmentFormSelectComponent, IloSelectComponent],
     animations: [expandIn],
 })
 export class AssessmentFormsComponent {
@@ -61,17 +63,4 @@ export class AssessmentFormsComponent {
 
     public addAssessmentForm = this.formService.addAssessmentForm;
     public removeAssessmentForm = this.formService.removeAssessmentForm;
-
-    public onIloToggle(subForm: AssessmentForm, iloId: string, checked: boolean): void {
-        const current = subForm.controls.iloIds.value ?? [];
-        let next: string[];
-        if (checked) {
-            next = current.includes(iloId) ? current : [...current, iloId];
-        } else {
-            next = current.filter(id => id !== iloId);
-        }
-        subForm.controls.iloIds.setValue(next);
-        subForm.controls.iloIds.markAsDirty();
-        subForm.controls.iloIds.markAsTouched();
-    }
 }

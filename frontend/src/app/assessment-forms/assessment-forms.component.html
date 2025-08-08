@@ -22,69 +22,88 @@
     <div class="card">
         <div class="card-body">
             <form [formGroup]="subForm">
-                <div class="form-control-group">
-                    <label for="assessment-form-{{ $index }}" i18n>
-                        Assessment form
-                    </label>
-                    <select
-                        id="assessment-form-{{ $index }}"
-                        class="form-select"
+                <div class="d-flex justify-content-between">
+                    <gr-assessment-form-select
+                        [options]="availableOptionsFor($index)"
                         [formControl]="subForm.controls.assessmentId"
-                    >
-                        @if (availableOptionsFor($index).length === 0) {
-                        <option value="" disabled i18n>
-                            No assessment forms available
-                        </option>
-                        } @else {
-                        <option value="" disabled i18n>
-                            Select an assessment form
-                        </option>
-                        } @for (form of availableOptionsFor($index); track
-                        form.id) {
-                        <option [value]="form.id">{{ form.name }}</option>
-                        }
-                    </select>
-                </div>
-                <div class="form-control-group">
-                    <label for="affected-true-{{ $index }}" i18n>
-                        Affected by GenAI?
-                    </label>
-                    <div class="form-check">
-                        <input
-                            id="affected-true-{{ $index }}"
-                            class="form-check-input"
-                            type="radio"
-                            name="affected-{{ $index }}"
-                            [value]="true"
-                            [formControl]="subForm.controls.affected"
-                        />
+                    />
+                    <div class="d-flex align-items-center gap-3">
                         <label
                             for="affected-true-{{ $index }}"
-                            class="form-check-label"
+                            class="form-label mb-0"
                             i18n
                         >
-                            Yes
+                            Affected by GenAI?
                         </label>
-                    </div>
-                    <div class="form-check">
-                        <input
-                            id="affected-false-{{ $index }}"
-                            class="form-check-input"
-                            type="radio"
-                            name="affected-{{ $index }}"
-                            [value]="false"
-                            [formControl]="subForm.controls.affected"
-                        />
-                        <label
-                            for="affected-false-{{ $index }}"
-                            class="form-check-label"
-                            i18n
-                        >
-                            No
-                        </label>
+                        <div class="form-check">
+                            <input
+                                id="affected-true-{{ $index }}"
+                                class="form-check-input"
+                                type="radio"
+                                name="affected-{{ $index }}"
+                                [value]="true"
+                                [formControl]="subForm.controls.affected"
+                            />
+                            <label
+                                for="affected-true-{{ $index }}"
+                                class="form-check-label"
+                                i18n
+                            >
+                                Yes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input
+                                id="affected-false-{{ $index }}"
+                                class="form-check-input"
+                                type="radio"
+                                name="affected-{{ $index }}"
+                                [value]="false"
+                                [formControl]="subForm.controls.affected"
+                            />
+                            <label
+                                for="affected-false-{{ $index }}"
+                                class="form-check-label"
+                                i18n
+                            >
+                                No
+                            </label>
+                        </div>
                     </div>
                 </div>
+
+                @if (subForm.controls.affected.value === true) {
+                <div [@expandIn] class="animated-row mt-4">
+                    <label class="form-label fw-bold" i18n>
+                        Select one or multiple affected ILOs
+                    </label>
+                    @for ( iloForm of form.controls.learningOutcomes.controls;
+                    track iloForm.controls.id.value ) {
+                    <gr-ilo-select
+                        [formIndex]="$index"
+                        [iloForm]="iloForm"
+                        [formControl]="subForm.controls.iloIds"
+                    ></gr-ilo-select>
+                    } @empty {
+                    <p class="text-muted" i18n>
+                        No ILOs available. Add some in the previous step.
+                    </p>
+                    }
+                    <div>
+                        <p class="fw-bold">Adjustments</p>
+                        <ul>
+                            @for (adjustment of
+                            getAdjustments(subForm.controls.assessmentId.value);
+                            track $index) {
+                            <li>{{ adjustment }}</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                }
             </form>
+        </div>
+        <div class="card-footer">
             <button
                 type="button"
                 class="btn btn-outline-secondary small btn-small"
@@ -93,58 +112,13 @@
             >
                 Remove
             </button>
-            @if (subForm.controls.affected.value === true) {
-            <div [@expandIn] class="animated-row">
-                <label for="ilo-select-{{ $index }}" i18n>
-                    Select one or multiple affected ILOs
-                </label>
-                @for ( iloCtrl of form.controls.learningOutcomes.controls; track
-                iloCtrl.controls.id.value ) {
-                <div class="form-check">
-                    <input
-                        id="ilo-{{ $index }}-{{ iloCtrl.controls.id.value }}"
-                        class="form-check-input"
-                        type="checkbox"
-                        [value]="iloCtrl.controls.id.value"
-                        [checked]="
-                            subForm.controls.iloIds.value.includes(
-                                iloCtrl.controls.id.value
-                            )
-                        "
-                        (change)="
-                            onIloToggle(
-                                subForm,
-                                iloCtrl.controls.id.value,
-                                $any($event.target).checked
-                            )
-                        "
-                    />
-                    <label
-                        for="ilo-{{ $index }}-{{ iloCtrl.controls.id.value }}"
-                        class="form-check-label"
-                    >
-                        {{ iloCtrl.controls.intendedOutcome.value }}
-                    </label>
-                </div>
-                }
-                <div>
-                    <strong>Adjustments</strong>
-                    <ul>
-                        @for (adjustment of
-                        getAdjustments(subForm.controls.assessmentId.value);
-                        track $index) {
-                        <li>{{ adjustment }}</li>
-                        }
-                    </ul>
-                </div>
-            </div>
-            }
         </div>
     </div>
     }
 
     <button
         class="btn btn-outline-secondary"
+        type="button"
         (click)="addAssessmentForm()"
         i18n
     >

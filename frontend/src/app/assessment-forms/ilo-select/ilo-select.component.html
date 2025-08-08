@@ -1,0 +1,18 @@
+<div class="form-check">
+    <input
+        #inputEle
+        id="ilo-select-{{ formIndex }}"
+        class="form-check-input"
+        type="checkbox"
+        [value]="iloForm.controls.id.value"
+        [checked]="isChecked()"
+        [disabled]="disabled"
+        (change)="onToggle(inputEle.checked)"
+    />
+    <label
+        for="ilo-select-{{ formIndex }}"
+        class="form-check-label"
+    >
+        {{ iloForm.controls.intendedOutcome.value }}
+    </label>
+</div>
