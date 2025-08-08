@@ -5,6 +5,7 @@ import {
 } from "../nav-buttons/nav-buttons.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { FormService } from "../services/form.service";
+import { Router } from "@angular/router";
 
 @Component({
     selector: "gr-intro",
@@ -14,6 +15,7 @@ import { FormService } from "../services/form.service";
     imports: [NavButtonsComponent, ReactiveFormsModule],
 })
 export class IntroComponent {
+    private router = inject(Router);
     public navButtons: NavButton[] = [
         {
             label: $localize`Go to Step 1`,
@@ -25,4 +27,9 @@ export class IntroComponent {
     private formService = inject(FormService);
 
     public form = this.formService.form;
+
+    submitCourseName(event: Event): void {
+        event.preventDefault();
+        this.router.navigate(["/learning-outcomes"]);
+    }
 }
