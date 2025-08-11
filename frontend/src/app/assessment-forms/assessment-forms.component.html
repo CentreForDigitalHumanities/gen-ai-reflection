@@ -18,111 +18,155 @@
         this way and whose assessment could be affected by the use of GenAI.
     </p>
 
-    @for (subForm of form.controls.assessmentForms.controls; track $index) {
-    <div class="card">
-        <div class="card-body">
-            <form [formGroup]="subForm">
-                <div class="d-flex justify-content-between">
-                    <gr-assessment-form-select
-                        [options]="availableOptionsFor($index)"
-                        [formControl]="subForm.controls.assessmentId"
-                    />
-                    <div class="d-flex align-items-center gap-3">
-                        <label
-                            for="affected-true-{{ $index }}"
-                            class="form-label mb-0"
-                            i18n
-                        >
-                            Affected by GenAI?
-                        </label>
-                        <div class="form-check">
-                            <input
-                                id="affected-true-{{ $index }}"
-                                class="form-check-input"
-                                type="radio"
-                                name="affected-{{ $index }}"
-                                [value]="true"
-                                [formControl]="subForm.controls.affected"
-                            />
-                            <label
-                                for="affected-true-{{ $index }}"
-                                class="form-check-label"
-                                i18n
+    <div class="container">
+        <div class="row">
+            @for (subForm of form.controls.assessmentForms.controls; track
+            $index) {
+            <div class="col-md-6 col-xl-4 g-3">
+                <div class="card rounded-4">
+                    <div class="card-body position-relative py-4">
+                        <div class="remove-button-wrapper">
+                            <button
+                                class="btn btn-sm btn-outline-danger"
+                                type="button"
+                                (click)="removeAssessmentForm($index)"
+                                aria-labelledby="remove-assessment-form"
+                                title="Remove assessment form"
+                                title-i18n
                             >
-                                Yes
-                            </label>
+                                <fa-icon
+                                    [icon]="faTrash"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                ></fa-icon>
+                                <span
+                                    id="remove-assessment-form"
+                                    class="visually-hidden"
+                                    i18n
+                                >
+                                    Remove assessment form
+                                </span>
+                            </button>
                         </div>
-                        <div class="form-check">
-                            <input
-                                id="affected-false-{{ $index }}"
-                                class="form-check-input"
-                                type="radio"
-                                name="affected-{{ $index }}"
-                                [value]="false"
-                                [formControl]="subForm.controls.affected"
-                            />
-                            <label
-                                for="affected-false-{{ $index }}"
-                                class="form-check-label"
-                                i18n
-                            >
-                                No
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                @if (subForm.controls.affected.value === true) {
-                <div [@expandIn] class="animated-row mt-4">
-                    <label class="form-label fw-bold" i18n>
-                        Select one or multiple affected ILOs
-                    </label>
-                    @for ( iloForm of form.controls.learningOutcomes.controls;
-                    track iloForm.controls.id.value ) {
-                    <gr-ilo-select
-                        [formIndex]="$index"
-                        [iloForm]="iloForm"
-                        [formControl]="subForm.controls.iloIds"
-                    ></gr-ilo-select>
-                    } @empty {
-                    <p class="text-muted" i18n>
-                        No ILOs available. Add some in the previous step.
-                    </p>
-                    }
-                    <div>
-                        <p class="fw-bold">Adjustments</p>
-                        <ul>
-                            @for (adjustment of
-                            getAdjustments(subForm.controls.assessmentId.value);
-                            track $index) {
-                            <li>{{ adjustment }}</li>
+                        <form [formGroup]="subForm">
+                            <div>
+                                <gr-assessment-form-select
+                                    [options]="availableOptionsFor($index)"
+                                    [formControl]="
+                                        subForm.controls.assessmentId
+                                    "
+                                />
+                                <div class="mt-4">
+                                    <label
+                                        for="affected-true-{{ $index }}"
+                                        class="form-label fw-bold"
+                                        i18n
+                                    >
+                                        Affected by GenAI?
+                                    </label>
+                                    <div class="form-check">
+                                        <input
+                                            id="affected-true-{{ $index }}"
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="affected-{{ $index }}"
+                                            [value]="true"
+                                            [formControl]="
+                                                subForm.controls.affected
+                                            "
+                                        />
+                                        <label
+                                            for="affected-true-{{ $index }}"
+                                            class="form-check-label"
+                                            i18n
+                                        >
+                                            Yes
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input
+                                            id="affected-false-{{ $index }}"
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="affected-{{ $index }}"
+                                            [value]="false"
+                                            [formControl]="
+                                                subForm.controls.affected
+                                            "
+                                        />
+                                        <label
+                                            for="affected-false-{{ $index }}"
+                                            class="form-check-label"
+                                            i18n
+                                        >
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            @if (subForm.controls.affected.value === true) {
+                            <div [@expandIn] class="animated-row mt-4">
+                                <label class="form-label fw-bold" i18n>
+                                    Select one or multiple affected ILOs
+                                </label>
+                                @for ( iloForm of
+                                form.controls.learningOutcomes.controls; track
+                                iloForm.controls.id.value ) {
+                                <gr-ilo-select
+                                    [formIndex]="$index"
+                                    [iloForm]="iloForm"
+                                    [formControl]="subForm.controls.iloIds"
+                                ></gr-ilo-select>
+                                } @empty {
+                                <p class="text-muted" i18n>
+                                    No ILOs available. Add some in the previous
+                                    step.
+                                </p>
+                                }
+                                <div class="mt-4">
+                                    <p class="fw-bold" i18n>
+                                        Suggested adjustments
+                                    </p>
+                                    <ul>
+                                        @for (adjustment of
+                                        getAdjustments(subForm.controls.assessmentId.value);
+                                        track $index) {
+                                        <li>
+                                            {{ adjustment }}
+                                        </li>
+                                        } @empty {
+                                        <p class="text-muted" i18n>
+                                            No adjustments available. Select an
+                                            assessment form first.
+                                        </p>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
                             }
-                        </ul>
+                        </form>
                     </div>
                 </div>
-                }
-            </form>
-        </div>
-        <div class="card-footer">
-            <button
-                type="button"
-                class="btn btn-outline-secondary small btn-small"
-                (click)="removeAssessmentForm($index)"
-                i18n
-            >
-                Remove
-            </button>
+            </div>
+            }
+            <div class="col-md-6 col-xl-4 g-3 d-flex align-items-center">
+                <button
+                    class="btn btn-outline-dark d-flex flex-column"
+                    (click)="addAssessmentForm()"
+                    aria-labelledby="add-assessment-form"
+                    title="Add assessment form"
+                    title-i18n
+                >
+                    <fa-icon
+                        [icon]="faPlus"
+                        aria-hidden="true"
+                        focusable="false"
+                    ></fa-icon>
+                    <span id="add-assessment-form" i18n>Add form</span>
+                </button>
+            </div>
         </div>
     </div>
-    }
-
-    <button
-        class="btn btn-outline-secondary"
-        type="button"
-        (click)="addAssessmentForm()"
-        i18n
-    >
-        Add an assessment form
-    </button>
 </article>
+
 <gr-nav-buttons [navButtons]="navButtons" />

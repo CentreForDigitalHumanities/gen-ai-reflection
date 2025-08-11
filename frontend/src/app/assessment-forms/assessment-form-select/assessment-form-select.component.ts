@@ -29,7 +29,7 @@ export class AssessmentFormSelectComponent implements ControlValueAccessor {
     disabled = false;
 
     writeValue(value: string | null): void {
-        this.value = value;
+        this.value = value === null ? "" : value;
     }
 
     registerOnChange(fn: (value: string | null) => void): void {

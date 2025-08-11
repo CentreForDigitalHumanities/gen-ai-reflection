@@ -4,20 +4,22 @@ import {
     NavButtonsComponent,
 } from "../nav-buttons/nav-buttons.component";
 import { ApiService } from "../services/api.service";
-import { AssessmentForm, FormService } from "../services/form.service";
+import { FormService } from "../services/form.service";
 import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule } from "@angular/forms";
 import { Assessment } from "../shared/types";
 import { expandIn } from "../shared/animations";
 import { AssessmentFormSelectComponent } from "./assessment-form-select/assessment-form-select.component";
 import { IloSelectComponent } from "./ilo-select/ilo-select.component";
+import { faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 @Component({
     selector: "gr-assessment-forms",
     templateUrl: "./assessment-forms.component.html",
     styleUrls: ["./assessment-forms.component.scss"],
     standalone: true,
-    imports: [NavButtonsComponent, CommonModule, ReactiveFormsModule, AssessmentFormSelectComponent, IloSelectComponent],
+    imports: [NavButtonsComponent, CommonModule, ReactiveFormsModule, AssessmentFormSelectComponent, IloSelectComponent, FontAwesomeModule],
     animations: [expandIn],
 })
 export class AssessmentFormsComponent {
@@ -38,6 +40,9 @@ export class AssessmentFormsComponent {
     ];
 
     public form = this.formService.form;
+
+    public faTrash = faTrash;
+    public faPlus = faPlus;
 
     private allAssessmentFormOptions = computed(() => this.apiService.serverData.value()?.assessments ?? []);
 
