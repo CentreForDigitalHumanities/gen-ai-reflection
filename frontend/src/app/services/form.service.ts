@@ -44,7 +44,7 @@ export class FormService {
 
     addNewLearningOutcome(): void {
         // Math.random() is not cryptographically secure, but it suffices
-        // for its current purpose: disambiguation.
+        // for its current purpose of disambiguating forms.
         const newId = Math.random().toString(36).substring(2, 15);
         const newLearningOutcome: LearningOutcomesForm = new FormGroup({
             id: new FormControl<string>(newId, {

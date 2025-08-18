@@ -46,6 +46,10 @@ export class AssessmentFormsComponent {
 
     private allAssessmentFormOptions = computed(() => this.apiService.serverData.value()?.assessments ?? []);
 
+    /**
+     * Returns a filtered list of available assessment options for a given selection index.
+     * Ensures that each assessment option can only be selected once across all form controls.
+     */
     public availableOptionsFor(selectedIndex: number): Assessment[] {
         const allOptions = this.allAssessmentFormOptions();
         const assessmentFormControls = this.form.controls.assessmentForms.controls;
