@@ -14,6 +14,7 @@ type GRForm = FormGroup<{
     department: FormControl<Department | null>;
     learningOutcomes: FormArray<LearningOutcomesForm>;
     assessmentForms: FormArray<AssessmentForm>;
+    chosenAiUses: FormControl<string[]>;
 }>;
 
 export type LearningOutcomesForm = FormGroup<{
@@ -39,6 +40,9 @@ export class FormService {
         department: new FormControl<Department | null>(null),
         learningOutcomes: new FormArray<LearningOutcomesForm>([]),
         assessmentForms: new FormArray<AssessmentForm>([]),
+        chosenAiUses: new FormControl<string[]>([], {
+            nonNullable: true,
+        }),
     });
 
 

@@ -2,10 +2,43 @@
     <h1 i18n>Step 3: Course Integration</h1>
 
     <p i18n>
-        If you are interested to think about how generative AI can be included
-        in your course, we here provide you with some suggestions that can start
-        the thought process about this.
+        Here, you are invited to reconsider exercises or assignments by
+        involving generative AI to various extents. The AI assessment scale that
+        this step is based on, has officially been accepted by the UU as a
+        guiding principle. It helps teachers to think of generative AI in a less
+        binary manner – not as something that is either forbidden or approved,
+        but as a set of tools that can be integrated in academic education to
+        different degrees.
+    </p>
+
+    <p i18n>
+        Click on one of the five scales to find examples of educational
+        exercises or assignments that make use of generative AI to different
+        degrees (scales 2-5) or not at all (scale 1). You can check off examples
+        that you are interested in. These will be included in your final report.
     </p>
 </article>
+
+<section class="px-5 my-4">
+    <gr-ai-scale-select [formControl]="selectedScaleLevel" />
+</section>
+
+<section class="d-flex flex-column">
+    <p i18n>
+        Select the options below that you would like to see in your summary
+        report.
+    </p>
+    @for (example of visibleExamples(); track $index) {
+    <div class="example-item">
+        <!-- <input
+            type="checkbox"
+            [id]="'example-' + $index"
+            [value]="example.text"
+            (change)="onExampleChange($event, example)"
+        /> -->
+        <p>{{ example.text }}</p>
+    </div>
+    }
+</section>
 
 <gr-nav-buttons [navButtons]="navButtons" />
