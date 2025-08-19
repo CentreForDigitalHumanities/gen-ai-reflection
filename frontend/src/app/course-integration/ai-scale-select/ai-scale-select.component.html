@@ -1,0 +1,25 @@
+<div class="d-flex flex-column">
+    <input
+        type="range"
+        class="range-input"
+        min="1"
+        max="5"
+        step="1"
+        [value]="value"
+        (input)="onRangeChange($event)"
+        list="markers"
+    />
+    <datalist id="markers" class="range-labels">
+        @for (rangeItem of rangeItems; track $index) {
+        <div class="option-container">
+            <option
+                class="range-label range-label-{{ $index }}"
+                [class.selected]="value === rangeItem.scaleLevel"
+                value="{{ rangeItem.value }}"
+                label="{{ rangeItem.label }}"
+                (click)="selectValue(rangeItem.scaleLevel)"
+            ></option>
+        </div>
+        }
+    </datalist>
+</div>
