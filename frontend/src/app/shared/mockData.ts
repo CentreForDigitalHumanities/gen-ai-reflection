@@ -1,5 +1,7 @@
 import {
-    Assessment,
+    AiAssessmentScaleLevel,
+    AIUseExample,
+    AssessmentForm,
     Challenges,
     DublinIndicator,
     Opportunities,
@@ -47,7 +49,7 @@ export const mockOpportunities: Opportunities = {
     ],
 };
 
-export const mockAssessments: Assessment[] = [
+export const mockAssessments: AssessmentForm[] = [
     {
         id: "1",
         name: "Individual Paper/thesis",
@@ -121,3 +123,44 @@ export const mockAssessments: Assessment[] = [
         ]
     },
 ];
+
+export const mockAiUseExamples: AIUseExample[] = [{
+    id: "1",
+    scaleLevel: AiAssessmentScaleLevel.NO_AI,
+    text: "Oral report / exam"
+},
+{
+    id: "2",
+    scaleLevel: AiAssessmentScaleLevel.NO_AI,
+    text: "In-class assignments"
+},
+{
+    id: "3",
+    scaleLevel: AiAssessmentScaleLevel.NO_AI,
+    text: "Drawing / hand drawn schemes (in class)"
+},
+{
+    id: "4",
+    scaleLevel: AiAssessmentScaleLevel.AI_PLANNING,
+    text: "Brainstorming exercises with AI: research questions, paper design, arguments pro and contra -> prompt GenAI to generate alternatives and reflect on best ones"
+},
+{
+    id: "5",
+    scaleLevel: AiAssessmentScaleLevel.AI_COLLABORATION,
+    text: "Have GenAI create different versions of the student’s output, for example a public summary, an opinion piece, a script for a podcast, etc."
+},
+{
+    id: "6",
+    scaleLevel: AiAssessmentScaleLevel.FULL_AI,
+    text: "Have GenAI build a program, a website, or have it design a poster or a presentation -> something that we cannot expect our students to do themselves but that creates a new kind of output."
+},
+{
+    id: "7",
+    scaleLevel: AiAssessmentScaleLevel.AI_EXPLORATION,
+    text: "Have GenAI play out historical dialogues, or have it engage in a conversation with you from the perspective of a historical figure. The assignment is in the input (detailed contextual information) rather than on the output."
+},
+{
+    id: "8",
+    scaleLevel: AiAssessmentScaleLevel.AI_EXPLORATION,
+    text: "Reflect on the quality of GenAI’s output by asking it for something that you already know, for example ‘who caused the French Revolution?’ or ‘who started the First World War?’ to query its perspective (bias)."
+}];

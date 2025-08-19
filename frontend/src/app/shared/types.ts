@@ -10,14 +10,29 @@ export type Challenges = Record<DublinIndicator, string[]>;
 
 export type Opportunities = Record<DublinIndicator, string[]>;
 
-export interface Assessment {
+export interface AssessmentForm {
     id: string;
     name: string;
     adjustments: string[];
 }
 
+export enum AiAssessmentScaleLevel {
+    NO_AI = "no AI",
+    AI_PLANNING = "AI planning",
+    AI_COLLABORATION = "AI collaboration",
+    FULL_AI = "full AI",
+    AI_EXPLORATION = "AI exploration"
+}
+
+export interface AIUseExample {
+    id: string;
+    text: string;
+    scaleLevel: AiAssessmentScaleLevel;
+}
+
 export type ApiResponse = {
     challenges: Challenges;
     opportunities: Opportunities;
-    assessments: Assessment[];
+    assessmentForms: AssessmentForm[];
+    aiUseExamples: AIUseExample[];
 };

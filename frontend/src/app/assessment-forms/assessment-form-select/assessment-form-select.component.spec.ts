@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AssessmentFormSelectComponent } from './assessment-form-select.component';
-import { Assessment } from '../../shared/types';
+import { AssessmentForm } from '../../shared/types';
 import { ComponentRef } from '@angular/core';
 
-const mockOptions: Assessment[] = [{
+const mockOptions: AssessmentForm[] = [{
     id: 'assessment-1',
     name: 'Presentation',
     adjustments: ['Adjustment 1', 'Adjustment 2']

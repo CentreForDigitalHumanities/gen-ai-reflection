@@ -1,5 +1,5 @@
 import { Component, forwardRef, input } from '@angular/core';
-import { Assessment } from '../../shared/types';
+import { AssessmentForm } from '../../shared/types';
 import {
     ControlValueAccessor,
     NG_VALUE_ACCESSOR,
@@ -20,7 +20,7 @@ import {
     ],
 })
 export class AssessmentFormSelectComponent implements ControlValueAccessor {
-    public options = input.required<Assessment[]>();
+    public options = input.required<AssessmentForm[]>();
 
     public value: string | null = null;
 

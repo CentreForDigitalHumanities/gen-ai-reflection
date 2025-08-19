@@ -7,11 +7,11 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { NavButtonsComponent } from "../nav-buttons/nav-buttons.component";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { signal } from "@angular/core";
-import { Assessment, Challenges, Opportunities } from "../shared/types";
+import { AssessmentForm, Challenges, Opportunities } from "../shared/types";
 import { provideRouter } from "@angular/router";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
-const mockAssessmentForms: Assessment[] = [
+const mockAssessmentForms: AssessmentForm[] = [
     {
         id: "1",
         name: "Individual Paper/thesis",
