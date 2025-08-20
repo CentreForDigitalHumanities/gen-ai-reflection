@@ -28,17 +28,25 @@
         Select the options below that you would like to see in your summary
         report.
     </p>
-    @for (example of visibleExamples(); track $index) {
-    <div class="example-item">
-        <!-- <input
-            type="checkbox"
-            [id]="'example-' + $index"
-            [value]="example.text"
-            (change)="onExampleChange($event, example)"
-        /> -->
-        <p>{{ example.text }}</p>
+    <div class="list-group example-item-group">
+        @for (example of visibleExamples(); track example.id) {
+        <li class="list-group-item d-flex align-items-center example-item" [class.selected]="chosenAiUses.value.includes(example.id)">
+            <input
+                [id]="'example-' + example.id"
+                type="checkbox"
+                class="form-check-input"
+                [value]="example.id"
+                [checked]="chosenAiUses.value.includes(example.id)"
+                (change)="onExampleChange(example.id)"
+            />
+            <label [for]="'example-' + example.id" class="form-check-label ms-2">
+                {{ example.text }}
+            </label>
+        </li>
+        } @empty {
+            <p i18n>No examples found.</p>
+        }
     </div>
-    }
 </section>
 
 <gr-nav-buttons [navButtons]="navButtons" />

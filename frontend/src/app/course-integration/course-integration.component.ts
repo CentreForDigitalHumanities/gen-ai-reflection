@@ -9,6 +9,7 @@ import { ApiService } from "../services/api.service";
 import { toSignal } from "@angular/core/rxjs-interop";
 import { FormService } from "../services/form.service";
 import { AiScaleSelectComponent } from "./ai-scale-select/ai-scale-select.component";
+import { startWith } from "rxjs";
 
 @Component({
     selector: "gr-course-integration",
@@ -44,7 +45,12 @@ export class CourseIntegrationComponent {
     });
 
     public selectedScaleLevel = new FormControl<AiAssessmentScaleLevel>(AiAssessmentScaleLevel.AI_COLLABORATION);
-    private selectedScaleLevelChanges = toSignal(this.selectedScaleLevel.valueChanges);
+
+    private selectedScaleLevelChanges = toSignal(
+        this.selectedScaleLevel.valueChanges.pipe(
+            startWith(this.selectedScaleLevel.value)
+        )
+    );
 
     public visibleExamples = computed<AIUseExample[]>(() => {
         const selectedRangeValue = this.selectedScaleLevelChanges();
@@ -54,4 +60,12 @@ export class CourseIntegrationComponent {
         }
         return aiUseExamples.filter(example => example.scaleLevel === selectedRangeValue);
     });
+
+    public onExampleChange(id: string): void {
+        if (this.chosenAiUses.value.includes(id)) {
+            this.chosenAiUses.setValue(this.chosenAiUses.value.filter(value => value !== id));
+        } else {
+            this.chosenAiUses.setValue([...this.chosenAiUses.value, id]);
+        }
+    }
 }
