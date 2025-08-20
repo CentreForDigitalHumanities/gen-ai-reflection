@@ -30,7 +30,7 @@ export class AiScaleSelectComponent implements ControlValueAccessor {
         { value: 5, scaleLevel: AiAssessmentScaleLevel.AI_EXPLORATION, label: $localize`AI exploration` }
     ];
 
-    public value = AiAssessmentScaleLevel.AI_COLLABORATION; // Default value is the third item.
+    public value: AiAssessmentScaleLevel | null = null; // Default value is the third item.
 
     onChange: (value: AiAssessmentScaleLevel) => void = () => { };
     onTouched: () => void = () => { };
@@ -52,14 +52,30 @@ export class AiScaleSelectComponent implements ControlValueAccessor {
         this.onChange(value);
     }
 
+
+    /**
+     * Converts an `AiAssessmentScaleLevel` value to its corresponding numeric value.
+     */
+    public scaleLevelToNumber(scaleLevel: AiAssessmentScaleLevel | null): number {
+        const item = this.rangeItems.find(item => item.scaleLevel === scaleLevel);
+        return item ? item.value : 0;
+    }
+
+    /**
+     * Converts a numeric value to its corresponding `AiAssessmentScaleLevel` value.
+     */
+    private numberToScaleLevel(value: number): AiAssessmentScaleLevel | null {
+        const selectedScaleLevel = this.rangeItems.find(item => item.value === value)?.scaleLevel;
+        return selectedScaleLevel ?? null;
+    }
+
     public onRangeChange(event: Event): void {
         const target = event.target as HTMLInputElement;
         const rangeValue = parseInt(target.value, 10);
-        const selectedScaleLevel = this.rangeItems.find(item => item.value === rangeValue)?.scaleLevel;
-        if (!selectedScaleLevel) {
-            return;
+        const selectedScaleLevel = this.numberToScaleLevel(rangeValue);
+        if (selectedScaleLevel) {
+            this.value = selectedScaleLevel;
+            this.onChange(this.value);
         }
-        this.value = selectedScaleLevel;
-        this.onChange(this.value);
     }
 }
