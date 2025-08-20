@@ -7,7 +7,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { NavButtonsComponent } from "../nav-buttons/nav-buttons.component";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { signal } from "@angular/core";
-import { AssessmentForm, Challenges, Opportunities } from "../shared/types";
+import { ApiResponse, AssessmentForm, Challenges, Opportunities } from "../shared/types";
 import { provideRouter } from "@angular/router";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
@@ -47,10 +47,11 @@ describe("AssessmentFormsComponent", () => {
 
     const mockApiService = {
         serverData: {
-            value: signal({
+            value: signal<ApiResponse>({
                 challenges: {} as Challenges,
                 opportunities: {} as Opportunities,
-                assessments: mockAssessmentForms,
+                assessmentForms: mockAssessmentForms,
+                aiUseExamples: []
             }),
         },
     };
@@ -83,10 +84,11 @@ describe("AssessmentFormsComponent", () => {
     });
 
     it("should load assessment form options on init", () => {
-        expect(component['allAssessmentFormOptions']().length).toBe(
+        const options = component['allAssessmentFormOptions']();
+
+        expect(options.length).toBe(
             mockAssessmentForms.length
         );
-        const options = component['allAssessmentFormOptions']();
         expect(options[0].name).toBe(
             mockAssessmentForms[0].name
         );
