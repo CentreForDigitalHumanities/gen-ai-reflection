@@ -1,7 +1,7 @@
 <div class="form-check">
     <input
         #inputEle
-        id="ilo-select-{{ formIndex }}"
+        id="ilo-select-{{ controlId }}"
         class="form-check-input"
         type="checkbox"
         [value]="iloForm.controls.id.value"
@@ -10,7 +10,7 @@
         (change)="onToggle(inputEle.checked)"
     />
     <label
-        for="ilo-select-{{ formIndex }}"
+        for="ilo-select-{{ controlId }}"
         class="form-check-label"
     >
         {{ iloForm.controls.intendedOutcome.value }}
