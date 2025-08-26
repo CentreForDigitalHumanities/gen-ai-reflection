@@ -30,7 +30,8 @@ export class AiScaleSelectComponent implements ControlValueAccessor {
         { value: 5, scaleLevel: AiAssessmentScaleLevel.AI_EXPLORATION, label: $localize`AI exploration` }
     ];
 
-    public value: AiAssessmentScaleLevel | null = null; // Default value is the third item.
+    // Default value is the third item.
+    public value: AiAssessmentScaleLevel = AiAssessmentScaleLevel.AI_COLLABORATION;
 
     onChange: (value: AiAssessmentScaleLevel) => void = () => { };
     onTouched: () => void = () => { };
