@@ -18,7 +18,7 @@ import { LearningOutcomesForm } from '../../services/form.service';
 })
 export class IloSelectComponent implements ControlValueAccessor {
     @Input({ required: true }) iloForm!: LearningOutcomesForm;
-    @Input({ required: true }) formIndex!: number;
+    @Input({ required: true }) controlId!: string;
 
     public value: string[] = [];
     public disabled = false;

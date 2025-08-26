@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row">
             @for (subForm of form.controls.assessmentForms.controls; track
-            $index) {
+            $index) { @let subFormIndex = $index.toString();
             <div class="col-md-6 col-xl-4 g-3">
                 <div class="card rounded-4">
                     <div class="card-body position-relative py-4">
@@ -113,7 +113,7 @@
                                 form.controls.learningOutcomes.controls; track
                                 iloForm.controls.id.value ) {
                                 <gr-ilo-select
-                                    [formIndex]="$index"
+                                    [controlId]="`${subFormIndex}-${$index}`"
                                     [iloForm]="iloForm"
                                     [formControl]="subForm.controls.iloIds"
                                 ></gr-ilo-select>
