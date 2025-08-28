@@ -7,7 +7,7 @@ import {
     provideHttpClient,
     withInterceptorsFromDi,
 } from "@angular/common/http";
-import { ActivatedRoute, provideRouter } from "@angular/router";
+import { ActivatedRoute } from "@angular/router";
 
 describe("AppComponent", () => {
     beforeEach(waitForAsync(() => {
