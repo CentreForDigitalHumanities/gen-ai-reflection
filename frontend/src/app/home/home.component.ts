@@ -1,18 +1,12 @@
 import { NgOptimizedImage } from "@angular/common";
-import { Component, inject } from "@angular/core";
-import { NavigationService, Step } from "../services/navigation.service";
+import { Component } from "@angular/core";
+import { RouterLink } from "@angular/router";
 
 @Component({
     selector: "gr-home",
     templateUrl: "./home.component.html",
     styleUrls: ["./home.component.scss"],
-    imports: [NgOptimizedImage],
+    imports: [NgOptimizedImage, RouterLink],
     standalone: true,
 })
-export class HomeComponent {
-    private navigation = inject(NavigationService);
-
-    public start(): void {
-        this.navigation.navigateTo(Step.Intro);
-    }
-}
+export class HomeComponent {}

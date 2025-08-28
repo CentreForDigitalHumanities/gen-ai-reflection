@@ -7,16 +7,16 @@
     "
 >
     @for (navButton of sorted(); track $index) {
-        <button
-            class="btn btn-secondary"
-            [class]="
-                navButton.direction === 'next'
-                    ? 'btn-arrow-right'
-                    : 'btn-arrow-left'
-            "
-            (click)="navButton.direction === 'next' ? next() : back()"
-        >
-            {{ navButton.label }}
-        </button>
+    <a
+        class="btn btn-secondary"
+        [class]="
+            navButton.direction === 'next'
+                ? 'btn-arrow-right'
+                : 'btn-arrow-left'
+        "
+        [routerLink]="navButton.link"
+    >
+        {{ navButton.label }}
+    </a>
     }
 </div>

@@ -1,20 +1,19 @@
-import { Component, computed, input, inject } from "@angular/core";
-import { NavigationService, Step } from "../services/navigation.service";
+import { Component, computed, input } from "@angular/core";
+import { RouterLink } from "@angular/router";
 
 export interface NavButton {
     label: string;
     direction: "next" | "back";
+    link: string;
 }
 
 @Component({
     selector: "gr-nav-buttons",
-    imports: [],
+    imports: [RouterLink],
     templateUrl: "./nav-buttons.component.html",
     styleUrl: "./nav-buttons.component.scss",
 })
 export class NavButtonsComponent {
-    private navigation = inject(NavigationService);
-
     public navButtons = input<NavButton[]>([]);
 
     // Make sure the buttons are sorted so 'back' comes before 'next'.
@@ -29,12 +28,4 @@ export class NavButtonsComponent {
             return 0;
         });
     });
-
-    public next(): void {
-        this.navigation.navigateForward();
-    }
-
-    public back(): void {
-        this.navigation.navigateBack();
-    }
 }
