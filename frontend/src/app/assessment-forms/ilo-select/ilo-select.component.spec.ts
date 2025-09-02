@@ -25,7 +25,7 @@ describe('IloSelectComponent', () => {
         component = fixture.componentInstance;
 
         component.iloForm = mockIloForm;
-        component.controlId = "0";
+        component.controlId = "test-control";
 
         fixture.detectChanges();
     });

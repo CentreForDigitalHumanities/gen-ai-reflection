@@ -28,7 +28,9 @@ export class IntroComponent {
 
     public form = this.formService.form;
 
-    submitCourseName(event: Event): void {
+    // The user can navigate by hitting Enter (which submits the form)
+    // or by pressing the navigation button.
+    public submitCourseName(event: Event): void {
         event.preventDefault();
         this.router.navigate(["/learning-outcomes"]);
     }
