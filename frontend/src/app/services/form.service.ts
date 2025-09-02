@@ -1,9 +1,18 @@
 import { effect, Injectable } from "@angular/core";
-import { FormArray, FormControl, FormGroup } from "@angular/forms";
+import { FormArray, FormControl, FormGroup, Validators } from "@angular/forms";
 import { DublinIndicator } from "../../types";
 import { toSignal } from "@angular/core/rxjs-interop";
 
+export enum Department {
+    TLC = "TLC",
+    GKG = "GKG",
+    MCW = "MCW",
+    "F&R" = "F&R",
+}
+
 type GRForm = FormGroup<{
+    course: FormControl<string>;
+    department: FormControl<Department | null>;
     learningOutcomes: FormArray<LearningOutcomesForm>;
     assessmentForm: FormControl<string | null>;
     aiUse: FormControl<string | null>;
@@ -19,6 +28,11 @@ type LearningOutcomesForm = FormGroup<{
 })
 export class FormService {
     form: GRForm = new FormGroup({
+        course: new FormControl<string>("", {
+            nonNullable: true,
+            validators: [Validators.required],
+        }),
+        department: new FormControl<Department | null>(null),
         learningOutcomes: new FormArray<LearningOutcomesForm>([
             new FormGroup({
                 intendedOutcome: new FormControl<string>("", {
@@ -33,7 +47,7 @@ export class FormService {
 
     constructor() {
         const assessmentFormChanges = toSignal(
-            this.form.controls.assessmentForm.valueChanges,
+            this.form.controls.assessmentForm.valueChanges
         );
 
         // Side effect: reset aiUse control when assessmentForm changes.

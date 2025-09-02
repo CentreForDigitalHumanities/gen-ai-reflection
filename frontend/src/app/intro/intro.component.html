@@ -38,4 +38,23 @@
     </ul>
 </article>
 
-<gr-nav-buttons [navButtons]="navButtons"></gr-nav-buttons>
+<article>
+    <h3 i18n>Before we begin...</h3>
+    <p i18n>
+        Please provide the name of your course. This will personalize the final
+        report.
+    </p>
+    <form>
+        <label for="course" class="form-label" i18n>Course name</label>
+        <input
+            id="course"
+            type="text"
+            class="form-control"
+            [formControl]="form.controls.course"
+            placeholder="Enter the name of your course..."
+            placeholder-i18n
+        />
+    </form>
+</article>
+
+<gr-nav-buttons [navButtons]="navButtons" />
