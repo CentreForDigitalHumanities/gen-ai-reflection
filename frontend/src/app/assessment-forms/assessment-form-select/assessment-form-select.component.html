@@ -1,0 +1,24 @@
+<div>
+    <label for="assessment-form" class="form-label fw-bold" i18n>
+        Assessment form:
+    </label>
+    <select
+        #selectEle
+        id="assessment-form"
+        class="form-select"
+        [value]="value"
+        [disabled]="disabled"
+        (change)="onSelectionChange(selectEle.value)"
+    >
+        <option value="" disabled selected i18n>
+            Select an assessment form
+        </option>
+        @for (assessmentOption of options(); track assessmentOption.id) {
+        <option [value]="assessmentOption.id">
+            {{ assessmentOption.name }}
+        </option>
+        } @empty {
+        <option value="" disabled i18n>No assessment forms available</option>
+        }
+    </select>
+</div>

@@ -1,7 +1,6 @@
-import { effect, Injectable } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { FormArray, FormControl, FormGroup, Validators } from "@angular/forms";
-import { DublinIndicator } from "../../types";
-import { toSignal } from "@angular/core/rxjs-interop";
+import { DublinIndicator } from "../shared/types";
 
 export enum Department {
     TLC = "TLC",
@@ -11,16 +10,22 @@ export enum Department {
 }
 
 type GRForm = FormGroup<{
-    course: FormControl<string>;
+    course: FormControl<string | null>;
     department: FormControl<Department | null>;
     learningOutcomes: FormArray<LearningOutcomesForm>;
-    assessmentForm: FormControl<string | null>;
-    aiUse: FormControl<string | null>;
+    assessmentForms: FormArray<AssessmentForm>;
 }>;
 
-type LearningOutcomesForm = FormGroup<{
+export type LearningOutcomesForm = FormGroup<{
+    id: FormControl<string>;
     intendedOutcome: FormControl<string>;
     dublinIndicator: FormControl<DublinIndicator | null>;
+}>;
+
+export type AssessmentForm = FormGroup<{
+    assessmentId: FormControl<string | null>;
+    iloIds: FormControl<string[]>;
+    affected: FormControl<boolean | null>;
 }>;
 
 @Injectable({
@@ -28,39 +33,23 @@ type LearningOutcomesForm = FormGroup<{
 })
 export class FormService {
     form: GRForm = new FormGroup({
-        course: new FormControl<string>("", {
-            nonNullable: true,
+        course: new FormControl<string | null>(null, {
             validators: [Validators.required],
         }),
         department: new FormControl<Department | null>(null),
-        learningOutcomes: new FormArray<LearningOutcomesForm>([
-            new FormGroup({
-                intendedOutcome: new FormControl<string>("", {
-                    nonNullable: true,
-                }),
-                dublinIndicator: new FormControl<DublinIndicator | null>(null),
-            }),
-        ]),
-        assessmentForm: new FormControl<string | null>(null),
-        aiUse: new FormControl<string | null>(null),
+        learningOutcomes: new FormArray<LearningOutcomesForm>([]),
+        assessmentForms: new FormArray<AssessmentForm>([]),
     });
 
-    constructor() {
-        const assessmentFormChanges = toSignal(
-            this.form.controls.assessmentForm.valueChanges
-        );
-
-        // Side effect: reset aiUse control when assessmentForm changes.
-        effect(() => {
-            const assessmentFormId = assessmentFormChanges();
-            if (assessmentFormId) {
-                this.form.controls.aiUse.setValue(null);
-            }
-        });
-    }
 
     addNewLearningOutcome(): void {
+        // Math.random() is not cryptographically secure, but it suffices
+        // for its current purpose of disambiguating forms.
+        const newId = Math.random().toString(36).substring(2, 15);
         const newLearningOutcome: LearningOutcomesForm = new FormGroup({
+            id: new FormControl<string>(newId, {
+                nonNullable: true,
+            }),
             intendedOutcome: new FormControl<string>("", {
                 nonNullable: true,
             }),
@@ -69,10 +58,25 @@ export class FormService {
         this.form.controls.learningOutcomes.push(newLearningOutcome);
     }
 
-    removeLearningOutcome(index: number): void {
-        if (this.form.controls.learningOutcomes.length <= 1) {
-            return;
+    removeLearningOutcome(id: string): void {
+        const index = this.form.controls.learningOutcomes.controls.findIndex(control => control.value.id === id);
+        if (index !== -1) {
+            this.form.controls.learningOutcomes.removeAt(index);
         }
-        this.form.controls.learningOutcomes.removeAt(index);
+    }
+
+    addAssessmentForm(): void {
+        const newAssessmentForm: AssessmentForm = new FormGroup({
+            assessmentId: new FormControl<string | null>(null),
+            iloIds: new FormControl<string[]>([], {
+                nonNullable: true,
+            }),
+            affected: new FormControl<boolean | null>(null),
+        });
+        this.form.controls.assessmentForms.push(newAssessmentForm);
+    }
+
+    removeAssessmentForm(index: number): void {
+        this.form.controls.assessmentForms.removeAt(index);
     }
 }

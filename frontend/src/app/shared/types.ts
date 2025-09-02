@@ -10,27 +10,14 @@ export type Challenges = Record<DublinIndicator, string[]>;
 
 export type Opportunities = Record<DublinIndicator, string[]>;
 
-export interface AIUse {
+export interface Assessment {
     id: string;
     name: string;
-    examples: string[];
-}
-
-export type ILOWithAlternatives = {
-    id: string;
-    intendedOutcome: string;
-    alternatives: string[];
-};
-
-export interface AssessmentForm {
-    id: string;
-    name: string;
-    aiUses: AIUse[];
-    iloWithAlternatives: ILOWithAlternatives[];
+    adjustments: string[];
 }
 
 export type ApiResponse = {
     challenges: Challenges;
     opportunities: Opportunities;
-    assessmentForms: AssessmentForm[];
+    assessments: Assessment[];
 };

@@ -44,7 +44,7 @@
         Please provide the name of your course. This will personalize the final
         report.
     </p>
-    <form>
+    <form [formGroup]="form" (ngSubmit)="submitCourseName($event)">
         <label for="course" class="form-label" i18n>Course name</label>
         <input
             id="course"
