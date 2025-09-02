@@ -1,0 +1,24 @@
+@use "sass:color";
+@import "uu-bootstrap/scss/configuration";
+
+.example-item-group {
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.example-item {
+    cursor: pointer;
+    background-color: $white;
+
+    &.selected {
+        background-color: $cream;
+    }
+
+    &:hover {
+        background-color: color.adjust($cream, $lightness: -5%);
+    }
+}
+
+.no-items {
+    cursor: default;
+}

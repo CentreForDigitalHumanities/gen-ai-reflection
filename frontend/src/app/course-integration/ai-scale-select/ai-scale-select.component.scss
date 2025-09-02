@@ -1,0 +1,41 @@
+.range-container {
+    padding: 2rem;
+    margin: auto;
+}
+
+.range-input {
+    cursor: pointer;
+    width: 100%;
+    margin: auto;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+}
+
+.option-container {
+    position: relative;
+    width: 0;
+}
+
+.range-label {
+    position: absolute;
+    width: fit-content;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    transform: translate(-50%, 30%);
+
+    &:hover {
+        transform: translate(-50%, 30%) scale(1.1);
+    }
+
+    &.selected {
+        font-weight: bold;
+        color: var(--bs-secondary-rgb);
+        transform: translate(-50%, 30%) scale(1.2);
+    }
+}

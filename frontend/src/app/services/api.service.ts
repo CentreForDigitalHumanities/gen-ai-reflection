@@ -1,6 +1,7 @@
 import { Injectable, resource } from "@angular/core";
 import { ApiResponse } from "../shared/types";
 import {
+    mockAiUseExamples,
     mockAssessments,
     mockChallenges,
     mockOpportunities,
@@ -17,7 +18,8 @@ export class ApiService {
                 resolve({
                     challenges: mockChallenges,
                     opportunities: mockOpportunities,
-                    assessments: mockAssessments,
+                    assessmentForms: mockAssessments,
+                    aiUseExamples: mockAiUseExamples,
                 });
             }),
     });
