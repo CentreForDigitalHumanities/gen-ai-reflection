@@ -1,4 +1,4 @@
-from os import path
+from os import getcwd, path
 from django.http import HttpRequest, HttpResponse
 from django.contrib.staticfiles import finders
 from django.views.decorators.csrf import ensure_csrf_cookie
@@ -14,8 +14,11 @@ def index(request: HttpRequest):
 
     print("Langage:", language)
     print("Page:", page)
-    print("Location:", location)
-    print("Location two:", finders.find(path.join(language, "index.html")))
+    print("Location 1:", path.join(language, page, "index.html"))
+    print("Location 1 found?:", bool(location))
+    print("Location 2:", path.join(language, "index.html"))
+    print("Location 2 found?:", bool(finders.find(path.join(language, "index.html"))))
+    print('CWD:', getcwd())
 
     if not location:
         location = finders.find(path.join(language, "index.html"))
