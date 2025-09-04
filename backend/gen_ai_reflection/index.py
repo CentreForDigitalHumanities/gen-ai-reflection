@@ -14,15 +14,24 @@ def index(request: HttpRequest):
         path.join("source", "frontend", "dist", "browser", language, page, "index.html")
     )
 
-    print("Langage:", language)
-    print("Page:", page)
-    print("Location 1:", path.join(language, page, "index.html"))
-    print("Location 1 found?:", bool(location))
-    print("Location 2:", path.join(language, "index.html"))
-    print("Location 2 found?:", bool(finders.find(path.join(language, "index.html"))))
-    print("CWD:", getcwd())
-
     if not location:
-        location = finders.find(path.join(language, "index.html"))
+        location = finders.find(
+            path.join("source", "frontend", "dist", "browser", language, "index.html")
+        )
+
+    prerendered_location = path.join(
+        "source", "frontend", "dist", "browser", language, page, "index.html"
+    )
+    general_location = path.join(
+        "source", "frontend", "dist", "browser", language, "index.html"
+    )
+
+    print("Current working directory:", getcwd())
+    print(
+        f"Looking for prerendered location: {prerendered_location} -> Found: {bool(location)}"
+    )
+    print(
+        f"Looking for other location: {general_location} -> Found: {bool(finders.find(general_location))}"
+    )
 
     return HttpResponse(content=open(location))
