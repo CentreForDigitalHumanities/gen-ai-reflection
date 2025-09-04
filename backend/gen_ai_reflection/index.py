@@ -10,7 +10,9 @@ def index(request: HttpRequest):
     language = request.LANGUAGE_CODE
     page = request.path[1:].split("/", 1)[0]
     # pre-rendered version available?
-    location = finders.find(path.join(language, page, "index.html"))
+    location = finders.find(
+        path.join("source", "frontend", "dist", "browser", language, page, "index.html")
+    )
 
     print("Langage:", language)
     print("Page:", page)
@@ -18,7 +20,7 @@ def index(request: HttpRequest):
     print("Location 1 found?:", bool(location))
     print("Location 2:", path.join(language, "index.html"))
     print("Location 2 found?:", bool(finders.find(path.join(language, "index.html"))))
-    print('CWD:', getcwd())
+    print("CWD:", getcwd())
 
     if not location:
         location = finders.find(path.join(language, "index.html"))
