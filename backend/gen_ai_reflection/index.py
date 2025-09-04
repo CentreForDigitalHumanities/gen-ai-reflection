@@ -11,6 +11,12 @@ def index(request: HttpRequest):
     page = request.path[1:].split("/", 1)[0]
     # pre-rendered version available?
     location = finders.find(path.join(language, page, "index.html"))
+
+    print("Langage:", language)
+    print("Page:", page)
+    print("Location:", location)
+    print("Location two:", finders.find(path.join(language, "index.html")))
+
     if not location:
         location = finders.find(path.join(language, "index.html"))
 
