@@ -9,21 +9,24 @@ def index(request: HttpRequest):
     """Thin wrapper for the static index.html that adds the CSRF cookie."""
     language = request.LANGUAGE_CODE
     page = request.path[1:].split("/", 1)[0]
+
+    cwd = getcwd()
+
     # pre-rendered version available?
     location = finders.find(
-        path.join("source", "frontend", "dist", "browser", language, page, "index.html")
+        path.join(cwd, "source", "frontend", "dist", "browser", language, page, "index.html")
     )
 
     if not location:
         location = finders.find(
-            path.join("source", "frontend", "dist", "browser", language, "index.html")
+            path.join(cwd, "source", "frontend", "dist", "browser", language, "index.html")
         )
 
     prerendered_location = path.join(
-        "source", "frontend", "dist", "browser", language, page, "index.html"
+        cwd, "source", "frontend", "dist", "browser", language, page, "index.html"
     )
     general_location = path.join(
-        "source", "frontend", "dist", "browser", language, "index.html"
+        cwd, "source", "frontend", "dist", "browser", language, "index.html"
     )
 
     print("Current working directory:", getcwd())
