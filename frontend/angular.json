@@ -67,6 +67,8 @@
                     },
                     "configurations": {
                         "production": {
+                            "ssr": false,
+                            "prerender": false,
                             "budgets": [
                                 {
                                     "type": "initial",
@@ -83,6 +85,8 @@
                             "sourceMap": true
                         },
                         "development": {
+                            "ssr": false,
+                            "prerender": false,
                             "optimization": false,
                             "extractLicenses": false,
                             "sourceMap": true
