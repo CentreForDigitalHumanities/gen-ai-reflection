@@ -23,9 +23,9 @@ You need to install the following software:
 This project integrates three isolated subprojects, each inside its own subdirectory with its own code, package dependencies and tests:
 
  - **backend**: the server side web application based on [Django][3] and [DRF][4]
- 
+
  - **frontend**: the client side web application based on [Angular](https://angular.io)
- 
+
  - **functional-tests**: the functional test suite based on [Selenium][6] and [pytest][7]
 
 [3]: https://www.djangoproject.com
@@ -44,6 +44,13 @@ First time after cloning this project:
 
 ```console
 $ python bootstrap.py
+```
+
+If you want, load initial data into the database:
+
+```console
+$ cd backend
+$ python manage.py loaddata initial
 ```
 
 Running the application in [development mode][8] (hit ctrl-C to stop):
