@@ -5,6 +5,7 @@ class ChallengeOpportunity(models.Model):
     class Meta:
         verbose_name_plural = "challenges and opportunities"
         verbose_name = "challenge or opportunity"
+        ordering = ("text",)
 
     class DublinIndicator(models.TextChoices):
         KNOWLEDGE_AND_UNDERSTANDING = "knowledge_and_understanding", "Knowledge and Understanding"
@@ -26,6 +27,10 @@ class ChallengeOpportunity(models.Model):
 
 
 class AssessmentForm(models.Model):
+    class Meta:
+        ordering = ("name",)
+
+
     name = models.CharField(max_length=100)
     adjustments = models.ManyToManyField("Adjustment")
 
@@ -34,13 +39,21 @@ class AssessmentForm(models.Model):
 
 
 class Adjustment(models.Model):
-    name = models.CharField(max_length=100)
+    class Meta:
+        ordering = ("order", "text")
+
+    text = models.TextField()
+    order = models.PositiveIntegerField(default=0, help_text="The order in which the adjustments are presented to the user. If multiple adjustments have the same order, they will be presented in alphabetical order.")
 
     def __str__(self):
-        return self.name
+        return self.text
 
 
 class UseExample(models.Model):
+    class Meta:
+        ordering = ("text",)
+
+
     class ScaleLevel(models.TextChoices):
         NO_AI = "no AI", "No AI"
         AI_PLANNING = "AI planning", "AI Planning"

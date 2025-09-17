@@ -17,7 +17,7 @@ def get_challenges_opportunities_per_di(category: ChallengeOpportunity.Category)
 
 @api_view(["GET"])
 def get_data(request: Request) -> Response:
-    assessment_forms_s = AssessmentFormSerializer(AssessmentForm.objects.all(), many=True)
+    assessment_forms_s = AssessmentFormSerializer(AssessmentForm.objects.prefetch_related("adjustments"), many=True)
     use_examples_s = UseExampleSerializer(UseExample.objects.all(), many=True)
 
     return Response({

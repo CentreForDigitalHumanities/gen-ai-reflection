@@ -20,4 +20,5 @@ class UseExampleAdmin(admin.ModelAdmin):
 
 @admin.register(ChallengeOpportunity)
 class ChallengeOpportunityAdmin(admin.ModelAdmin):
-    pass
+    list_display = ("category", "dublin_indicator", "text")
+    ordering = ("category", "dublin_indicator")
