@@ -39,6 +39,7 @@ urlpatterns = [
     path("api-auth", RedirectView.as_view(url="/api-auth/", permanent=True)),
     path("admin/", admin.site.urls),
     path("api/", include(api_router.urls)),
+    path("api/data/", include("formdata.urls")),
     path(
         "api-auth/",
         include(
