@@ -11,7 +11,7 @@ export type Challenges = Record<DublinIndicator, string[]>;
 export type Opportunities = Record<DublinIndicator, string[]>;
 
 export interface AssessmentForm {
-    id: string;
+    id: number;
     name: string;
     adjustments: string[];
 }
@@ -25,9 +25,9 @@ export enum AiAssessmentScaleLevel {
 }
 
 export interface AIUseExample {
-    id: string;
+    id: number;
     text: string;
-    scaleLevel: AiAssessmentScaleLevel;
+    scale_level: AiAssessmentScaleLevel;
 }
 
 export type ApiResponse = {

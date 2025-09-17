@@ -58,7 +58,7 @@ export class AssessmentFormsComponent {
             .map((form, index) => (index === selectedIndex ? null : form.controls.assessmentId.value))
             .filter((value) => value !== null);
 
-        return allOptions.filter(opt => opt.id === currentValue || !selectedIdsExcludingCurrent.includes(opt.id));
+        return allOptions.filter(opt => opt.id.toString() === currentValue || !selectedIdsExcludingCurrent.includes(opt.id.toString()));
     }
 
     public getAdjustments(assessmentId: string | null): string[] {
@@ -66,7 +66,7 @@ export class AssessmentFormsComponent {
             return [];
         }
         const assessmentInfo = this.allAssessmentFormOptions();
-        const adjustments = assessmentInfo.find(assessment => assessment.id === assessmentId)?.adjustments ?? [];
+        const adjustments = assessmentInfo.find(assessment => assessment.id.toString() === assessmentId)?.adjustments ?? [];
         return adjustments;
     }
 

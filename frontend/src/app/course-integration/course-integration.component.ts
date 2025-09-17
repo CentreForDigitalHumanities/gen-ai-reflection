@@ -58,7 +58,7 @@ export class CourseIntegrationComponent {
         if (!selectedRangeValue) {
             return [];
         }
-        return aiUseExamples.filter(example => example.scaleLevel === selectedRangeValue);
+        return aiUseExamples.filter(example => example.scale_level === selectedRangeValue);
     });
 
     public onExampleChange(id: string): void {

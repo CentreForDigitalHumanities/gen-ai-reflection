@@ -11,9 +11,9 @@ import { AiScaleSelectComponent } from './ai-scale-select/ai-scale-select.compon
 
 const mockApiData: ApiResponse = {
     aiUseExamples: [
-        { id: '1', text: 'Example 1', scaleLevel: AiAssessmentScaleLevel.AI_COLLABORATION },
-        { id: '2', text: 'Example 2', scaleLevel: AiAssessmentScaleLevel.AI_PLANNING },
-        { id: '3', text: 'Example 3', scaleLevel: AiAssessmentScaleLevel.AI_COLLABORATION },
+        { id: 1, text: 'Example 1', scale_level: AiAssessmentScaleLevel.AI_COLLABORATION },
+        { id: 2, text: 'Example 2', scale_level: AiAssessmentScaleLevel.AI_PLANNING },
+        { id: 3, text: 'Example 3', scale_level: AiAssessmentScaleLevel.AI_COLLABORATION },
     ],
     challenges: {
         knowledge_and_understanding: [],
@@ -79,7 +79,7 @@ describe('CourseIntegrationComponent', () => {
         component.selectedScaleLevel.setValue(AiAssessmentScaleLevel.AI_COLLABORATION);
         fixture.detectChanges();
         expect(component.visibleExamples().length).toBe(2);
-        expect(component.visibleExamples().every(ex => ex.scaleLevel === AiAssessmentScaleLevel.AI_COLLABORATION)).toBeTrue();
+        expect(component.visibleExamples().every(ex => ex.scale_level === AiAssessmentScaleLevel.AI_COLLABORATION)).toBeTrue();
     });
 
     it('should add an AI use example on change', () => {
