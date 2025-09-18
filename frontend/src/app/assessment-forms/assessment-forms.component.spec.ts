@@ -13,7 +13,7 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 const mockAssessmentForms: AssessmentForm[] = [
     {
-        id: "1",
+        id: 1,
         name: "Individual Paper/thesis",
         adjustments: [
             "Add GenAI statement",
@@ -22,7 +22,7 @@ const mockAssessmentForms: AssessmentForm[] = [
         ]
     },
     {
-        id: "2",
+        id: 2,
         name: "Presentation",
         adjustments: [
             "Stronger focus on Q&A (to test knowledge)",
@@ -31,7 +31,7 @@ const mockAssessmentForms: AssessmentForm[] = [
         ]
     },
     {
-        id: "3",
+        id: 3,
         name: "Group Assignment",
         adjustments: [
             "Individual reflection component",
@@ -110,7 +110,7 @@ describe("AssessmentFormsComponent", () => {
 
             // Check that options for second form don't include "1"
             const optionsForSecond = component.availableOptionsFor(1);
-            const selectedOption = optionsForSecond.find(opt => opt.id === "1");
+            const selectedOption = optionsForSecond.find(opt => opt.id === 1);
             expect(selectedOption).toBeUndefined();
         });
 
@@ -119,7 +119,7 @@ describe("AssessmentFormsComponent", () => {
             component.form.controls.assessmentForms.at(0)?.controls.assessmentId.setValue("1");
 
             const options = component.availableOptionsFor(0);
-            const currentOption = options.find(opt => opt.id === "1");
+            const currentOption = options.find(opt => opt.id === 1);
             expect(currentOption).toBeTruthy();
         });
     });
