@@ -21,7 +21,10 @@
                 "build": {
                     "builder": "@angular/build:application",
                     "options": {
-                        "outputPath": "dist",
+                        "outputPath": {
+                            "base": "dist",
+                            "browser": ""
+                        },
                         "index": "src/index.html",
                         "browser": "src/main.ts",
                         "polyfills": ["zone.js", "@angular/localize/init"],
@@ -64,6 +67,8 @@
                     },
                     "configurations": {
                         "production": {
+                            "ssr": false,
+                            "prerender": false,
                             "budgets": [
                                 {
                                     "type": "initial",
@@ -80,6 +85,8 @@
                             "sourceMap": true
                         },
                         "development": {
+                            "ssr": false,
+                            "prerender": false,
                             "optimization": false,
                             "extractLicenses": false,
                             "sourceMap": true
