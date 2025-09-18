@@ -11,49 +11,7 @@
     <h1 class="title" i18n>Generative AI - A three-step reflection tool</h1>
 
     <h2>🌍 🚀 🌙</h2>
-    @if (languages) {
-        <li class="nav-item" ngbDropdown>
-            <button
-                class="nav-link"
-                ngbDropdownToggle
-                id="language-dropdown-toggle"
-                aria-label="language"
-                i18n-aria-label
-            >
-                @if (loading) {
-                    <span
-                        class="spinner-border spinner-border-sm"
-                    ></span>
-                    <span class="visually-hidden" i18n
-                        >Loading languages...</span
-                    >
-                } @else {
-                    <fa-icon [icon]="faGlobe" aria-hidden="true" />
-                }
-            </button>
-            <div
-                ngbDropdownMenu
-                aria-labelledby="language-dropdown-toggle"
-                class="dropdown-menu dropdown-menu-end"
-            >
-                @for (language of languages; track language) {
-                    <button
-                        ngbDropdownItem
-                        class="navbar-item"
-                        [class.active]="
-                            language.code == currentLanguage
-                        "
-                        [attr.aria-pressed]="
-                            language.code == currentLanguage
-                        "
-                        (click)="setLanguage(language.code)"
-                    >
-                        {{ language.name }}
-                    </button>
-                }
-            </div>
-        </li>
-    }
+
     <p i18n>Select your department to begin</p>
 
     <button
@@ -64,4 +22,13 @@
     >
         GKG
     </button>
+
+    @if (languages && !loading) {
+        <div class="btn-group mt-5" role="group" aria-label="Language selection">
+            @for (language of languages; track language) {
+                <input id="{{ language.code }}" class="btn-check" type="radio" name="language" value="{{ language.code }}" autocomplete="off" [checked]="language.code == currentLanguage" (click)="setLanguage(language.code)">
+                <label class="btn btn-outline-secondary" for="{{ language.code }}" i18n>{{ language.name }}</label>
+            }
+        </div>
+    }
 </div>

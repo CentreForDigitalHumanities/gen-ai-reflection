@@ -71,6 +71,4 @@ export class HomeComponent implements OnInit {
                 document.location.reload();
             });
     }
-
-    protected readonly faGlobe = faGlobe;
 }
