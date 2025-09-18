@@ -61,7 +61,7 @@ export class AssessmentFormsComponent {
         return allOptions.filter(opt => opt.id === currentValue || !selectedIdsExcludingCurrent.includes(opt.id));
     }
 
-    public getAdjustments(assessmentId: string | null): string[] {
+    public getAdjustments(assessmentId: number | null): string[] {
         if (!assessmentId) {
             return [];
         }

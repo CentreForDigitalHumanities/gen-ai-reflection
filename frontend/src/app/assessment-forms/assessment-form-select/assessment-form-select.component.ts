@@ -22,17 +22,17 @@ import {
 export class AssessmentFormSelectComponent implements ControlValueAccessor {
     public options = input.required<AssessmentForm[]>();
 
-    public value: string | null = null;
+    public value: number | null = null;
 
-    onChange: (value: string | null) => void = () => { };
+    onChange: (value: number | null) => void = () => { };
     onTouched: () => void = () => { };
     disabled = false;
 
-    writeValue(value: string | null): void {
-        this.value = value === null ? "" : value;
+    writeValue(value: number | null): void {
+        this.value = value;
     }
 
-    registerOnChange(fn: (value: string | null) => void): void {
+    registerOnChange(fn: (value: number | null) => void): void {
         this.onChange = fn;
     }
 
@@ -44,9 +44,11 @@ export class AssessmentFormSelectComponent implements ControlValueAccessor {
         this.disabled = isDisabled;
     }
 
-    onSelectionChange(selectedValue: string): void {
+    onSelectionChange(selectedValue: number): void {
         this.value = selectedValue;
         this.onChange(selectedValue);
         this.onTouched();
     }
+
+    protected readonly parseInt = parseInt;
 }

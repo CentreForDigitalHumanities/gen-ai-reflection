@@ -1,0 +1,468 @@
+[
+{
+    "model": "formdata.challengeopportunity",
+    "pk": 1,
+    "fields": {
+        "text": "Students may rely on AI-generated content without deep understanding.",
+        "dublin_indicator": "knowledge_and_understanding",
+        "category": "challenge"
+    }
+},
+{
+    "model": "formdata.challengeopportunity",
+    "pk": 2,
+    "fields": {
+        "text": "It can be difficult to distinguish between AI-generated knowledge and own critical thinking.",
+        "dublin_indicator": "knowledge_and_understanding",
+        "category": "challenge"
+    }
+},
+{
+    "model": "formdata.challengeopportunity",
+    "pk": 3,
+    "fields": {
+        "text": "GenAI can apply presented knowledge to problems which reduces students engagement in application.",
+        "dublin_indicator": "applying_knowledge_and_understanding",
+        "category": "challenge"
+    }
+},
+{
+    "model": "formdata.challengeopportunity",
+    "pk": 4,
+    "fields": {
+        "text": "GenAI can make judgements for students.",
+        "dublin_indicator": "making_judgements",
+        "category": "challenge"
+    }
+},
+{
+    "model": "formdata.challengeopportunity",
+    "pk": 5,
+    "fields": {
+        "text": "GenAI reproduces biases that can restrict students' ability to make judgements.",
+        "dublin_indicator": "making_judgements",
+        "category": "challenge"
+    }
+},
+{
+    "model": "formdata.challengeopportunity",
+    "pk": 6,
+    "fields": {
+        "text": "GenAI can improve written communication, thus reduce students' need to develop their own writing skills.",
+        "dublin_indicator": "communication",
+        "category": "challenge"
+    }
+},
+{
+    "model": "formdata.challengeopportunity",
+    "pk": 7,
+    "fields": {
+        "text": "GenAI can homogenize communication styles, thus affecting originality.",
+        "dublin_indicator": "communication",
+        "category": "challenge"
+    }
+},
+{
+    "model": "formdata.challengeopportunity",
+    "pk": 8,
+    "fields": {
+        "text": "Students can become dependent on AI for learning",
+        "dublin_indicator": "lifelong_learning_skills",
+        "category": "challenge"
+    }
+},
+{
+    "model": "formdata.challengeopportunity",
+    "pk": 9,
+    "fields": {
+        "text": "Reliance on AI may affect students' independent study skills.",
+        "dublin_indicator": "lifelong_learning_skills",
+        "category": "challenge"
+    }
+},
+{
+    "model": "formdata.challengeopportunity",
+    "pk": 10,
+    "fields": {
+        "text": "GenAI can help students to explore complex topics faster and increase knowledge.",
+        "dublin_indicator": "knowledge_and_understanding",
+        "category": "opportunity"
+    }
+},
+{
+    "model": "formdata.challengeopportunity",
+    "pk": 11,
+    "fields": {
+        "text": "AI can provide cases to which knowledge is applied.",
+        "dublin_indicator": "applying_knowledge_and_understanding",
+        "category": "opportunity"
+    }
+},
+{
+    "model": "formdata.challengeopportunity",
+    "pk": 12,
+    "fields": {
+        "text": "AI can be used to generate multiple solutions and students reflect on the suitability of these solutions.",
+        "dublin_indicator": "applying_knowledge_and_understanding",
+        "category": "opportunity"
+    }
+},
+{
+    "model": "formdata.challengeopportunity",
+    "pk": 13,
+    "fields": {
+        "text": "We can teach students to critically assess GenAI content and verify sources.",
+        "dublin_indicator": "making_judgements",
+        "category": "opportunity"
+    }
+},
+{
+    "model": "formdata.challengeopportunity",
+    "pk": 14,
+    "fields": {
+        "text": "Students can use GenAI for grammar and style suggestions.",
+        "dublin_indicator": "communication",
+        "category": "opportunity"
+    }
+},
+{
+    "model": "formdata.challengeopportunity",
+    "pk": 15,
+    "fields": {
+        "text": "Students can be trained to analyze GenAI communication and reflect on homogeneity, as well as what they can take from it.",
+        "dublin_indicator": "communication",
+        "category": "opportunity"
+    }
+},
+{
+    "model": "formdata.challengeopportunity",
+    "pk": 16,
+    "fields": {
+        "text": "Students need to learn how to use GenAI responsibly and effectively given the expectations on the labor market.",
+        "dublin_indicator": "lifelong_learning_skills",
+        "category": "opportunity"
+    }
+},
+{
+    "model": "formdata.assessmentform",
+    "pk": 1,
+    "fields": {
+        "name": "Individual paper/thesis",
+        "adjustments": [
+            1,
+            2,
+            3,
+            6,
+            4,
+            9,
+            5,
+            8,
+            7,
+            10
+        ]
+    }
+},
+{
+    "model": "formdata.assessmentform",
+    "pk": 2,
+    "fields": {
+        "name": "Presentation",
+        "adjustments": [
+            3,
+            12,
+            13,
+            6,
+            14,
+            15,
+            11,
+            10
+        ]
+    }
+},
+{
+    "model": "formdata.assessmentform",
+    "pk": 3,
+    "fields": {
+        "name": "Participation",
+        "adjustments": [
+            3,
+            16,
+            11,
+            10
+        ]
+    }
+},
+{
+    "model": "formdata.assessmentform",
+    "pk": 4,
+    "fields": {
+        "name": "Proposal",
+        "adjustments": [
+            1,
+            2,
+            17,
+            9,
+            8,
+            10
+        ]
+    }
+},
+{
+    "model": "formdata.assessmentform",
+    "pk": 5,
+    "fields": {
+        "name": "Group Assignment",
+        "adjustments": [
+            1,
+            19,
+            18,
+            10
+        ]
+    }
+},
+{
+    "model": "formdata.assessmentform",
+    "pk": 6,
+    "fields": {
+        "name": "Internship",
+        "adjustments": [
+            21,
+            9,
+            20,
+            10
+        ]
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 1,
+    "fields": {
+        "text": "Add GenAI statement",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 2,
+    "fields": {
+        "text": "Add portfolio of workflow",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 3,
+    "fields": {
+        "text": "Brainstorming in class, together with peers (e.g., hand in design and stick to it)",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 4,
+    "fields": {
+        "text": "Oral mini-defense (Q&A about the paper)",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 5,
+    "fields": {
+        "text": "Require drafts with comments (throughout the course)",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 6,
+    "fields": {
+        "text": "Literature: library visit in class",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 7,
+    "fields": {
+        "text": "Writing: Prepare at home, write in class",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 8,
+    "fields": {
+        "text": "Rethink 'writing skills', 'working independently'",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 9,
+    "fields": {
+        "text": "Process documentation: reflect on professional and personal learning goals",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 10,
+    "fields": {
+        "text": "If none of these adjustments to the assignment are sufficient, you have to reconsider the type of assignments, and/or critically reflect on whether the ILO needs to be adjusted (for the latter, you can find more information in Step 3 of this tool).",
+        "order": 99
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 11,
+    "fields": {
+        "text": "Stronger focus on Q&A (to test knowledge)",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 12,
+    "fields": {
+        "text": "Improvisation element (e.g. analysis of a chart/quote/object that the teacher brings and the students need to relate to the presentation)",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 13,
+    "fields": {
+        "text": "Interactive presentations (students need to include audience interaction which requires deeper understanding)",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 14,
+    "fields": {
+        "text": "Making the presentation in class",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 15,
+    "fields": {
+        "text": "Rethink 'technical skills', 'working independently'",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 16,
+    "fields": {
+        "text": "(Random) picking of students to lead discussions",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 17,
+    "fields": {
+        "text": "Literature: library visit in class; add report of how literature was found/why literature was selected.",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 18,
+    "fields": {
+        "text": "Process documentation: include reflection of each group member",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 19,
+    "fields": {
+        "text": "Live explanation: groups explain their work live, or as a video.",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 20,
+    "fields": {
+        "text": "Process documentation: (weekly) logbooks",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.adjustment",
+    "pk": 21,
+    "fields": {
+        "text": "Process documentation: reflection on feedback",
+        "order": 0
+    }
+},
+{
+    "model": "formdata.useexample",
+    "pk": 1,
+    "fields": {
+        "scale_level": "no AI",
+        "text": "Oral report / exam"
+    }
+},
+{
+    "model": "formdata.useexample",
+    "pk": 2,
+    "fields": {
+        "scale_level": "no AI",
+        "text": "In-class assignments"
+    }
+},
+{
+    "model": "formdata.useexample",
+    "pk": 3,
+    "fields": {
+        "scale_level": "no AI",
+        "text": "Drawing / hand drawn schemes (in class)"
+    }
+},
+{
+    "model": "formdata.useexample",
+    "pk": 4,
+    "fields": {
+        "scale_level": "AI planning",
+        "text": "Brainstorming exercises with AI: research questions, paper design, arguments pro and contra -> prompt GenAI to generate alternatives and reflect on best ones"
+    }
+},
+{
+    "model": "formdata.useexample",
+    "pk": 5,
+    "fields": {
+        "scale_level": "AI collaboration",
+        "text": "Have GenAI create different versions of the student’s output, for example a public summary, an opinion piece, a script for a podcast, etc."
+    }
+},
+{
+    "model": "formdata.useexample",
+    "pk": 6,
+    "fields": {
+        "scale_level": "full AI",
+        "text": "Have GenAI build a program, a website, or have it design a poster or a presentation -> something that we cannot expect our students to do themselves but that creates a new kind of output."
+    }
+},
+{
+    "model": "formdata.useexample",
+    "pk": 7,
+    "fields": {
+        "scale_level": "AI exploration",
+        "text": "Have GenAI play out historical dialogues, or have it engage in a conversation with you from the perspective of a historical figure. The assignment is in the input (detailed contextual information) rather than on the output."
+    }
+},
+{
+    "model": "formdata.useexample",
+    "pk": 8,
+    "fields": {
+        "scale_level": "AI exploration",
+        "text": "Reflect on the quality of GenAI’s output by asking it for something that you already know, for example ‘who caused the French Revolution?’ or ‘who started the First World War?’ to query its perspective (bias)."
+    }
+}
+]

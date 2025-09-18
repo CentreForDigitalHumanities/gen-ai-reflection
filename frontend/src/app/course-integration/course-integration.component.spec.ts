@@ -11,9 +11,9 @@ import { AiScaleSelectComponent } from './ai-scale-select/ai-scale-select.compon
 
 const mockApiData: ApiResponse = {
     aiUseExamples: [
-        { id: '1', text: 'Example 1', scaleLevel: AiAssessmentScaleLevel.AI_COLLABORATION },
-        { id: '2', text: 'Example 2', scaleLevel: AiAssessmentScaleLevel.AI_PLANNING },
-        { id: '3', text: 'Example 3', scaleLevel: AiAssessmentScaleLevel.AI_COLLABORATION },
+        { id: 1, text: 'Example 1', scaleLevel: AiAssessmentScaleLevel.AI_COLLABORATION },
+        { id: 2, text: 'Example 2', scaleLevel: AiAssessmentScaleLevel.AI_PLANNING },
+        { id: 3, text: 'Example 3', scaleLevel: AiAssessmentScaleLevel.AI_COLLABORATION },
     ],
     challenges: {
         knowledge_and_understanding: [],
@@ -46,7 +46,7 @@ class MockFormService {
         department: new FormControl(null),
         learningOutcomes: new FormArray([]),
         assessmentForms: new FormArray([]),
-        chosenAiUses: new FormControl<string[]>([])
+        chosenAiUses: new FormControl<number[]>([])
     });
 }
 
@@ -83,14 +83,14 @@ describe('CourseIntegrationComponent', () => {
     });
 
     it('should add an AI use example on change', () => {
-        component.onExampleChange('1');
-        expect(formService.form.controls.chosenAiUses.value).toEqual(['1']);
+        component.onExampleChange(1);
+        expect(formService.form.controls.chosenAiUses.value).toEqual([1]);
     });
 
     it('should remove an AI use example on change if it already exists', () => {
-        component.chosenAiUses.setValue(['1', '2']);
-        component.onExampleChange('1');
-        expect(formService.form.controls.chosenAiUses.value).toEqual(['2']);
+        component.chosenAiUses.setValue([1, 2]);
+        component.onExampleChange(1);
+        expect(formService.form.controls.chosenAiUses.value).toEqual([2]);
     });
 
     it('should update the scale level from the AiScaleSelectComponent', () => {

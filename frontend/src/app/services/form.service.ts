@@ -14,7 +14,7 @@ type GRForm = FormGroup<{
     department: FormControl<Department | null>;
     learningOutcomes: FormArray<LearningOutcomesForm>;
     assessmentForms: FormArray<AssessmentForm>;
-    chosenAiUses: FormControl<string[]>;
+    chosenAiUses: FormControl<number[]>;
 }>;
 
 export type LearningOutcomesForm = FormGroup<{
@@ -24,7 +24,7 @@ export type LearningOutcomesForm = FormGroup<{
 }>;
 
 export type AssessmentForm = FormGroup<{
-    assessmentId: FormControl<string | null>;
+    assessmentId: FormControl<number | null>;
     iloIds: FormControl<string[]>;
     affected: FormControl<boolean | null>;
 }>;
@@ -40,7 +40,7 @@ export class FormService {
         department: new FormControl<Department | null>(null),
         learningOutcomes: new FormArray<LearningOutcomesForm>([]),
         assessmentForms: new FormArray<AssessmentForm>([]),
-        chosenAiUses: new FormControl<string[]>([], {
+        chosenAiUses: new FormControl<number[]>([], {
             nonNullable: true,
         }),
     });
@@ -71,7 +71,7 @@ export class FormService {
 
     addAssessmentForm(): void {
         const newAssessmentForm: AssessmentForm = new FormGroup({
-            assessmentId: new FormControl<string | null>(null),
+            assessmentId: new FormControl<number | null>(null),
             iloIds: new FormControl<string[]>([], {
                 nonNullable: true,
             }),

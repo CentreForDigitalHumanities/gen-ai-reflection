@@ -1,26 +1,10 @@
-import { Injectable, resource } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { ApiResponse } from "../shared/types";
-import {
-    mockAiUseExamples,
-    mockAssessments,
-    mockChallenges,
-    mockOpportunities,
-} from "../shared/mockData";
+import { httpResource } from "@angular/common/http";
 
 @Injectable({
     providedIn: "root",
 })
 export class ApiService {
-    serverData = resource<ApiResponse, undefined>({
-        // TODO: Replace with actual API call.
-        loader: () =>
-            new Promise<ApiResponse>((resolve) => {
-                resolve({
-                    challenges: mockChallenges,
-                    opportunities: mockOpportunities,
-                    assessmentForms: mockAssessments,
-                    aiUseExamples: mockAiUseExamples,
-                });
-            }),
-    });
+    serverData = httpResource<ApiResponse>(() => `/api/data/`);
 }

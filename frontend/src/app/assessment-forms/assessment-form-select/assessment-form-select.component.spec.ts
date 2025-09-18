@@ -5,11 +5,11 @@ import { AssessmentForm } from '../../shared/types';
 import { ComponentRef } from '@angular/core';
 
 const mockOptions: AssessmentForm[] = [{
-    id: 'assessment-1',
+    id: 1,
     name: 'Presentation',
     adjustments: ['Adjustment 1', 'Adjustment 2']
 }, {
-    id: 'assessment-2',
+    id: 2,
     name: 'Report',
     adjustments: ['Adjustment 3', 'Adjustment 4']
 }];

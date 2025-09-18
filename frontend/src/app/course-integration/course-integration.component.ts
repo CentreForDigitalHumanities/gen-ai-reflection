@@ -61,7 +61,7 @@ export class CourseIntegrationComponent {
         return aiUseExamples.filter(example => example.scaleLevel === selectedRangeValue);
     });
 
-    public onExampleChange(id: string): void {
+    public onExampleChange(id: number): void {
         if (this.chosenAiUses.value.includes(id)) {
             this.chosenAiUses.setValue(this.chosenAiUses.value.filter(value => value !== id));
         } else {
