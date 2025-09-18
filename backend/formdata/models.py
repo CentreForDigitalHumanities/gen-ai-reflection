@@ -23,7 +23,7 @@ class ChallengeOpportunity(models.Model):
     category = models.CharField(max_length=50, choices=Category)
 
     def __str__(self):
-        return f"{self.get_category_display()}: {self.text}"
+        return f"{self.get_category_display()}: {self.text}"  # type: ignore  # automatic method
 
 
 class AssessmentForm(models.Model):
