@@ -106,7 +106,7 @@ describe("AssessmentFormsComponent", () => {
             component.addAssessmentForm();
 
             // Set the first form to use assessment "1"
-            component.form.controls.assessmentForms.at(0)?.controls.assessmentId.setValue("1");
+            component.form.controls.assessmentForms.at(0)?.controls.assessmentId.setValue(1);
 
             // Check that options for second form don't include "1"
             const optionsForSecond = component.availableOptionsFor(1);
@@ -116,7 +116,7 @@ describe("AssessmentFormsComponent", () => {
 
         it("should include current selection in available options", () => {
             component.addAssessmentForm();
-            component.form.controls.assessmentForms.at(0)?.controls.assessmentId.setValue("1");
+            component.form.controls.assessmentForms.at(0)?.controls.assessmentId.setValue(1);
 
             const options = component.availableOptionsFor(0);
             const currentOption = options.find(opt => opt.id === 1);
@@ -131,12 +131,12 @@ describe("AssessmentFormsComponent", () => {
         });
 
         it("should return adjustments for valid assessmentId", () => {
-            const adjustments = component.getAdjustments("1");
+            const adjustments = component.getAdjustments(1);
             expect(adjustments).toEqual(mockAssessmentForms[0].adjustments);
         });
 
         it("should return empty array for non-existent assessmentId", () => {
-            const adjustments = component.getAdjustments("non-existent");
+            const adjustments = component.getAdjustments(100);
             expect(adjustments).toEqual([]);
         });
     });

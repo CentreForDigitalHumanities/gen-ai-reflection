@@ -30,14 +30,14 @@
     </p>
     <div class="list-group example-item-group">
         @for (example of visibleExamples(); track example.id) {
-        <li class="list-group-item d-flex align-items-center example-item" [class.selected]="chosenAiUses.value.includes(example.id.toString())">
+        <li class="list-group-item d-flex align-items-center example-item" [class.selected]="chosenAiUses.value.includes(example.id)">
             <input
                 [id]="'example-' + example.id"
                 type="checkbox"
                 class="form-check-input"
                 [value]="example.id"
-                [checked]="chosenAiUses.value.includes(example.id.toString())"
-                (change)="onExampleChange(example.id.toString())"
+                [checked]="chosenAiUses.value.includes(example.id)"
+                (change)="onExampleChange(example.id)"
             />
             <label [for]="'example-' + example.id" class="form-check-label ms-2 w-100">
                 {{ example.text }}
