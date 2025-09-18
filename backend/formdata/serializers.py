@@ -13,6 +13,8 @@ class AssessmentFormSerializer(serializers.ModelSerializer):
 
 
 class UseExampleSerializer(serializers.ModelSerializer):
+    scaleLevel = serializers.ReadOnlyField(source="scale_level")
+
     class Meta:
         model = UseExample
-        fields = "__all__"
+        fields = ("text", "scaleLevel")

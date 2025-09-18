@@ -27,7 +27,7 @@ export enum AiAssessmentScaleLevel {
 export interface AIUseExample {
     id: number;
     text: string;
-    scale_level: AiAssessmentScaleLevel;
+    scaleLevel: AiAssessmentScaleLevel;
 }
 
 export type ApiResponse = {
