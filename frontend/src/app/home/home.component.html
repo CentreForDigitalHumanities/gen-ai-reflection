@@ -25,7 +25,7 @@
 
     @if (languages && !loading) {
         <div class="btn-group mt-5" role="group" aria-label="Language selection">
-            @for (language of languages; track language) {
+            @for (language of languages; track language.code) {
                 <input id="{{ language.code }}" class="btn-check" type="radio" name="language" value="{{ language.code }}" autocomplete="off" [checked]="language.code == currentLanguage" (click)="setLanguage(language.code)">
                 <label class="btn btn-outline-secondary" for="{{ language.code }}" i18n>{{ language.name }}</label>
             }
