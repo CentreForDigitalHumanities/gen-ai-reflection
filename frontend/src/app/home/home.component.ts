@@ -51,7 +51,9 @@ export class HomeComponent implements OnInit {
         // allow switching even when the current locale is different
         // this should really only be the case in development:
         // then the instance is only running in a single language
-        this.languageService.languageInfo$.pipe().subscribe((languageInfo) => {
+        this.languageService.languageInfo$
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe((languageInfo) => {
             this.currentLanguage = languageInfo.current || this.localeId;
             this.languages = languageInfo.supported;
         });
