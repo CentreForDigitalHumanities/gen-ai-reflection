@@ -25,49 +25,6 @@
                 <li class="nav-item">
                     <gr-dark-mode-toggle role="listitem" class="nav-item" />
                 </li>
-                @if (languages) {
-                    <li class="nav-item" ngbDropdown>
-                        <button
-                            class="nav-link"
-                            ngbDropdownToggle
-                            id="language-dropdown-toggle"
-                            aria-label="language"
-                            i18n-aria-label
-                        >
-                            @if (loading) {
-                                <span
-                                    class="spinner-border spinner-border-sm"
-                                ></span>
-                                <span class="visually-hidden" i18n
-                                    >Loading languages...</span
-                                >
-                            } @else {
-                                <fa-icon [icon]="faGlobe" aria-hidden="true" />
-                            }
-                        </button>
-                        <div
-                            ngbDropdownMenu
-                            aria-labelledby="language-dropdown-toggle"
-                            class="dropdown-menu dropdown-menu-end"
-                        >
-                            @for (language of languages; track language) {
-                                <button
-                                    ngbDropdownItem
-                                    class="navbar-item"
-                                    [class.active]="
-                                        language.code == currentLanguage
-                                    "
-                                    [attr.aria-pressed]="
-                                        language.code == currentLanguage
-                                    "
-                                    (click)="setLanguage(language.code)"
-                                >
-                                    {{ language.name }}
-                                </button>
-                            }
-                        </div>
-                    </li>
-                }
             </ul>
         </div>
     </div>
