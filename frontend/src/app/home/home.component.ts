@@ -5,21 +5,12 @@ import { Department, FormService } from "../services/form.service";
 import { ReactiveFormsModule } from "@angular/forms";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { LanguageInfo, LanguageService } from "../services/language.service";
-import { FaIconComponent } from "@fortawesome/angular-fontawesome";
-import {
-    NgbDropdown,
-    NgbDropdownButtonItem,
-    NgbDropdownItem,
-    NgbDropdownMenu,
-    NgbDropdownToggle
-} from "@ng-bootstrap/ng-bootstrap";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
     selector: "gr-home",
     templateUrl: "./home.component.html",
     styleUrls: ["./home.component.scss"],
-    imports: [NgOptimizedImage, ReactiveFormsModule, FaIconComponent, NgbDropdown, NgbDropdownButtonItem, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle],
+    imports: [NgOptimizedImage, ReactiveFormsModule],
     standalone: true,
 })
 export class HomeComponent implements OnInit {
