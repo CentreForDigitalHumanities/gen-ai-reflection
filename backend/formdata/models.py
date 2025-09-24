@@ -53,7 +53,6 @@ class UseExample(models.Model):
     class Meta:
         ordering = ("text",)
 
-
     class ScaleLevel(models.TextChoices):
         NO_AI = "no AI", "No AI"
         AI_PLANNING = "AI planning", "AI Planning"

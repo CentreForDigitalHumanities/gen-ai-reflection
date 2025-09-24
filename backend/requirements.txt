@@ -10,9 +10,12 @@ django==5.2.6
     # via
     #   -r requirements.in
     #   django-livereload-server
+    #   django-modeltranslation
     #   django-revproxy
     #   djangorestframework
 django-livereload-server==0.5.1
+    # via -r requirements.in
+django-modeltranslation==0.19.17
     # via -r requirements.in
 django-revproxy==0.13.0
     # via -r requirements.in
