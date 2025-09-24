@@ -1,5 +1,5 @@
 INSTALLED_APPS = [
-    "modeltranslation",
+    "modeltranslation",  # Before admin as suggested in the docs
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
