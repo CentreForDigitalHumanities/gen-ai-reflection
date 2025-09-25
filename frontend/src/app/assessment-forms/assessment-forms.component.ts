@@ -7,7 +7,6 @@ import { ApiService } from "../services/api.service";
 import { FormService } from "../services/form.service";
 import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule } from "@angular/forms";
-import { AssessmentForm } from "../shared/types";
 import { expandIn } from "../shared/animations";
 import { AssessmentFormSelectComponent } from "./assessment-form-select/assessment-form-select.component";
 import { IloSelectComponent } from "./ilo-select/ilo-select.component";
@@ -44,22 +43,7 @@ export class AssessmentFormsComponent {
     public faTrash = faTrash;
     public faPlus = faPlus;
 
-    private allAssessmentFormOptions = computed(() => this.apiService.serverData.value()?.assessmentForms ?? []);
-
-    /**
-     * Returns a filtered list of available assessment options for a given selection index.
-     * Ensures that each assessment option can only be selected once across all form controls.
-     */
-    public availableOptionsFor(selectedIndex: number): AssessmentForm[] {
-        const allOptions = this.allAssessmentFormOptions();
-        const assessmentFormControls = this.form.controls.assessmentForms.controls;
-        const currentValue = assessmentFormControls[selectedIndex]?.controls.assessmentId.value;
-        const selectedIdsExcludingCurrent = assessmentFormControls
-            .map((form, index) => (index === selectedIndex ? null : form.controls.assessmentId.value))
-            .filter((value) => value !== null);
-
-        return allOptions.filter(opt => opt.id === currentValue || !selectedIdsExcludingCurrent.includes(opt.id));
-    }
+    public allAssessmentFormOptions = computed(() => this.apiService.serverData.value()?.assessmentForms ?? []);
 
     public getAdjustments(assessmentId: number | null): string[] {
         if (!assessmentId) {
@@ -67,7 +51,7 @@ export class AssessmentFormsComponent {
         }
         const assessmentInfo = this.allAssessmentFormOptions();
         const adjustments = assessmentInfo.find(assessment => assessment.id === assessmentId)?.adjustments ?? [];
-        return adjustments;
+        return adjustments.map(adj => adj.text);
     }
 
     public addAssessmentForm = this.formService.addAssessmentForm;
