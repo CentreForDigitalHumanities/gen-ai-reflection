@@ -1,0 +1,28 @@
+<div class="mt-4">
+    <label class="form-label fw-bold" i18n>
+        Known AI Uses for this assessment form
+    </label>
+    <div ngbAccordion>
+        @for (aiUse of knownAiUses(); track aiUse.id) {
+        <div ngbAccordionItem>
+            <div ngbAccordionHeader>
+                <button ngbAccordionButton>{{ aiUse.text }}</button>
+            </div>
+            <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                    <ng-template>
+                        <p class="text-muted" i18n>
+                            Examples for this known use of GenAI:
+                        </p>
+                        <ul>
+                            @for (example of aiUse.examples; track example.id) {
+                            <li>{{ example.text }}</li>
+                            }
+                        </ul>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>

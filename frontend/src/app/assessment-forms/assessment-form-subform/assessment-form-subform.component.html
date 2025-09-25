@@ -1,0 +1,109 @@
+@let form = subForm();
+<div class="card rounded-4">
+    <div class="card-body position-relative py-4">
+        <div class="remove-button-wrapper">
+            <button
+                class="btn btn-sm btn-outline-danger"
+                type="button"
+                (click)="removeForm.emit()"
+                aria-labelledby="remove-assessment-form"
+                title="Remove assessment form"
+                title-i18n
+            >
+                <fa-icon
+                    [icon]="faTrash"
+                    aria-hidden="true"
+                    focusable="false"
+                ></fa-icon>
+                <span id="remove-assessment-form" class="visually-hidden" i18n>
+                    Remove assessment form
+                </span>
+            </button>
+        </div>
+        <form [formGroup]="form">
+            <gr-assessment-form-select
+                [options]="allAssessmentFormOptions()"
+                [formControl]="form.controls.assessmentId"
+            />
+            @if (form.controls.assessmentId.value; as assId) {
+            <gr-known-uses-examples [assessmentFormId]="assId" />
+
+            <div [@expandIn] class="animated-row mt-4">
+                <label class="form-label fw-bold" i18n>
+                    Which ILOs are tested with this assessment? Select one or
+                    multiple.
+                </label>
+                <gr-ilo-select
+                    [subFormId]="subFormId()"
+                    [formControl]="form.controls.iloIds"
+                />
+            </div>
+            } @if (form.controls.iloIds.value.length > 0) {
+            <div class="mt-4">
+                <label
+                    for="affected-true-{{ subFormId() }}"
+                    class="form-label fw-bold"
+                    i18n
+                >
+                    Does the use of GenAI in the assignment assessment affect
+                    the extent to which {form.controls.iloIds.value.length,
+                    plural, =1 {this learning goal} other {these learning
+                    goals}} can be tested?
+                </label>
+                <div class="form-check">
+                    <input
+                        id="affected-true-{{ subFormId() }}"
+                        class="form-check-input"
+                        type="radio"
+                        name="affected-{{ subFormId() }}"
+                        [value]="true"
+                        [formControl]="form.controls.affected"
+                    />
+                    <label
+                        for="affected-true-{{ subFormId() }}"
+                        class="form-check-label"
+                        i18n
+                    >
+                        Yes
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input
+                        id="affected-false-{{ subFormId() }}"
+                        class="form-check-input"
+                        type="radio"
+                        name="affected-{{ subFormId() }}"
+                        [value]="false"
+                        [formControl]="form.controls.affected"
+                    />
+                    <label
+                        for="affected-false-{{ subFormId() }}"
+                        class="form-check-label"
+                        i18n
+                    >
+                        No
+                    </label>
+                </div>
+            </div>
+            } @if (form.controls.affected.value === true) {
+            <div class="mt-4">
+                <p class="fw-bold" i18n>Suggested adjustments</p>
+                <ul>
+                    @for (adjustment of
+                    getAdjustments(form.controls.assessmentId.value); track
+                    $index) {
+                    <li>
+                        {{ adjustment }}
+                    </li>
+                    } @empty {
+                    <p class="text-muted" i18n>
+                        No adjustments available. Select an assessment form
+                        first.
+                    </p>
+                    }
+                </ul>
+            </div>
+            }
+        </form>
+    </div>
+</div>

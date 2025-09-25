@@ -21,7 +21,7 @@ interface KnownAiUseExample {
     text: string;
 }
 
-interface KnownAiUse {
+export interface KnownAiUse {
     id: number;
     text: string;
     examples: KnownAiUseExample[];
