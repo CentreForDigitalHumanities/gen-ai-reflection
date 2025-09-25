@@ -2,6 +2,7 @@
     <label class="form-label fw-bold" i18n>
         Known AI Uses for this assessment form
     </label>
+    <p class="text-muted" i18n>Click the bars below to see examples of ways in which students may use GenAI for this assessment form.</p>
     <div ngbAccordion>
         @for (aiUse of knownAiUses(); track aiUse.id) {
         <div ngbAccordionItem>
@@ -11,9 +12,6 @@
             <div ngbAccordionCollapse>
                 <div ngbAccordionBody>
                     <ng-template>
-                        <p class="text-muted" i18n>
-                            Examples for this known use of GenAI:
-                        </p>
                         <ul>
                             @for (example of aiUse.examples; track example.id) {
                             <li>{{ example.text }}</li>
