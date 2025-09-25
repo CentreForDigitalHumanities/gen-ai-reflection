@@ -28,12 +28,9 @@ def get_challenges_opportunities_per_di(
 @api_view(["GET"])
 def get_data(request: Request) -> Response:
     assessment_forms_s = AssessmentFormSerializer(
-        AssessmentForm.objects.prefetch_related("adjustments"), many=True
+        AssessmentForm.objects.prefetch_related("adjustments", "known_ai_uses"), many=True
     )
     use_examples_s = UseExampleSerializer(UseExample.objects.all(), many=True)
-    known_ai_uses_s = KnownAiUseSerializer(
-        KnownAiUse.objects.prefetch_related("examples"), many=True
-    )
 
     return Response(
         {
@@ -44,7 +41,6 @@ def get_data(request: Request) -> Response:
             ),
             "opportunities": get_challenges_opportunities_per_di(
                 ChallengeOpportunity.Category.OPPORTUNITY
-            ),
-            "knownAiUses": known_ai_uses_s.data,
+            )
         }
     )
