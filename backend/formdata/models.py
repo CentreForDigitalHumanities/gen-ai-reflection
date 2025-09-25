@@ -8,11 +8,20 @@ class ChallengeOpportunity(models.Model):
         ordering = ("text",)
 
     class DublinIndicator(models.TextChoices):
-        KNOWLEDGE_AND_UNDERSTANDING = "knowledge_and_understanding", "Knowledge and Understanding"
-        APPLYING_KNOWLEDGE_AND_UNDERSTANDING = "applying_knowledge_and_understanding", "Applying Knowledge and Understanding"
+        KNOWLEDGE_AND_UNDERSTANDING = (
+            "knowledge_and_understanding",
+            "Knowledge and Understanding",
+        )
+        APPLYING_KNOWLEDGE_AND_UNDERSTANDING = (
+            "applying_knowledge_and_understanding",
+            "Applying Knowledge and Understanding",
+        )
         MAKING_JUDGEMENTS = "making_judgements", "Making Judgements"
         COMMUNICATION = "communication", "Communication"
-        LIFELONG_LEARNING_SKILLS = "lifelong_learning_skills", "Lifelong Learning Skills"
+        LIFELONG_LEARNING_SKILLS = (
+            "lifelong_learning_skills",
+            "Lifelong Learning Skills",
+        )
 
     class Category(models.TextChoices):
         CHALLENGE = "challenge", "Challenge"
@@ -30,7 +39,6 @@ class AssessmentForm(models.Model):
     class Meta:
         ordering = ("name",)
 
-
     name = models.CharField(max_length=100)
     adjustments = models.ManyToManyField("Adjustment")
 
@@ -43,7 +51,10 @@ class Adjustment(models.Model):
         ordering = ("order", "text")
 
     text = models.TextField()
-    order = models.PositiveIntegerField(default=0, help_text="The order in which the adjustments are presented to the user. If multiple adjustments have the same order, they will be presented in alphabetical order.")
+    order = models.PositiveIntegerField(
+        default=0,
+        help_text="The order in which the adjustments are presented to the user. If multiple adjustments have the same order, they will be presented in alphabetical order.",
+    )
 
     def __str__(self):
         return self.text
@@ -65,3 +76,34 @@ class UseExample(models.Model):
 
     def __str__(self):
         return f"{self.text} ({self.get_scale_level_display()})"
+
+
+class KnownAiUse(models.Model):
+    class Meta:
+        ordering = ("text",)
+
+    assessment_forms = models.ManyToManyField(
+        AssessmentForm,
+        related_name="known_ai_uses",
+        blank=True,
+    )
+
+    text = models.TextField()
+
+    def __str__(self):
+        return f"{self.text}"
+
+
+class KnownAiUseExample(models.Model):
+    class Meta:
+        ordering = ("text",)
+
+    text = models.TextField()
+    ai_use = models.ForeignKey(
+        KnownAiUse,
+        on_delete=models.CASCADE,
+        related_name="examples",
+    )
+
+    def __str__(self):
+        return f"{self.text} ({self.ai_use})"
