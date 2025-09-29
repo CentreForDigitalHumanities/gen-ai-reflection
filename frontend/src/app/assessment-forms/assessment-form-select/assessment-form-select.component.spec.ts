@@ -7,11 +7,25 @@ import { ComponentRef } from '@angular/core';
 const mockOptions: AssessmentForm[] = [{
     id: 1,
     name: 'Presentation',
-    adjustments: ['Adjustment 1', 'Adjustment 2']
+    adjustments: [{
+        id: 1,
+        text: 'Adjustment 1',
+        order: 1
+    }, {
+        id: 2,
+        text: 'Adjustment 2',
+        order: 2
+    }],
+    knownAiUses: []
 }, {
     id: 2,
     name: 'Report',
-    adjustments: ['Adjustment 3', 'Adjustment 4']
+    adjustments: [{
+        id: 3,
+        text: 'Adjustment 3',
+        order: 1
+    }],
+    knownAiUses: []
 }];
 
 describe('AssessmentFormSelectComponent', () => {
@@ -35,4 +49,15 @@ describe('AssessmentFormSelectComponent', () => {
     it('should create', () => {
         expect(component).toBeTruthy();
     });
+
+    it("should load assessment form options on init", () => {
+    const options = component.options();
+
+    expect(options.length).toBe(
+        mockOptions.length
+    );
+    expect(options[0].name).toBe(
+        mockOptions[0].name
+    );
+});
 });
