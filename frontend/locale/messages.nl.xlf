@@ -4,7 +4,7 @@
     <body>
       <trans-unit id="1409585916089173371" datatype="html">
         <source>toggle navigation</source>
-        <target state="translated">toon/verberg navigatei</target>
+        <target state="translated">toon/verberg navigatie</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/menu/menu.component.html</context>
           <context context-type="linenumber">12</context>
@@ -36,7 +36,7 @@
       </trans-unit>
       <trans-unit id="5417042396026061851" datatype="html">
         <source>GenAI Reflection</source>
-        <target state="translated">GenAI Reflection</target>
+        <target state="translated">GenAI Reflectietool</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/footer/footer.component.html</context>
           <context context-type="linenumber">5</context>
@@ -363,7 +363,7 @@
       </trans-unit>
       <trans-unit id="8082396782637148201" datatype="html">
         <source> Which ILOs are tested with this assessment? Select one or multiple. </source>
-        <target state="translated"> Welke ILO's worden met deze beoordelingsvorm getoetst? Kies er een of meerdere. </target>
+        <target state="translated"> Welke leerdoelen (ILO's) worden met deze beoordelingsvorm getoetst? Kies er een of meerdere. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
           <context context-type="linenumber">33</context>
@@ -371,7 +371,7 @@
       </trans-unit>
       <trans-unit id="4762309552061348454" datatype="html">
         <source> Does the use of GenAI in the assignment assessment affect the extent to which <x id="ICU" equiv-text="{form.controls.iloIds.value.length, plural, =1 {this learning goal} other {these learning goals}}" xid="4899223999601784590"/> can be tested? </source>
-        <target state="translated"> Beïnvloedt het gebruik van GenAI in de beoordeling de mate waarin <x id="ICU" equiv-text="{form.controls.iloIds.value.length, plural, =1 {this learning goal} other {these learning goals}}" xid="4899223999601784590"/> onderzocht kunnen worden? </target>
+        <target state="translated"> Beïnvloedt het gebruik van generatieve AI in de beoordeling de mate waarin <x id="ICU" equiv-text="{form.controls.iloIds.value.length, plural, =1 {this learning goal} other {these learning goals}}" xid="4899223999601784590"/> onderzocht kunnen worden? </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
           <context context-type="linenumber">48</context>
@@ -390,7 +390,7 @@
         <target state="translated"> Ja </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
-          <context context-type="linenumber">67</context>
+          <context context-type="linenumber">72</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3603720768157919481" datatype="html">
@@ -398,7 +398,7 @@
         <target state="translated"> Nee </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
-          <context context-type="linenumber">84</context>
+          <context context-type="linenumber">89</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4492261562664451801" datatype="html">
@@ -406,7 +406,7 @@
         <target state="translated">Voorgestelde aanpassingen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
-          <context context-type="linenumber">90</context>
+          <context context-type="linenumber">95</context>
         </context-group>
       </trans-unit>
       <trans-unit id="631938289599141900" datatype="html">
@@ -414,23 +414,23 @@
         <target state="translated"> Geen aanpassingen beschikbaar. Kies eerst een beoordelingsvorm uit de lijst. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
-          <context context-type="linenumber">100</context>
+          <context context-type="linenumber">105</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3284381017849042813" datatype="html">
         <source> Known AI Uses for this assessment form </source>
-        <target state="translated"> Bekende gebruikswijzen GenAI voor deze beoordelingsvorm </target>
+        <target state="translated"> Bekende gebruikswijzen generatieve AI voor deze beoordelingsvorm </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/known-uses-examples/known-uses-examples.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3976357022167710323" datatype="html">
-        <source>Click the bars below to see examples of ways in which students may use GenAI for this assessment form.</source>
-        <target state="translated">Klik op de balken hieronder om manieren te zien waarop studenten GenAI voor deze beoordelingsvorm kunnen gebruiken.</target>
+      <trans-unit id="2391158681990264844" datatype="html">
+        <source> Click the bars below to see examples of ways in which students may use GenAI for this assessment form. </source>
+        <target state="translated"> Klik op de balken hieronder om manieren te zien waarop studenten generatieve AI voor deze beoordelingsvorm kunnen gebruiken. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/known-uses-examples/known-uses-examples.component.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2390145448604379785" datatype="html">
@@ -443,7 +443,7 @@
       </trans-unit>
       <trans-unit id="2892507142791346084" datatype="html">
         <source> In this step, you will receive information on how students can make use of GenAI for the assessment forms in your course. </source>
-        <target state="translated"> In deze stap vind je meer informatie over hoe studenten GenAI kunnen gebruiken voor de beoordelingsvormen in je cursus. </target>
+        <target state="translated"> In deze stap vind je meer informatie over hoe studenten generatieve AI kunnen gebruiken voor de beoordelingsvormen in je cursus. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-forms.component.html</context>
           <context context-type="linenumber">5</context>
@@ -451,7 +451,7 @@
       </trans-unit>
       <trans-unit id="3159786391493979652" datatype="html">
         <source> After adding an assessment form, you decide whether the use of GenAI is a problem in this context, based on the ILOs that are tested. If you consider the use of GenAI in the assessment a problem, the tool suggests alternatives. </source>
-        <target state="translated"> Na het toevoegen van een beoordelingsvorm kun je aangeven of het gebruik van GenAI, gelet op de ILO's die hiermee getest worden, in deze context problematisch is. Als je het gebruik van GenAI problematisch voor de beoordeling problematisch acht, biedt de tool een aantal alternatieven. </target>
+        <target state="translated"> Na het toevoegen van een beoordelingsvorm kun je aangeven of het gebruik van generatieve AI, gelet op de leerdoelen die hiermee getest worden, in deze context problematisch is. Als je het gebruik van generatieve AI problematisch voor de beoordeling problematisch acht, biedt de tool een aantal alternatieven. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-forms.component.html</context>
           <context context-type="linenumber">10</context>
@@ -489,12 +489,12 @@
           <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5485300311962562554" datatype="html">
-        <source>No ILOs available. Add some in the previous step.</source>
-        <target state="translated">Geen ILO's beschikbaar. Voeg er een of meerdere toe in de vorige stap.</target>
+      <trans-unit id="816856833027805630" datatype="html">
+        <source> No ILOs available. Add some in the previous step. </source>
+        <target state="translated"> Geen leerdoelen beschikbaar. Voeg er een of meerdere toe in de vorige stap. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/ilo-select/ilo-select.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5210440752261349241" datatype="html">
@@ -547,7 +547,7 @@
       </trans-unit>
       <trans-unit id="5744320452103348341" datatype="html">
         <source> Here, you are invited to reconsider exercises or assignments by involving generative AI to various extents. The AI assessment scale that this step is based on, has officially been accepted by the UU as a guiding principle. It helps teachers to think of generative AI in a less binary manner – not as something that is either forbidden or approved, but as a set of tools that can be integrated in academic education to different degrees. </source>
-        <target state="translated"> Je wordt hier uitgenodigd om oefeningen en opdrachten te heroverwegen door generatieve AI op verschillende wijzen toe te passen. De AI assessment-schaal waar deze stap op gebaseerd is, wordt officieel door de UU als leidraad gebruikt. Deze helpt docenten om in met meer nuance over generatieve AI na te denken – niet als iets wat alleen verboden of toegestaan is, maar als een verzameling gereedschappen die in  wisselende mate in academisch onderwijs geïntegreerd kunnen worden. </target>
+        <target state="translated"> Je wordt hier uitgenodigd om oefeningen en opdrachten te heroverwegen door generatieve AI op verschillende wijzen toe te passen. De AI assessment-schaal waar deze stap op gebaseerd is, wordt officieel door de UU als leidraad gebruikt. Deze helpt docenten om in met meer nuance over generatieve AI na te denken – niet als iets wat alleen verboden of toegestaan is, maar als een verzameling gereedschappen die in wisselende mate in academisch onderwijs geïntegreerd kunnen worden. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
           <context context-type="linenumber">5</context>
@@ -621,7 +621,7 @@
         <source>
           <x id="INTERPOLATION" equiv-text="{{ language.name }}"/>
         </source>
-        <target state="new">
+        <target state="translated">
           <x id="INTERPOLATION" equiv-text="{{ language.name }}"/>
         </target>
         <context-group purpose="location">
@@ -779,7 +779,7 @@
       </trans-unit>
       <trans-unit id="9144113132734081787" datatype="html">
         <source> For each ILO you enter, please select the Dublin Descriptor that best aligns. </source>
-        <target state="translated"> Selecteer voor ieder toegevoegd leerdoel (ILO) de Dublin-descriptor die er het beste bij past. </target>
+        <target state="translated"> Selecteer voor ieder beoogd leerdoel de Dublin-descriptor die er het beste bij past. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">25</context>
@@ -791,14 +791,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">34</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="9127069262674785487" datatype="html">
-        <source>Dublin Indicator</source>
-        <target state="translated">Dublin-indicator</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
-          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3193976279273491157" datatype="html">
@@ -895,6 +887,22 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.ts</context>
           <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7968185656343036730" datatype="html">
+        <source> Here you need to evaluate whether you can still test the ILO with the chosen assignment. Take into account that students can and may use GenAI. </source>
+        <target state="translated"> Hier kun je aangeven of je het behalen van de leerdoelen nog steeds kunt toetsen met deze beoordelingsvorm. Houd er rekening mee dat studenten generatieve AI kunnen en zullen gebruiken. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7470156777004815375" datatype="html">
+        <source>Dublin Descriptor</source>
+        <target state="translated">Dublin-descriptor</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
     </body>
