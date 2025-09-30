@@ -51,13 +51,13 @@ describe('AssessmentFormSelectComponent', () => {
     });
 
     it("should load assessment form options on init", () => {
-    const options = component.options();
+        const options = component.options();
 
-    expect(options.length).toBe(
-        mockOptions.length
-    );
-    expect(options[0].name).toBe(
-        mockOptions[0].name
-    );
-});
+        expect(options.length).toBe(
+            mockOptions.length
+        );
+        expect(options[0].name).toBe(
+            mockOptions[0].name
+        );
+    });
 });
