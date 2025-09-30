@@ -8,9 +8,9 @@
         class="form-select"
         [value]="value"
         [disabled]="disabled"
-        (change)="onSelectionChange(parseInt(selectEle.value))"
+        (change)="onSelectionChange(selectEle.value)"
     >
-        <option value="null" disabled selected i18n>
+        <option value="" disabled selected i18n>
             Select an assessment form
         </option>
         @for (assessmentOption of options(); track assessmentOption.id) {

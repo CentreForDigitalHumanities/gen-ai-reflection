@@ -92,6 +92,8 @@
                             "sourceMap": true
                         },
                         "nl": {
+                            "ssr": false,
+                            "prerender": false,
                             "localize": ["nl"]
                         }
                     },
