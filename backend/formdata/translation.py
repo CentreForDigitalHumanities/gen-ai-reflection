@@ -22,3 +22,13 @@ class ChallengeOpportunityTranslationOptions(TranslationOptions):
 @register(models.Adjustment)
 class AdjustmentTranslationOptions(TranslationOptions):
     fields = ("text",)
+
+
+@register(models.KnownAiUse)
+class KnownAiUseTranslationOptions(TranslationOptions):
+    fields = ("text",)
+
+
+@register(models.KnownAiUseExample)
+class KnownAiUseExampleTranslationOptions(TranslationOptions):
+    fields = ("text",)

@@ -1,11 +1,14 @@
-import { Component, Input, forwardRef } from '@angular/core';
+import { Component, DestroyRef, Input, forwardRef, inject, input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
-import { LearningOutcomesForm } from '../../services/form.service';
+import { FormService, LearningOutcomesForm } from '../../services/form.service';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { map, startWith } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'gr-ilo-select',
     standalone: true,
-    imports: [ReactiveFormsModule],
+    imports: [ReactiveFormsModule, CommonModule],
     templateUrl: './ilo-select.component.html',
     styleUrl: './ilo-select.component.scss',
     providers: [
@@ -17,11 +20,19 @@ import { LearningOutcomesForm } from '../../services/form.service';
     ],
 })
 export class IloSelectComponent implements ControlValueAccessor {
-    @Input({ required: true }) iloForm!: LearningOutcomesForm;
-    @Input({ required: true }) controlId!: string;
+    private formService = inject(FormService);
+    private destroy = inject(DestroyRef);
+
+    readonly subFormId = input.required<string>();
 
     public value: string[] = [];
     public disabled = false;
+
+    public iloValues$ = this.formService.form.valueChanges.pipe(
+        startWith(this.formService.form.value),
+        map(() => this.formService.form.getRawValue().learningOutcomes),
+        takeUntilDestroyed(this.destroy)
+    );
 
     onChange: (value: string[]) => void = () => { };
     onTouched: () => void = () => { };
@@ -42,21 +53,15 @@ export class IloSelectComponent implements ControlValueAccessor {
         this.disabled = isDisabled;
     }
 
-    onToggle(checked: boolean): void {
-        const iloId = this.iloForm.controls.id.value;
+    onToggle(id: string): void {
         const current = this.value ?? [];
-        let next: string[];
-        if (checked) {
-            next = current.includes(iloId) ? current : [...current, iloId];
-        } else {
-            next = current.filter(id => id !== iloId);
-        }
+        const next = current.includes(id) ? current.filter(iloId => iloId !== id) : [...current, id];
         this.value = next;
         this.onChange(this.value);
         this.onTouched();
     }
 
-    isChecked(): boolean {
-        return this.value?.includes(this.iloForm.controls.id.value) ?? false;
+    isChecked(id: string): boolean {
+        return this.value?.includes(id) ?? false;
     }
 }

@@ -10,10 +10,28 @@ export type Challenges = Record<DublinIndicator, string[]>;
 
 export type Opportunities = Record<DublinIndicator, string[]>;
 
+interface Adjustment {
+    id: number;
+    text: string;
+    order: number;
+}
+
+interface KnownAiUseExample {
+    id: number;
+    text: string;
+}
+
+export interface KnownAiUse {
+    id: number;
+    text: string;
+    examples: KnownAiUseExample[];
+}
+
 export interface AssessmentForm {
     id: number;
     name: string;
-    adjustments: string[];
+    adjustments: Adjustment[];
+    knownAiUses: KnownAiUse[];
 }
 
 export enum AiAssessmentScaleLevel {

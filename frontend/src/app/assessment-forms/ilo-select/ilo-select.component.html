@@ -1,18 +1,23 @@
+@for (ilo of iloValues$ | async; track ilo.id) {
 <div class="form-check">
     <input
-        #inputEle
-        id="ilo-select-{{ controlId }}"
+        id="ilo-select-{{ ilo.id }}-{{ subFormId() }}"
         class="form-check-input"
         type="checkbox"
-        [value]="iloForm.controls.id.value"
-        [checked]="isChecked()"
+        [value]="ilo.id"
+        [checked]="isChecked(ilo.id)"
         [disabled]="disabled"
-        (change)="onToggle(inputEle.checked)"
+        (change)="onToggle(ilo.id)"
     />
     <label
-        for="ilo-select-{{ controlId }}"
+        for="ilo-select-{{ ilo.id }}-{{ subFormId() }}"
         class="form-check-label"
     >
-        {{ iloForm.controls.intendedOutcome.value }}
+        {{ ilo.intendedOutcome }}
     </label>
 </div>
+} @empty {
+<p class="text-muted small" i18n>
+    No ILOs available. Add some in the previous step.
+</p>
+}

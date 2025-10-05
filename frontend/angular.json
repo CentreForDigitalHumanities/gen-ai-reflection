@@ -92,6 +92,8 @@
                             "sourceMap": true
                         },
                         "nl": {
+                            "ssr": false,
+                            "prerender": false,
                             "localize": ["nl"]
                         }
                     },
@@ -118,11 +120,15 @@
                 "extract-i18n": {
                     "builder": "ng-extract-i18n-merge:ng-extract-i18n-merge",
                     "options": {
-                        "buildTarget": "gen-ai-reflection:build",
-                        "format": "xlf",
-                        "outputPath": "locale",
-                        "includeContext": true,
-                        "targetFiles": ["messages.nl.xlf"]
+                      "buildTarget": "gen-ai-reflection:build",
+                      "format": "xlf",
+                      "outputPath": "locale",
+                      "includeContext": true,
+                      "targetFiles": [
+                        "messages.nl.xlf"
+                      ],
+                      "prettyNestedTags": true,
+                      "sort": "stableAppendNew"
                     }
                 },
                 "test": {
