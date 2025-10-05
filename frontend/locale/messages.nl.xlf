@@ -459,7 +459,7 @@
       </trans-unit>
       <trans-unit id="1789779892365619975" datatype="html">
         <source> Next, pick one or more intended learning outcomes that are assessed in this way and whose assessment could be affected by the use of GenAI. </source>
-        <target state="translated"> Kies vervolgens een of meerdere leerdoelen die op deze manier beoordeeld worden en wier beoordeling door het gebruik van GenAI zou kunnen worden. </target>
+        <target state="translated"> Kies vervolgens een of meerdere leerdoelen die op deze manier beoordeeld worden en waarvan de beoordeling door het gebruik van GenAI beïnvloed zou kunnen worden. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-forms.component.html</context>
           <context context-type="linenumber">17</context>
@@ -547,7 +547,7 @@
       </trans-unit>
       <trans-unit id="5744320452103348341" datatype="html">
         <source> Here, you are invited to reconsider exercises or assignments by involving generative AI to various extents. The AI assessment scale that this step is based on, has officially been accepted by the UU as a guiding principle. It helps teachers to think of generative AI in a less binary manner – not as something that is either forbidden or approved, but as a set of tools that can be integrated in academic education to different degrees. </source>
-        <target state="translated"> Je wordt hier uitgenodigd om oefeningen en opdrachten te heroverwegen door generatieve AI op verschillende wijzen toe te passen. De AI assessment-schaal waar deze stap op gebaseerd is, wordt officieel door de UU als leidraad gebruikt. Deze helpt docenten om in met meer nuance over generatieve AI na te denken – niet als iets wat alleen verboden of toegestaan is, maar als een verzameling gereedschappen die in wisselende mate in academisch onderwijs geïntegreerd kunnen worden. </target>
+        <target state="translated"> Je wordt hier uitgenodigd om oefeningen en opdrachten te heroverwegen door generatieve AI op verschillende wijzen toe te passen. De AI assessment-schaal waar deze stap op gebaseerd is, wordt officieel door de UU als leidraad gebruikt. Deze helpt docenten om met meer nuance over generatieve AI na te denken – niet als iets wat alleen verboden of toegestaan is, maar als een verzameling gereedschappen die in wisselende mate in universitair onderwijs geïntegreerd kunnen worden. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
           <context context-type="linenumber">5</context>
