@@ -68,7 +68,7 @@
       </trans-unit>
       <trans-unit id="dateFormat" datatype="html">
         <source>MMMM dd, yyyy</source>
-        <target state="translated">MMMM dd, jjjj</target>
+        <target state="translated">MMMM dd, yyyy</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/footer/footer.component.ts</context>
           <context context-type="linenumber">25</context>
@@ -903,6 +903,30 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4288258189522495536" datatype="html">
+        <source>Remove assessment form</source>
+        <target state="translated">Verwijder beoordelingsvorm</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2904406081442218041" datatype="html">
+        <source>Add assessment form</source>
+        <target state="translated">Voeg beoordelingsvorm toe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/assessment-forms/assessment-forms.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2732756422945227425" datatype="html">
+        <source>Enter the name of your course...</source>
+        <target state="translated">Voer de naam van je cursus in...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/intro/intro.component.html</context>
+          <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
     </body>
