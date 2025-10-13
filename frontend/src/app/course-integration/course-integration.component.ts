@@ -10,13 +10,14 @@ import { toSignal } from "@angular/core/rxjs-interop";
 import { FormService } from "../services/form.service";
 import { AiScaleSelectComponent } from "./ai-scale-select/ai-scale-select.component";
 import { startWith } from "rxjs";
+import { NgOptimizedImage } from "@angular/common";
 
 @Component({
     selector: "gr-course-integration",
     templateUrl: "./course-integration.component.html",
     styleUrls: ["./course-integration.component.scss"],
     standalone: true,
-    imports: [NavButtonsComponent, ReactiveFormsModule, AiScaleSelectComponent],
+    imports: [NavButtonsComponent, ReactiveFormsModule, AiScaleSelectComponent, NgOptimizedImage],
 })
 export class CourseIntegrationComponent {
     private apiService = inject(ApiService);
@@ -34,6 +35,8 @@ export class CourseIntegrationComponent {
             link: "/summary",
         },
     ];
+
+    public showLightbox = false;
 
     public chosenAiUses = this.formService.form.controls.chosenAiUses;
 
@@ -67,5 +70,13 @@ export class CourseIntegrationComponent {
         } else {
             this.chosenAiUses.setValue([...this.chosenAiUses.value, id]);
         }
+    }
+
+    public openLightbox(): void {
+        this.showLightbox = true;
+    }
+
+    public closeLightbox(): void {
+        this.showLightbox = false;
     }
 }

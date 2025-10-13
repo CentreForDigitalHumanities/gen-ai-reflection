@@ -20,13 +20,18 @@
         developed by Perkins et al. (2024).
     </p>
 
-    <figure class="d-flex flex-column align-items-center justify-content-center my-4">
+    <figure
+        class="d-flex flex-column align-items-center justify-content-center my-4"
+    >
         <img
-            class="w-50"
-            src="../../assets/ai-assessment-scale.png"
+            class="img-fluid rounded w-50 small-ai-scale-image"
+            ngSrc="../../assets/ai-assessment-scale-small.png"
             alt="AI Assessment Scale"
+            (click)="openLightbox()"
+            width="600"
+            height="420"
         />
-        <figcaption><i>AI Assessment Scale (click to enlarge)</i></figcaption>
+        <figcaption class="fst-italic small mt-2" i18n>AI Assessment Scale (click to enlarge)</figcaption>
     </figure>
 
     <p i18n>
@@ -43,7 +48,7 @@
 
 <section class="d-flex flex-column">
     <p i18n>
-        Select the options below that you would like to see in your summary
+        Select the options below that you would like to include in your summary
         report.
     </p>
     <div class="list-group example-item-group">
@@ -81,24 +86,54 @@
 
     <ul>
         <li>
+            <span class="me-2" i18n>UU AI policy (general page):</span>
             <a
                 href="https://www.uu.nl/en/organisation/ai-policy"
                 target="_blank"
                 i18n-href="url"
                 i18n="display text"
                 >https://www.uu.nl/en/organisation/ai-policy</a
-            ><span class="ms-2" i18n>UU AI policy (general page)</span>
+            >
         </li>
         <li>
+            <span class="me-2" i18n>AI index (for teachers):</span>
             <a
                 href="https://www.uu.nl/en/organisation/ai-policy/teachers/for-teachers/ai-index"
                 target="_blank"
                 i18n-href="url"
                 i18n="display text"
                 >https://www.uu.nl/en/organisation/ai-policy/teachers/for-teachers/ai-index</a
-            ><span class="ms-2" i18n>AI index (for teachers)</span>
+            >
         </li>
     </ul>
 </section>
 
 <gr-nav-buttons [navButtons]="navButtons" />
+
+@if (showLightbox) {
+<div class="modal fade show d-block" tabindex="-1" (click)="closeLightbox()">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div
+            class="modal-content bg-transparent border-0"
+            (click)="$event.stopPropagation()"
+        >
+            <div class="modal-header border-0" (click)="closeLightbox()">
+                <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    (click)="closeLightbox()"
+                    aria-label="Close"
+                    i18n-aria-label
+                ></button>
+            </div>
+            <div class="modal-body text-center">
+                <img
+                    src="../../assets/ai-assessment-scale.png"
+                    alt="AI Assessment Scale"
+                    class="img-fluid"
+                />
+            </div>
+        </div>
+    </div>
+</div>
+}
