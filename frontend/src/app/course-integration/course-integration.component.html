@@ -12,9 +12,27 @@
     </p>
 
     <p i18n>
-        Click on one of the five scales to find examples of educational
+        Below you will find a scale with five levels of AI integration, based on
+        the
+        <a href="https://aiassessmentscale.com/" target="_blank"
+            >AI Assessment Scale (AIAS)</a
+        >
+        developed by Perkins et al. (2024).
+    </p>
+
+    <figure class="d-flex flex-column align-items-center justify-content-center my-4">
+        <img
+            class="w-50"
+            src="../../assets/ai-assessment-scale.png"
+            alt="AI Assessment Scale"
+        />
+        <figcaption><i>AI Assessment Scale (click to enlarge)</i></figcaption>
+    </figure>
+
+    <p i18n>
+        Click on one of the five levels to find examples of educational
         exercises or assignments that make use of generative AI to different
-        degrees (scales 2-5) or not at all (scale 1). You can check off examples
+        degrees (levels 2-5) or not at all (level 1). You can check off examples
         that you are interested in. These will be included in your final report.
     </p>
 </article>
@@ -30,7 +48,10 @@
     </p>
     <div class="list-group example-item-group">
         @for (example of visibleExamples(); track example.id) {
-        <li class="list-group-item d-flex align-items-center example-item" [class.selected]="chosenAiUses.value.includes(example.id)">
+        <li
+            class="list-group-item d-flex align-items-center example-item"
+            [class.selected]="chosenAiUses.value.includes(example.id)"
+        >
             <input
                 [id]="'example-' + example.id"
                 type="checkbox"
@@ -39,14 +60,45 @@
                 [checked]="chosenAiUses.value.includes(example.id)"
                 (change)="onExampleChange(example.id)"
             />
-            <label [for]="'example-' + example.id" class="form-check-label ms-2 w-100">
+            <label
+                [for]="'example-' + example.id"
+                class="form-check-label ms-2 w-100"
+            >
                 {{ example.text }}
             </label>
         </li>
         } @empty {
-            <p i18n>No examples found.</p>
+        <p i18n>No examples found.</p>
         }
     </div>
+</section>
+
+<section class="my-4">
+    <p i18n>
+        Additional information regarding the university policy on generative AI
+        can be found here. (Links will open in a new tab.)
+    </p>
+
+    <ul>
+        <li>
+            <a
+                href="https://www.uu.nl/en/organisation/ai-policy"
+                target="_blank"
+                i18n-href="url"
+                i18n="display text"
+                >https://www.uu.nl/en/organisation/ai-policy</a
+            ><span class="ms-2" i18n>UU AI policy (general page)</span>
+        </li>
+        <li>
+            <a
+                href="https://www.uu.nl/en/organisation/ai-policy/teachers/for-teachers/ai-index"
+                target="_blank"
+                i18n-href="url"
+                i18n="display text"
+                >https://www.uu.nl/en/organisation/ai-policy/teachers/for-teachers/ai-index</a
+            ><span class="ms-2" i18n>AI index (for teachers)</span>
+        </li>
+    </ul>
 </section>
 
 <gr-nav-buttons [navButtons]="navButtons" />
