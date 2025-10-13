@@ -319,18 +319,18 @@
           <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1678047304962618668" datatype="html">
-        <source> Click on one of the five scales to find examples of educational exercises or assignments that make use of generative AI to different degrees (scales 2-5) or not at all (scale 1). You can check off examples that you are interested in. These will be included in your final report. </source>
+      <trans-unit id="4947044279123895575" datatype="html">
+        <source> Click on one of the five levels to find examples of educational exercises or assignments that make use of generative AI to different degrees (levels 2-5) or not at all (level 1). You can check off examples that you are interested in. These will be included in your final report. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1707384110772691733" datatype="html">
         <source>Go to Summary</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.ts</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1789779892365619975" datatype="html">
@@ -531,11 +531,11 @@
           <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4852667757446424555" datatype="html">
-        <source> Select the options below that you would like to see in your summary report. </source>
+      <trans-unit id="4444957576059484849" datatype="html">
+        <source> Select the options below that you would like to include in your summary report. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4861926948802653243" datatype="html">
@@ -668,7 +668,7 @@
         <source>No examples found.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">70</context>
+          <context context-type="linenumber">76</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6831199969097106617" datatype="html">
@@ -693,7 +693,7 @@
         <source>Back to Step 2</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.ts</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7402787924748680728" datatype="html">
@@ -815,32 +815,25 @@
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2966570603081872500" datatype="html">
-        <source>AI index (for teachers)</source>
+      <trans-unit id="7485339708545160201" datatype="html">
+        <source>AI index (for teachers):</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">98</context>
+          <context context-type="linenumber">99</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4012265924696718914" datatype="html">
         <source> Additional information regarding the university policy on generative AI can be found here. (Links will open in a new tab.) </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">77</context>
+          <context context-type="linenumber">83</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6602102412374651397" datatype="html">
-        <source>UU AI policy (general page)</source>
+      <trans-unit id="8258051070099547441" datatype="html">
+        <source>UU AI policy (general page):</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
           <context context-type="linenumber">89</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3133251835791334632" datatype="html">
-        <source> Below you will find a scale with five levels of AI integration, based on the AI Assessment Scale (AIAS) developed by Perkins et al. (2024). More information can be found here (will open in a new tab). <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://aiassessmentscale.com/&quot; target=&quot;_blank&quot;&gt;"/> https://aiassessmentscale.com/ <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8803732224958530078" datatype="html">
@@ -848,11 +841,11 @@
         <note priority="1" from="description">url</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">84</context>
+          <context context-type="linenumber">91</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">88</context>
+          <context context-type="linenumber">95</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8819475970509465689" datatype="html">
@@ -860,11 +853,32 @@
         <note priority="1" from="description">url</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">93</context>
+          <context context-type="linenumber">101</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">97</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7819314041543176992" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7943574911756256975" datatype="html">
+        <source>AI Assessment Scale (click to enlarge)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6431857416550248523" datatype="html">
+        <source> Below you will find a scale with five levels of AI integration in educational assessments, based on the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://aiassessmentscale.com/&quot; target=&quot;_blank&quot; &gt;"/>AI Assessment Scale (AIAS)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a &gt;"/> developed by Perkins et al. (2024). </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
     </body>
