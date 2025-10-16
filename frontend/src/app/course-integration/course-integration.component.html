@@ -22,6 +22,7 @@
 
     <figure
         class="d-flex flex-column align-items-center justify-content-center my-4"
+        role="group"
     >
         <img
             tabindex="0"
@@ -35,7 +36,9 @@
             width="600"
             height="420"
         />
-        <figcaption class="fst-italic small mt-2" i18n>AI Assessment Scale (click to enlarge)</figcaption>
+        <figcaption class="fst-italic small mt-2" i18n>
+            AI Assessment Scale (click to enlarge)
+        </figcaption>
     </figure>
 
     <p i18n>
@@ -131,11 +134,26 @@
                 ></button>
             </div>
             <div class="modal-body text-center">
-                <img
-                    src="../../assets/ai-assessment-scale.png"
-                    alt="AI Assessment Scale"
-                    class="img-fluid"
-                />
+                <figure role="group">
+                    <img
+                        src="../../assets/ai-assessment-scale.png"
+                        alt="AI Assessment Scale"
+                        class="img-fluid"
+                    />
+                    <figcaption
+                        class="d-flex flex-column lightbox-caption mt-0 justify-content-center align-items-center"
+                    >
+                        <a
+                            href="https://aiassessmentscale.com/"
+                            target="_blank"
+                        >
+                            <span i18n>AI Assessment Scale (AIAS)</span>
+                        </a>
+                        <span class="ms-2 fst-italic" i18n
+                            >(Link will open in a new tab.)</span
+                        >
+                    </figcaption>
+                </figure>
             </div>
         </div>
     </div>
