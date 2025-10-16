@@ -1,4 +1,4 @@
-import { Component, computed, HostListener, inject } from "@angular/core";
+import { Component, computed, effect, ElementRef, HostListener, inject, viewChild } from "@angular/core";
 import { FormControl, ReactiveFormsModule } from "@angular/forms";
 import {
     NavButton,
@@ -22,6 +22,8 @@ import { NgOptimizedImage } from "@angular/common";
 export class CourseIntegrationComponent {
     private apiService = inject(ApiService);
     private formService = inject(FormService);
+
+    private closeButton = viewChild<ElementRef>('closeButton');
 
     public navButtons: NavButton[] = [
         {
@@ -70,6 +72,15 @@ export class CourseIntegrationComponent {
         }
         return aiUseExamples.filter(example => example.scaleLevel === selectedRangeValue);
     });
+
+    // Focus the close button as soon as the lightbox enters the DOM.
+    constructor() {
+        effect(() => {
+            if (this.showLightbox) {
+                this.closeButton()?.nativeElement.focus();
+            }
+        })
+    }
 
     public onExampleChange(id: number): void {
         if (this.chosenAiUses.value.includes(id)) {
