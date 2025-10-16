@@ -24,10 +24,14 @@
         class="d-flex flex-column align-items-center justify-content-center my-4"
     >
         <img
+            tabindex="0"
             class="img-fluid rounded w-50 small-ai-scale-image"
             ngSrc="../../assets/ai-assessment-scale-small.png"
             alt="AI Assessment Scale"
             (click)="openLightbox()"
+            (keydown.enter)="openLightbox()"
+            (keydown.space)="$event.preventDefault(); openLightbox()"
+            role="button"
             width="600"
             height="420"
         />

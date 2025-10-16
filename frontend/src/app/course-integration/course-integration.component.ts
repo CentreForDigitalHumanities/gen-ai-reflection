@@ -1,4 +1,4 @@
-import { Component, computed, inject } from "@angular/core";
+import { Component, computed, HostListener, inject } from "@angular/core";
 import { FormControl, ReactiveFormsModule } from "@angular/forms";
 import {
     NavButton,
@@ -35,6 +35,13 @@ export class CourseIntegrationComponent {
             link: "/summary",
         },
     ];
+
+    @HostListener('document:keydown.escape')
+    public onEscapeKey(): void {
+        if (this.showLightbox) {
+            this.closeLightbox();
+        }
+    }
 
     public showLightbox = false;
 
