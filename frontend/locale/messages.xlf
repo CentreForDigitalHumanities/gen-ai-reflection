@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="en">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="1409585916089173371" datatype="html">
         <source>toggle navigation</source>
-        <target state="translated">toggle navigation</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/menu/menu.component.html</context>
           <context context-type="linenumber">12</context>
@@ -12,7 +11,6 @@
       </trans-unit>
       <trans-unit id="2709140321180243306" datatype="html">
         <source>Centre for Digital Humanities, Utrecht University</source>
-        <target state="translated">Centre for Digital Humanities, Utrecht University</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/footer/footer.component.html</context>
           <context context-type="linenumber">34</context>
@@ -20,7 +18,6 @@
       </trans-unit>
       <trans-unit id="306733880709423201" datatype="html">
         <source>Source code</source>
-        <target state="translated">Source code</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/footer/footer.component.html</context>
           <context context-type="linenumber">8</context>
@@ -28,7 +25,6 @@
       </trans-unit>
       <trans-unit id="4608015944298801142" datatype="html">
         <source>Switch to light mode</source>
-        <target state="translated">Switch to light mode</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dark-mode-toggle/dark-mode-toggle.component.html</context>
           <context context-type="linenumber">14</context>
@@ -36,7 +32,6 @@
       </trans-unit>
       <trans-unit id="5417042396026061851" datatype="html">
         <source>GenAI Reflection</source>
-        <target state="translated">GenAI Reflection</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/footer/footer.component.html</context>
           <context context-type="linenumber">5</context>
@@ -44,7 +39,6 @@
       </trans-unit>
       <trans-unit id="5775897364163102609" datatype="html">
         <source>(BSD 3-Clause License)</source>
-        <target state="translated">(BSD 3-Clause License)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/footer/footer.component.html</context>
           <context context-type="linenumber">10</context>
@@ -52,7 +46,6 @@
       </trans-unit>
       <trans-unit id="6267525301152196009" datatype="html">
         <source>Version: </source>
-        <target state="translated">Version: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/footer/footer.component.html</context>
           <context context-type="linenumber">15</context>
@@ -60,7 +53,6 @@
       </trans-unit>
       <trans-unit id="803131845720356706" datatype="html">
         <source>Switch to dark mode</source>
-        <target state="translated">Switch to dark mode</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dark-mode-toggle/dark-mode-toggle.component.html</context>
           <context context-type="linenumber">5</context>
@@ -68,7 +60,6 @@
       </trans-unit>
       <trans-unit id="dateFormat" datatype="html">
         <source>MMMM dd, yyyy</source>
-        <target state="translated">MMMM dd, yyyy</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/footer/footer.component.ts</context>
           <context context-type="linenumber">25</context>
@@ -76,7 +67,6 @@
       </trans-unit>
       <trans-unit id="ngb.alert.close" datatype="html">
         <source>Close</source>
-        <target state="translated">Close</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/alert/alert.ts</context>
           <context context-type="linenumber">50</context>
@@ -84,7 +74,6 @@
       </trans-unit>
       <trans-unit id="ngb.carousel.next" datatype="html">
         <source>Next</source>
-        <target state="translated">Next</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
           <context context-type="linenumber">149</context>
@@ -92,7 +81,6 @@
       </trans-unit>
       <trans-unit id="ngb.carousel.previous" datatype="html">
         <source>Previous</source>
-        <target state="translated">Previous</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
           <context context-type="linenumber">141</context>
@@ -100,7 +88,6 @@
       </trans-unit>
       <trans-unit id="ngb.carousel.slide-number" datatype="html">
         <source> Slide <x id="INTERPOLATION"/> of <x id="INTERPOLATION_1"/> </source>
-        <target state="translated"> Slide <x id="INTERPOLATION"/> of <x id="INTERPOLATION_1"/> </target>
         <note priority="1" from="description">Currently selected slide number read by screen reader</note>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
@@ -109,7 +96,6 @@
       </trans-unit>
       <trans-unit id="ngb.datepicker.next-month" datatype="html">
         <source>Next month</source>
-        <target state="translated">Next month</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
           <context context-type="linenumber">112</context>
@@ -117,7 +103,6 @@
       </trans-unit>
       <trans-unit id="ngb.datepicker.previous-month" datatype="html">
         <source>Previous month</source>
-        <target state="translated">Previous month</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
           <context context-type="linenumber">83</context>
@@ -129,7 +114,6 @@
       </trans-unit>
       <trans-unit id="ngb.datepicker.select-month" datatype="html">
         <source>Select month</source>
-        <target state="translated">Select month</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation-select.ts</context>
           <context context-type="linenumber">91</context>
@@ -137,7 +121,6 @@
       </trans-unit>
       <trans-unit id="ngb.datepicker.select-year" datatype="html">
         <source>Select year</source>
-        <target state="translated">Select year</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation-select.ts</context>
           <context context-type="linenumber">91</context>
@@ -145,7 +128,6 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.first" datatype="html">
         <source>««</source>
-        <target state="translated">««</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">290</context>
@@ -153,7 +135,6 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.first-aria" datatype="html">
         <source>First</source>
-        <target state="translated">First</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">347</context>
@@ -161,7 +142,6 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.last" datatype="html">
         <source>»»</source>
-        <target state="translated">»»</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">327</context>
@@ -169,7 +149,6 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.last-aria" datatype="html">
         <source>Last</source>
-        <target state="translated">Last</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">400</context>
@@ -177,7 +156,6 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.next" datatype="html">
         <source>»</source>
-        <target state="translated">»</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">316</context>
@@ -185,7 +163,6 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.next-aria" datatype="html">
         <source>Next</source>
-        <target state="translated">Next</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">385</context>
@@ -193,7 +170,6 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.previous" datatype="html">
         <source>«</source>
-        <target state="translated">«</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">303</context>
@@ -201,7 +177,6 @@
       </trans-unit>
       <trans-unit id="ngb.pagination.previous-aria" datatype="html">
         <source>Previous</source>
-        <target state="translated">Previous</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">363</context>
@@ -211,9 +186,6 @@
         <source>
           <x id="INTERPOLATION"/>
         </source>
-        <target state="translated">
-          <x id="INTERPOLATION"/>
-        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/progressbar/progressbar.ts</context>
           <context context-type="linenumber">41</context>
@@ -221,7 +193,6 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
         <source>Decrement hours</source>
-        <target state="translated">Decrement hours</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">320</context>
@@ -229,7 +200,6 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
         <source>Decrement minutes</source>
-        <target state="translated">Decrement minutes</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">361</context>
@@ -237,7 +207,6 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
         <source>Decrement seconds</source>
-        <target state="translated">Decrement seconds</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">440</context>
@@ -245,7 +214,6 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.HH" datatype="html">
         <source>HH</source>
-        <target state="translated">HH</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">234</context>
@@ -253,7 +221,6 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.hours" datatype="html">
         <source>Hours</source>
-        <target state="translated">Hours</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">254</context>
@@ -261,7 +228,6 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
         <source>Increment hours</source>
-        <target state="translated">Increment hours</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">307</context>
@@ -269,7 +235,6 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
         <source>Increment minutes</source>
-        <target state="translated">Increment minutes</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">345</context>
@@ -277,7 +242,6 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
         <source>Increment seconds</source>
-        <target state="translated">Increment seconds</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">423</context>
@@ -285,7 +249,6 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.minutes" datatype="html">
         <source>Minutes</source>
-        <target state="translated">Minutes</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">291</context>
@@ -293,7 +256,6 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.MM" datatype="html">
         <source>MM</source>
-        <target state="translated">MM</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">273</context>
@@ -303,9 +265,6 @@
         <source>
           <x id="INTERPOLATION"/>
         </source>
-        <target state="translated">
-          <x id="INTERPOLATION"/>
-        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">440</context>
@@ -313,7 +272,6 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.seconds" datatype="html">
         <source>Seconds</source>
-        <target state="translated">Seconds</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">401</context>
@@ -321,7 +279,6 @@
       </trans-unit>
       <trans-unit id="ngb.timepicker.SS" datatype="html">
         <source>SS</source>
-        <target state="translated">SS</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">383</context>
@@ -329,15 +286,13 @@
       </trans-unit>
       <trans-unit id="ngb.toast.close-aria" datatype="html">
         <source>Close</source>
-        <target state="translated">Close</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/toast/toast.ts</context>
           <context context-type="linenumber">93</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1078467927799266371" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; >"/>Step 1: Learning outcomes analysis <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> clarify and map your course goals </source>
-        <target state="translated"><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; >"/>Step 1: Learning outcomes analysis <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> clarify and map your course goals </target>
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; &gt;"/>Step 1: Learning outcomes analysis <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> clarify and map your course goals </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">22</context>
@@ -345,7 +300,6 @@
       </trans-unit>
       <trans-unit id="1119898721291569992" datatype="html">
         <source>Lifelong learning skills</source>
-        <target state="translated">Lifelong learning skills</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">21</context>
@@ -353,7 +307,6 @@
       </trans-unit>
       <trans-unit id="1189696668151220585" datatype="html">
         <source>AI collaboration</source>
-        <target state="translated">AI collaboration</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/ai-scale-select/ai-scale-select.component.ts</context>
           <context context-type="linenumber">28</context>
@@ -361,31 +314,27 @@
       </trans-unit>
       <trans-unit id="1401748466223667596" datatype="html">
         <source>Applying Knowledge and Understanding</source>
-        <target state="translated">Applying Knowledge and Understanding</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.ts</context>
           <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1678047304962618668" datatype="html">
-        <source> Click on one of the five scales to find examples of educational exercises or assignments that make use of generative AI to different degrees (scales 2-5) or not at all (scale 1). You can check off examples that you are interested in. These will be included in your final report. </source>
-        <target state="translated"> Click on one of the five scales to find examples of educational exercises or assignments that make use of generative AI to different degrees (scales 2-5) or not at all (scale 1). You can check off examples that you are interested in. These will be included in your final report. </target>
+      <trans-unit id="4947044279123895575" datatype="html">
+        <source> Click on one of the five levels to find examples of educational exercises or assignments that make use of generative AI to different degrees (levels 2-5) or not at all (level 1). You can check off examples that you are interested in. These will be included in your final report. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1707384110772691733" datatype="html">
         <source>Go to Summary</source>
-        <target state="translated">Go to Summary</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.ts</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1789779892365619975" datatype="html">
         <source> Next, pick one or more intended learning outcomes that are assessed in this way and whose assessment could be affected by the use of GenAI. </source>
-        <target state="translated"> Next, pick one or more intended learning outcomes that are assessed in this way and whose assessment could be affected by the use of GenAI. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-forms.component.html</context>
           <context context-type="linenumber">17</context>
@@ -395,9 +344,6 @@
         <source>
           <x id="INTERPOLATION" equiv-text="{{ language.name }}"/>
         </source>
-        <target state="translated">
-          <x id="INTERPOLATION" equiv-text="{{ language.name }}"/>
-        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
           <context context-type="linenumber">30</context>
@@ -405,7 +351,6 @@
       </trans-unit>
       <trans-unit id="213925514828623262" datatype="html">
         <source>Select an option</source>
-        <target state="translated">Select an option</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.ts</context>
           <context context-type="linenumber">53</context>
@@ -413,7 +358,6 @@
       </trans-unit>
       <trans-unit id="2203684742377071634" datatype="html">
         <source>Generative AI - A three-step reflection tool</source>
-        <target state="translated">Generative AI - A three-step reflection tool</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
           <context context-type="linenumber">11</context>
@@ -421,7 +365,6 @@
       </trans-unit>
       <trans-unit id="2264149804512237702" datatype="html">
         <source>Back to Introduction</source>
-        <target state="translated">Back to Introduction</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.ts</context>
           <context context-type="linenumber">37</context>
@@ -429,7 +372,6 @@
       </trans-unit>
       <trans-unit id="2379354884306325081" datatype="html">
         <source> Add new intended learning outcome </source>
-        <target state="translated"> Add new intended learning outcome </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">116</context>
@@ -437,7 +379,6 @@
       </trans-unit>
       <trans-unit id="2390145448604379785" datatype="html">
         <source>Step 2: Assessment Forms</source>
-        <target state="translated">Step 2: Assessment Forms</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-forms.component.html</context>
           <context context-type="linenumber">2</context>
@@ -445,15 +386,13 @@
       </trans-unit>
       <trans-unit id="2433299293992288618" datatype="html">
         <source> Assessment form: </source>
-        <target state="translated"> Assessment form: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-select/assessment-form-select.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2741672408473838115" datatype="html">
-        <source> Welcome to the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>GenAI reflection tool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>. The aim of this tool is to stimulate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>reflection<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> on the impact of generative AI on academic teaching. Students can use generative AI for almost all assignments. The question whether assessment forms need to be adapted as a consequence of this, depends on the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>intended learning outcomes<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> that the assignments test. This is why this tool aims to make an explicit link between assessment forms and learning outcomes. Wherever the use of generative AI is considered problematic, the tool provides <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>alternative assessment forms<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>, or stimulates you to consider changing the learning outcomes. </source>
-        <target state="translated"> Welcome to the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>GenAI reflection tool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>. The aim of this tool is to stimulate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>reflection<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> on the impact of generative AI on academic teaching. Students can use generative AI for almost all assignments. The question whether assessment forms need to be adapted as a consequence of this, depends on the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>intended learning outcomes<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> that the assignments test. This is why this tool aims to make an explicit link between assessment forms and learning outcomes. Wherever the use of generative AI is considered problematic, the tool provides <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>alternative assessment forms<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>, or stimulates you to consider changing the learning outcomes. </target>
+        <source> Welcome to the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>GenAI reflection tool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. The aim of this tool is to stimulate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>reflection<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> on the impact of generative AI on academic teaching. Students can use generative AI for almost all assignments. The question whether assessment forms need to be adapted as a consequence of this, depends on the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>intended learning outcomes<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> that the assignments test. This is why this tool aims to make an explicit link between assessment forms and learning outcomes. Wherever the use of generative AI is considered problematic, the tool provides <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>alternative assessment forms<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>, or stimulates you to consider changing the learning outcomes. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">5</context>
@@ -461,7 +400,6 @@
       </trans-unit>
       <trans-unit id="2866637957719899821" datatype="html">
         <source>AI Opportunities:</source>
-        <target state="translated">AI Opportunities:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">94</context>
@@ -469,7 +407,6 @@
       </trans-unit>
       <trans-unit id="2892507142791346084" datatype="html">
         <source> In this step, you will receive information on how students can make use of GenAI for the assessment forms in your course. </source>
-        <target state="translated"> In this step, you will receive information on how students can make use of GenAI for the assessment forms in your course. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-forms.component.html</context>
           <context context-type="linenumber">5</context>
@@ -477,7 +414,6 @@
       </trans-unit>
       <trans-unit id="3028315461551290856" datatype="html">
         <source>No assessment forms available</source>
-        <target state="translated">No assessment forms available</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-select/assessment-form-select.component.html</context>
           <context context-type="linenumber">21</context>
@@ -485,7 +421,6 @@
       </trans-unit>
       <trans-unit id="3159786391493979652" datatype="html">
         <source> After adding an assessment form, you decide whether the use of GenAI is a problem in this context, based on the ILOs that are tested. If you consider the use of GenAI in the assessment a problem, the tool suggests alternatives. </source>
-        <target state="translated"> After adding an assessment form, you decide whether the use of GenAI is a problem in this context, based on the ILOs that are tested. If you consider the use of GenAI in the assessment a problem, the tool suggests alternatives. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-forms.component.html</context>
           <context context-type="linenumber">10</context>
@@ -493,7 +428,6 @@
       </trans-unit>
       <trans-unit id="3189126519756644709" datatype="html">
         <source>Making judgments</source>
-        <target state="translated">Making judgments</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">19</context>
@@ -501,7 +435,6 @@
       </trans-unit>
       <trans-unit id="3193976279273491157" datatype="html">
         <source>Actions</source>
-        <target state="translated">Actions</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">36</context>
@@ -509,7 +442,6 @@
       </trans-unit>
       <trans-unit id="3284381017849042813" datatype="html">
         <source> Known AI Uses for this assessment form </source>
-        <target state="translated"> Known AI Uses for this assessment form </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/known-uses-examples/known-uses-examples.component.html</context>
           <context context-type="linenumber">3</context>
@@ -517,7 +449,6 @@
       </trans-unit>
       <trans-unit id="3355125060616451212" datatype="html">
         <source> In this step, you will map the Intended Learning Outcomes (ILOs) for your course and link each one to the most relevant Dublin Descriptor. </source>
-        <target state="translated"> In this step, you will map the Intended Learning Outcomes (ILOs) for your course and link each one to the most relevant Dublin Descriptor. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">6</context>
@@ -525,7 +456,6 @@
       </trans-unit>
       <trans-unit id="3603720768157919481" datatype="html">
         <source> No </source>
-        <target state="translated"> No </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
           <context context-type="linenumber">89</context>
@@ -533,7 +463,6 @@
       </trans-unit>
       <trans-unit id="3740316623407933815" datatype="html">
         <source> Remove assessment form </source>
-        <target state="translated"> Remove assessment form </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
           <context context-type="linenumber">19</context>
@@ -541,7 +470,6 @@
       </trans-unit>
       <trans-unit id="3753264251297620876" datatype="html">
         <source>AI exploration</source>
-        <target state="translated">AI exploration</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/ai-scale-select/ai-scale-select.component.ts</context>
           <context context-type="linenumber">30</context>
@@ -549,7 +477,6 @@
       </trans-unit>
       <trans-unit id="3879118507115300181" datatype="html">
         <source> GKG </source>
-        <target state="translated"> GKG </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
           <context context-type="linenumber">23</context>
@@ -557,7 +484,6 @@
       </trans-unit>
       <trans-unit id="4091554869276612379" datatype="html">
         <source> Select an assessment form </source>
-        <target state="translated"> Select an assessment form </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-select/assessment-form-select.component.html</context>
           <context context-type="linenumber">14</context>
@@ -565,7 +491,6 @@
       </trans-unit>
       <trans-unit id="4122356897457931055" datatype="html">
         <source>Full AI</source>
-        <target state="translated">Full AI</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/ai-scale-select/ai-scale-select.component.ts</context>
           <context context-type="linenumber">29</context>
@@ -573,7 +498,6 @@
       </trans-unit>
       <trans-unit id="4492261562664451801" datatype="html">
         <source>Suggested adjustments</source>
-        <target state="translated">Suggested adjustments</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
           <context context-type="linenumber">95</context>
@@ -581,7 +505,6 @@
       </trans-unit>
       <trans-unit id="457230007605516764" datatype="html">
         <source>Intended Outcome</source>
-        <target state="translated">Intended Outcome</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">34</context>
@@ -589,7 +512,6 @@
       </trans-unit>
       <trans-unit id="4701996646063599508" datatype="html">
         <source> Please provide the name of your course. This will personalize the final report. </source>
-        <target state="translated"> Please provide the name of your course. This will personalize the final report. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">44</context>
@@ -597,7 +519,6 @@
       </trans-unit>
       <trans-unit id="4752243530490701304" datatype="html">
         <source>AI planning</source>
-        <target state="translated">AI planning</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/ai-scale-select/ai-scale-select.component.ts</context>
           <context context-type="linenumber">27</context>
@@ -605,23 +526,20 @@
       </trans-unit>
       <trans-unit id="4762309552061348454" datatype="html">
         <source> Does the use of GenAI in the assignment assessment affect the extent to which <x id="ICU" equiv-text="{form.controls.iloIds.value.length, plural, =1 {this learning goal} other {these learning goals}}" xid="4899223999601784590"/> can be tested? </source>
-        <target state="translated"> Does the use of GenAI in the assignment assessment affect the extent to which <x id="ICU" equiv-text="{form.controls.iloIds.value.length, plural, =1 {this learning goal} other {these learning goals}}" xid="4899223999601784590"/> can be tested? </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
           <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4852667757446424555" datatype="html">
-        <source> Select the options below that you would like to see in your summary report. </source>
-        <target state="translated"> Select the options below that you would like to see in your summary report. </target>
+      <trans-unit id="4444957576059484849" datatype="html">
+        <source> Select the options below that you would like to include in your summary report. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">28</context>
+          <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4861926948802653243" datatype="html">
         <source> Yes </source>
-        <target state="translated"> Yes </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
           <context context-type="linenumber">72</context>
@@ -629,7 +547,6 @@
       </trans-unit>
       <trans-unit id="4899223999601784590" datatype="html">
         <source>{VAR_PLURAL, plural, =1 {this learning goal} other {these learning goals}}</source>
-        <target state="translated">{VAR_PLURAL, plural, =1 {this learning goal} other {these learning goals}}</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
           <context context-type="linenumber">49</context>
@@ -637,7 +554,6 @@
       </trans-unit>
       <trans-unit id="4919772938230654717" datatype="html">
         <source>Step 1: Learning Outcomes</source>
-        <target state="translated">Step 1: Learning Outcomes</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">3</context>
@@ -645,7 +561,6 @@
       </trans-unit>
       <trans-unit id="49984396230361861" datatype="html">
         <source>Go to Step 3</source>
-        <target state="translated">Go to Step 3</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-forms.component.ts</context>
           <context context-type="linenumber">25</context>
@@ -653,7 +568,6 @@
       </trans-unit>
       <trans-unit id="5210440752261349241" datatype="html">
         <source>No AI</source>
-        <target state="translated">No AI</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/ai-scale-select/ai-scale-select.component.ts</context>
           <context context-type="linenumber">26</context>
@@ -661,7 +575,6 @@
       </trans-unit>
       <trans-unit id="5238941599907864164" datatype="html">
         <source>Knowledge and understanding</source>
-        <target state="translated">Knowledge and understanding</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">17</context>
@@ -669,15 +582,13 @@
       </trans-unit>
       <trans-unit id="5546062049781757676" datatype="html">
         <source>Before we begin...</source>
-        <target state="translated">Before we begin...</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5681982888923314146" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; >"/>Step 3: Ideas for integrating generative AI in your course <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> explore how generative AI can be used to enhance your course </source>
-        <target state="translated"><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; >"/>Step 3: Ideas for integrating generative AI in your course <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> explore how generative AI can be used to enhance your course </target>
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; &gt;"/>Step 3: Ideas for integrating generative AI in your course <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> explore how generative AI can be used to enhance your course </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">33</context>
@@ -685,7 +596,6 @@
       </trans-unit>
       <trans-unit id="5744320452103348341" datatype="html">
         <source> Here, you are invited to reconsider exercises or assignments by involving generative AI to various extents. The AI assessment scale that this step is based on, has officially been accepted by the UU as a guiding principle. It helps teachers to think of generative AI in a less binary manner – not as something that is either forbidden or approved, but as a set of tools that can be integrated in academic education to different degrees. </source>
-        <target state="translated"> Here, you are invited to reconsider exercises or assignments by involving generative AI to various extents. The AI assessment scale that this step is based on, has officially been accepted by the UU as a guiding principle. It helps teachers to think of generative AI in a less binary manner – not as something that is either forbidden or approved, but as a set of tools that can be integrated in academic education to different degrees. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
           <context context-type="linenumber">5</context>
@@ -693,7 +603,6 @@
       </trans-unit>
       <trans-unit id="6137534685031930211" datatype="html">
         <source>This tool consists of three subsequent steps:</source>
-        <target state="translated">This tool consists of three subsequent steps:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">18</context>
@@ -701,7 +610,6 @@
       </trans-unit>
       <trans-unit id="6245984563620527824" datatype="html">
         <source>What is this tool for?</source>
-        <target state="translated">What is this tool for?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">2</context>
@@ -709,7 +617,6 @@
       </trans-unit>
       <trans-unit id="6254513026312445060" datatype="html">
         <source>Making Judgements</source>
-        <target state="translated">Making Judgements</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.ts</context>
           <context context-type="linenumber">64</context>
@@ -717,7 +624,6 @@
       </trans-unit>
       <trans-unit id="631938289599141900" datatype="html">
         <source> No adjustments available. Select an assessment form first. </source>
-        <target state="translated"> No adjustments available. Select an assessment form first. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
           <context context-type="linenumber">105</context>
@@ -725,7 +631,6 @@
       </trans-unit>
       <trans-unit id="6417521833926344097" datatype="html">
         <source>Lifelong Learning Skills</source>
-        <target state="translated">Lifelong Learning Skills</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.ts</context>
           <context context-type="linenumber">72</context>
@@ -733,7 +638,6 @@
       </trans-unit>
       <trans-unit id="6590400841462802132" datatype="html">
         <source>Applying knowledge and understanding</source>
-        <target state="translated">Applying knowledge and understanding</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">18</context>
@@ -741,7 +645,6 @@
       </trans-unit>
       <trans-unit id="662160971930278145" datatype="html">
         <source>AI Challenges:</source>
-        <target state="translated">AI Challenges:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">83</context>
@@ -749,7 +652,6 @@
       </trans-unit>
       <trans-unit id="6652916190109562" datatype="html">
         <source> The Dublin Descriptors are internationally recognized criterias to classify learning outcomes, and used on a program-level in our department. They are organized into five categories: </source>
-        <target state="translated"> The Dublin Descriptors are internationally recognized criterias to classify learning outcomes, and used on a program-level in our department. They are organized into five categories: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">11</context>
@@ -757,7 +659,6 @@
       </trans-unit>
       <trans-unit id="6714281002775886421" datatype="html">
         <source>Knowledge and Understanding</source>
-        <target state="translated">Knowledge and Understanding</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.ts</context>
           <context context-type="linenumber">56</context>
@@ -765,15 +666,13 @@
       </trans-unit>
       <trans-unit id="6730431658914549250" datatype="html">
         <source>No examples found.</source>
-        <target state="translated">No examples found.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">47</context>
+          <context context-type="linenumber">76</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6831199969097106617" datatype="html">
         <source>Go to Step 2</source>
-        <target state="translated">Go to Step 2</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.ts</context>
           <context context-type="linenumber">32</context>
@@ -781,7 +680,6 @@
       </trans-unit>
       <trans-unit id="6915429060840718325" datatype="html">
         <source>Communication</source>
-        <target state="translated">Communication</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">20</context>
@@ -793,15 +691,13 @@
       </trans-unit>
       <trans-unit id="7006751082102407318" datatype="html">
         <source>Back to Step 2</source>
-        <target state="translated">Back to Step 2</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.ts</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7402787924748680728" datatype="html">
         <source>Select your department to begin</source>
-        <target state="translated">Select your department to begin</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
           <context context-type="linenumber">15</context>
@@ -809,7 +705,6 @@
       </trans-unit>
       <trans-unit id="7777648593514611528" datatype="html">
         <source>Add form</source>
-        <target state="translated">Add form</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-forms.component.html</context>
           <context context-type="linenumber">42</context>
@@ -817,7 +712,6 @@
       </trans-unit>
       <trans-unit id="8082396782637148201" datatype="html">
         <source> Which ILOs are tested with this assessment? Select one or multiple. </source>
-        <target state="translated"> Which ILOs are tested with this assessment? Select one or multiple. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
           <context context-type="linenumber">33</context>
@@ -825,7 +719,6 @@
       </trans-unit>
       <trans-unit id="8117713534415180784" datatype="html">
         <source>Step 3: Course Integration</source>
-        <target state="translated">Step 3: Course Integration</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
           <context context-type="linenumber">2</context>
@@ -833,7 +726,6 @@
       </trans-unit>
       <trans-unit id="8212177249756365917" datatype="html">
         <source> Remove </source>
-        <target state="translated"> Remove </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">75</context>
@@ -841,7 +733,6 @@
       </trans-unit>
       <trans-unit id="8270998101354145433" datatype="html">
         <source>Back to Step 1</source>
-        <target state="translated">Back to Step 1</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-forms.component.ts</context>
           <context context-type="linenumber">30</context>
@@ -849,15 +740,13 @@
       </trans-unit>
       <trans-unit id="8297964309906642959" datatype="html">
         <source>Course name</source>
-        <target state="translated">Course name</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8537204403829125203" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;>"/>Step 2: Assessment forms<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> assess whether the use of generative AI in assignments negatively impacts the learning outcomes </source>
-        <target state="translated"><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;>"/>Step 2: Assessment forms<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> assess whether the use of generative AI in assignments negatively impacts the learning outcomes </target>
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;&gt;"/>Step 2: Assessment forms<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> assess whether the use of generative AI in assignments negatively impacts the learning outcomes </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">28</context>
@@ -865,7 +754,6 @@
       </trans-unit>
       <trans-unit id="9144113132734081787" datatype="html">
         <source> For each ILO you enter, please select the Dublin Descriptor that best aligns. </source>
-        <target state="translated"> For each ILO you enter, please select the Dublin Descriptor that best aligns. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">25</context>
@@ -873,7 +761,6 @@
       </trans-unit>
       <trans-unit id="947548908968390099" datatype="html">
         <source>Go to Step 1</source>
-        <target state="translated">Go to Step 1</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.ts</context>
           <context context-type="linenumber">21</context>
@@ -881,7 +768,6 @@
       </trans-unit>
       <trans-unit id="2391158681990264844" datatype="html">
         <source> Click the bars below to see examples of ways in which students may use GenAI for this assessment form. </source>
-        <target state="translated"> Click the bars below to see examples of ways in which students may use GenAI for this assessment form. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/known-uses-examples/known-uses-examples.component.html</context>
           <context context-type="linenumber">6</context>
@@ -889,7 +775,6 @@
       </trans-unit>
       <trans-unit id="7470156777004815375" datatype="html">
         <source>Dublin Descriptor</source>
-        <target state="translated">Dublin Descriptor</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">35</context>
@@ -897,7 +782,6 @@
       </trans-unit>
       <trans-unit id="7968185656343036730" datatype="html">
         <source> Here you need to evaluate whether you can still test the ILO with the chosen assignment. Take into account that students can and may use GenAI. </source>
-        <target state="translated"> Here you need to evaluate whether you can still test the ILO with the chosen assignment. Take into account that students can and may use GenAI. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
           <context context-type="linenumber">54</context>
@@ -905,7 +789,6 @@
       </trans-unit>
       <trans-unit id="816856833027805630" datatype="html">
         <source> No ILOs available. Add some in the previous step. </source>
-        <target state="translated"> No ILOs available. Add some in the previous step. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/ilo-select/ilo-select.component.html</context>
           <context context-type="linenumber">21</context>
@@ -913,7 +796,6 @@
       </trans-unit>
       <trans-unit id="2732756422945227425" datatype="html">
         <source>Enter the name of your course...</source>
-        <target state="translated">Enter the name of your course...</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">54</context>
@@ -921,7 +803,6 @@
       </trans-unit>
       <trans-unit id="2904406081442218041" datatype="html">
         <source>Add assessment form</source>
-        <target state="translated">Add assessment form</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-forms.component.html</context>
           <context context-type="linenumber">34</context>
@@ -929,10 +810,75 @@
       </trans-unit>
       <trans-unit id="4288258189522495536" datatype="html">
         <source>Remove assessment form</source>
-        <target state="translated">Remove assessment form</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
           <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7485339708545160201" datatype="html">
+        <source>AI index (for teachers):</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4012265924696718914" datatype="html">
+        <source> Additional information regarding the university policy on generative AI can be found here. (Links will open in a new tab.) </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8258051070099547441" datatype="html">
+        <source>UU AI policy (general page):</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8803732224958530078" datatype="html">
+        <source>https://www.uu.nl/en/organisation/ai-policy</source>
+        <note priority="1" from="description">url</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8819475970509465689" datatype="html">
+        <source>https://www.uu.nl/en/organisation/ai-policy/teachers/for-teachers/ai-index</source>
+        <note priority="1" from="description">url</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7819314041543176992" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7943574911756256975" datatype="html">
+        <source>AI Assessment Scale (click to enlarge)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6431857416550248523" datatype="html">
+        <source> Below you will find a scale with five levels of AI integration in educational assessments, based on the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://aiassessmentscale.com/&quot; target=&quot;_blank&quot; &gt;"/>AI Assessment Scale (AIAS)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a &gt;"/> developed by Perkins et al. (2024). </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
     </body>

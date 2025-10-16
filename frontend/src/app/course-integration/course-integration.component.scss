@@ -22,3 +22,20 @@
 .no-items {
     cursor: default;
 }
+
+.small-ai-scale-image {
+    cursor: pointer;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .modal-header {
+        background-color: transparent;
+    }
+}
+
+.lightbox-caption {
+    background-color: white;
+    padding: 1rem;
+}

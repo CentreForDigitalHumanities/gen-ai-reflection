@@ -553,20 +553,20 @@
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1678047304962618668" datatype="html">
-        <source> Click on one of the five scales to find examples of educational exercises or assignments that make use of generative AI to different degrees (scales 2-5) or not at all (scale 1). You can check off examples that you are interested in. These will be included in your final report. </source>
+      <trans-unit id="4947044279123895575" datatype="html">
+        <source> Click on one of the five levels to find examples of educational exercises or assignments that make use of generative AI to different degrees (levels 2-5) or not at all (level 1). You can check off examples that you are interested in. These will be included in your final report. </source>
         <target state="translated"> Klik op een van de vijf niveaus hieronder om voorbeelden te zien van educatieve oefeningen of opdrachten die in wisselende mate (niveaus 2-5) of helemaal geen (niveau 1) gebruik maken van generatieve AI. Vink voorbeelden aan die je interesseren. Deze komen in het uiteindelijke rapport terecht. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4852667757446424555" datatype="html">
-        <source> Select the options below that you would like to see in your summary report. </source>
+      <trans-unit id="4444957576059484849" datatype="html">
+        <source> Select the options below that you would like to include in your summary report. </source>
         <target state="translated"> Selecteer de opties die je graag in het eindrapport terug zou willen zien. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">28</context>
+          <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6730431658914549250" datatype="html">
@@ -574,7 +574,7 @@
         <target state="translated">Geen voorbeelden gevonden.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">47</context>
+          <context context-type="linenumber">76</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7006751082102407318" datatype="html">
@@ -582,7 +582,7 @@
         <target state="translated">Terug naar Stap 2</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.ts</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1707384110772691733" datatype="html">
@@ -590,7 +590,7 @@
         <target state="translated">Verder naar Samenvatting</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.ts</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2203684742377071634" datatype="html">
@@ -927,6 +927,80 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4012265924696718914" datatype="html">
+        <source> Additional information regarding the university policy on generative AI can be found here. (Links will open in a new tab.) </source>
+        <target state="translated"> Meer informatie over het universiteitsbeleid ten opzichte van generatieve AI vind je hier. (Links openen in een nieuw tabblad.) </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8258051070099547441" datatype="html">
+        <source>UU AI policy (general page):</source>
+        <target state="translated">UU AI-beleid (algemene pagina):</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7485339708545160201" datatype="html">
+        <source>AI index (for teachers):</source>
+        <target state="translated">AI-index (voor docenten):</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8803732224958530078" datatype="html">
+        <source>https://www.uu.nl/en/organisation/ai-policy</source>
+        <target state="translated">https://www.uu.nl/organisatie/ai-beleid</target>
+        <note priority="1" from="description">url</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8819475970509465689" datatype="html">
+        <source>https://www.uu.nl/en/organisation/ai-policy/teachers/for-teachers/ai-index</source>
+        <target state="translated">https://www.uu.nl/organisatie/ai-beleid/docenten/voor-docenten/ai-index</target>
+        <note priority="1" from="description">url</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6431857416550248523" datatype="html">
+        <source> Below you will find a scale with five levels of AI integration in educational assessments, based on the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://aiassessmentscale.com/&quot; target=&quot;_blank&quot; >"/>AI Assessment Scale (AIAS)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/> developed by Perkins et al. (2024). </source>
+        <target state="translated"> Hieronder vind je een schaal met vijf niveaus waarin generatieve AI in educatieve opdrachten geïntegreerd kan worden, gebaseerd op de <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://aiassessmentscale.com/&quot; target=&quot;_blank&quot; >"/>AI Assessment Scale (AIAS)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/> van Perkins et al. (2024). </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7943574911756256975" datatype="html">
+        <source>AI Assessment Scale (click to enlarge)</source>
+        <target state="translated">AI Assessment Scale (klik om te vergroten)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7819314041543176992" datatype="html">
+        <source>Close</source>
+        <target state="translated">Sluiten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">126</context>
         </context-group>
       </trans-unit>
     </body>
