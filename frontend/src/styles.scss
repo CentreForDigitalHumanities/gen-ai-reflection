@@ -6,6 +6,34 @@
 @import "uu-bootstrap/scss/configuration";
 @import "uu-bootstrap/scss/components";
 
+@font-face {
+    font-family: "Open Sans";
+    src: url("./assets/fonts/OpenSans.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./assets/fonts/OpenSans-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Merriweather";
+    src: url("./assets/fonts/Merriweather.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Merriweather";
+    src: url("./assets/fonts/Merriweather-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
 @media print {
     .is-hidden-print,
     .is-hidden-print * {
@@ -31,3 +59,5 @@ body {
 .gr-table td {
     padding: 1em;
 }
+
+

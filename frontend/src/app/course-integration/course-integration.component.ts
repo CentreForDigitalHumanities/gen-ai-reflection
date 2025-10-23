@@ -1,4 +1,4 @@
-import { Component, computed, inject } from "@angular/core";
+import { Component, computed, effect, ElementRef, HostListener, inject, viewChild } from "@angular/core";
 import { FormControl, ReactiveFormsModule } from "@angular/forms";
 import {
     NavButton,
@@ -10,17 +10,20 @@ import { toSignal } from "@angular/core/rxjs-interop";
 import { FormService } from "../services/form.service";
 import { AiScaleSelectComponent } from "./ai-scale-select/ai-scale-select.component";
 import { startWith } from "rxjs";
+import { NgOptimizedImage } from "@angular/common";
 
 @Component({
     selector: "gr-course-integration",
     templateUrl: "./course-integration.component.html",
     styleUrls: ["./course-integration.component.scss"],
     standalone: true,
-    imports: [NavButtonsComponent, ReactiveFormsModule, AiScaleSelectComponent],
+    imports: [NavButtonsComponent, ReactiveFormsModule, AiScaleSelectComponent, NgOptimizedImage],
 })
 export class CourseIntegrationComponent {
     private apiService = inject(ApiService);
     private formService = inject(FormService);
+
+    private closeButton = viewChild<ElementRef>('closeButton');
 
     public navButtons: NavButton[] = [
         {
@@ -34,6 +37,15 @@ export class CourseIntegrationComponent {
             link: "/summary",
         },
     ];
+
+    @HostListener('document:keydown.escape')
+    public onEscapeKey(): void {
+        if (this.showLightbox) {
+            this.closeLightbox();
+        }
+    }
+
+    public showLightbox = false;
 
     public chosenAiUses = this.formService.form.controls.chosenAiUses;
 
@@ -61,11 +73,28 @@ export class CourseIntegrationComponent {
         return aiUseExamples.filter(example => example.scaleLevel === selectedRangeValue);
     });
 
+    // Focus the close button as soon as the lightbox enters the DOM.
+    constructor() {
+        effect(() => {
+            if (this.showLightbox) {
+                this.closeButton()?.nativeElement.focus();
+            }
+        })
+    }
+
     public onExampleChange(id: number): void {
         if (this.chosenAiUses.value.includes(id)) {
             this.chosenAiUses.setValue(this.chosenAiUses.value.filter(value => value !== id));
         } else {
             this.chosenAiUses.setValue([...this.chosenAiUses.value, id]);
         }
+    }
+
+    public openLightbox(): void {
+        this.showLightbox = true;
+    }
+
+    public closeLightbox(): void {
+        this.showLightbox = false;
     }
 }
