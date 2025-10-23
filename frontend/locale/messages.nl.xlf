@@ -211,6 +211,9 @@
         <source>
           <x id="INTERPOLATION"/>
         </source>
+        <target state="translated">
+          <x id="INTERPOLATION"/>
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/progressbar/progressbar.ts</context>
           <context context-type="linenumber">41</context>
@@ -300,6 +303,9 @@
         <source>
           <x id="INTERPOLATION"/>
         </source>
+        <target state="translated">
+          <x id="INTERPOLATION"/>
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">440</context>
@@ -433,9 +439,9 @@
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2390145448604379785" datatype="html">
-        <source>Step 2: Assessment Forms</source>
-        <target state="translated">Stap 2: Beoordelingsvormen</target>
+      <trans-unit id="3893531597079366164" datatype="html">
+        <source>🚀 Step 2: Assessment Forms</source>
+        <target state="translated">🚀 Stap 2: Beoordelingsvormen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-forms.component.html</context>
           <context context-type="linenumber">2</context>
@@ -537,9 +543,9 @@
           <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8117713534415180784" datatype="html">
-        <source>Step 3: Course Integration</source>
-        <target state="translated">Stap 3: Cursusintegratie</target>
+      <trans-unit id="592253593258547003" datatype="html">
+        <source>🌙 Step 3: Course Integration</source>
+        <target state="translated">🌙 Stap 3: Cursusintegratie</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
           <context context-type="linenumber">2</context>
@@ -558,7 +564,7 @@
         <target state="translated"> Klik op een van de vijf niveaus hieronder om voorbeelden te zien van educatieve oefeningen of opdrachten die in wisselende mate (niveaus 2-5) of helemaal geen (niveau 1) gebruik maken van generatieve AI. Vink voorbeelden aan die je interesseren. Deze komen in het uiteindelijke rapport terecht. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">38</context>
+          <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4444957576059484849" datatype="html">
@@ -566,7 +572,7 @@
         <target state="translated"> Selecteer de opties die je graag in het eindrapport terug zou willen zien. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="linenumber">59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6730431658914549250" datatype="html">
@@ -574,7 +580,7 @@
         <target state="translated">Geen voorbeelden gevonden.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">76</context>
+          <context context-type="linenumber">84</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7006751082102407318" datatype="html">
@@ -582,7 +588,7 @@
         <target state="translated">Terug naar Stap 2</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.ts</context>
-          <context context-type="linenumber">28</context>
+          <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1707384110772691733" datatype="html">
@@ -590,7 +596,7 @@
         <target state="translated">Verder naar Samenvatting</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.ts</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2203684742377071634" datatype="html">
@@ -709,9 +715,9 @@
           <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4919772938230654717" datatype="html">
-        <source>Step 1: Learning Outcomes</source>
-        <target state="translated">Stap 1: Leerdoelen</target>
+      <trans-unit id="417481999067791225" datatype="html">
+        <source>🌍 Step 1: Learning Outcomes</source>
+        <target state="translated">🌍 Stap 1: Leerdoelen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">3</context>
@@ -934,7 +940,7 @@
         <target state="translated"> Meer informatie over het universiteitsbeleid ten opzichte van generatieve AI vind je hier. (Links openen in een nieuw tabblad.) </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">83</context>
+          <context context-type="linenumber">91</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8258051070099547441" datatype="html">
@@ -942,7 +948,7 @@
         <target state="translated">UU AI-beleid (algemene pagina):</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">89</context>
+          <context context-type="linenumber">97</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7485339708545160201" datatype="html">
@@ -950,7 +956,7 @@
         <target state="translated">AI-index (voor docenten):</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">99</context>
+          <context context-type="linenumber">107</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8803732224958530078" datatype="html">
@@ -959,11 +965,11 @@
         <note priority="1" from="description">url</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">91</context>
+          <context context-type="linenumber">99</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">95</context>
+          <context context-type="linenumber">103</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8819475970509465689" datatype="html">
@@ -972,11 +978,11 @@
         <note priority="1" from="description">url</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">101</context>
+          <context context-type="linenumber">109</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">105</context>
+          <context context-type="linenumber">113</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6431857416550248523" datatype="html">
@@ -987,12 +993,12 @@
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7943574911756256975" datatype="html">
-        <source>AI Assessment Scale (click to enlarge)</source>
-        <target state="translated">AI Assessment Scale (klik om te vergroten)</target>
+      <trans-unit id="6680681147557237751" datatype="html">
+        <source> AI Assessment Scale (click to enlarge) </source>
+        <target state="translated"> AI Assessment Scale (klik om te vergroten) </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7819314041543176992" datatype="html">
@@ -1000,7 +1006,23 @@
         <target state="translated">Sluiten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">126</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5503328465500572474" datatype="html">
+        <source>AI Assessment Scale (AIAS)</source>
+        <target state="translated">AI Assessment Scale (AIAS)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">152</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3420369144167721743" datatype="html">
+        <source>(Link will open in a new tab.)</source>
+        <target state="translated">(Link opent in een nieuwe tabblad.)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">155</context>
         </context-group>
       </trans-unit>
     </body>
