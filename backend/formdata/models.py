@@ -81,6 +81,7 @@ class UseExample(models.Model):
 class KnownAiUse(models.Model):
     class Meta:
         ordering = ("text",)
+        verbose_name = "Known AI use"
 
     assessment_forms = models.ManyToManyField(
         AssessmentForm,
@@ -97,6 +98,7 @@ class KnownAiUse(models.Model):
 class KnownAiUseExample(models.Model):
     class Meta:
         ordering = ("text",)
+        verbose_name = "Known AI use example"
 
     text = models.TextField()
     ai_use = models.ForeignKey(
