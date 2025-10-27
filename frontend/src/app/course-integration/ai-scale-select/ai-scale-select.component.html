@@ -1,25 +1,18 @@
-<div class="d-flex flex-column">
-    <input
-        type="range"
-        class="range-input"
-        min="1"
-        max="5"
-        step="1"
-        [value]="scaleLevelToNumber(value)"
-        (input)="onRangeChange($event)"
-        list="markers"
-    />
-    <datalist id="markers" class="range-labels">
-        @for (rangeItem of rangeItems; track $index) {
-        <div class="option-container">
-            <option
-                class="range-label range-label-{{ $index }}"
-                [class.selected]="value === rangeItem.scaleLevel"
-                value="{{ rangeItem.value }}"
-                label="{{ rangeItem.label }}"
-                (click)="selectValue(rangeItem.scaleLevel)"
-            ></option>
-        </div>
-        }
-    </datalist>
+<div class="radio-group">
+    @for (rangeItem of rangeItems; track $index) {
+    <div class="radio-option">
+        <input
+            type="radio"
+            [id]="'ai-scale-' + rangeItem.value"
+            name="ai-scale"
+            [value]="rangeItem.scaleLevel"
+            [checked]="value === rangeItem.scaleLevel"
+            (change)="selectValue(rangeItem.scaleLevel)"
+        />
+        <label [for]="'ai-scale-' + rangeItem.value" class="radio-label">
+            <span class="label-value">{{ rangeItem.value }}</span>
+            <span class="label-text">{{ rangeItem.label }}</span>
+        </label>
+    </div>
+    }
 </div>

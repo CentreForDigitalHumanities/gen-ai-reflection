@@ -30,17 +30,17 @@ export class AiScaleSelectComponent implements ControlValueAccessor {
         { value: 5, scaleLevel: AiAssessmentScaleLevel.AI_EXPLORATION, label: $localize`AI exploration` }
     ];
 
-    // Default value is the third item.
-    public value: AiAssessmentScaleLevel = AiAssessmentScaleLevel.AI_COLLABORATION;
+    // Default value is null (indeterminate state).
+    public value: AiAssessmentScaleLevel | null = null;
 
-    onChange: (value: AiAssessmentScaleLevel) => void = () => { };
+    onChange: (value: AiAssessmentScaleLevel | null) => void = () => { };
     onTouched: () => void = () => { };
 
-    public writeValue(value: AiAssessmentScaleLevel): void {
+    public writeValue(value: AiAssessmentScaleLevel | null): void {
         this.value = value;
     }
 
-    public registerOnChange(fn: (value: AiAssessmentScaleLevel) => void): void {
+    public registerOnChange(fn: (value: AiAssessmentScaleLevel | null) => void): void {
         this.onChange = fn;
     }
 
@@ -51,32 +51,6 @@ export class AiScaleSelectComponent implements ControlValueAccessor {
     public selectValue(value: AiAssessmentScaleLevel): void {
         this.value = value;
         this.onChange(value);
-    }
-
-
-    /**
-     * Converts an `AiAssessmentScaleLevel` value to its corresponding numeric value.
-     */
-    public scaleLevelToNumber(scaleLevel: AiAssessmentScaleLevel | null): number {
-        const item = this.rangeItems.find(item => item.scaleLevel === scaleLevel);
-        return item ? item.value : 0;
-    }
-
-    /**
-     * Converts a numeric value to its corresponding `AiAssessmentScaleLevel` value.
-     */
-    private numberToScaleLevel(value: number): AiAssessmentScaleLevel | null {
-        const selectedScaleLevel = this.rangeItems.find(item => item.value === value)?.scaleLevel;
-        return selectedScaleLevel ?? null;
-    }
-
-    public onRangeChange(event: Event): void {
-        const target = event.target as HTMLInputElement;
-        const rangeValue = parseInt(target.value, 10);
-        const selectedScaleLevel = this.numberToScaleLevel(rangeValue);
-        if (selectedScaleLevel) {
-            this.value = selectedScaleLevel;
-            this.onChange(this.value);
-        }
+        this.onTouched();
     }
 }
