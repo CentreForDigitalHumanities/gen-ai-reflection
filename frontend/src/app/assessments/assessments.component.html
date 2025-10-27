@@ -18,6 +18,10 @@
         this way and whose assessment could be affected by the use of GenAI.
     </p>
 
+    <p i18n>
+        Please select one type of assessment. You can add more below.
+    </p>
+
     <div class="d-flex flex-column gap-4">
         @for (subForm of form.controls.assessments.controls; track $index) {
         <gr-assessment-subform
