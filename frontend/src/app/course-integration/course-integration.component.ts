@@ -32,7 +32,7 @@ export class CourseIntegrationComponent {
             link: "/assessments",
         },
         {
-            label: $localize`Go to Summary`,
+            label: $localize`Go to Step 4`,
             direction: "next",
             link: "/summary",
         },
