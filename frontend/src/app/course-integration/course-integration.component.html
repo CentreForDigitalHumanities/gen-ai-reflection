@@ -1,14 +1,16 @@
 <article>
-    <h1 i18n>🌙 Step 3: Course Integration</h1>
+    <h1 i18n>🌙 Step 3: Rethinking courses in times of GenAI</h1>
 
     <p i18n>
-        Here, you are invited to reconsider exercises or assignments by
-        involving generative AI to various extents. The AI assessment scale that
-        this step is based on, has officially been accepted by the UU as a
-        guiding principle. It helps teachers to think of generative AI in a less
-        binary manner – not as something that is either forbidden or approved,
-        but as a set of tools that can be integrated in academic education to
-        different degrees.
+        The previous steps aimed at checking the extent to which your current
+        course design is resilient against the potential use of GenAI. In this
+        third and final step, you are invited to reconsider exercises or
+        assignments by involving generative AI to various extents. The AI
+        assessment scale that this step is based on, has officially been
+        accepted by the UU as a guiding principle. It helps teachers to think of
+        generative AI in a less binary manner – not as something that is either
+        forbidden or approved, but as a set of tools that can be integrated in
+        academic education to different degrees.
     </p>
 
     <p i18n>
@@ -54,37 +56,40 @@
     <gr-ai-scale-select [formControl]="selectedScaleLevel" />
 </section>
 
-<section class="d-flex flex-column">
-    <p i18n>
-        Select the options below that you would like to include in your summary
-        report.
-    </p>
-    <div class="list-group example-item-group">
-        @for (example of visibleExamples(); track example.id) {
-        <li
-            class="list-group-item d-flex align-items-center example-item"
-            [class.selected]="chosenAiUses.value.includes(example.id)"
-        >
-            <input
-                [id]="'example-' + example.id"
-                type="checkbox"
-                class="form-check-input"
-                [value]="example.id"
-                [checked]="chosenAiUses.value.includes(example.id)"
-                (change)="onExampleChange(example.id)"
-            />
-            <label
-                [for]="'example-' + example.id"
-                class="form-check-label ms-2 w-100"
+@if (selectedScaleLevel.value) {
+
+    <section class="d-flex flex-column">
+        <p i18n>
+            Select the options below that you would like to include in your summary
+            report.
+        </p>
+        <div class="list-group example-item-group">
+            @for (example of visibleExamples(); track example.id) {
+            <li
+                class="list-group-item d-flex align-items-center example-item"
+                [class.selected]="chosenAiUses.value.includes(example.id)"
             >
-                {{ example.text }}
-            </label>
-        </li>
-        } @empty {
-        <p i18n>No examples found.</p>
-        }
-    </div>
-</section>
+                <input
+                    [id]="'example-' + example.id"
+                    type="checkbox"
+                    class="form-check-input"
+                    [value]="example.id"
+                    [checked]="chosenAiUses.value.includes(example.id)"
+                    (change)="onExampleChange(example.id)"
+                />
+                <label
+                    [for]="'example-' + example.id"
+                    class="form-check-label ms-2 w-100"
+                >
+                    {{ example.text }}
+                </label>
+            </li>
+            } @empty {
+            <p i18n>No examples found.</p>
+            }
+        </div>
+    </section>
+}
 
 <section class="my-4">
     <p i18n>
