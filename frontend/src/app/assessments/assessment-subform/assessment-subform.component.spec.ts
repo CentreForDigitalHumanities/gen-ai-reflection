@@ -37,7 +37,7 @@ const mockOptions: AssessmentForm[] = [{
     knownAiUses: []
 }];
 
-describe('AssessmentFormSubformComponent', () => {
+describe('AssessmentSubformComponent', () => {
     let component: AssessmentSubformComponent;
     let fixture: ComponentFixture<AssessmentSubformComponent>;
 
