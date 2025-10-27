@@ -29,7 +29,7 @@ export class CourseIntegrationComponent {
         {
             label: $localize`Back to Step 2`,
             direction: "back",
-            link: "/assessment-forms",
+            link: "/assessments",
         },
         {
             label: $localize`Go to Summary`,

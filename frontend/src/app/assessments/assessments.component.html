@@ -1,13 +1,13 @@
 <article>
-    <h1 i18n>🚀 Step 2: Assessment Forms</h1>
+    <h1 i18n>🚀 Step 2: Assessments</h1>
 
     <p i18n>
         In this step, you will receive information on how students can make use
-        of GenAI for the assessment forms in your course.
+        of GenAI for the assessments in your course.
     </p>
 
     <p i18n>
-        After adding an assessment form, you decide whether the use of GenAI is
+        After adding an assessment, you decide whether the use of GenAI is
         a problem in this context, based on the ILOs that are tested. If you
         consider the use of GenAI in the assessment a problem, the tool suggests
         alternatives.
@@ -19,19 +19,19 @@
     </p>
 
     <div class="d-flex flex-column gap-4">
-        @for (subForm of form.controls.assessmentForms.controls; track $index) {
+        @for (subForm of form.controls.assessments.controls; track $index) {
         <gr-assessment-form-subform
             [subFormId]="$index.toString()"
             [subForm]="subForm"
-            (removeForm)="removeAssessmentForm($index)"
+            (removeForm)="removeAssessment($index)"
         />
         }
         <div class="col-md-6 col-xl-4 g-3 d-flex align-items-center">
             <button
                 class="btn btn-outline-dark d-flex flex-column"
-                (click)="addAssessmentForm()"
-                aria-labelledby="add-assessment-form"
-                title="Add assessment form"
+                (click)="addAssessment()"
+                aria-labelledby="add-assessment"
+                title="Add assessment"
                 i18n-title
             >
                 <fa-icon
@@ -39,7 +39,7 @@
                     aria-hidden="true"
                     focusable="false"
                 ></fa-icon>
-                <span id="add-assessment-form" i18n>Add form</span>
+                <span id="add-assessment" i18n>Add assessment</span>
             </button>
         </div>
     </div>

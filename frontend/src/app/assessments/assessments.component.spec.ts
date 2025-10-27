@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { AssessmentFormsComponent } from "./assessment-forms.component";
+import { AssessmentsComponent } from "./assessments.component";
 import { FormService } from "../services/form.service";
 import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule } from "@angular/forms";
@@ -9,14 +9,14 @@ import { ActivatedRoute } from "@angular/router";
 
 
 
-describe("AssessmentFormsComponent", () => {
-    let component: AssessmentFormsComponent;
-    let fixture: ComponentFixture<AssessmentFormsComponent>;
+describe("AssessmentsComponent", () => {
+    let component: AssessmentsComponent;
+    let fixture: ComponentFixture<AssessmentsComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [
-                AssessmentFormsComponent,
+                AssessmentsComponent,
                 CommonModule,
                 ReactiveFormsModule,
                 NavButtonsComponent,
@@ -31,7 +31,7 @@ describe("AssessmentFormsComponent", () => {
             ],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(AssessmentFormsComponent);
+        fixture = TestBed.createComponent(AssessmentsComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

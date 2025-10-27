@@ -11,13 +11,13 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { AssessmentFormSubformComponent } from "./assessment-form-subform/assessment-form-subform.component";
 
 @Component({
-    selector: "gr-assessment-forms",
-    templateUrl: "./assessment-forms.component.html",
-    styleUrls: ["./assessment-forms.component.scss"],
+    selector: "gr-assessments",
+    templateUrl: "./assessments.component.html",
+    styleUrls: ["./assessments.component.scss"],
     standalone: true,
     imports: [NavButtonsComponent, CommonModule, ReactiveFormsModule, FontAwesomeModule, AssessmentFormSubformComponent],
 })
-export class AssessmentFormsComponent {
+export class AssessmentsComponent {
     private formService = inject(FormService);
 
     public navButtons: NavButton[] = [
@@ -37,6 +37,6 @@ export class AssessmentFormsComponent {
 
     public form = this.formService.form;
 
-    public addAssessmentForm = this.formService.addAssessmentForm;
-    public removeAssessmentForm = this.formService.removeAssessmentForm;
+    public addAssessment = this.formService.addAssessment;
+    public removeAssessment = this.formService.removeAssessment;
 }
