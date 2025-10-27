@@ -20,7 +20,7 @@
 
     <div class="d-flex flex-column gap-4">
         @for (subForm of form.controls.assessments.controls; track $index) {
-        <gr-assessment-form-subform
+        <gr-assessment-subform
             [subFormId]="$index.toString()"
             [subForm]="subForm"
             (removeForm)="removeAssessment($index)"

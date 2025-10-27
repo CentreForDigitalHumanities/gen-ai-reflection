@@ -8,14 +8,14 @@ import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule } from "@angular/forms";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
-import { AssessmentFormSubformComponent } from "./assessment-form-subform/assessment-form-subform.component";
+import { AssessmentSubformComponent } from "./assessment-subform/assessment-subform.component";
 
 @Component({
     selector: "gr-assessments",
     templateUrl: "./assessments.component.html",
     styleUrls: ["./assessments.component.scss"],
     standalone: true,
-    imports: [NavButtonsComponent, CommonModule, ReactiveFormsModule, FontAwesomeModule, AssessmentFormSubformComponent],
+    imports: [NavButtonsComponent, CommonModule, ReactiveFormsModule, FontAwesomeModule, AssessmentSubformComponent],
 })
 export class AssessmentsComponent {
     private formService = inject(FormService);
