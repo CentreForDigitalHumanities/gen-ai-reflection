@@ -6,6 +6,16 @@
         generate and download a report.
     </p>
 
+    <div class="btn-group">
+        <button (click)="generateReport()" class="btn btn-secondary" i18n>Generate report</button>
+        <button (click)="downloadReport()" class="btn btn-secondary" i18n [disabled]="!report">Download report</button>
+    </div>
+
+    @if (report) {
+        <div class="report-container" [innerHTML]="report">
+        </div>
+    }
+
 </article>
 
 <gr-nav-buttons [navButtons]="navButtons" />
