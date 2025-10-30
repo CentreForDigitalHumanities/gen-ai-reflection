@@ -1,0 +1,88 @@
+<h1>GenAI Reflection – Report</h1>
+
+<p>
+    Course name: {{ raw_data.course }}<br>
+    Department: {{ raw_data.department }}<br>
+    Instructor: {{ raw_data.lecturers }}<br>
+    Date of generation: {{ current_date|date }}
+</p>
+
+
+<h2>Step 1: Learning Outcomes</h2>
+
+{% for outcome in learning_outcomes %}
+<h3>{{ outcome.text }}</h3>
+<p>Dublin indicator: {{ outcome.dublin_indicator }}</p>
+<h4>AI Challenges</h4>
+<ul>
+    {% for challenge in outcome.challenges %}
+    <li>{{ challenge }}</li>
+    {% endfor %}
+</ul>
+<h4>AI Opportunities</h4>
+<ul>
+    {% for opportunity in outcome.opportunities %}
+    <li>{{ opportunity }}</li>
+    {% endfor %}
+</ul>
+{% endfor %}
+
+<h2>Step 2: Assessment Forms</h2>
+
+{% for form in assessment_forms %}
+<h3>{{ form.assessment_form }}</h3>
+
+<h4>Known AI Uses</h4>
+
+<ul>
+    {% for use in form.known_ai_uses %}
+    <li>{{ use.text }}
+        <ul>
+            {% for example in use.examples.all %}
+            <li>{{ example.text }}</li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+
+<h4>Connected learning outcomes</h4>
+
+<ul>
+{% for ilo in form.learning_outcomes %}
+<li>{{ ilo }}</li>
+{% endfor %}
+</ul>
+
+<h4>Impact of AI on assessment</h4>
+
+{% if form.affected %}
+<p>The use of AI <strong>does</strong> affect the extent to which this learning goal can be tested by this assignment. Suggested adjustments:</p>
+
+<ul>
+    {% for adjustment in form.adjustments %}
+    <li>{{ adjustment }}</li>
+    {% endfor %}
+</ul>
+
+{% else %}
+<p>The use of AI <strong>does not</strong> affect the extent to which this learning goal can be tested by this assignment.</p>
+{% endif %}
+
+{% endfor %}
+
+<h2>Step 3: Course Integration</h2>
+
+{% for scale in course_integration %}
+
+{% if scale.examples %}
+<h3>{{ scale.scale }}</h3>
+
+<ul>
+    {% for example in scale.examples %}
+    <li>{{ example }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% endfor %}
