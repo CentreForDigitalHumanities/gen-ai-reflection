@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SummaryComponent } from './summary.component';
+import { ApiService } from "../services/api.service";
+import { provideRouter } from "@angular/router";
+import { FormService } from "../services/form.service";
 
 describe('SummaryComponent', () => {
   let component: SummaryComponent;
@@ -8,7 +11,12 @@ describe('SummaryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SummaryComponent]
+      imports: [SummaryComponent],
+      providers: [
+        FormService,
+        { provide: ApiService, useValue: {} },
+        provideRouter([]),
+      ],
     })
     .compileComponents();
 
