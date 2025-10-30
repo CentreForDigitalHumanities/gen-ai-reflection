@@ -11,24 +11,30 @@ class LearningOutcome:
     def __init__(self, data: dict):
         self.id = data["id"]
         self.text = data["intendedOutcome"]
-        dublin_indicator = ChallengeOpportunity.DublinIndicator(data["dublinIndicator"])
-        self.dublin_indicator = gettext(dublin_indicator.label)
-        self.challenges = ChallengeOpportunity.objects.filter(
-            category=ChallengeOpportunity.Category.CHALLENGE, dublin_indicator=dublin_indicator
-        ).values_list("text", flat=True)
-        self.opportunities = ChallengeOpportunity.objects.filter(
-            category=ChallengeOpportunity.Category.OPPORTUNITY, dublin_indicator=dublin_indicator
-        ).values_list("text", flat=True)
+        if data["dublinIndicator"]:
+            dublin_indicator = ChallengeOpportunity.DublinIndicator(data["dublinIndicator"])
+            self.dublin_indicator = gettext(dublin_indicator.label)
+            self.challenges = ChallengeOpportunity.objects.filter(
+                category=ChallengeOpportunity.Category.CHALLENGE, dublin_indicator=dublin_indicator
+            ).values_list("text", flat=True)
+            self.opportunities = ChallengeOpportunity.objects.filter(
+                category=ChallengeOpportunity.Category.OPPORTUNITY, dublin_indicator=dublin_indicator
+            ).values_list("text", flat=True)
 
 
 class AssessmentFormData:
     def __init__(self, data: dict, learning_outcomes: list[LearningOutcome]):
-        assessment_form_obj = AssessmentForm.objects.get(id=data["assessmentId"])
-        self.assessment_form = assessment_form_obj.name
-        self.known_ai_uses = assessment_form_obj.known_ai_uses.all()
+        try:
+            assessment_form_obj = AssessmentForm.objects.get(id=data["assessmentId"])
+        except AssessmentForm.DoesNotExist:
+            pass  # This may happen if no assessment form has been chosen.
+        else:
+            self.assessment_form = assessment_form_obj.name
+            self.known_ai_uses = assessment_form_obj.known_ai_uses.all()
+            self.adjustments = assessment_form_obj.adjustments.order_by("order").values_list("text", flat=True)
         self.learning_outcomes = [x.text for x in filter(lambda lo: lo.id in data["iloIds"], learning_outcomes)]
         self.affected = data["affected"] == True
-        self.adjustments = assessment_form_obj.adjustments.order_by("order").values_list("text", flat=True)
+
 
 
 def get_integrations_by_scale(data: dict):
