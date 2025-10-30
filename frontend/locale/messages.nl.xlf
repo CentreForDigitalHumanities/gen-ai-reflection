@@ -1019,7 +1019,7 @@
       </trans-unit>
       <trans-unit id="3420369144167721743" datatype="html">
         <source>(Link will open in a new tab.)</source>
-        <target state="translated">(Link opent in een nieuwe tabblad.)</target>
+        <target state="translated">(Link opent in een nieuw tabblad.)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
           <context context-type="linenumber">155</context>
