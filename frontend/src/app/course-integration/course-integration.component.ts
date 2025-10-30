@@ -29,10 +29,10 @@ export class CourseIntegrationComponent {
         {
             label: $localize`Back to Step 2`,
             direction: "back",
-            link: "/assessment-forms",
+            link: "/assessments",
         },
         {
-            label: $localize`Go to Summary`,
+            label: $localize`Go to Step 4`,
             direction: "next",
             link: "/summary",
         },
@@ -56,7 +56,7 @@ export class CourseIntegrationComponent {
         return [];
     });
 
-    public selectedScaleLevel = new FormControl<AiAssessmentScaleLevel>(AiAssessmentScaleLevel.AI_COLLABORATION);
+    public selectedScaleLevel = new FormControl<AiAssessmentScaleLevel | null>(null);
 
     private selectedScaleLevelChanges = toSignal(
         this.selectedScaleLevel.valueChanges.pipe(
@@ -66,6 +66,9 @@ export class CourseIntegrationComponent {
 
     public visibleExamples = computed<AIUseExample[]>(() => {
         const selectedRangeValue = this.selectedScaleLevelChanges();
+        if (!selectedRangeValue) {
+            return [];
+        }
         const aiUseExamples = this.aiUseExamples();
         if (!selectedRangeValue) {
             return [];
