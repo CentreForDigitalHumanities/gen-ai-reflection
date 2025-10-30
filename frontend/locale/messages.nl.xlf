@@ -87,7 +87,7 @@
         <target state="translated">Volgende</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
-          <context context-type="linenumber">149</context>
+          <context context-type="linenumber">148</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.carousel.previous" datatype="html">
@@ -95,7 +95,7 @@
         <target state="translated">Vorige</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
-          <context context-type="linenumber">141</context>
+          <context context-type="linenumber">140</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.carousel.slide-number" datatype="html">
@@ -124,7 +124,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
-          <context context-type="linenumber">98</context>
+          <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.datepicker.select-month" datatype="html">
@@ -148,7 +148,7 @@
         <target state="translated">««</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
-          <context context-type="linenumber">290</context>
+          <context context-type="linenumber">289</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.first-aria" datatype="html">
@@ -164,7 +164,7 @@
         <target state="translated">»»</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
-          <context context-type="linenumber">327</context>
+          <context context-type="linenumber">325</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.last-aria" datatype="html">
@@ -172,7 +172,7 @@
         <target state="translated">Laatste</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
-          <context context-type="linenumber">400</context>
+          <context context-type="linenumber">398</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.next" datatype="html">
@@ -180,7 +180,7 @@
         <target state="translated">»</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
-          <context context-type="linenumber">316</context>
+          <context context-type="linenumber">314</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.next-aria" datatype="html">
@@ -188,7 +188,7 @@
         <target state="translated">Volgende</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
-          <context context-type="linenumber">385</context>
+          <context context-type="linenumber">380</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.previous" datatype="html">
@@ -196,7 +196,7 @@
         <target state="translated">«</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
-          <context context-type="linenumber">303</context>
+          <context context-type="linenumber">301</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.previous-aria" datatype="html">
@@ -204,7 +204,7 @@
         <target state="translated">Vorige</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
-          <context context-type="linenumber">363</context>
+          <context context-type="linenumber">360</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.progressbar.value" datatype="html">
@@ -221,7 +221,7 @@
         <target state="translated">Minder uren</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">320</context>
+          <context context-type="linenumber">316</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
@@ -229,7 +229,7 @@
         <target state="translated">Minder minuten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">361</context>
+          <context context-type="linenumber">358</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
@@ -237,7 +237,7 @@
         <target state="translated">Minder seconden</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">440</context>
+          <context context-type="linenumber">433</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.HH" datatype="html">
@@ -245,7 +245,7 @@
         <target state="translated">UU</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">234</context>
+          <context context-type="linenumber">233</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.hours" datatype="html">
@@ -261,7 +261,7 @@
         <target state="translated">Meer uren</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">307</context>
+          <context context-type="linenumber">301</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
@@ -269,7 +269,7 @@
         <target state="translated">Meer minuten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">345</context>
+          <context context-type="linenumber">339</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
@@ -277,7 +277,7 @@
         <target state="translated">Meer seconden</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">423</context>
+          <context context-type="linenumber">417</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.minutes" datatype="html">
@@ -285,7 +285,7 @@
         <target state="translated">Minuten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">291</context>
+          <context context-type="linenumber">289</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.MM" datatype="html">
@@ -293,7 +293,7 @@
         <target state="translated">MM</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">273</context>
+          <context context-type="linenumber">270</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.PM" datatype="html">
@@ -310,7 +310,7 @@
         <target state="translated">Seconden</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">401</context>
+          <context context-type="linenumber">393</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.SS" datatype="html">
@@ -318,7 +318,7 @@
         <target state="translated">SS</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">383</context>
+          <context context-type="linenumber">375</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.toast.close-aria" datatype="html">
@@ -326,7 +326,7 @@
         <target state="translated">Sluiten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/toast/toast.ts</context>
-          <context context-type="linenumber">93</context>
+          <context context-type="linenumber">92</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2433299293992288618" datatype="html">
@@ -363,7 +363,7 @@
       </trans-unit>
       <trans-unit id="8082396782637148201" datatype="html">
         <source> Which ILOs are tested with this assessment? Select one or multiple. </source>
-        <target state="translated"> Welke leerdoelen (ILO's) worden met deze beoordelingsvorm getoetst? Kies er een of meerdere. </target>
+        <target state="translated"> Welke leerdoelen (ILO&apos;s) worden met deze beoordelingsvorm getoetst? Kies er een of meerdere. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-form-subform/assessment-form-subform.component.html</context>
           <context context-type="linenumber">33</context>
@@ -433,9 +433,9 @@
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2390145448604379785" datatype="html">
-        <source>Step 2: Assessment Forms</source>
-        <target state="translated">Stap 2: Beoordelingsvormen</target>
+      <trans-unit id="3893531597079366164" datatype="html">
+        <source>🚀 Step 2: Assessment Forms</source>
+        <target state="new">Stap 2: Beoordelingsvormen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessment-forms/assessment-forms.component.html</context>
           <context context-type="linenumber">2</context>
@@ -537,9 +537,9 @@
           <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8117713534415180784" datatype="html">
-        <source>Step 3: Course Integration</source>
-        <target state="translated">Stap 3: Cursusintegratie</target>
+      <trans-unit id="592253593258547003" datatype="html">
+        <source>🌙 Step 3: Course Integration</source>
+        <target state="new">Stap 3: Cursusintegratie</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
           <context context-type="linenumber">2</context>
@@ -558,7 +558,7 @@
         <target state="translated"> Klik op een van de vijf niveaus hieronder om voorbeelden te zien van educatieve oefeningen of opdrachten die in wisselende mate (niveaus 2-5) of helemaal geen (niveau 1) gebruik maken van generatieve AI. Vink voorbeelden aan die je interesseren. Deze komen in het uiteindelijke rapport terecht. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">38</context>
+          <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4444957576059484849" datatype="html">
@@ -566,7 +566,7 @@
         <target state="translated"> Selecteer de opties die je graag in het eindrapport terug zou willen zien. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="linenumber">59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6730431658914549250" datatype="html">
@@ -574,7 +574,7 @@
         <target state="translated">Geen voorbeelden gevonden.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">76</context>
+          <context context-type="linenumber">84</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7006751082102407318" datatype="html">
@@ -582,7 +582,7 @@
         <target state="translated">Terug naar Stap 2</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.ts</context>
-          <context context-type="linenumber">28</context>
+          <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1707384110772691733" datatype="html">
@@ -590,7 +590,7 @@
         <target state="translated">Verder naar Samenvatting</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.ts</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2203684742377071634" datatype="html">
@@ -638,8 +638,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="2741672408473838115" datatype="html">
-        <source> Welcome to the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>GenAI reflection tool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>. The aim of this tool is to stimulate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>reflection<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> on the impact of generative AI on academic teaching. Students can use generative AI for almost all assignments. The question whether assessment forms need to be adapted as a consequence of this, depends on the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>intended learning outcomes<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> that the assignments test. This is why this tool aims to make an explicit link between assessment forms and learning outcomes. Wherever the use of generative AI is considered problematic, the tool provides <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>alternative assessment forms<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>, or stimulates you to consider changing the learning outcomes. </source>
-        <target state="translated"> Welkom bij de <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>GenAI reflectietool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>. Het doel van deze applicatie is om je te laten <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>reflecteren<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> op de impact van generatieve AI op academisch onderwijs. Studenten kunnen generatieve AI voor bijna alle opdrachten inzetten. De vraag of beoordelingsvormen hierdoor aangepast moeten worden, hangt af van de <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>beoogde leerdoelen<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> die de beoordelingsvormen viseren. Deze tool maakt daarom een expliciete link tussen beoordelingsvomen en leerdoelen. Waar het gebruik van generatieve AI problematisch wordt geacht, biedt de tool <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>alternatieve beoordelingsvormen<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> of nodigt je uit om de leerdoelen aan te passen. </target>
+        <source> Welcome to the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>GenAI reflection tool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. The aim of this tool is to stimulate <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>reflection<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> on the impact of generative AI on academic teaching. Students can use generative AI for almost all assignments. The question whether assessment forms need to be adapted as a consequence of this, depends on the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>intended learning outcomes<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> that the assignments test. This is why this tool aims to make an explicit link between assessment forms and learning outcomes. Wherever the use of generative AI is considered problematic, the tool provides <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>alternative assessment forms<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>, or stimulates you to consider changing the learning outcomes. </source>
+        <target state="translated"> Welkom bij de <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>GenAI reflectietool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. Het doel van deze applicatie is om je te laten <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>reflecteren<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> op de impact van generatieve AI op academisch onderwijs. Studenten kunnen generatieve AI voor bijna alle opdrachten inzetten. De vraag of beoordelingsvormen hierdoor aangepast moeten worden, hangt af van de <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>beoogde leerdoelen<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> die de beoordelingsvormen viseren. Deze tool maakt daarom een expliciete link tussen beoordelingsvomen en leerdoelen. Waar het gebruik van generatieve AI problematisch wordt geacht, biedt de tool <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>alternatieve beoordelingsvormen<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> of nodigt je uit om de leerdoelen aan te passen. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">5</context>
@@ -654,24 +654,24 @@
         </context-group>
       </trans-unit>
       <trans-unit id="1078467927799266371" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; >"/>Step 1: Learning outcomes analysis <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> clarify and map your course goals </source>
-        <target state="translated"><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; >"/>Stap 1: Leerdoelanalyse <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> zet de doelen van je cursus uiteen </target>
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; &gt;"/>Step 1: Learning outcomes analysis <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> clarify and map your course goals </source>
+        <target state="translated"><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; &gt;"/>Stap 1: Leerdoelanalyse <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> zet de doelen van je cursus uiteen </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8537204403829125203" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;>"/>Step 2: Assessment forms<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> assess whether the use of generative AI in assignments negatively impacts the learning outcomes </source>
-        <target state="translated"><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;>"/>Stap 2: Beoordelingsvormen <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> toetst of het gebruik van generatieve AI in opdrachten een negatieve invloed heeft op het behalen van de leerdoelen </target>
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;&gt;"/>Step 2: Assessment forms<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> assess whether the use of generative AI in assignments negatively impacts the learning outcomes </source>
+        <target state="translated"><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;&gt;"/>Stap 2: Beoordelingsvormen <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> toetst of het gebruik van generatieve AI in opdrachten een negatieve invloed heeft op het behalen van de leerdoelen </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5681982888923314146" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; >"/>Step 3: Ideas for integrating generative AI in your course <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> explore how generative AI can be used to enhance your course </source>
-        <target state="translated"><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; >"/>Stap 3: Ideeën om generatieve AI in je cursus te integreren <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> onderzoekt hoe generatieve AI eventueel gebruikt zou kunnen worden om je cursus te verbeteren </target>
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; &gt;"/>Step 3: Ideas for integrating generative AI in your course <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> explore how generative AI can be used to enhance your course </source>
+        <target state="translated"><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; &gt;"/>Stap 3: Ideeën om generatieve AI in je cursus te integreren <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> onderzoekt hoe generatieve AI eventueel gebruikt zou kunnen worden om je cursus te verbeteren </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">33</context>
@@ -685,20 +685,12 @@
           <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4701996646063599508" datatype="html">
-        <source> Please provide the name of your course. This will personalize the final report. </source>
-        <target state="translated"> Vul de naam van je cursus in. Dit wordt gebruikt om het eindrapport mee te personaliseren. </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/intro/intro.component.html</context>
-          <context context-type="linenumber">44</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="8297964309906642959" datatype="html">
         <source>Course name</source>
         <target state="translated">Cursusnaam</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="947548908968390099" datatype="html">
@@ -709,9 +701,9 @@
           <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4919772938230654717" datatype="html">
-        <source>Step 1: Learning Outcomes</source>
-        <target state="translated">Stap 1: Leerdoelen</target>
+      <trans-unit id="417481999067791225" datatype="html">
+        <source>🌍 Step 1: Learning Outcomes</source>
+        <target state="new">Stap 1: Leerdoelen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">3</context>
@@ -719,7 +711,7 @@
       </trans-unit>
       <trans-unit id="3355125060616451212" datatype="html">
         <source> In this step, you will map the Intended Learning Outcomes (ILOs) for your course and link each one to the most relevant Dublin Descriptor. </source>
-        <target state="translated"> In deze stap koppel je de beoogde leerdoelen ('Intended Learning Outcomes', ofwel ILO's) voor je cursus aan de meest relevante Dublin-descriptor. </target>
+        <target state="translated"> In deze stap koppel je de beoogde leerdoelen (&apos;Intended Learning Outcomes&apos;, ofwel ILO&apos;s) voor je cursus aan de meest relevante Dublin-descriptor. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">6</context>
@@ -926,7 +918,7 @@
         <target state="translated">Voer de naam van je cursus in...</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4012265924696718914" datatype="html">
@@ -934,7 +926,7 @@
         <target state="translated"> Meer informatie over het universiteitsbeleid ten opzichte van generatieve AI vind je hier. (Links openen in een nieuw tabblad.) </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">83</context>
+          <context context-type="linenumber">91</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8258051070099547441" datatype="html">
@@ -942,7 +934,7 @@
         <target state="translated">UU AI-beleid (algemene pagina):</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">89</context>
+          <context context-type="linenumber">97</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7485339708545160201" datatype="html">
@@ -950,7 +942,7 @@
         <target state="translated">AI-index (voor docenten):</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">99</context>
+          <context context-type="linenumber">107</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8803732224958530078" datatype="html">
@@ -959,11 +951,11 @@
         <note priority="1" from="description">url</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">91</context>
+          <context context-type="linenumber">99</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">95</context>
+          <context context-type="linenumber">103</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8819475970509465689" datatype="html">
@@ -972,27 +964,27 @@
         <note priority="1" from="description">url</note>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">101</context>
+          <context context-type="linenumber">109</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">105</context>
+          <context context-type="linenumber">113</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6431857416550248523" datatype="html">
-        <source> Below you will find a scale with five levels of AI integration in educational assessments, based on the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://aiassessmentscale.com/&quot; target=&quot;_blank&quot; >"/>AI Assessment Scale (AIAS)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/> developed by Perkins et al. (2024). </source>
-        <target state="translated"> Hieronder vind je een schaal met vijf niveaus waarin generatieve AI in educatieve opdrachten geïntegreerd kan worden, gebaseerd op de <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://aiassessmentscale.com/&quot; target=&quot;_blank&quot; >"/>AI Assessment Scale (AIAS)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/> van Perkins et al. (2024). </target>
+        <source> Below you will find a scale with five levels of AI integration in educational assessments, based on the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://aiassessmentscale.com/&quot; target=&quot;_blank&quot; &gt;"/>AI Assessment Scale (AIAS)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a &gt;"/> developed by Perkins et al. (2024). </source>
+        <target state="translated"> Hieronder vind je een schaal met vijf niveaus waarin generatieve AI in educatieve opdrachten geïntegreerd kan worden, gebaseerd op de <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://aiassessmentscale.com/&quot; target=&quot;_blank&quot; &gt;"/>AI Assessment Scale (AIAS)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a &gt;"/> van Perkins et al. (2024). </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7943574911756256975" datatype="html">
-        <source>AI Assessment Scale (click to enlarge)</source>
-        <target state="translated">AI Assessment Scale (klik om te vergroten)</target>
+      <trans-unit id="6680681147557237751" datatype="html">
+        <source> AI Assessment Scale (click to enlarge) </source>
+        <target state="translated"> AI Assessment Scale (klik om te vergroten) </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7819314041543176992" datatype="html">
@@ -1000,7 +992,95 @@
         <target state="translated">Sluiten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">126</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5503328465500572474" datatype="html">
+        <source>AI Assessment Scale (AIAS)</source>
+        <target state="translated">AI Assessment Scale (AIAS)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">152</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3420369144167721743" datatype="html">
+        <source>(Link will open in a new tab.)</source>
+        <target state="translated">(Link wordt geopend in nieuw tabblad.)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">155</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5863943641247908675" datatype="html">
+        <source> Please provide the name of your course and the name of the lecturers. This will personalize the final report. </source>
+        <target state="translated"> Vul de naam van de cursus en van de docenten in. Hiermee wordt het rapport gepersonaliseerd. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/intro/intro.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2492597071591261326" datatype="html">
+        <source>Lecturers</source>
+        <target state="translated">Docenten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/intro/intro.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6437639597937808844" datatype="html">
+        <source>Enter the name of the lecturers...</source>
+        <target state="translated">Vul de naam van de docenten in...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/intro/intro.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4739818603756173797" datatype="html">
+        <source>Summary</source>
+        <target state="translated">Samenvatting</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/summary/summary.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3979800807088653978" datatype="html">
+        <source> You have completed the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>GenAI reflection tool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>! You can now generate and download a report. </source>
+        <target state="translated"> Dit is het einde van de <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Reflectietool GenAI<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>! Je kunt nu het rapport aanmaken en downloaden. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/summary/summary.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2893292538434506430" datatype="html">
+        <source>Generate report</source>
+        <target state="translated">Rapport aanmaken</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/summary/summary.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5202300350522124506" datatype="html">
+        <source>Download report</source>
+        <target state="translated">Rapport downloaden</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/summary/summary.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6136657377262940727" datatype="html">
+        <source>Back to Step 3</source>
+        <target state="translated">Terug naar stap 3</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/summary/summary.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="763434360141362050" datatype="html">
+        <source>Start over</source>
+        <target state="translated">Opnieuw beginnen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/summary/summary.component.ts</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
     </body>
