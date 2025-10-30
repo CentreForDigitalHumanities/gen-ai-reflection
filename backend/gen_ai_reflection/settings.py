@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from pathlib import Path
+
 from gen_ai_reflection.common_settings import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -34,7 +36,7 @@ ROOT_URLCONF = "gen_ai_reflection.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [Path(BASE_DIR) / "report" / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
