@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xliff version="1.2"
-    xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file source-language="en" target-language="nl" datatype="plaintext" original="ng2.template">
         <body>
             <trans-unit id="1409585916089173371" datatype="html">
@@ -1038,7 +1037,7 @@ AI Assessment Scale (AIAS)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/>
 </trans-unit>
 <trans-unit id="558478349982758223" datatype="html">
 <source> The previous steps aimed at checking the extent to which your current course design is resilient against the potential use of GenAI. In this third step, you are invited to reconsider exercises or assignments by involving generative AI to various extents. The AI assessment scale that this step is based on, has officially been accepted by the UU as a guiding principle. It helps teachers to think of generative AI in a less binary manner – not as something that is either forbidden or approved, but as a set of tools that can be integrated in academic education to different degrees. </source>
-<target state="translated"> De vorige stappen probeerden vast te stellen in hoeverre het huidige cursusontwerp bestand is tegen het mogelijke gebruik van generatieve AI. In deze derde stap word je gestimuleerd om opgaven en beoordelingen te heroverwegen door generatieve AI in meer of mindere mate hierin te integreren. De AI-beoordelingsschaal die aan deze stap ten grondslag ligt, is officieel door de UU als leidraad gekozen. Zij helpt docenten om minder zwart-wit over generatieve AI na te denken – niet als iets wat geheel verboden of toegestaan is, maar als een set gereedschappen die in wisselende mate in academisch onderwijs geïntegreerd kunnen worden. </target>
+<target state="translated"> In de vorige stappen probeerden we vast te stellen in hoeverre het huidige cursusontwerp bestand is tegen het mogelijke gebruik van generatieve AI. In deze derde stap word je gestimuleerd om opgaven en beoordelingen te heroverwegen door generatieve AI in meer of mindere mate hierin te integreren. De AI-beoordelingsschaal die aan deze stap ten grondslag ligt, is officieel door de UU als leidraad gekozen. Zij helpt docenten om minder zwart-wit over generatieve AI na te denken – niet als iets wat geheel verboden of toegestaan is, maar als een set gereedschappen die in wisselende mate in academisch onderwijs geïntegreerd kunnen worden. </target>
 <context-group purpose="location">
     <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
     <context context-type="linenumber">5</context>
@@ -1058,7 +1057,7 @@ GenAI reflection tool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/
 . This tool is designed to reflect on the impact of GenAI on the learning goals of individual courses. It works best if you run this tool with a particular course in mind (and to have the course manual ready). The tool will guide you through some steps (see below) that challenge you to reflect on the validity of the intended learning outcomes of the course and the effectiveness of the assignments to test these. Once finished, you will be offered a report with an overview of the outcomes. </source>
 <target state="translated"> Welkom in deze <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>
 GenAI-reflectietool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
-. Deze tool is ontworpen om je te laten reflecteren over de impact van GEnAI </target>
+. Deze tool is ontworpen om je te laten reflecteren over de impact van GenAI </target>
 <context-group purpose="location">
 <context context-type="sourcefile">src/app/intro/intro.component.html</context>
 <context context-type="linenumber">5</context>
@@ -1088,7 +1087,7 @@ GenAI-reflectietool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/st
 <target state="translated">
 <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;>"/>
  Stap 4: Eindrapport <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
- na het doorlopen van de tool kun je een gepersonaliseerd rapport doorlopen met de belangrijkste bevindingen. </target>
+ na het doorlopen van de tool kun je een gepersonaliseerd rapport downloaden met de belangrijkste bevindingen. </target>
 <context-group purpose="location">
 <context context-type="sourcefile">src/app/intro/intro.component.html</context>
 <context context-type="linenumber">44</context>
@@ -1096,7 +1095,7 @@ GenAI-reflectietool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/st
 </trans-unit>
 <trans-unit id="6747957211917839470" datatype="html">
 <source> Enter the intended learning outcomes of your course here (one per field). You can do this in your own words. For each ILO you enter, please select the Dublin Descriptor that best aligns. </source>
-<target state="translated"> Voer hier de beoogde leerdoelen van je cursus in (één per veld). Je kunt dit in je eigen woorden doen. Kies voor iedere ingevoerde ILO de Dublin-descriptor die er het beste bijpast. </target>
+<target state="translated"> Voer hier de beoogde leerdoelen (ILO's) van je cursus in (één per veld). Je kunt dit in je eigen woorden doen. Kies voor iedere ingevoerde ILO de Dublin-descriptor die er het beste bijpast. </target>
 <context-group purpose="location">
 <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
 <context context-type="linenumber">25</context>
