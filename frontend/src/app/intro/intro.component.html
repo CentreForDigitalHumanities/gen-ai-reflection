@@ -41,19 +41,38 @@
 <article>
     <h3 i18n>Before we begin...</h3>
     <p i18n>
-        Please provide the name of your course. This will personalize the final
+        Please provide the name of your course and the name of the lecturers. This will personalize the final
         report.
     </p>
     <form [formGroup]="form" (ngSubmit)="submitCourseName($event)">
-        <label for="course" class="form-label" i18n>Course name</label>
-        <input
-            id="course"
-            type="text"
-            class="form-control"
-            [formControl]="form.controls.course"
-            placeholder="Enter the name of your course..."
-            i18n-placeholder
-        />
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="course" class="form-label" i18n>Course name</label>
+                    <input
+                        id="course"
+                        type="text"
+                        class="form-control"
+                        [formControl]="form.controls.course"
+                        placeholder="Enter the name of your course..."
+                        i18n-placeholder
+                    />
+                </div>
+                <div class="col-md-6">
+                    <label for="lecturers" class="form-label" i18n>Lecturers</label>
+                    <input
+                        id="lecturers"
+                        type="text"
+                        class="form-control"
+                        [formControl]="form.controls.lecturers"
+                        placeholder="Enter the name of the lecturers..."
+                        i18n-placeholder
+                    />
+                </div>
+            </div>
+        </div>
+
+
     </form>
 </article>
 
