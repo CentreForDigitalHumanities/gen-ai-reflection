@@ -16,9 +16,10 @@ interface Adjustment {
     order: number;
 }
 
-interface KnownAiUseExample {
+export interface KnownAiUseExample {
     id: number;
     text: string;
+    assessmentForm: number;
 }
 
 export interface KnownAiUse {

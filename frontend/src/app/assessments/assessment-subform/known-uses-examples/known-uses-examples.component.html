@@ -16,7 +16,7 @@
                 <div ngbAccordionBody>
                     <ng-template>
                         <ul>
-                            @for (example of aiUse.examples; track example.id) {
+                            @for (example of examplesForUse(aiUse); track example.id) {
                             <li>{{ example.text }}</li>
                             }
                         </ul>

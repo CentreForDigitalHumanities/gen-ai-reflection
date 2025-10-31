@@ -18,10 +18,11 @@ class UseExampleSerializer(serializers.ModelSerializer):
 
 
 class KnownAiUseExampleSerializer(serializers.ModelSerializer):
+    assessmentForm = serializers.ReadOnlyField(source="assessment_form.id")
 
     class Meta:
         model = KnownAiUseExample
-        fields = ("id", "text")
+        fields = ("id", "text", "assessmentForm")
 
 
 class KnownAiUseSerializer(serializers.ModelSerializer):

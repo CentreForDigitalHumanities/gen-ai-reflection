@@ -101,11 +101,18 @@ class KnownAiUseExample(models.Model):
         verbose_name = "Known AI use example"
 
     text = models.TextField()
+
     ai_use = models.ForeignKey(
         KnownAiUse,
         on_delete=models.CASCADE,
         related_name="examples",
     )
 
+    assessment_form = models.ForeignKey(
+        AssessmentForm,
+        on_delete=models.CASCADE,
+        related_name="examples",
+    )
+
     def __str__(self):
-        return f"{self.text} ({self.ai_use})"
+        return f"{self.text} ({self.ai_use} -- {self.assessment_form})"
