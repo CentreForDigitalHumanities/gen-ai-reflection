@@ -10,6 +10,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "revproxy",
     "formdata",
+    "report",
 ]
 
 MIDDLEWARE = [
