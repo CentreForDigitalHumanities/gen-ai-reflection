@@ -29,13 +29,13 @@
 
 <h2>Step 2: Assessment Forms</h2>
 
-{% for form in assessment_forms %}
-<h3>{{ form.assessment_form }}</h3>
+{% for assessment in assessments %}
+<h3>{{ assessment.assessment_form }}</h3>
 
 <h4>Known AI Uses</h4>
 
 <ul>
-    {% for use in form.known_ai_uses %}
+    {% for use in assessment.known_ai_uses %}
     <li>{{ use.text }}
         <ul>
             {% for example in use.examples.all %}
@@ -49,18 +49,18 @@
 <h4>Connected learning outcomes</h4>
 
 <ul>
-{% for ilo in form.learning_outcomes %}
+{% for ilo in assessment.learning_outcomes %}
 <li>{{ ilo }}</li>
 {% endfor %}
 </ul>
 
 <h4>Impact of AI on assessment</h4>
 
-{% if form.affected %}
+{% if assessment.affected %}
 <p>The use of AI <strong>does</strong> affect the extent to which this learning goal can be tested by this assignment. Suggested adjustments:</p>
 
 <ul>
-    {% for adjustment in form.adjustments %}
+    {% for adjustment in assessment.adjustments %}
     <li>{{ adjustment }}</li>
     {% endfor %}
 </ul>

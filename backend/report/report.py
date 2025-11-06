@@ -21,7 +21,7 @@ class LearningOutcome:
             ).values_list("text", flat=True)
 
 
-class AssessmentFormData:
+class AssessmentData:
     def __init__(self, data: dict, learning_outcomes: list[LearningOutcome]):
         try:
             assessment_form_obj = AssessmentForm.objects.get(id=data["assessmentId"])
@@ -53,12 +53,12 @@ def create_report(data: dict) -> str:
     """Create the inner HTML of the report using the form data from the
     frontend."""
     learning_outcomes = [LearningOutcome(data) for data in data["learningOutcomes"]]
-    assessment_forms = [AssessmentFormData(data, learning_outcomes) for data in data["assessmentForms"]]
+    assessments = [AssessmentData(data, learning_outcomes) for data in data["assessments"]]
     course_integration = get_integrations_by_scale(data["chosenAiUses"])
     return render_to_string("report/inner_html.html", {
         'raw_data': data,
         'learning_outcomes': learning_outcomes,
-        'assessment_forms': assessment_forms,
+        'assessments': assessments,
         'course_integration': course_integration,
         'current_date': datetime.datetime.now(),
     })
