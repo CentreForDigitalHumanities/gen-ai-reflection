@@ -18,7 +18,9 @@ export class SummaryComponent {
     private formService = inject(FormService);
     private apiService = inject(ApiService);
     private destroyRef = inject(DestroyRef);
-    public report = "";
+    public form = this.formService.form;
+    public reportHtml = "";
+    public reportPdf: Blob | null = null;
     public navButtons: NavButton[] = [
         {
             label: $localize`Back to Step 3`,
@@ -32,19 +34,22 @@ export class SummaryComponent {
         },
     ];
     generateReport() {
-        this.apiService.generateReportHTML(this.formService.form.getRawValue()).pipe(takeUntilDestroyed(this.destroyRef)).subscribe(html => {
-            this.report = html;
+        this.apiService.generateReport(this.formService.form.getRawValue()).pipe(takeUntilDestroyed(this.destroyRef)).subscribe(reportData => {
+            this.reportHtml = reportData.html;
+            const dataArray = Uint8Array.from(window.atob(reportData.pdf), (char) => char.charCodeAt(0));
+            this.reportPdf = new Blob([dataArray], {type: 'application/pdf'});
         });
     }
     downloadReport() {
-        this.apiService.generateReportPDF(this.formService.form.getRawValue()).pipe(takeUntilDestroyed(this.destroyRef)).subscribe(blob => {
-            const anchor = document.createElement('a');
-            const url = URL.createObjectURL(blob);
-            anchor.href = url;
-            anchor.download = 'report.pdf';
-            anchor.click();
-            anchor.remove();
-            URL.revokeObjectURL(url);
-        });
+        if (!this.reportPdf) {
+            return;
+        }
+        const anchor = document.createElement('a');
+        const url = URL.createObjectURL(this.reportPdf);
+        anchor.href = url;
+        anchor.download = 'report.pdf';
+        anchor.click();
+        anchor.remove();
+        URL.revokeObjectURL(url);
     }
 }

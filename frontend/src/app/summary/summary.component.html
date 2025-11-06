@@ -2,17 +2,31 @@
     <h1 i18n>Summary</h1>
 
     <p i18n>
-        You have completed the <strong>GenAI reflection tool</strong>! You can now
-        generate and download a report.
+        You have completed the <strong>GenAI reflection tool</strong>! To generate the report,
+        please enter your name and click the button below.
     </p>
+
+    <form [formGroup]="form" (ngSubmit)="generateReport()" class="mb-5">
+        <label for="name" class="form-label" i18n>Your name:</label>
+        <input
+            id="name"
+            type="text"
+            class="form-control"
+            [formControl]="form.controls.name"
+            placeholder="Enter your name..."
+            i18n-placeholder
+        />
+    </form>
 
     <div class="btn-group">
         <button (click)="generateReport()" class="btn btn-secondary" i18n>Generate report</button>
-        <button (click)="downloadReport()" class="btn btn-secondary" i18n [disabled]="!report">Download report</button>
+        @if (reportHtml) {
+            <button (click)="downloadReport()" class="btn btn-secondary" i18n>Download report</button>
+        }
     </div>
 
-    @if (report) {
-        <div class="report-container" [innerHTML]="report">
+    @if (reportHtml) {
+        <div class="report-container" [innerHTML]="reportHtml">
         </div>
     }
 

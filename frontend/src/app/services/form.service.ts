@@ -11,7 +11,7 @@ export enum Department {
 
 export type GRForm = FormGroup<{
     course: FormControl<string | null>;
-    lecturers: FormControl<string | null>;
+    name: FormControl<string | null>;
     department: FormControl<Department | null>;
     learningOutcomes: FormArray<LearningOutcomesForm>;
     assessments: FormArray<AssessmentForm>;
@@ -40,7 +40,7 @@ export class FormService {
         course: new FormControl<string | null>(null, {
             validators: [Validators.required],
         }),
-        lecturers: new FormControl<string | null>(null, {
+        name: new FormControl<string | null>(null, {
             validators: [Validators.required],
         }),
         department: new FormControl<Department | null>(null),
