@@ -23,7 +23,7 @@ describe('AiScaleSelectComponent', () => {
     });
 
     it('should initialize with a default value', () => {
-        expect(component.value).toBe(AiAssessmentScaleLevel.AI_COLLABORATION);
+        expect(component.value).toBe(null);
     });
 
 
@@ -33,29 +33,27 @@ describe('AiScaleSelectComponent', () => {
         expect(onChangeSpy).toHaveBeenCalledWith(AiAssessmentScaleLevel.AI_PLANNING);
     });
 
-    it('should update value on range change', () => {
-        const rangeInput = fixture.debugElement.query(By.css('input[type="range"]')).nativeElement;
-        rangeInput.value = '1';
-        rangeInput.dispatchEvent(new Event('input'));
+    it('should update value on radio button change', () => {
+        const radioInput = fixture.debugElement.query(By.css('input[type="radio"][value="' + AiAssessmentScaleLevel.NO_AI + '"]')).nativeElement;
+        radioInput.click();
         fixture.detectChanges();
 
         expect(component.value).toBe(AiAssessmentScaleLevel.NO_AI);
     });
 
-    it('should call onChange on range change', () => {
+    it('should call onChange on radio button change', () => {
         const onChangeSpy = spyOn(component, 'onChange');
-        const rangeInput = fixture.debugElement.query(By.css('input[type="range"]')).nativeElement;
-        rangeInput.value = '5';
-        rangeInput.dispatchEvent(new Event('input'));
+        const radioInput = fixture.debugElement.query(By.css('input[type="radio"][value="' + AiAssessmentScaleLevel.AI_EXPLORATION + '"]')).nativeElement;
+        radioInput.click();
         fixture.detectChanges();
 
         expect(onChangeSpy).toHaveBeenCalledWith(AiAssessmentScaleLevel.AI_EXPLORATION);
     });
 
-    it('should select a value on option click', () => {
+    it('should select a value on radio button click', () => {
         spyOn(component, 'selectValue').and.callThrough();
-        const option = fixture.debugElement.query(By.css('option[value="2"]'));
-        option.triggerEventHandler('click', null);
+        const radioInput = fixture.debugElement.query(By.css('input[type="radio"][value="' + AiAssessmentScaleLevel.AI_PLANNING + '"]')).nativeElement;
+        radioInput.click();
         fixture.detectChanges();
         expect(component.selectValue).toHaveBeenCalledWith(AiAssessmentScaleLevel.AI_PLANNING);
         expect(component.value).toBe(AiAssessmentScaleLevel.AI_PLANNING);

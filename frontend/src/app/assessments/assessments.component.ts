@@ -8,16 +8,16 @@ import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule } from "@angular/forms";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
-import { AssessmentFormSubformComponent } from "./assessment-form-subform/assessment-form-subform.component";
+import { AssessmentSubformComponent } from "./assessment-subform/assessment-subform.component";
 
 @Component({
-    selector: "gr-assessment-forms",
-    templateUrl: "./assessment-forms.component.html",
-    styleUrls: ["./assessment-forms.component.scss"],
+    selector: "gr-assessments",
+    templateUrl: "./assessments.component.html",
+    styleUrls: ["./assessments.component.scss"],
     standalone: true,
-    imports: [NavButtonsComponent, CommonModule, ReactiveFormsModule, FontAwesomeModule, AssessmentFormSubformComponent],
+    imports: [NavButtonsComponent, CommonModule, ReactiveFormsModule, FontAwesomeModule, AssessmentSubformComponent],
 })
-export class AssessmentFormsComponent {
+export class AssessmentsComponent {
     private formService = inject(FormService);
 
     public navButtons: NavButton[] = [
@@ -37,6 +37,6 @@ export class AssessmentFormsComponent {
 
     public form = this.formService.form;
 
-    public addAssessmentForm = this.formService.addAssessmentForm;
-    public removeAssessmentForm = this.formService.removeAssessmentForm;
+    public addAssessment = this.formService.addAssessment;
+    public removeAssessment = this.formService.removeAssessment;
 }

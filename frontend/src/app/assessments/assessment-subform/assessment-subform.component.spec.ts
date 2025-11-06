@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AssessmentFormSubformComponent } from './assessment-form-subform.component';
+import { AssessmentSubformComponent } from './assessment-subform.component';
 import { ApiResponse, AssessmentForm, Challenges, Opportunities } from '../../shared/types';
 import { signal } from '@angular/core';
 import { ApiService } from '../../services/api.service';
@@ -37,9 +37,9 @@ const mockOptions: AssessmentForm[] = [{
     knownAiUses: []
 }];
 
-describe('AssessmentFormSubformComponent', () => {
-    let component: AssessmentFormSubformComponent;
-    let fixture: ComponentFixture<AssessmentFormSubformComponent>;
+describe('AssessmentSubformComponent', () => {
+    let component: AssessmentSubformComponent;
+    let fixture: ComponentFixture<AssessmentSubformComponent>;
 
     const mockApiService = {
         serverData: {
@@ -54,12 +54,12 @@ describe('AssessmentFormSubformComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [AssessmentFormSubformComponent],
+            imports: [AssessmentSubformComponent],
             providers: [{ provide: ApiService, useValue: mockApiService },]
         })
             .compileComponents();
 
-        fixture = TestBed.createComponent(AssessmentFormSubformComponent);
+        fixture = TestBed.createComponent(AssessmentSubformComponent);
         fixture.componentRef.setInput('subFormId', 'test-form');
         fixture.componentRef.setInput('subForm', mockForm);
         component = fixture.componentInstance;

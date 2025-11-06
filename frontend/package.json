@@ -7,6 +7,7 @@
         "test": "ng test --watch=true",
         "serve:ssr:gen-ai-reflection": "node dist/gen-ai-reflection/server/server.mjs",
         "prebuild": "node ./build/build-pre.js",
+        "postbuild": "node ./build/build-post.js",
         "i18n": "ng extract-i18n --output-path locale",
         "preserve": "yarn prebuild",
         "serve": "ng serve",

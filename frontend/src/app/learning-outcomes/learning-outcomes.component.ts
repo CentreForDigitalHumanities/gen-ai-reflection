@@ -31,7 +31,7 @@ export class LearningOutcomesComponent {
         {
             label: $localize`Go to Step 2`,
             direction: "next",
-            link: "/assessment-forms",
+            link: "/assessments",
         },
         {
             label: $localize`Back to Introduction`,

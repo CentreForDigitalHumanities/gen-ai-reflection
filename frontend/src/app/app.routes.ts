@@ -3,7 +3,7 @@ import { Routes } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { IntroComponent } from "./intro/intro.component";
 import { LearningOutcomesComponent } from "./learning-outcomes/learning-outcomes.component";
-import { AssessmentFormsComponent } from "./assessment-forms/assessment-forms.component";
+import { AssessmentsComponent } from "./assessments/assessments.component";
 import { CourseIntegrationComponent } from "./course-integration/course-integration.component";
 import { SummaryComponent } from "./summary/summary.component";
 
@@ -22,8 +22,8 @@ const routes: Routes = [
         component: LearningOutcomesComponent,
     },
     {
-        path: "assessment-forms",
-        component: AssessmentFormsComponent,
+        path: "assessments",
+        component: AssessmentsComponent,
     },
     {
         path: "course-integration",

@@ -14,7 +14,7 @@ type GRForm = FormGroup<{
     lecturers: FormControl<string | null>;
     department: FormControl<Department | null>;
     learningOutcomes: FormArray<LearningOutcomesForm>;
-    assessmentForms: FormArray<AssessmentForm>;
+    assessments: FormArray<AssessmentForm>;
     chosenAiUses: FormControl<number[]>;
 }>;
 
@@ -43,7 +43,7 @@ export class FormService {
         }),
         department: new FormControl<Department | null>(null),
         learningOutcomes: new FormArray<LearningOutcomesForm>([]),
-        assessmentForms: new FormArray<AssessmentForm>([]),
+        assessments: new FormArray<AssessmentForm>([]),
         chosenAiUses: new FormControl<number[]>([], {
             nonNullable: true,
         }),
@@ -73,7 +73,7 @@ export class FormService {
         }
     }
 
-    addAssessmentForm(): void {
+    addAssessment(): void {
         const newAssessmentForm: AssessmentForm = new FormGroup({
             assessmentId: new FormControl<number | null>(null),
             iloIds: new FormControl<string[]>([], {
@@ -81,10 +81,10 @@ export class FormService {
             }),
             affected: new FormControl<boolean | null>(null),
         });
-        this.form.controls.assessmentForms.push(newAssessmentForm);
+        this.form.controls.assessments.push(newAssessmentForm);
     }
 
-    removeAssessmentForm(index: number): void {
-        this.form.controls.assessmentForms.removeAt(index);
+    removeAssessment(index: number): void {
+        this.form.controls.assessments.removeAt(index);
     }
 }

@@ -10,13 +10,13 @@ import { expandIn } from '../../shared/animations';
 import { KnownUsesExamplesComponent } from './known-uses-examples/known-uses-examples.component';
 
 @Component({
-    selector: 'gr-assessment-form-subform',
+    selector: 'gr-assessment-subform',
     imports: [AssessmentFormSelectComponent, IloSelectComponent, FontAwesomeModule, ReactiveFormsModule, KnownUsesExamplesComponent],
-    templateUrl: './assessment-form-subform.component.html',
-    styleUrl: './assessment-form-subform.component.scss',
+    templateUrl: './assessment-subform.component.html',
+    styleUrl: './assessment-subform.component.scss',
     animations: [expandIn]
 })
-export class AssessmentFormSubformComponent {
+export class AssessmentSubformComponent {
     private apiService = inject(ApiService);
     private formService = inject(FormService);
     public removeForm = output<void>();

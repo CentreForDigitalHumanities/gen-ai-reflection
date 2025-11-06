@@ -2,78 +2,89 @@
     <h1 i18n>What is this tool for?</h1>
 
     <p i18n>
-        Welcome to the <strong>GenAI reflection tool</strong>. The aim of this
-        tool is to stimulate <strong>reflection</strong> on the impact of
-        generative AI on academic teaching. Students can use generative AI for
-        almost all assignments. The question whether assessment forms need to be
-        adapted as a consequence of this, depends on the
-        <strong>intended learning outcomes</strong> that the assignments test.
-        This is why this tool aims to make an explicit link between assessment
-        forms and learning outcomes. Wherever the use of generative AI is
-        considered problematic, the tool provides
-        <strong>alternative assessment forms</strong>, or stimulates you to
-        consider changing the learning outcomes.
+        Welcome to the <strong>GenAI reflection tool</strong>. This tool is
+        designed to reflect on the impact of GenAI on the learning goals of
+        individual courses. It works best if you run this tool with a particular
+        course in mind (and to have the course manual ready). The tool will
+        guide you through some steps (see below) that challenge you to reflect
+        on the validity of the intended learning outcomes of the course and the
+        effectiveness of the assignments to test these. Once finished, you will
+        be offered a report with an overview of the outcomes.
     </p>
 
-    <p i18n>This tool consists of three subsequent steps:</p>
-
-    <ul>
-        <li i18n>
-            <strong class="step-title"
-                >Step 1: Learning outcomes analysis
-            </strong>
-            clarify and map your course goals
-        </li>
-        <li i18n>
-            <strong class="step-title">Step 2: Assessment forms</strong>
-            assess whether the use of generative AI in assignments negatively
-            impacts the learning outcomes
-        </li>
-        <li i18n>
-            <strong class="step-title"
-                >Step 3: Ideas for integrating generative AI in your course
-            </strong>
-            explore how generative AI can be used to enhance your course
-        </li>
-    </ul>
-</article>
-
-<article>
-    <h3 i18n>Before we begin...</h3>
     <p i18n>
-        Please provide the name of your course and the name of the lecturers. This will personalize the final
-        report.
+        You can run the tool as many times and for as many courses as you like.
+        We do not store or save the information you enter in this tool.
     </p>
-    <form [formGroup]="form" (ngSubmit)="submitCourseName($event)">
-        <div class="container">
-            <div class="row g-3">
-                <div class="col-md-6">
-                    <label for="course" class="form-label" i18n>Course name</label>
-                    <input
-                        id="course"
-                        type="text"
-                        class="form-control"
-                        [formControl]="form.controls.course"
-                        placeholder="Enter the name of your course..."
-                        i18n-placeholder
-                    />
-                </div>
-                <div class="col-md-6">
-                    <label for="lecturers" class="form-label" i18n>Lecturers</label>
-                    <input
-                        id="lecturers"
-                        type="text"
-                        class="form-control"
-                        [formControl]="form.controls.lecturers"
-                        placeholder="Enter the name of the lecturers..."
-                        i18n-placeholder
-                    />
+
+    <section class="my-4">
+        <header>
+            <h2 i18n>How the tool works</h2>
+        </header>
+        <p i18n>This tool consists of four subsequent steps:</p>
+        <ul>
+            <li i18n>
+                <strong class="step-title">
+                    Step 1: Learning outcomes analysis
+                </strong>
+                clarify and map your course goals.
+            </li>
+            <li i18n>
+                <strong class="step-title"> Step 2: Assessments </strong>
+                assess whether the use of generative AI in assignments
+                negatively impacts the learning outcomes.
+            </li>
+            <li i18n>
+                <strong class="step-title">
+                    Step 3: Rethinking courses in times of GenAI
+                </strong>
+                explore how generative AI can be used to enhance your course.
+            </li>
+            <li i18n>
+                <strong class="step-title"> Step 4: Report </strong>
+                after finishing the tool you can download a report with the most
+                important outcomes.
+            </li>
+        </ul>
+    </section>
+
+    <section class="my-4">
+        <header>
+            <h2 i18n>Before we begin...</h2>
+        </header>
+        <p i18n>
+            Please provide the name of your course and the name of the lecturers. This will personalize the final
+            report.
+        </p>
+        <form [formGroup]="form" (ngSubmit)="submitCourseName($event)">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="course" class="form-label" i18n>Course name</label>
+                        <input
+                            id="course"
+                            type="text"
+                            class="form-control"
+                            [formControl]="form.controls.course"
+                            placeholder="Enter the name of your course..."
+                            i18n-placeholder
+                        />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lecturers" class="form-label" i18n>Lecturers</label>
+                        <input
+                            id="lecturers"
+                            type="text"
+                            class="form-control"
+                            [formControl]="form.controls.lecturers"
+                            placeholder="Enter the name of the lecturers..."
+                            i18n-placeholder
+                        />
+                    </div>
                 </div>
             </div>
-        </div>
-
-
-    </form>
+        </form>
+    </section>
 </article>
 
 <gr-nav-buttons [navButtons]="navButtons" />
