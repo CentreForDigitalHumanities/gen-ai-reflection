@@ -39,9 +39,12 @@ export class SummaryComponent {
     downloadReport() {
         this.apiService.generateReportPDF(this.formService.form.value).subscribe(blob => {
             const anchor = document.createElement('a');
-            anchor.href = URL.createObjectURL(blob);
+            const url = URL.createObjectURL(blob);
+            anchor.href = url;
             anchor.download = 'report.pdf';
             anchor.click();
+            anchor.remove();
+            URL.revokeObjectURL(url);
         });
     }
 }
