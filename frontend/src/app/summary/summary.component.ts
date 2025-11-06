@@ -1,9 +1,9 @@
-import {Component, inject} from '@angular/core';
+import {Component, DestroyRef, inject} from '@angular/core';
 import {FormService} from "../services/form.service";
 import {NavButton, NavButtonsComponent} from "../nav-buttons/nav-buttons.component";
 import {ReactiveFormsModule} from "@angular/forms";
-import {Router} from "@angular/router";
 import {ApiService} from "../services/api.service";
+import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'gr-done',
@@ -17,8 +17,8 @@ import {ApiService} from "../services/api.service";
 export class SummaryComponent {
     private formService = inject(FormService);
     private apiService = inject(ApiService);
-    private router = inject(Router);
-    public report: string = "";
+    private destroyRef = inject(DestroyRef);
+    public report = "";
     public navButtons: NavButton[] = [
         {
             label: $localize`Back to Step 3`,
@@ -32,12 +32,12 @@ export class SummaryComponent {
         },
     ];
     generateReport() {
-        this.apiService.generateReportHTML(this.formService.form.getRawValue()).subscribe(html => {
+        this.apiService.generateReportHTML(this.formService.form.getRawValue()).pipe(takeUntilDestroyed(this.destroyRef)).subscribe(html => {
             this.report = html;
         });
     }
     downloadReport() {
-        this.apiService.generateReportPDF(this.formService.form.getRawValue()).subscribe(blob => {
+        this.apiService.generateReportPDF(this.formService.form.getRawValue()).pipe(takeUntilDestroyed(this.destroyRef)).subscribe(blob => {
             const anchor = document.createElement('a');
             const url = URL.createObjectURL(blob);
             anchor.href = url;
