@@ -1,11 +1,11 @@
-<div class="d-flex flex-column align-items-center justify-content-center gap-3">
+<div class="d-flex flex-column align-items-center justify-content-center gap-2">
     <img
         ngOptimizedImage
         ngSrc="assets/images/genai-home.png"
         alt="GenAI Reflection Tool"
         class="img-fluid mb-4"
-        width="300"
-        height="300"
+        width="400"
+        height="400"
         priority
     />
 
@@ -25,7 +25,7 @@
     </button>
 
     @if (languages && !loading) {
-    <div class="btn-group mt-5" role="group" aria-label="Language selection">
+    <div class="btn-group mt-4" role="group" aria-label="Language selection">
         @for (language of languages; track language.code) {
         <input
             id="{{ language.code }}"
