@@ -32,12 +32,12 @@ export class SummaryComponent {
         },
     ];
     generateReport() {
-        this.apiService.generateReportHTML(this.formService.form.value).subscribe(html => {
+        this.apiService.generateReportHTML(this.formService.form.getRawValue()).subscribe(html => {
             this.report = html;
         });
     }
     downloadReport() {
-        this.apiService.generateReportPDF(this.formService.form.value).subscribe(blob => {
+        this.apiService.generateReportPDF(this.formService.form.getRawValue()).subscribe(blob => {
             const anchor = document.createElement('a');
             const url = URL.createObjectURL(blob);
             anchor.href = url;
