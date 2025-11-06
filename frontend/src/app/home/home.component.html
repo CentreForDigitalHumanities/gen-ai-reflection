@@ -1,11 +1,12 @@
 <div class="d-flex flex-column align-items-center justify-content-center gap-3">
     <img
         ngOptimizedImage
-        ngSrc="assets/images/home.jpg"
-        alt="Three Step Reflection Tool"
+        ngSrc="assets/images/genai-home.png"
+        alt="GenAI Reflection Tool"
         class="img-fluid mb-4"
-        width="500"
-        height="333"
+        width="300"
+        height="300"
+        priority
     />
 
     <h1 class="title" i18n>Generative AI - A three-step reflection tool</h1>
@@ -24,11 +25,25 @@
     </button>
 
     @if (languages && !loading) {
-        <div class="btn-group mt-5" role="group" aria-label="Language selection">
-            @for (language of languages; track language.code) {
-                <input id="{{ language.code }}" class="btn-check" type="radio" name="language" value="{{ language.code }}" autocomplete="off" [checked]="language.code == currentLanguage" (click)="setLanguage(language.code)">
-                <label class="btn btn-outline-secondary" for="{{ language.code }}" i18n>{{ language.name }}</label>
-            }
-        </div>
+    <div class="btn-group mt-5" role="group" aria-label="Language selection">
+        @for (language of languages; track language.code) {
+        <input
+            id="{{ language.code }}"
+            class="btn-check"
+            type="radio"
+            name="language"
+            value="{{ language.code }}"
+            autocomplete="off"
+            [checked]="language.code == currentLanguage"
+            (click)="setLanguage(language.code)"
+        />
+        <label
+            class="btn btn-outline-secondary"
+            for="{{ language.code }}"
+            i18n
+            >{{ language.name }}</label
+        >
+        }
+    </div>
     }
 </div>
