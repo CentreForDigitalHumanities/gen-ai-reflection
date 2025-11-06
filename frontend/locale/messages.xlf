@@ -731,14 +731,14 @@
         <source>Course name</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
-          <context context-type="linenumber">63</context>
+          <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2732756422945227425" datatype="html">
         <source>Enter the name of your course...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
-          <context context-type="linenumber">69</context>
+          <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="947548908968390099" datatype="html">
@@ -920,25 +920,11 @@
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2492597071591261326" datatype="html">
-        <source>Lecturers</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/intro/intro.component.html</context>
-          <context context-type="linenumber">74</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="2893292538434506430" datatype="html">
         <source>Generate report</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/summary/summary.component.html</context>
-          <context context-type="linenumber">10</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3979800807088653978" datatype="html">
-        <source> You have completed the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>GenAI reflection tool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>! You can now generate and download a report. </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/summary/summary.component.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4739818603756173797" datatype="html">
@@ -952,35 +938,49 @@
         <source>Download report</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/summary/summary.component.html</context>
-          <context context-type="linenumber">11</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5863943641247908675" datatype="html">
-        <source> Please provide the name of your course and the name of the lecturers. This will personalize the final report. </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/intro/intro.component.html</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6136657377262940727" datatype="html">
         <source>Back to Step 3</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/summary/summary.component.ts</context>
-          <context context-type="linenumber">24</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6437639597937808844" datatype="html">
-        <source>Enter the name of the lecturers...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/intro/intro.component.html</context>
-          <context context-type="linenumber">80</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="763434360141362050" datatype="html">
         <source>Start over</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/summary/summary.component.ts</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1208562831617318136" datatype="html">
+        <source> You have completed the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>GenAI reflection tool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>! To generate the report, please enter your name and click the button below. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/summary/summary.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1743698543125721713" datatype="html">
+        <source>Enter your name...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/summary/summary.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4701996646063599508" datatype="html">
+        <source> Please provide the name of your course. This will personalize the final report. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/intro/intro.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7961815355441875063" datatype="html">
+        <source>Your name:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/summary/summary.component.html</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
     </body>

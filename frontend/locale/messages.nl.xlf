@@ -648,7 +648,7 @@
         <target state="translated">Cursusnaam</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
-          <context context-type="linenumber">63</context>
+          <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="947548908968390099" datatype="html">
@@ -852,7 +852,7 @@
         <target state="translated">Voer de naam van je cursus in...</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
-          <context context-type="linenumber">69</context>
+          <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4012265924696718914" datatype="html">
@@ -1093,30 +1093,6 @@
           <context context-type="linenumber">155</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5863943641247908675" datatype="html">
-        <source> Please provide the name of your course and the name of the lecturers. This will personalize the final report. </source>
-        <target state="translated"> Vul de naam van de cursus en van de docenten in. Hiermee wordt het rapport gepersonaliseerd. </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/intro/intro.component.html</context>
-          <context context-type="linenumber">56</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2492597071591261326" datatype="html">
-        <source>Lecturers</source>
-        <target state="translated">Docenten</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/intro/intro.component.html</context>
-          <context context-type="linenumber">74</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6437639597937808844" datatype="html">
-        <source>Enter the name of the lecturers...</source>
-        <target state="translated">Vul de naam van de docenten in...</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/intro/intro.component.html</context>
-          <context context-type="linenumber">80</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="4739818603756173797" datatype="html">
         <source>Summary</source>
         <target state="translated">Samenvatting</target>
@@ -1125,20 +1101,12 @@
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3979800807088653978" datatype="html">
-        <source> You have completed the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>GenAI reflection tool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>! You can now generate and download a report. </source>
-        <target state="translated"> Dit is het einde van de <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Reflectietool GenAI<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>! Je kunt nu het rapport aanmaken en downloaden. </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/summary/summary.component.html</context>
-          <context context-type="linenumber">5</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="2893292538434506430" datatype="html">
         <source>Generate report</source>
         <target state="translated">Rapport aanmaken</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/summary/summary.component.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5202300350522124506" datatype="html">
@@ -1146,7 +1114,7 @@
         <target state="translated">Rapport downloaden</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/summary/summary.component.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6136657377262940727" datatype="html">
@@ -1154,7 +1122,7 @@
         <target state="translated">Terug naar stap 3</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/summary/summary.component.ts</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="763434360141362050" datatype="html">
@@ -1162,7 +1130,39 @@
         <target state="translated">Opnieuw beginnen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/summary/summary.component.ts</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4701996646063599508" datatype="html">
+        <source> Please provide the name of your course. This will personalize the final report. </source>
+        <target state="translated"> Vul de naam van de cursus in. Hiermee wordt het rapport gepersonaliseerd. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/intro/intro.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1208562831617318136" datatype="html">
+        <source> You have completed the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>GenAI reflection tool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>! To generate the report, please enter your name and click the button below. </source>
+        <target state="translated"> Dit is het einde van de <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Reflectietool GenAI<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>! Vul je naam in en klik op de knop hieronder om het rapport aan te maken. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/summary/summary.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7961815355441875063" datatype="html">
+        <source>Your name:</source>
+        <target state="translated">Naam:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/summary/summary.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1743698543125721713" datatype="html">
+        <source>Enter your name...</source>
+        <target state="translated">Vul je naam in...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/summary/summary.component.html</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
     </body>
