@@ -7,5 +7,5 @@ def report_to_pdf(html: str) -> bytes:
     total_html = render_to_string("report/outer_html.html", {
         "inner_html": html,
     })
-    html = HTML(string=html)
+    html = HTML(string=total_html)
     return html.write_pdf()
