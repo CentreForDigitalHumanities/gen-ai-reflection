@@ -1,5 +1,5 @@
 import { Component, computed, inject, input } from '@angular/core';
-import { KnownAiUse, KnownAiUseExample } from '../../../shared/types';
+import { KnownAiUse } from '../../../shared/types';
 import { ApiService } from '../../../services/api.service';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -20,10 +20,12 @@ export class KnownUsesExamplesComponent {
         if (!serverData) {
             return [];
         }
-        return serverData.assessmentForms.find(af => af.id === assessmentFormId)?.knownAiUses ?? [];
-    });
 
-    public examplesForUse(knownAiUse: KnownAiUse): KnownAiUseExample[] {
-        return knownAiUse.examples.filter(example => example.assessmentForm === this.assessmentFormId());
-    }
+        const uses = serverData.assessmentForms.find(af => af.id === assessmentFormId)?.knownAiUses ?? [];
+
+        return uses.map(use => ({
+            ...use,
+            examples: use.examples.filter(example => example.assessmentForm === assessmentFormId),
+        }));
+    });
 }
