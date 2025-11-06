@@ -1,3 +1,16 @@
+@import "../../variables";
+
+.attribution-banner {
+    border: 1px solid $primary-dark;
+    background-color: $primary-light;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .home-container {
     display: flex;
     flex-direction: column;

@@ -124,7 +124,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
-          <context context-type="linenumber">98</context>
+          <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.datepicker.select-month" datatype="html">
@@ -148,7 +148,7 @@
         <target state="translated">««</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
-          <context context-type="linenumber">290</context>
+          <context context-type="linenumber">289</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.first-aria" datatype="html">
@@ -164,7 +164,7 @@
         <target state="translated">»»</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
-          <context context-type="linenumber">327</context>
+          <context context-type="linenumber">325</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.last-aria" datatype="html">
@@ -172,7 +172,7 @@
         <target state="translated">Laatste</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
-          <context context-type="linenumber">400</context>
+          <context context-type="linenumber">399</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.next" datatype="html">
@@ -188,7 +188,7 @@
         <target state="translated">Volgende</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
-          <context context-type="linenumber">385</context>
+          <context context-type="linenumber">384</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.previous" datatype="html">
@@ -196,7 +196,7 @@
         <target state="translated">«</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
-          <context context-type="linenumber">303</context>
+          <context context-type="linenumber">301</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.previous-aria" datatype="html">
@@ -204,7 +204,7 @@
         <target state="translated">Vorige</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
-          <context context-type="linenumber">363</context>
+          <context context-type="linenumber">360</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.progressbar.value" datatype="html">
@@ -224,7 +224,7 @@
         <target state="translated">Minder uren</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">320</context>
+          <context context-type="linenumber">317</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
@@ -232,7 +232,7 @@
         <target state="translated">Minder minuten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">361</context>
+          <context context-type="linenumber">358</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
@@ -240,7 +240,7 @@
         <target state="translated">Minder seconden</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">440</context>
+          <context context-type="linenumber">436</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.HH" datatype="html">
@@ -264,7 +264,7 @@
         <target state="translated">Meer uren</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">307</context>
+          <context context-type="linenumber">304</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
@@ -272,7 +272,7 @@
         <target state="translated">Meer minuten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">345</context>
+          <context context-type="linenumber">341</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
@@ -280,7 +280,7 @@
         <target state="translated">Meer seconden</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">423</context>
+          <context context-type="linenumber">421</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.minutes" datatype="html">
@@ -288,7 +288,7 @@
         <target state="translated">Minuten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">291</context>
+          <context context-type="linenumber">290</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.MM" datatype="html">
@@ -296,7 +296,7 @@
         <target state="translated">MM</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">273</context>
+          <context context-type="linenumber">270</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.PM" datatype="html">
@@ -316,7 +316,7 @@
         <target state="translated">Seconden</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">401</context>
+          <context context-type="linenumber">395</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.SS" datatype="html">
@@ -324,7 +324,7 @@
         <target state="translated">SS</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">383</context>
+          <context context-type="linenumber">378</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.toast.close-aria" datatype="html">
@@ -332,7 +332,7 @@
         <target state="translated">Sluiten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/toast/toast.ts</context>
-          <context context-type="linenumber">93</context>
+          <context context-type="linenumber">92</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2433299293992288618" datatype="html">
@@ -369,7 +369,7 @@
       </trans-unit>
       <trans-unit id="8082396782637148201" datatype="html">
         <source> Which ILOs are tested with this assessment? Select one or multiple. </source>
-        <target state="translated"> Welke leerdoelen (ILO&apos;s) worden met deze beoordelingsvorm getoetst? Kies er een of meerdere. </target>
+        <target state="translated"> Welke leerdoelen (ILO's) worden met deze beoordelingsvorm getoetst? Kies er een of meerdere. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-subform/assessment-subform.component.html</context>
           <context context-type="linenumber">33</context>
@@ -564,7 +564,7 @@
         <target state="translated">Generatieve AI - Een reflectietool in drie stappen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7402787924748680728" datatype="html">
@@ -572,7 +572,7 @@
         <target state="translated">Selecteer je departement om te beginnen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3879118507115300181" datatype="html">
@@ -580,7 +580,7 @@
         <target state="translated"> GKG </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="187187500641108332" datatype="html">
@@ -592,7 +592,7 @@
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6245984563620527824" datatype="html">
@@ -612,24 +612,24 @@
         </context-group>
       </trans-unit>
       <trans-unit id="6981570102210847657" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;&gt;"/> Step 1: Learning outcomes analysis <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> clarify and map your course goals. </source>
-        <target state="translated"><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; &gt;"/> Stap 1: Leerdoelanalyse <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> zet de doelen van je cursus uiteen. </target>
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;>"/> Step 1: Learning outcomes analysis <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> clarify and map your course goals. </source>
+        <target state="translated"><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; >"/> Stap 1: Leerdoelanalyse <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> zet de doelen van je cursus uiteen. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2512488390029641446" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;&gt;"/> Step 2: Assessments <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> assess whether the use of generative AI in assignments negatively impacts the learning outcomes. </source>
-        <target state="translated"><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;&gt;"/> Stap 2: Beoordelingen <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> toetst of het gebruik van generatieve AI in opdrachten een negatieve invloed heeft op het behalen van de leerdoelen. </target>
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;>"/> Step 2: Assessments <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> assess whether the use of generative AI in assignments negatively impacts the learning outcomes. </source>
+        <target state="translated"><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;>"/> Stap 2: Beoordelingen <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> toetst of het gebruik van generatieve AI in opdrachten een negatieve invloed heeft op het behalen van de leerdoelen. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4516431926015412550" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;&gt;"/> Step 3: Rethinking courses in times of GenAI <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> explore how generative AI can be used to enhance your course. </source>
-        <target state="translated"><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; &gt;"/> Stap 3: Cursussen heroverwegen in tijden van GenAI <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> onderzoekt hoe generatieve AI eventueel gebruikt zou kunnen worden om je cursus te verbeteren. </target>
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;>"/> Step 3: Rethinking courses in times of GenAI <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> explore how generative AI can be used to enhance your course. </source>
+        <target state="translated"><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot; >"/> Stap 3: Cursussen heroverwegen in tijden van GenAI <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> onderzoekt hoe generatieve AI eventueel gebruikt zou kunnen worden om je cursus te verbeteren. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">38</context>
@@ -677,7 +677,7 @@
       </trans-unit>
       <trans-unit id="3355125060616451212" datatype="html">
         <source> In this step, you will map the Intended Learning Outcomes (ILOs) for your course and link each one to the most relevant Dublin Descriptor. </source>
-        <target state="translated"> In deze stap koppel je de beoogde leerdoelen (&apos;Intended Learning Outcomes&apos;, ofwel ILO&apos;s) voor je cursus aan de meest relevante Dublin-descriptor. </target>
+        <target state="translated"> In deze stap koppel je de beoogde leerdoelen ('Intended Learning Outcomes', ofwel ILO's) voor je cursus aan de meest relevante Dublin-descriptor. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">6</context>
@@ -914,8 +914,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="6431857416550248523" datatype="html">
-        <source> Below you will find a scale with five levels of AI integration in educational assessments, based on the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://aiassessmentscale.com/&quot; target=&quot;_blank&quot; &gt;"/>AI Assessment Scale (AIAS)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a &gt;"/> developed by Perkins et al. (2024). </source>
-        <target state="new"> Hieronder vind je een schaal met vijf niveaus waarin generatieve AI in educatieve opdrachten geïntegreerd kan worden, gebaseerd op de <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://aiassessmentscale.com/&quot; target=&quot;_blank&quot; &gt;"/> AI Assessment Scale (AIAS)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a &gt;"/> van Perkins et al. (2024). </target>
+        <source> Below you will find a scale with five levels of AI integration in educational assessments, based on the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://aiassessmentscale.com/&quot; target=&quot;_blank&quot; >"/>AI Assessment Scale (AIAS)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/> developed by Perkins et al. (2024). </source>
+        <target state="translated"> Hieronder vind je een schaal met vijf niveaus waarin generatieve AI in educatieve opdrachten geïntegreerd kan worden, gebaseerd op de <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://aiassessmentscale.com/&quot; target=&quot;_blank&quot; >"/> AI Assessment Scale (AIAS)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/> van Perkins et al. (2024). </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
           <context context-type="linenumber">17</context>
@@ -955,7 +955,7 @@
       </trans-unit>
       <trans-unit id="5890787992189125196" datatype="html">
         <source> In other words, evaluate whether you think <x id="ICU" equiv-text="{form.controls.iloIds.value.length, plural, =1 {the ILO} other {the ILOs}}" xid="2957047433752626179"/> can still be tested with the chosen type of assignment, assuming that students will use GenAI in the ways listed above and, potentially, more. If you select ‘No’, your assessment is GenAI resilient. Congratulations! If you select ‘Yes’, you will be presented some suggestions to make your assessment more resilient. </source>
-        <target state="translated"> In andere woorden: denk na over de vraag of <x id="ICU" equiv-text="{form.controls.iloIds.value.length, plural, =1 {het leerdoel} other {de leerdoelen}}" xid="2957047433752626179"/> nog steeds behaald kunnen worden met deze beoordeling, in de vooronderstelling dat studenten GenAI op de hierboven beschreven (en wellicht nog andere) manieren zullen gebruiken. Als je &apos;Nee&apos; antwoordt, dan is je beoordeling AI-bestendig. Gefeliciteerd! Als je &apos;Ja&apos; kiest, toont deze tool suggesties om je beoordeling bestendiger te maken. </target>
+        <target state="translated"> In andere woorden: denk na over de vraag of <x id="ICU" equiv-text="{form.controls.iloIds.value.length, plural, =1 {het leerdoel} other {de leerdoelen}}" xid="2957047433752626179"/> nog steeds behaald kunnen worden met deze beoordeling, in de vooronderstelling dat studenten GenAI op de hierboven beschreven (en wellicht nog andere) manieren zullen gebruiken. Als je 'Nee' antwoordt, dan is je beoordeling AI-bestendig. Gefeliciteerd! Als je 'Ja' kiest, toont deze tool suggesties om je beoordeling bestendiger te maken. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-subform/assessment-subform.component.html</context>
           <context context-type="linenumber">54</context>
@@ -1022,8 +1022,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="2568652124050898655" datatype="html">
-        <source> Welcome to the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>GenAI reflection tool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. This tool is designed to reflect on the impact of GenAI on the learning goals of individual courses. It works best if you run this tool with a particular course in mind (and to have the course manual ready). The tool will guide you through some steps (see below) that challenge you to reflect on the validity of the intended learning outcomes of the course and the effectiveness of the assignments to test these. Once finished, you will be offered a report with an overview of the outcomes. </source>
-        <target state="translated"> Welkom in deze <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/> GenAI-reflectietool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> . Deze tool is ontworpen om je te laten reflecteren op de impact van GenAI op de leerdoelen van individuele cursussen. Het is het beste als je deze tool met een specifieke cursus in gedachte doorloopt (en de cursushandleiding bij de hand houdt). De tool zal je door een aantal stappen leiden (zie hieronder) die je uitdagen om te reflecteren op de validiteit van de beoogde leerdoelen van de cursus en de effectiviteit van de beoordelingen die gebruikt worden om deze te testen. Na afronding biedt deze tool je een rapport met een overzicht van de bevindingen. </target>
+        <source> Welcome to the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>GenAI reflection tool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>. This tool is designed to reflect on the impact of GenAI on the learning goals of individual courses. It works best if you run this tool with a particular course in mind (and to have the course manual ready). The tool will guide you through some steps (see below) that challenge you to reflect on the validity of the intended learning outcomes of the course and the effectiveness of the assignments to test these. Once finished, you will be offered a report with an overview of the outcomes. </source>
+        <target state="translated"> Welkom in deze <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/> GenAI-reflectietool<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> . Deze tool is ontworpen om je te laten reflecteren op de impact van GenAI op de leerdoelen van individuele cursussen. Het is het beste als je deze tool met een specifieke cursus in gedachte doorloopt (en de cursushandleiding bij de hand houdt). De tool zal je door een aantal stappen leiden (zie hieronder) die je uitdagen om te reflecteren op de validiteit van de beoogde leerdoelen van de cursus en de effectiviteit van de beoordelingen die gebruikt worden om deze te testen. Na afronding biedt deze tool je een rapport met een overzicht van de bevindingen. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">5</context>
@@ -1046,8 +1046,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="5799040676079422813" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;&gt;"/> Step 4: Report <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> after finishing the tool you can download a report with the most important outcomes. </source>
-        <target state="translated"><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;&gt;"/> Stap 4: Eindrapport <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> na het doorlopen van de tool kun je een gepersonaliseerd rapport downloaden met de belangrijkste bevindingen. </target>
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;>"/> Step 4: Report <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> after finishing the tool you can download a report with the most important outcomes. </source>
+        <target state="translated"><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong class=&quot;step-title&quot;>"/> Stap 4: Eindrapport <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> na het doorlopen van de tool kun je een gepersonaliseerd rapport downloaden met de belangrijkste bevindingen. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/intro/intro.component.html</context>
           <context context-type="linenumber">44</context>
@@ -1055,15 +1055,15 @@
       </trans-unit>
       <trans-unit id="6747957211917839470" datatype="html">
         <source> Enter the intended learning outcomes of your course here (one per field). You can do this in your own words. For each ILO you enter, please select the Dublin Descriptor that best aligns. </source>
-        <target state="translated"> Voer hier de beoogde leerdoelen (ILO&apos;s) van je cursus in (één per veld). Je kunt dit in je eigen woorden doen. Kies voor iedere ingevoerde ILO de Dublin-descriptor die er het beste bijpast. </target>
+        <target state="translated"> Voer hier de beoogde leerdoelen (ILO's) van je cursus in (één per veld). Je kunt dit in je eigen woorden doen. Kies voor iedere ingevoerde ILO de Dublin-descriptor die er het beste bijpast. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/learning-outcomes/learning-outcomes.component.html</context>
           <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6431857416550248523" datatype="html">
-        <source> Below you will find a scale with five levels of AI integration in educational assessments, based on the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://aiassessmentscale.com/&quot; target=&quot;_blank&quot; &gt;"/> AI Assessment Scale (AIAS)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a &gt;"/> developed by Perkins et al. (2024). </source>
-        <target state="translated"> Hieronder vind je een schaal met vijf niveaus waarin generatieve AI in educatieve opdrachten geïntegreerd kan worden, gebaseerd op de <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://aiassessmentscale.com/&quot; target=&quot;_blank&quot; &gt;"/> AI Assessment Scale (AIAS)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a &gt;"/> van Perkins et al. (2024). </target>
+        <source> Below you will find a scale with five levels of AI integration in educational assessments, based on the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://aiassessmentscale.com/&quot; target=&quot;_blank&quot; >"/> AI Assessment Scale (AIAS)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/> developed by Perkins et al. (2024). </source>
+        <target state="translated"> Hieronder vind je een schaal met vijf niveaus waarin generatieve AI in educatieve opdrachten geïntegreerd kan worden, gebaseerd op de <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://aiassessmentscale.com/&quot; target=&quot;_blank&quot; >"/> AI Assessment Scale (AIAS)<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/> van Perkins et al. (2024). </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
           <context context-type="linenumber">15</context>
@@ -1099,6 +1099,14 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
           <context context-type="linenumber">155</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="905936744114247737" datatype="html">
+        <source> This application has been developed by <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:p.huijnen@uu.nl&quot;>"/>Pim Huijnen<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/> and <x id="START_LINK_1" equiv-text="&lt;a href=&quot;mailto:s.falcke@uu.nl&quot;>"/>Swantje Falcke<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/> in collaboration with the <x id="START_LINK_2" equiv-text="&lt;a href=&quot;https://cdh.uu.nl/&quot;>"/>Centre for Digital Humanities<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/> within the context of the USO project <x id="START_LINK_3" equiv-text="&lt;a href=&quot;https://teaching-and-learning-collection.sites.uu.nl/project/ai-in-higher-education/&quot; >"/>"AI in Higher Education: Building reflective awareness through educational interventions"<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/>. </source>
+        <target state="translated"> Deze applicatie wordt ontwikkeld door <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:p.huijnen@uu.nl&quot;>"/>Pim Huijnen<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/> en <x id="START_LINK_1" equiv-text="&lt;a href=&quot;mailto:s.falcke@uu.nl&quot;>"/>Swantje Falcke<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/> in samenwerking met het <x id="START_LINK_2" equiv-text="&lt;a href=&quot;https://cdh.uu.nl/&quot;>"/>Centre for Digital Humanities<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/> binnen het kader van het USO-project <x id="START_LINK_3" equiv-text="&lt;a href=&quot;https://teaching-and-learning-collection.sites.uu.nl/project/ai-in-higher-education/&quot; >"/>"AI in Higher Education: Building reflective awareness through educational interventions"<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/>. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">52</context>
         </context-group>
       </trans-unit>
     </body>
