@@ -111,7 +111,7 @@ class KnownAiUseExample(models.Model):
     assessment_form = models.ForeignKey(
         AssessmentForm,
         on_delete=models.CASCADE,
-        related_name="examples",
+        related_name="known_ai_use_examples",
     )
 
     def __str__(self):
