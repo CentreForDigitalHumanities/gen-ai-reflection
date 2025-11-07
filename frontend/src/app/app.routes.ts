@@ -5,6 +5,7 @@ import { IntroComponent } from "./intro/intro.component";
 import { LearningOutcomesComponent } from "./learning-outcomes/learning-outcomes.component";
 import { AssessmentsComponent } from "./assessments/assessments.component";
 import { CourseIntegrationComponent } from "./course-integration/course-integration.component";
+import { SummaryComponent } from "./summary/summary.component";
 
 const routes: Routes = [
     {
@@ -27,6 +28,10 @@ const routes: Routes = [
     {
         path: "course-integration",
         component: CourseIntegrationComponent,
+    },
+    {
+        path: "summary",
+        component: SummaryComponent,
     },
     {
         path: "**",

@@ -40,6 +40,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include(api_router.urls)),
     path("api/data/", include("formdata.urls")),
+    path("api/report/", include("report.urls")),
     path(
         "api-auth/",
         include(
