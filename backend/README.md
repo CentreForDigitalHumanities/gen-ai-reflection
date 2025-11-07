@@ -18,6 +18,9 @@ You need to install the following software:
  - WSGI-compatible webserver (deployment only)
  - [Visual C++ for Python][14] (Windows only)
 
+The part of the application that renders PDFs depends on the `weasyprint` package, which does not work with Windows.
+Windows users may use WSL though.
+
 [14]: https://wiki.python.org/moin/WindowsCompilers
 
 

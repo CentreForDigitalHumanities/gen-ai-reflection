@@ -1,0 +1,55 @@
+import {Component, DestroyRef, inject} from '@angular/core';
+import {FormService} from "../services/form.service";
+import {NavButton, NavButtonsComponent} from "../nav-buttons/nav-buttons.component";
+import {ReactiveFormsModule} from "@angular/forms";
+import {ApiService} from "../services/api.service";
+import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
+
+@Component({
+  selector: 'gr-done',
+    imports: [
+        NavButtonsComponent,
+        ReactiveFormsModule,
+    ],
+  templateUrl: './summary.component.html',
+  styleUrl: './summary.component.scss'
+})
+export class SummaryComponent {
+    private formService = inject(FormService);
+    private apiService = inject(ApiService);
+    private destroyRef = inject(DestroyRef);
+    public form = this.formService.form;
+    public reportHtml = "";
+    public reportPdf: Blob | null = null;
+    public navButtons: NavButton[] = [
+        {
+            label: $localize`Back to Step 3`,
+            direction: "back",
+            link: "/course-integration",
+        },
+        {
+            label: $localize`Start over`,
+            direction: "next",
+            link: "/",
+        },
+    ];
+    generateReport() {
+        this.apiService.generateReport(this.formService.form.getRawValue()).pipe(takeUntilDestroyed(this.destroyRef)).subscribe(reportData => {
+            this.reportHtml = reportData.html;
+            const dataArray = Uint8Array.from(window.atob(reportData.pdf), (char) => char.charCodeAt(0));
+            this.reportPdf = new Blob([dataArray], {type: 'application/pdf'});
+        });
+    }
+    downloadReport() {
+        if (!this.reportPdf) {
+            return;
+        }
+        const anchor = document.createElement('a');
+        const url = URL.createObjectURL(this.reportPdf);
+        anchor.href = url;
+        anchor.download = 'report.pdf';
+        anchor.click();
+        anchor.remove();
+        URL.revokeObjectURL(url);
+    }
+}

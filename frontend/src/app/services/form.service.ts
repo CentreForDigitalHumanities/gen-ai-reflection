@@ -9,13 +9,16 @@ export enum Department {
     "F&R" = "F&R",
 }
 
-type GRForm = FormGroup<{
+export type GRForm = FormGroup<{
     course: FormControl<string | null>;
+    name: FormControl<string | null>;
     department: FormControl<Department | null>;
     learningOutcomes: FormArray<LearningOutcomesForm>;
     assessments: FormArray<AssessmentForm>;
     chosenAiUses: FormControl<number[]>;
 }>;
+
+export type GRFormValue = ReturnType<GRForm["getRawValue"]>;
 
 export type LearningOutcomesForm = FormGroup<{
     id: FormControl<string>;
@@ -35,6 +38,9 @@ export type AssessmentForm = FormGroup<{
 export class FormService {
     form: GRForm = new FormGroup({
         course: new FormControl<string | null>(null, {
+            validators: [Validators.required],
+        }),
+        name: new FormControl<string | null>(null, {
             validators: [Validators.required],
         }),
         department: new FormControl<Department | null>(null),
