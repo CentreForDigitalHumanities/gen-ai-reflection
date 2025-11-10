@@ -1,4 +1,4 @@
-import { Component, computed, inject, input, signal } from '@angular/core';
+import { Component, computed, inject, input } from '@angular/core';
 import { KnownAiUse } from '../../../shared/types';
 import { ApiService } from '../../../services/api.service';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
@@ -14,16 +14,18 @@ export class KnownUsesExamplesComponent {
 
     private apiService = inject(ApiService);
 
-    public selectedUse = signal<KnownAiUse | null>(null);
-
     public knownAiUses = computed<KnownAiUse[]>(() => {
         const assessmentFormId = this.assessmentFormId();
         const serverData = this.apiService.serverData.value();
         if (!serverData) {
             return [];
         }
-        return serverData.assessmentForms.find(af => af.id === assessmentFormId)?.knownAiUses ?? [];
+
+        const uses = serverData.assessmentForms.find(af => af.id === assessmentFormId)?.knownAiUses ?? [];
+
+        return uses.map(use => ({
+            ...use,
+            examples: use.examples.filter(example => example.assessmentForm === assessmentFormId),
+        }));
     });
-
-
 }

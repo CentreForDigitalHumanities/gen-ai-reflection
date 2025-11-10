@@ -76,8 +76,8 @@ class KnownAiUseAdmin(ListDescriptionMixin, SingleRowTextareaMixin, admin.ModelA
 class KnownAiUseExampleAdmin(
     ListDescriptionMixin, SingleRowTextareaMixin, admin.ModelAdmin
 ):
-    list_display = ["text_en", "text_nl", "ai_use"]
-    list_description = "These examples appear in Step 2 ('Assessments'). They are linked to Known AI uses and display in a list when a Known AI use is selected."
+    list_display = ["text_en", "text_nl", "assessment_form", "ai_use"]
+    list_description = "These examples appear in Step 2 ('Assessments'). They are linked to Assessments and Known AI uses and display in a list when their associated Assessment and Known AI use are both selected."
 
 
 @admin.register(ChallengeOpportunity)
