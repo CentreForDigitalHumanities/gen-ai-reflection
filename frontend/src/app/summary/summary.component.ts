@@ -1,18 +1,18 @@
-import {Component, DestroyRef, inject} from '@angular/core';
-import {FormService} from "../services/form.service";
-import {NavButton, NavButtonsComponent} from "../nav-buttons/nav-buttons.component";
-import {ReactiveFormsModule} from "@angular/forms";
-import {ApiService} from "../services/api.service";
-import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
+import { Component, DestroyRef, inject } from '@angular/core';
+import { FormService } from "../services/form.service";
+import { NavButton, NavButtonsComponent } from "../nav-buttons/nav-buttons.component";
+import { ReactiveFormsModule } from "@angular/forms";
+import { ApiService } from "../services/api.service";
+import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 
 @Component({
-  selector: 'gr-done',
+    selector: 'gr-done',
     imports: [
         NavButtonsComponent,
         ReactiveFormsModule,
     ],
-  templateUrl: './summary.component.html',
-  styleUrl: './summary.component.scss'
+    templateUrl: './summary.component.html',
+    styleUrl: './summary.component.scss'
 })
 export class SummaryComponent {
     private formService = inject(FormService);
@@ -35,14 +35,14 @@ export class SummaryComponent {
         },
     ];
     generateReport() {
-        this.formService.form.valueChanges.subscribe(() => {
+        this.formService.form.valueChanges.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => {
             this.formChanged = true;
         });
         this.apiService.generateReport(this.formService.form.getRawValue()).pipe(takeUntilDestroyed(this.destroyRef)).subscribe(reportData => {
             this.formChanged = false;
             this.reportHtml = reportData.html;
             const dataArray = Uint8Array.from(window.atob(reportData.pdf), (char) => char.charCodeAt(0));
-            this.reportPdf = new Blob([dataArray], {type: 'application/pdf'});
+            this.reportPdf = new Blob([dataArray], { type: 'application/pdf' });
         });
     }
     downloadReport() {
