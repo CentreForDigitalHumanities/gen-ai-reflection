@@ -1,0 +1,10 @@
+@use "sass:color";
+
+// Import UU-Bootstrap configuration to get access to $primary
+@import "bootstrap/scss/mixins/banner";
+@include bsBanner("");
+@import "uu-bootstrap/scss/configuration";
+
+// Custom color variables
+$primary-light: color.adjust($primary, $lightness: 30%);
+$primary-dark: color.adjust($primary, $lightness: -20%);
