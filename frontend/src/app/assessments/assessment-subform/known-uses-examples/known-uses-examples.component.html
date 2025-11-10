@@ -2,6 +2,11 @@
     <label class="form-label fw-bold" i18n>
         Known AI Uses for this assessment form
     </label>
+    @if (knownAiUses().length === 0) {
+        <p class="text-muted small" i18n>
+            No known AI uses available for this assessment form.
+        </p>
+    } @else {
     <p class="text-muted small" i18n>
         Click the bars below to see examples of ways in which students may use
         GenAI for this assessment form.
@@ -26,4 +31,5 @@
         </div>
         }
     </div>
+    }
 </div>
