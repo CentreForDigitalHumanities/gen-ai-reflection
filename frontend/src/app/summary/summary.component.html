@@ -19,7 +19,7 @@
     </form>
 
     <div class="btn-group">
-        <button (click)="generateReport()" class="btn btn-secondary" i18n>Generate report</button>
+        <button (click)="generateReport()" class="btn btn-secondary" [disabled]="!formChanged" i18n>Generate report</button>
         @if (reportHtml) {
             <button (click)="downloadReport()" class="btn btn-secondary" i18n>Download report</button>
         }
