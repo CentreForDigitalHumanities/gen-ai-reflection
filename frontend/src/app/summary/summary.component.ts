@@ -18,6 +18,7 @@ export class SummaryComponent {
     private formService = inject(FormService);
     private apiService = inject(ApiService);
     private destroyRef = inject(DestroyRef);
+    public formChanged = true;
     public form = this.formService.form;
     public reportHtml = "";
     public reportPdf: Blob | null = null;
@@ -34,7 +35,11 @@ export class SummaryComponent {
         },
     ];
     generateReport() {
+        this.formService.form.valueChanges.subscribe(() => {
+            this.formChanged = true;
+        });
         this.apiService.generateReport(this.formService.form.getRawValue()).pipe(takeUntilDestroyed(this.destroyRef)).subscribe(reportData => {
+            this.formChanged = false;
             this.reportHtml = reportData.html;
             const dataArray = Uint8Array.from(window.atob(reportData.pdf), (char) => char.charCodeAt(0));
             this.reportPdf = new Blob([dataArray], {type: 'application/pdf'});
