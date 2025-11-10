@@ -19,7 +19,7 @@
     text-align: center;
 }
 
-img {
+img.home-image {
     max-width: 400px;
     width: 100%;
     height: auto;
@@ -28,6 +28,12 @@ img {
     margin-right: auto;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+img.cc-logo {
+    height: 1.5em;
+    width: auto;
+    display: inline-block;
 }
 
 .btn-group {
