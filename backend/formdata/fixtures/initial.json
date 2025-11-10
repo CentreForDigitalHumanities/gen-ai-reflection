@@ -790,7 +790,8 @@
             "text": "Student uses ChatGPT to generate possible research angles.",
             "text_nl": "Student gebruikt ChatGPT om mogelijke onderzoeksrichtingen te genereren.",
             "text_en": "Student uses ChatGPT to generate possible research angles.",
-            "ai_use_id": 1
+            "ai_use_id": 1,
+            "assessment_form_id": 1
         }
     },
     {
@@ -800,7 +801,8 @@
             "text": "GenAI suggests multiple research questions based on keywords.",
             "text_nl": "GenAI stelt meerdere onderzoeksvragen voor op basis van trefwoorden.",
             "text_en": "GenAI suggests multiple research questions based on keywords.",
-            "ai_use_id": 2
+            "ai_use_id": 2,
+            "assessment_form_id": 1
         }
     },
     {
@@ -810,7 +812,8 @@
             "text": "AI helps summarize relevant academic articles.",
             "text_nl": "AI helpt bij het samenvatten van relevante academische artikelen.",
             "text_en": "AI helps summarize relevant academic articles.",
-            "ai_use_id": 3
+            "ai_use_id": 3,
+            "assessment_form_id": 1
         }
     },
     {
@@ -820,7 +823,8 @@
             "text": "Draft paragraphs are improved using AI grammar tools.",
             "text_nl": "Conceptteksten worden verbeterd met behulp van AI-grammaticatools.",
             "text_en": "Draft paragraphs are improved using AI grammar tools.",
-            "ai_use_id": 4
+            "ai_use_id": 4,
+            "assessment_form_id": 5
         }
     },
     {
@@ -830,7 +834,8 @@
             "text": "GenAI highlights passive voice and suggests improvements.",
             "text_nl": "GenAI wijst op het gebruik van de lijdende vorm en suggereert verbeteringen.",
             "text_en": "GenAI highlights passive voice and suggests improvements.",
-            "ai_use_id": 5
+            "ai_use_id": 5,
+            "assessment_form_id": 5
         }
     },
     {
@@ -840,7 +845,8 @@
             "text": "Generated visual aids like charts or diagrams to support presentations.",
             "text_nl": "Gegenereerde visuele hulpmiddelen zoals grafieken of diagrammen ter ondersteuning van presentaties.",
             "text_en": "Generated visual aids like charts or diagrams to support presentations.",
-            "ai_use_id": 6
+            "ai_use_id": 6,
+            "assessment_form_id": 2
         }
     },
     {
@@ -850,7 +856,8 @@
             "text": "GenAI proposes a slide outline and sample phrasing.",
             "text_nl": "GenAI stelt een dia-indeling en voorbeeldzinnen voor.",
             "text_en": "GenAI proposes a slide outline and sample phrasing.",
-            "ai_use_id": 7
+            "ai_use_id": 7,
+            "assessment_form_id": 2
         }
     },
     {
@@ -860,7 +867,8 @@
             "text": "AI provides rapid background info to support classroom answers.",
             "text_nl": "AI biedt snelle achtergrondinformatie ter ondersteuning van antwoorden op college.",
             "text_en": "AI provides rapid background info to support classroom answers.",
-            "ai_use_id": 8
+            "ai_use_id": 8,
+            "assessment_form_id": 3
         }
     },
     {
@@ -870,7 +878,8 @@
             "text": "GenAI helps gather structured data from open-access platforms.",
             "text_nl": "GenAI helpt bij het verzamelen van gestructureerde gegevens van open-access platforms.",
             "text_en": "GenAI helps gather structured data from open-access platforms.",
-            "ai_use_id": 9
+            "ai_use_id": 9,
+            "assessment_form_id": 6
         }
     },
     {
@@ -880,7 +889,8 @@
             "text": "Student uses AI to mock-up a prototype for feedback.",
             "text_nl": "Student gebruikt AI om een prototype te maken voor feedback.",
             "text_en": "Student uses AI to mock-up a prototype for feedback.",
-            "ai_use_id": 10
+            "ai_use_id": 10,
+            "assessment_form_id": 6
         }
     }
 ]
