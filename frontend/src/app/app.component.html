@@ -2,6 +2,15 @@
     <gr-menu role="banner" />
     <main class="main-content mt-5 mb-5">
         <div class="container">
+            @if (leaveWarning) {
+                <div class="alert alert-primary alert-dismissible" role="alert">
+                    <span i18n>
+                        Your data will not be saved if you close this page. You can download a report as part of the last step.
+                        If you do not want to save your data, you can safely close this page.
+                    </span>
+                    <button type="button" class="btn-close" aria-label="Close" (click)="dismissLeaveWarning()"></button>
+                </div>
+            }
             <router-outlet />
         </div>
     </main>

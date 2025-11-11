@@ -4,6 +4,7 @@ import { NavButton, NavButtonsComponent } from "../nav-buttons/nav-buttons.compo
 import { ReactiveFormsModule } from "@angular/forms";
 import { ApiService } from "../services/api.service";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
+import { AskForLeaveService } from "../services/ask-for-leave.service";
 
 @Component({
     selector: 'gr-done',
@@ -17,6 +18,7 @@ import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 export class SummaryComponent {
     private formService = inject(FormService);
     private apiService = inject(ApiService);
+    private askForLeaveService = inject(AskForLeaveService);
     private destroyRef = inject(DestroyRef);
     public formChanged = true;
     public form = this.formService.form;
@@ -43,6 +45,7 @@ export class SummaryComponent {
             this.reportHtml = reportData.html;
             const dataArray = Uint8Array.from(window.atob(reportData.pdf), (char) => char.charCodeAt(0));
             this.reportPdf = new Blob([dataArray], { type: 'application/pdf' });
+            this.askForLeaveService.allowLeave();
         });
     }
     downloadReport() {

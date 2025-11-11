@@ -4,6 +4,7 @@ import { MenuComponent } from "./menu/menu.component";
 import { DarkModeService } from "./services/dark-mode.service";
 import { FooterComponent } from "./footer/footer.component";
 import { RouterOutlet } from "@angular/router";
+import { AskForLeaveService } from "./services/ask-for-leave.service";
 
 @Component({
     selector: "gr-root",
@@ -14,6 +15,8 @@ import { RouterOutlet } from "@angular/router";
 export class AppComponent {
     private document = inject<Document>(DOCUMENT);
     private darkModeService = inject(DarkModeService);
+    private askForLeaveService = inject(AskForLeaveService);
+    public leaveWarning = false;
 
     constructor() {
         // Using the DOM API to only render on the browser instead of on the server
@@ -30,5 +33,12 @@ export class AppComponent {
                 style.href = `${theme}.css`;
             });
         });
+        this.askForLeaveService.leaveAsked$.subscribe(() => {
+            this.leaveWarning = true;
+        })
+    }
+
+    dismissLeaveWarning() {
+        this.leaveWarning = false;
     }
 }
