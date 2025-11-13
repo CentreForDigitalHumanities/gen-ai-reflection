@@ -11,6 +11,7 @@ export class AskForLeaveService {
     constructor() {
         this.handler = (event) => {
             event?.preventDefault();
+            event.returnValue = true; // Deprecated, but still recommended by MDN
             this.leaveAsked$.next();
         }
     }
