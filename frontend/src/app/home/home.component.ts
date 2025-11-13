@@ -5,7 +5,6 @@ import { Department, FormService } from "../services/form.service";
 import { ReactiveFormsModule } from "@angular/forms";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { LanguageInfo, LanguageService } from "../services/language.service";
-import { AskForLeaveService } from "../services/ask-for-leave.service";
 
 @Component({
     selector: "gr-home",
@@ -20,7 +19,6 @@ export class HomeComponent implements OnInit {
     private formService = inject(FormService);
     private languageService = inject(LanguageService);
     private router = inject(Router);
-    private askForLeaveService = inject(AskForLeaveService);
 
     loading: boolean = false;
 
@@ -38,7 +36,6 @@ export class HomeComponent implements OnInit {
     public startGkg(): void {
         this.formService.form.controls.department.setValue(Department.GKG);
         this.router.navigate(["/intro"]);
-        this.askForLeaveService.preventLeave();
     }
 
     ngOnInit(): void {
