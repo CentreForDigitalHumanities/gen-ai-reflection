@@ -1,6 +1,6 @@
 {
     "name": "gen_ai_reflection",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "A reflection tool about the use of generative AI by students and instructors, aimed at instructors at Utrecht University.",
     "author": "Portal Development, Centre for Digital Humanities, Utrecht University",
     "license": "BSD-3-Clause",
