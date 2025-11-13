@@ -1,9 +1,12 @@
-import { Component, afterEveryRender, DOCUMENT, inject } from "@angular/core";
+import { Component, afterEveryRender, DOCUMENT, inject, DestroyRef } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { MenuComponent } from "./menu/menu.component";
 import { DarkModeService } from "./services/dark-mode.service";
 import { FooterComponent } from "./footer/footer.component";
 import { RouterOutlet } from "@angular/router";
+import { AskForLeaveService } from "./services/ask-for-leave.service";
+import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
+import { FormService } from "./services/form.service";
 
 @Component({
     selector: "gr-root",
@@ -12,8 +15,12 @@ import { RouterOutlet } from "@angular/router";
     styleUrl: "./app.component.scss",
 })
 export class AppComponent {
+    private formService = inject(FormService);
     private document = inject<Document>(DOCUMENT);
     private darkModeService = inject(DarkModeService);
+    private askForLeaveService = inject(AskForLeaveService);
+    private destroyRef = inject(DestroyRef);
+    public leaveWarning = false;
 
     constructor() {
         // Using the DOM API to only render on the browser instead of on the server
@@ -30,5 +37,21 @@ export class AppComponent {
                 style.href = `${theme}.css`;
             });
         });
+        this.formService.form.valueChanges
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe(() => {
+                if (this.formService.form.dirty) {
+                    this.askForLeaveService.preventLeave();
+                } else {
+                    this.askForLeaveService.allowLeave();
+                }
+            });
+        this.askForLeaveService.leaveAsked$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => {
+            this.leaveWarning = true;
+        })
+    }
+
+    dismissLeaveWarning() {
+        this.leaveWarning = false;
     }
 }
