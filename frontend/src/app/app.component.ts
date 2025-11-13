@@ -1,10 +1,11 @@
-import { Component, afterEveryRender, DOCUMENT, inject } from "@angular/core";
+import { Component, afterEveryRender, DOCUMENT, inject, DestroyRef } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { MenuComponent } from "./menu/menu.component";
 import { DarkModeService } from "./services/dark-mode.service";
 import { FooterComponent } from "./footer/footer.component";
 import { RouterOutlet } from "@angular/router";
 import { AskForLeaveService } from "./services/ask-for-leave.service";
+import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 
 @Component({
     selector: "gr-root",
@@ -16,6 +17,7 @@ export class AppComponent {
     private document = inject<Document>(DOCUMENT);
     private darkModeService = inject(DarkModeService);
     private askForLeaveService = inject(AskForLeaveService);
+    private destroyRef = inject(DestroyRef);
     public leaveWarning = false;
 
     constructor() {
@@ -33,7 +35,7 @@ export class AppComponent {
                 style.href = `${theme}.css`;
             });
         });
-        this.askForLeaveService.leaveAsked$.subscribe(() => {
+        this.askForLeaveService.leaveAsked$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => {
             this.leaveWarning = true;
         })
     }
