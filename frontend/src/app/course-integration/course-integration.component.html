@@ -16,10 +16,20 @@
     <p i18n>
         Below you will find a scale with five levels of AI integration in
         educational assessments, based on the
-        <a href="https://aiassessmentscale.com/" target="_blank"
-            >AI Assessment Scale (AIAS)</a
+        <a
+            href="https://www.uu.nl/en/organisation/ai-policy/teachers/for-teachers/ai-index"
+            target="_blank"
+            i18n-href="url"
+            >AI Index</a
         >
-        developed by Perkins et al. (2024).
+        for teachers, as adopted by Utrecht University. Additional information
+        regarding the university policy on generative AI can be found
+        <a
+            href="https://www.uu.nl/en/organisation/ai-policy"
+            i18n-href="url"
+            target="_blank"
+            >here</a
+        >. (Both links will open in a new tab).
     </p>
 
     <figure
@@ -29,18 +39,18 @@
         <img
             tabindex="0"
             class="img-fluid rounded w-50 small-ai-scale-image"
-            ngSrc="../../assets/ai-assessment-scale-small.png"
-            alt="AI Assessment Scale"
+            [ngSrc]="`../../assets/images/ai-index-${currentLocale}.svg`"
+            alt="AI Index"
             (click)="openLightbox()"
             (keydown.enter)="openLightbox()"
             (keydown.space)="$event.preventDefault(); openLightbox()"
             role="button"
-            width="600"
-            height="420"
+            width="691"
+            height="782"
             priority
         />
         <figcaption class="fst-italic small mt-2" i18n>
-            AI Assessment Scale (click to enlarge)
+            AI Index for teachers (click to enlarge)
         </figcaption>
     </figure>
 
@@ -91,45 +101,12 @@
 </section>
 }
 
-<section class="my-4">
-    <p i18n>
-        Additional information regarding the university policy on generative AI
-        can be found here. (Links will open in a new tab.)
-    </p>
-
-    <ul>
-        <li>
-            <span class="me-2" i18n>UU AI policy (general page):</span>
-            <a
-                href="https://www.uu.nl/en/organisation/ai-policy"
-                target="_blank"
-                i18n-href="url"
-                i18n="display text"
-                >https://www.uu.nl/en/organisation/ai-policy</a
-            >
-        </li>
-        <li>
-            <span class="me-2" i18n>AI index (for teachers):</span>
-            <a
-                href="https://www.uu.nl/en/organisation/ai-policy/teachers/for-teachers/ai-index"
-                target="_blank"
-                i18n-href="url"
-                i18n="display text"
-                >https://www.uu.nl/en/organisation/ai-policy/teachers/for-teachers/ai-index</a
-            >
-        </li>
-    </ul>
-</section>
-
 <gr-nav-buttons [navButtons]="navButtons" />
 
 @if (showLightbox) {
 <div class="modal fade show d-block" tabindex="-1" (click)="closeLightbox()">
     <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div
-            class="modal-content bg-transparent border-0"
-            (click)="$event.stopPropagation()"
-        >
+        <div class="modal-content border-0" (click)="$event.stopPropagation()">
             <div class="modal-header border-0" (click)="closeLightbox()">
                 <button
                     #closeButton
@@ -143,20 +120,22 @@
             <div class="modal-body text-center">
                 <figure role="group">
                     <img
-                        src="../../assets/ai-assessment-scale.png"
-                        alt="AI Assessment Scale"
+                        [src]="`../../assets/images/ai-index-${currentLocale}.svg`"
+                        alt="AI Index"
                         class="img-fluid"
                     />
                     <figcaption
                         class="d-flex flex-column lightbox-caption mt-0 justify-content-center align-items-center"
+                        i18n
                     >
                         <a
-                            href="https://aiassessmentscale.com/"
+                            href="https://www.uu.nl/en/organisation/ai-policy/teachers/for-teachers/ai-index"
+                            i18n-href="url"
                             target="_blank"
                         >
-                            <span i18n>AI Assessment Scale (AIAS)</span>
+                            AI Index
                         </a>
-                        <span class="ms-2 fst-italic" i18n
+                        <span class="ms-2 fst-italic"
                             >(Link will open in a new tab.)</span
                         >
                     </figcaption>

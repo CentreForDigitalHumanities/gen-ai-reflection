@@ -1,4 +1,4 @@
-import { Component, computed, effect, ElementRef, HostListener, inject, viewChild } from "@angular/core";
+import { Component, computed, effect, ElementRef, HostListener, inject, LOCALE_ID, viewChild } from "@angular/core";
 import { FormControl, ReactiveFormsModule } from "@angular/forms";
 import {
     NavButton,
@@ -22,6 +22,7 @@ import { NgOptimizedImage } from "@angular/common";
 export class CourseIntegrationComponent {
     private apiService = inject(ApiService);
     private formService = inject(FormService);
+    private localeId = inject(LOCALE_ID);
 
     private closeButton = viewChild<ElementRef>('closeButton');
 
@@ -43,6 +44,13 @@ export class CourseIntegrationComponent {
         if (this.showLightbox) {
             this.closeLightbox();
         }
+    }
+
+    get currentLocale(): string {
+        if (this.localeId === 'nl' || this.localeId === 'en') {
+            return this.localeId;
+        }
+        return 'en';
     }
 
     public showLightbox = false;
@@ -82,7 +90,7 @@ export class CourseIntegrationComponent {
             if (this.showLightbox) {
                 this.closeButton()?.nativeElement.focus();
             }
-        })
+        });
     }
 
     public onExampleChange(id: number): void {
