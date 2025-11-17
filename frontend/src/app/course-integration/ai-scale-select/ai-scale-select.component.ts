@@ -25,9 +25,9 @@ export class AiScaleSelectComponent implements ControlValueAccessor {
     public rangeItems: RangeItem[] = [
         { value: 1, scaleLevel: AiAssessmentScaleLevel.NO_AI, label: $localize`No AI` },
         { value: 2, scaleLevel: AiAssessmentScaleLevel.AI_PLANNING, label: $localize`AI planning` },
-        { value: 3, scaleLevel: AiAssessmentScaleLevel.AI_COLLABORATION, label: $localize`AI collaboration` },
-        { value: 4, scaleLevel: AiAssessmentScaleLevel.FULL_AI, label: $localize`Full AI` },
-        { value: 5, scaleLevel: AiAssessmentScaleLevel.AI_EXPLORATION, label: $localize`AI exploration` }
+        { value: 3, scaleLevel: AiAssessmentScaleLevel.AI_EDIT, label: $localize`AI editing and feedback` },
+        { value: 4, scaleLevel: AiAssessmentScaleLevel.AI_SPECIFIC, label: $localize`AI for specific tasks` },
+        { value: 5, scaleLevel: AiAssessmentScaleLevel.FULL_AI, label: $localize`Full AI` },
     ];
 
     // Default value is null (indeterminate state).
