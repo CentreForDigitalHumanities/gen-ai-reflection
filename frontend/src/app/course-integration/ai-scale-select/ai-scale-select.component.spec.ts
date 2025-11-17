@@ -43,11 +43,11 @@ describe('AiScaleSelectComponent', () => {
 
     it('should call onChange on radio button change', () => {
         const onChangeSpy = spyOn(component, 'onChange');
-        const radioInput = fixture.debugElement.query(By.css('input[type="radio"][value="' + AiAssessmentScaleLevel.AI_EXPLORATION + '"]')).nativeElement;
+        const radioInput = fixture.debugElement.query(By.css('input[type="radio"][value="' + AiAssessmentScaleLevel.FULL_AI + '"]')).nativeElement;
         radioInput.click();
         fixture.detectChanges();
 
-        expect(onChangeSpy).toHaveBeenCalledWith(AiAssessmentScaleLevel.AI_EXPLORATION);
+        expect(onChangeSpy).toHaveBeenCalledWith(AiAssessmentScaleLevel.FULL_AI);
     });
 
     it('should select a value on radio button click', () => {

@@ -38,9 +38,9 @@ export interface AssessmentForm {
 export enum AiAssessmentScaleLevel {
     NO_AI = "no AI",
     AI_PLANNING = "AI planning",
-    AI_COLLABORATION = "AI collaboration",
-    FULL_AI = "full AI",
-    AI_EXPLORATION = "AI exploration"
+    AI_EDIT = "AI edit",
+    AI_SPECIFIC = "AI specific",
+    FULL_AI = "full AI"
 }
 
 export interface AIUseExample {

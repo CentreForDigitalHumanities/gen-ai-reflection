@@ -67,9 +67,9 @@ class UseExample(models.Model):
     class ScaleLevel(models.TextChoices):
         NO_AI = "no AI", "No AI"
         AI_PLANNING = "AI planning", "AI Planning"
-        AI_COLLABORATION = "AI collaboration", "AI Collaboration"
-        FULL_AL = "full AI", "Full AI"
-        AI_EXPLORATION = "AI exploration", "AI Exploration"
+        AI_EDIT = "AI edit", "AI Edit"
+        AI_SPECIFIC = "AI specific", "AI Specific"
+        FULL_AI = "full AI", "Full AI"
 
     scale_level = models.CharField(max_length=50, choices=ScaleLevel)
     text = models.TextField()

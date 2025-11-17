@@ -489,7 +489,7 @@
         "model": "formdata.useexample",
         "pk": 5,
         "fields": {
-            "scale_level": "AI collaboration",
+            "scale_level": "AI edit",
             "text": "Have GenAI create different versions of the student’s output, for example a public summary, an opinion piece, a script for a podcast, etc.",
             "text_en": "Have GenAI create different versions of the student’s output, for example a public summary, an opinion piece, a script for a podcast, etc.",
             "text_nl": "Laat GenAI verschillende versies van de output van de student maken, bijvoorbeeld een samenvatting, een opiniestuk, een script voor een podcast, enz."
@@ -509,7 +509,7 @@
         "model": "formdata.useexample",
         "pk": 7,
         "fields": {
-            "scale_level": "AI exploration",
+            "scale_level": "AI specific",
             "text": "Have GenAI play out historical dialogues, or have it engage in a conversation with you from the perspective of a historical figure. The assignment is in the input (detailed contextual information) rather than on the output.",
             "text_en": "Have GenAI play out historical dialogues, or have it engage in a conversation with you from the perspective of a historical figure. The assignment is in the input (detailed contextual information) rather than on the output.",
             "text_nl": "Laat GenAI historische dialogen naspelen, of laat het een gesprek met je voeren vanuit het perspectief van een historisch figuur. De opdracht zit in de input (gedetailleerde contextinformatie) in plaats van in de output."
@@ -519,7 +519,7 @@
         "model": "formdata.useexample",
         "pk": 8,
         "fields": {
-            "scale_level": "AI exploration",
+            "scale_level": "AI specific",
             "text": "Reflect on the quality of GenAI’s output by asking it for something that you already know, for example ‘who caused the French Revolution?’ or ‘who started the First World War?’ to query its perspective (bias).",
             "text_en": "Reflect on the quality of GenAI’s output by asking it for something that you already know, for example ‘who caused the French Revolution?’ or ‘who started the First World War?’ to query its perspective (bias).",
             "text_nl": "Reflecteer op de kwaliteit van de output van GenAI door het te vragen naar iets wat je al weet, bijvoorbeeld 'wie was verantwoordelijk voor de Franse Revolutie?' of 'wie begon de Eerste Wereldoorlog?' om zijn perspectief (bias) te onderzoeken."
