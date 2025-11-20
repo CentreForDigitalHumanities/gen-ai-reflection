@@ -16,11 +16,24 @@ def migrate_assessment_form_to_m2m(apps, schema_editor):
 def migrate_m2m_to_assessment_form(apps, schema_editor):
     """Reverse migration: migrate first M2M relationship back to ForeignKey."""
     KnownAiUseExample = apps.get_model("formdata", "KnownAiUseExample")
+    AssessmentForm = apps.get_model("formdata", "AssessmentForm")
+
+    # Take the first assessment form as default if the example has none.
+    default_form = AssessmentForm.objects.first()
+    if not default_form:
+        # If no assessment forms exist, we can't reverse this migration
+        raise Exception(
+            "Cannot reverse migration: No AssessmentForm exists. "
+            "Create at least one AssessmentForm before reversing this migration."
+        )
 
     for example in KnownAiUseExample.objects.all():
         first_assessment_form = example.assessment_forms.first()
         if first_assessment_form:
             example.assessment_form = first_assessment_form
+            example.save()
+        else:
+            example.assessment_form = default_form
             example.save()
 
 
@@ -42,21 +55,20 @@ class Migration(migrations.Migration):
                 to="formdata.assessmentform",
             ),
         ),
-        migrations.RunPython(
-            migrate_assessment_form_to_m2m,
-            reverse_code=migrate_m2m_to_assessment_form,
-        ),
-        # Set the default value of the old field to 1 so reversing RemoveField
-        # below does not fail because of null values.
+        # Make field nullable before migrating data
         migrations.AlterField(
             model_name="knownaiuseexample",
             name="assessment_form",
             field=models.ForeignKey(
-                default=1,
+                null=True,
                 on_delete=django.db.models.deletion.CASCADE,
                 related_name="known_ai_use_examples",
                 to="formdata.assessmentform",
             ),
+        ),
+        migrations.RunPython(
+            migrate_assessment_form_to_m2m,
+            reverse_code=migrate_m2m_to_assessment_form,
         ),
         migrations.RemoveField(
             model_name="knownaiuseexample",
