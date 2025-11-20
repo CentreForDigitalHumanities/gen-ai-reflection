@@ -116,6 +116,6 @@ class KnownAiUseExample(models.Model):
 
     def __str__(self):
         ass_form_names = self.assessment_forms.values_list('name', flat=True)
-        ass_form_names_str = ", ".join(list(ass_form_names))
+        ass_form_names_str = ", ".join(ass_form_names)
 
         return f"{self.text} ({self.ai_use} -- {ass_form_names_str})"
