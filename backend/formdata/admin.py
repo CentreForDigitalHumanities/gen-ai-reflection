@@ -56,6 +56,7 @@ class AssessmentFormAdmin(ListDescriptionMixin, admin.ModelAdmin):
         "When adding new ones, make sure to provide Known AI uses and Known AI use examples as well."
     )
     filter_horizontal = ["adjustments"]
+    search_fields = ["name"]
 
 
 @admin.register(UseExample)
@@ -76,8 +77,14 @@ class KnownAiUseAdmin(ListDescriptionMixin, SingleRowTextareaMixin, admin.ModelA
 class KnownAiUseExampleAdmin(
     ListDescriptionMixin, SingleRowTextareaMixin, admin.ModelAdmin
 ):
-    list_display = ["text_en", "text_nl", "assessment_form", "ai_use"]
+    list_display = ["text_en", "text_nl", "ai_use", "get_assessment_forms"]
     list_description = "These examples appear in Step 2 ('Assessments'). They are linked to Assessments and Known AI uses and display in a list when their associated Assessment and Known AI use are both selected."
+    fields = ["text", "text_en", "text_nl", "ai_use", "assessment_forms"]
+    filter_horizontal = ["assessment_forms"]
+
+    @admin.display(description="Assessment Forms")
+    def get_assessment_forms(self, obj):
+        return ", ".join(obj.assessment_forms.values_list("name", flat=True))
 
 
 @admin.register(ChallengeOpportunity)
