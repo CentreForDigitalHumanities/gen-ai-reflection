@@ -25,7 +25,7 @@ export class KnownUsesExamplesComponent {
 
         return uses.map(use => ({
             ...use,
-            examples: use.examples.filter(example => example.assessmentForm === assessmentFormId),
+            examples: use.examples.filter(example => example.assessmentFormIds.includes(assessmentFormId)),
         }));
     });
 }

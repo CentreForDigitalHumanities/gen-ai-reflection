@@ -108,11 +108,14 @@ class KnownAiUseExample(models.Model):
         related_name="examples",
     )
 
-    assessment_form = models.ForeignKey(
+    assessment_forms = models.ManyToManyField(
         AssessmentForm,
-        on_delete=models.CASCADE,
         related_name="known_ai_use_examples",
+        blank=True,
     )
 
     def __str__(self):
-        return f"{self.text} ({self.ai_use} -- {self.assessment_form})"
+        ass_form_names = self.assessment_forms.values_list('name', flat=True)
+        ass_form_names_str = ", ".join(ass_form_names)
+
+        return f"{self.text} ({self.ai_use} -- {ass_form_names_str})"

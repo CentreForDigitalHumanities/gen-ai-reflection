@@ -19,7 +19,7 @@ interface Adjustment {
 interface KnownAiUseExample {
     id: number;
     text: string;
-    assessmentForm: number;
+    assessmentFormIds: number[];
 }
 
 export interface KnownAiUse {

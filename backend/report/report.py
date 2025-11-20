@@ -6,18 +6,28 @@ from django.utils.translation import gettext
 from formdata.models import ChallengeOpportunity, AssessmentForm, UseExample
 
 
+class KnownAiUseData:
+    def __init__(self, text: str, examples: list):
+        self.text = text
+        self.examples = examples
+
+
 class LearningOutcome:
     def __init__(self, data: dict):
         self.id = data["id"]
         self.text = data["intendedOutcome"]
         if data["dublinIndicator"]:
-            dublin_indicator = ChallengeOpportunity.DublinIndicator(data["dublinIndicator"])
+            dublin_indicator = ChallengeOpportunity.DublinIndicator(
+                data["dublinIndicator"]
+            )
             self.dublin_indicator = gettext(dublin_indicator.label)
             self.challenges = ChallengeOpportunity.objects.filter(
-                category=ChallengeOpportunity.Category.CHALLENGE, dublin_indicator=dublin_indicator
+                category=ChallengeOpportunity.Category.CHALLENGE,
+                dublin_indicator=dublin_indicator,
             ).values_list("text", flat=True)
             self.opportunities = ChallengeOpportunity.objects.filter(
-                category=ChallengeOpportunity.Category.OPPORTUNITY, dublin_indicator=dublin_indicator
+                category=ChallengeOpportunity.Category.OPPORTUNITY,
+                dublin_indicator=dublin_indicator,
             ).values_list("text", flat=True)
 
 
@@ -29,11 +39,41 @@ class AssessmentData:
             pass  # This may happen if no assessment form has been chosen.
         else:
             self.assessment_form = assessment_form_obj.name
-            self.known_ai_uses = assessment_form_obj.known_ai_uses.all()
-            self.adjustments = assessment_form_obj.adjustments.order_by("order").values_list("text", flat=True)
-        self.learning_outcomes = [x.text for x in filter(lambda lo: lo.id in data["iloIds"], learning_outcomes)]
+            self.assessment_form_id = assessment_form_obj.pk
+            self.known_ai_uses = self.get_known_ai_uses_for_assessment_form(
+                assessment_form_obj
+            )
+
+            self.adjustments = assessment_form_obj.adjustments.order_by(
+                "order"
+            ).values_list("text", flat=True)
+        self.learning_outcomes = [
+            x.text
+            for x in filter(lambda lo: lo.id in data["iloIds"], learning_outcomes)
+        ]
         self.affected = data["affected"] == True
 
+    def get_known_ai_uses_for_assessment_form(
+        self, assessment_form: AssessmentForm
+    ) -> list[KnownAiUseData]:
+        all_known_ai_uses = assessment_form.known_ai_uses.prefetch_related(
+            "examples__assessment_forms"
+        ).all()
+
+        # Filter examples for each known AI use to only include those
+        # associated with this assessment form
+        filtered_known_ai_uses = []
+        for use in all_known_ai_uses:
+            filtered_examples = [
+                example
+                for example in use.examples.all()
+                if any(
+                    af.id == self.assessment_form_id
+                    for af in example.assessment_forms.all()
+                )
+            ]
+            filtered_known_ai_uses.append(KnownAiUseData(use.text, filtered_examples))
+        return filtered_known_ai_uses
 
 
 def get_integrations_by_scale(data: dict):
@@ -42,10 +82,14 @@ def get_integrations_by_scale(data: dict):
         # ScaleLevel.choices returns tuples of values and verbose text
         scale_val = scale[0]
         scale_text = gettext(scale[1])
-        result.append({
-            'scale': scale_text,
-            'examples': UseExample.objects.filter(scale_level=scale_val, id__in=data).values_list('text', flat=True)
-        })
+        result.append(
+            {
+                "scale": scale_text,
+                "examples": UseExample.objects.filter(
+                    scale_level=scale_val, id__in=data
+                ).values_list("text", flat=True),
+            }
+        )
     return result
 
 
@@ -53,12 +97,17 @@ def create_report(data: dict) -> str:
     """Create the inner HTML of the report using the form data from the
     frontend."""
     learning_outcomes = [LearningOutcome(data) for data in data["learningOutcomes"]]
-    assessments = [AssessmentData(data, learning_outcomes) for data in data["assessments"]]
+    assessments = [
+        AssessmentData(data, learning_outcomes) for data in data["assessments"]
+    ]
     course_integration = get_integrations_by_scale(data["chosenAiUses"])
-    return render_to_string("report/inner_html.html", {
-        'raw_data': data,
-        'learning_outcomes': learning_outcomes,
-        'assessments': assessments,
-        'course_integration': course_integration,
-        'current_date': datetime.datetime.now(),
-    })
+    return render_to_string(
+        "report/inner_html.html",
+        {
+            "raw_data": data,
+            "learning_outcomes": learning_outcomes,
+            "assessments": assessments,
+            "course_integration": course_integration,
+            "current_date": datetime.datetime.now(),
+        },
+    )
