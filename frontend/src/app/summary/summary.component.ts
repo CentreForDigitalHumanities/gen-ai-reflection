@@ -34,6 +34,9 @@ export class SummaryComponent {
             label: $localize`Start over`,
             direction: "next",
             link: "/",
+            action: () => {
+                this.form.reset();
+            }
         },
     ];
     generateReport() {
