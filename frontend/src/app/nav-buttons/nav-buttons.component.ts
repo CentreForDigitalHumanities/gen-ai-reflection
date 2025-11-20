@@ -5,6 +5,7 @@ export interface NavButton {
     label: string;
     direction: "next" | "back";
     link: string;
+    action?: () => void;
 }
 
 @Component({
@@ -18,7 +19,7 @@ export class NavButtonsComponent {
 
     // Make sure the buttons are sorted so 'back' comes before 'next'.
     public sorted = computed(() => {
-        const buttons = structuredClone(this.navButtons());
+        const buttons = [...this.navButtons()];
         return buttons.sort((a, b) => {
             if (a.direction === "back" && b.direction === "next") {
                 return -1;
