@@ -82,6 +82,9 @@ class KnownAiUseExampleAdmin(
     fields = ["text", "text_en", "text_nl", "ai_use", "assessment_forms"]
     filter_horizontal = ["assessment_forms"]
 
+    def get_queryset(self, request):
+        return super().get_queryset(request).prefetch_related("assessment_forms")
+
     @admin.display(description="Assessment Forms")
     def get_assessment_forms(self, obj):
         return ", ".join(obj.assessment_forms.values_list("name", flat=True))

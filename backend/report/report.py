@@ -67,8 +67,10 @@ class AssessmentData:
             filtered_examples = [
                 example
                 for example in use.examples.all()
-                if self.assessment_form_id
-                in example.assessment_forms.values_list("id", flat=True)
+                if any(
+                    af.id == self.assessment_form_id
+                    for af in example.assessment_forms.all()
+                )
             ]
             filtered_known_ai_uses.append(KnownAiUseData(use.text, filtered_examples))
         return filtered_known_ai_uses
