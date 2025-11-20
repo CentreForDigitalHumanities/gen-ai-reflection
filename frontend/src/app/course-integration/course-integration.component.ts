@@ -11,13 +11,14 @@ import { FormService } from "../services/form.service";
 import { AiScaleSelectComponent } from "./ai-scale-select/ai-scale-select.component";
 import { startWith } from "rxjs";
 import { NgOptimizedImage } from "@angular/common";
+import { NgbPopover } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
     selector: "gr-course-integration",
     templateUrl: "./course-integration.component.html",
     styleUrls: ["./course-integration.component.scss"],
     standalone: true,
-    imports: [NavButtonsComponent, ReactiveFormsModule, AiScaleSelectComponent, NgOptimizedImage],
+    imports: [NavButtonsComponent, ReactiveFormsModule, AiScaleSelectComponent, NgOptimizedImage, NgbPopover],
 })
 export class CourseIntegrationComponent {
     private apiService = inject(ApiService);

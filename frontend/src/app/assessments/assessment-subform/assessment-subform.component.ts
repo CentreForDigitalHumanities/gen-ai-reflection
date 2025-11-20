@@ -8,10 +8,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from '../../services/api.service';
 import { expandIn } from '../../shared/animations';
 import { KnownUsesExamplesComponent } from './known-uses-examples/known-uses-examples.component';
+import { NgbPopover } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
     selector: 'gr-assessment-subform',
-    imports: [AssessmentFormSelectComponent, IloSelectComponent, FontAwesomeModule, ReactiveFormsModule, KnownUsesExamplesComponent],
+    imports: [AssessmentFormSelectComponent, IloSelectComponent, FontAwesomeModule, ReactiveFormsModule, KnownUsesExamplesComponent, NgbPopover],
     templateUrl: './assessment-subform.component.html',
     styleUrl: './assessment-subform.component.scss',
     animations: [expandIn]
