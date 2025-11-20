@@ -69,9 +69,17 @@
 @if (selectedScaleLevel.value) {
 
 <section class="d-flex flex-column">
-    <p i18n>
-        Select the options below that you would like to include in your summary
-        report.
+    <ng-template #popContent i18n>
+        You are welcome to send your own examples for AI usages to <a href="mailto:genaitool@uu.nl">genaitool&#64;uu.nl</a>.
+    </ng-template>
+    <p>
+        <span i18n>
+            Select the options below that you would like to include in your summary
+            report.
+        </span>
+        <a href="javascript:void(0)" i18n [ngbPopover]="popContent">
+            Would you like to share your own examples?
+        </a>
     </p>
     <div class="list-group example-item-group">
         @for (example of visibleExamples(); track example.id) {

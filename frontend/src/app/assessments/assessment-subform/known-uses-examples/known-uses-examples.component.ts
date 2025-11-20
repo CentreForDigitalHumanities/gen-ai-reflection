@@ -1,11 +1,11 @@
 import { Component, computed, inject, input } from '@angular/core';
 import { KnownAiUse } from '../../../shared/types';
 import { ApiService } from '../../../services/api.service';
-import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAccordionModule, NgbPopover } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'gr-known-uses-examples',
-    imports: [NgbAccordionModule],
+    imports: [NgbAccordionModule, NgbPopover],
     templateUrl: './known-uses-examples.component.html',
     styleUrl: './known-uses-examples.component.scss'
 })

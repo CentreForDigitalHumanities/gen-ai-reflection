@@ -7,9 +7,17 @@
             No known AI uses available for this assessment form.
         </p>
     } @else {
-    <p class="text-muted small" i18n>
-        Click the bars below to see examples of ways in which students may use
-        GenAI for this assessment form.
+    <p class="text-muted small">
+        <span i18n>
+            Click the bars below to see examples of ways in which students may use
+            GenAI for this assessment form.
+        </span>
+        <ng-template #popContent i18n>
+            You are welcome to send your own examples of students' GenAI usages to <a href="mailto:genaitool@uu.nl">genaitool&#64;uu.nl</a>.
+        </ng-template>
+        <a href="javascript:void(0)" i18n [ngbPopover]="popContent">
+            Would you like to share your own examples?
+        </a>
     </p>
     <div ngbAccordion>
         @for (aiUse of knownAiUses(); track aiUse.id) {
