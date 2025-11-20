@@ -409,7 +409,7 @@
         "model": "formdata.adjustment",
         "pk": 18,
         "fields": {
-            "text": "Process documentation: include reflection of each group member",
+            "text": "Process documentation: include reflection of each group member.",
             "text_en": "Process documentation: include reflection of each group member.",
             "text_nl": "Procesdocumentatie: reflectie van elk groepslid opnemen.",
             "order": 0
@@ -439,7 +439,7 @@
         "model": "formdata.adjustment",
         "pk": 21,
         "fields": {
-            "text": "Process documentation: reflection on feedback",
+            "text": "Process documentation: reflection on feedback.",
             "text_en": "Process documentation: reflection on feedback.",
             "text_nl": "Procesdocumentatie: reflectie op feedback.",
             "order": 0
@@ -530,8 +530,9 @@
         "pk": 1,
         "fields": {
             "text": "Brainstorming",
+            "text_en": "Brainstorming",
             "text_nl": "Brainstormen",
-            "text_en": "Brainstorming"
+            "assessment_forms": [5, 1, 6, 3, 2, 4]
         }
     },
     {
@@ -539,8 +540,9 @@
         "pk": 2,
         "fields": {
             "text": "Formulating RQ",
+            "text_en": "Formulating RQ",
             "text_nl": "Onderzoeksvraag formuleren",
-            "text_en": "Formulating RQ"
+            "assessment_forms": [1, 4]
         }
     },
     {
@@ -548,8 +550,9 @@
         "pk": 3,
         "fields": {
             "text": "Literature",
+            "text_en": "Literature",
             "text_nl": "Literatuuronderzoek",
-            "text_en": "Literature"
+            "assessment_forms": [1, 2, 4]
         }
     },
     {
@@ -557,8 +560,9 @@
         "pk": 4,
         "fields": {
             "text": "Writing",
+            "text_en": "Writing",
             "text_nl": "Schrijven",
-            "text_en": "Writing"
+            "assessment_forms": [5, 1, 4]
         }
     },
     {
@@ -566,8 +570,9 @@
         "pk": 5,
         "fields": {
             "text": "Editing",
+            "text_en": "Editing",
             "text_nl": "Redigeren",
-            "text_en": "Editing"
+            "assessment_forms": [5, 1]
         }
     },
     {
@@ -575,8 +580,9 @@
         "pk": 6,
         "fields": {
             "text": "Generating images",
+            "text_en": "Generating images",
             "text_nl": "Afbeeldingen genereren",
-            "text_en": "Generating images"
+            "assessment_forms": [2]
         }
     },
     {
@@ -584,8 +590,9 @@
         "pk": 7,
         "fields": {
             "text": "Making the presentation",
+            "text_en": "Making the presentation",
             "text_nl": "De presentatie maken",
-            "text_en": "Making the presentation"
+            "assessment_forms": [2]
         }
     },
     {
@@ -593,8 +600,9 @@
         "pk": 8,
         "fields": {
             "text": "Answering questions",
+            "text_en": "Answering questions",
             "text_nl": "Vragen beantwoorden",
-            "text_en": "Answering questions"
+            "assessment_forms": [3]
         }
     },
     {
@@ -602,8 +610,9 @@
         "pk": 9,
         "fields": {
             "text": "Researching",
+            "text_en": "Researching",
             "text_nl": "Onderzoek doen",
-            "text_en": "Researching"
+            "assessment_forms": [6]
         }
     },
     {
@@ -611,176 +620,9 @@
         "pk": 10,
         "fields": {
             "text": "Making the product",
+            "text_en": "Making the product",
             "text_nl": "Het product maken",
-            "text_en": "Making the product"
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 1,
-        "fields": {
-            "assessmentform_id": 1,
-            "knownaiuse_id": 1
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 2,
-        "fields": {
-            "assessmentform_id": 1,
-            "knownaiuse_id": 2
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 3,
-        "fields": {
-            "assessmentform_id": 1,
-            "knownaiuse_id": 3
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 4,
-        "fields": {
-            "assessmentform_id": 1,
-            "knownaiuse_id": 4
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 5,
-        "fields": {
-            "assessmentform_id": 1,
-            "knownaiuse_id": 5
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 6,
-        "fields": {
-            "assessmentform_id": 2,
-            "knownaiuse_id": 1
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 7,
-        "fields": {
-            "assessmentform_id": 2,
-            "knownaiuse_id": 3
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 8,
-        "fields": {
-            "assessmentform_id": 2,
-            "knownaiuse_id": 6
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 9,
-        "fields": {
-            "assessmentform_id": 2,
-            "knownaiuse_id": 7
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 10,
-        "fields": {
-            "assessmentform_id": 3,
-            "knownaiuse_id": 1
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 11,
-        "fields": {
-            "assessmentform_id": 3,
-            "knownaiuse_id": 8
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 12,
-        "fields": {
-            "assessmentform_id": 4,
-            "knownaiuse_id": 1
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 13,
-        "fields": {
-            "assessmentform_id": 4,
-            "knownaiuse_id": 2
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 14,
-        "fields": {
-            "assessmentform_id": 4,
-            "knownaiuse_id": 3
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 15,
-        "fields": {
-            "assessmentform_id": 4,
-            "knownaiuse_id": 4
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 16,
-        "fields": {
-            "assessmentform_id": 5,
-            "knownaiuse_id": 1
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 17,
-        "fields": {
-            "assessmentform_id": 5,
-            "knownaiuse_id": 4
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 18,
-        "fields": {
-            "assessmentform_id": 5,
-            "knownaiuse_id": 5
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 19,
-        "fields": {
-            "assessmentform_id": 6,
-            "knownaiuse_id": 1
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 20,
-        "fields": {
-            "assessmentform_id": 6,
-            "knownaiuse_id": 9
-        }
-    },
-    {
-        "model": "formdata.knownaiuse_assessment_forms",
-        "pk": 21,
-        "fields": {
-            "assessmentform_id": 6,
-            "knownaiuse_id": 10
+            "assessment_forms": [6]
         }
     },
     {
@@ -788,10 +630,10 @@
         "pk": 1,
         "fields": {
             "text": "Student uses ChatGPT to generate possible research angles.",
-            "text_nl": "Student gebruikt ChatGPT om mogelijke onderzoeksrichtingen te genereren.",
             "text_en": "Student uses ChatGPT to generate possible research angles.",
-            "ai_use_id": 1,
-            "assessment_form_id": 1
+            "text_nl": "Student gebruikt ChatGPT om mogelijke onderzoeksrichtingen te genereren.",
+            "ai_use": 1,
+            "assessment_forms": [1]
         }
     },
     {
@@ -799,10 +641,10 @@
         "pk": 2,
         "fields": {
             "text": "GenAI suggests multiple research questions based on keywords.",
-            "text_nl": "GenAI stelt meerdere onderzoeksvragen voor op basis van trefwoorden.",
             "text_en": "GenAI suggests multiple research questions based on keywords.",
-            "ai_use_id": 2,
-            "assessment_form_id": 1
+            "text_nl": "GenAI stelt meerdere onderzoeksvragen voor op basis van trefwoorden.",
+            "ai_use": 2,
+            "assessment_forms": [1]
         }
     },
     {
@@ -810,10 +652,10 @@
         "pk": 3,
         "fields": {
             "text": "AI helps summarize relevant academic articles.",
-            "text_nl": "AI helpt bij het samenvatten van relevante academische artikelen.",
             "text_en": "AI helps summarize relevant academic articles.",
-            "ai_use_id": 3,
-            "assessment_form_id": 1
+            "text_nl": "AI helpt bij het samenvatten van relevante academische artikelen.",
+            "ai_use": 3,
+            "assessment_forms": [1]
         }
     },
     {
@@ -821,10 +663,10 @@
         "pk": 4,
         "fields": {
             "text": "Draft paragraphs are improved using AI grammar tools.",
-            "text_nl": "Conceptteksten worden verbeterd met behulp van AI-grammaticatools.",
             "text_en": "Draft paragraphs are improved using AI grammar tools.",
-            "ai_use_id": 4,
-            "assessment_form_id": 5
+            "text_nl": "Conceptteksten worden verbeterd met behulp van AI-grammaticatools.",
+            "ai_use": 4,
+            "assessment_forms": [5]
         }
     },
     {
@@ -832,10 +674,10 @@
         "pk": 5,
         "fields": {
             "text": "GenAI highlights passive voice and suggests improvements.",
-            "text_nl": "GenAI wijst op het gebruik van de lijdende vorm en suggereert verbeteringen.",
             "text_en": "GenAI highlights passive voice and suggests improvements.",
-            "ai_use_id": 5,
-            "assessment_form_id": 5
+            "text_nl": "GenAI wijst op het gebruik van de lijdende vorm en suggereert verbeteringen.",
+            "ai_use": 5,
+            "assessment_forms": [5]
         }
     },
     {
@@ -843,10 +685,10 @@
         "pk": 6,
         "fields": {
             "text": "Generated visual aids like charts or diagrams to support presentations.",
-            "text_nl": "Gegenereerde visuele hulpmiddelen zoals grafieken of diagrammen ter ondersteuning van presentaties.",
             "text_en": "Generated visual aids like charts or diagrams to support presentations.",
-            "ai_use_id": 6,
-            "assessment_form_id": 2
+            "text_nl": "Gegenereerde visuele hulpmiddelen zoals grafieken of diagrammen ter ondersteuning van presentaties.",
+            "ai_use": 6,
+            "assessment_forms": [2]
         }
     },
     {
@@ -854,10 +696,10 @@
         "pk": 7,
         "fields": {
             "text": "GenAI proposes a slide outline and sample phrasing.",
-            "text_nl": "GenAI stelt een dia-indeling en voorbeeldzinnen voor.",
             "text_en": "GenAI proposes a slide outline and sample phrasing.",
-            "ai_use_id": 7,
-            "assessment_form_id": 2
+            "text_nl": "GenAI stelt een dia-indeling en voorbeeldzinnen voor.",
+            "ai_use": 7,
+            "assessment_forms": [2]
         }
     },
     {
@@ -865,10 +707,10 @@
         "pk": 8,
         "fields": {
             "text": "AI provides rapid background info to support classroom answers.",
-            "text_nl": "AI biedt snelle achtergrondinformatie ter ondersteuning van antwoorden op college.",
             "text_en": "AI provides rapid background info to support classroom answers.",
-            "ai_use_id": 8,
-            "assessment_form_id": 3
+            "text_nl": "AI biedt snelle achtergrondinformatie ter ondersteuning van antwoorden op college.",
+            "ai_use": 8,
+            "assessment_forms": [3]
         }
     },
     {
@@ -876,10 +718,10 @@
         "pk": 9,
         "fields": {
             "text": "GenAI helps gather structured data from open-access platforms.",
-            "text_nl": "GenAI helpt bij het verzamelen van gestructureerde gegevens van open-access platforms.",
             "text_en": "GenAI helps gather structured data from open-access platforms.",
-            "ai_use_id": 9,
-            "assessment_form_id": 6
+            "text_nl": "GenAI helpt bij het verzamelen van gestructureerde gegevens van open-access platforms.",
+            "ai_use": 9,
+            "assessment_forms": [6]
         }
     },
     {
@@ -887,10 +729,10 @@
         "pk": 10,
         "fields": {
             "text": "Student uses AI to mock-up a prototype for feedback.",
-            "text_nl": "Student gebruikt AI om een prototype te maken voor feedback.",
             "text_en": "Student uses AI to mock-up a prototype for feedback.",
-            "ai_use_id": 10,
-            "assessment_form_id": 6
+            "text_nl": "Student gebruikt AI om een prototype te maken voor feedback.",
+            "ai_use": 10,
+            "assessment_forms": [6]
         }
     }
 ]
