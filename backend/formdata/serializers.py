@@ -18,11 +18,14 @@ class UseExampleSerializer(serializers.ModelSerializer):
 
 
 class KnownAiUseExampleSerializer(serializers.ModelSerializer):
-    assessmentForm = serializers.ReadOnlyField(source="assessment_form.id")
+    assessmentFormIds = serializers.SerializerMethodField()
 
     class Meta:
         model = KnownAiUseExample
-        fields = ("id", "text", "assessmentForm")
+        fields = ("id", "text", "assessmentFormIds")
+
+    def get_assessmentFormIds(self, obj):
+        return list(obj.assessment_forms.values_list("id", flat=True))
 
 
 class KnownAiUseSerializer(serializers.ModelSerializer):
