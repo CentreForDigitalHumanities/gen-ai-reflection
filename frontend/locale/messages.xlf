@@ -21,14 +21,14 @@
         <source>Previous</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
-          <context context-type="linenumber">141</context>
+          <context context-type="linenumber">140</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.carousel.next" datatype="html">
         <source>Next</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
-          <context context-type="linenumber">149</context>
+          <context context-type="linenumber">148</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.datepicker.select-month" datatype="html">
@@ -81,7 +81,7 @@
         <source>»</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
-          <context context-type="linenumber">316</context>
+          <context context-type="linenumber">314</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.last" datatype="html">
@@ -109,14 +109,14 @@
         <source>Next</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
-          <context context-type="linenumber">384</context>
+          <context context-type="linenumber">380</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.last-aria" datatype="html">
         <source>Last</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
-          <context context-type="linenumber">399</context>
+          <context context-type="linenumber">398</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.progressbar.value" datatype="html">
@@ -132,7 +132,7 @@
         <source>HH</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">234</context>
+          <context context-type="linenumber">233</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.hours" datatype="html">
@@ -153,28 +153,28 @@
         <source>Minutes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">290</context>
+          <context context-type="linenumber">289</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
         <source>Increment hours</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">304</context>
+          <context context-type="linenumber">301</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
         <source>Decrement hours</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">317</context>
+          <context context-type="linenumber">316</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
         <source>Increment minutes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">341</context>
+          <context context-type="linenumber">339</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
@@ -188,28 +188,28 @@
         <source>SS</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">378</context>
+          <context context-type="linenumber">375</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.seconds" datatype="html">
         <source>Seconds</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">395</context>
+          <context context-type="linenumber">393</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
         <source>Increment seconds</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">421</context>
+          <context context-type="linenumber">417</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
         <source>Decrement seconds</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
-          <context context-type="linenumber">436</context>
+          <context context-type="linenumber">433</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.PM" datatype="html">
@@ -295,42 +295,42 @@
         <source> In other words, evaluate whether you think <x id="ICU" equiv-text="{form.controls.iloIds.value.length, plural, =1 {the ILO} other {the ILOs}}" xid="2957047433752626179"/> can still be tested with the chosen type of assignment, assuming that students will use GenAI in the ways listed above and, potentially, more. If you select ‘No’, your assessment is GenAI resilient. Congratulations! If you select ‘Yes’, you will be presented some suggestions to make your assessment more resilient. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-subform/assessment-subform.component.html</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2957047433752626179" datatype="html">
         <source>{VAR_PLURAL, plural, =1 {the ILO} other {the ILOs}}</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-subform/assessment-subform.component.html</context>
-          <context context-type="linenumber">55</context>
+          <context context-type="linenumber">59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4861926948802653243" datatype="html">
         <source> Yes </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-subform/assessment-subform.component.html</context>
-          <context context-type="linenumber">77</context>
+          <context context-type="linenumber">85</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3603720768157919481" datatype="html">
         <source> No </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-subform/assessment-subform.component.html</context>
-          <context context-type="linenumber">94</context>
+          <context context-type="linenumber">102</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4492261562664451801" datatype="html">
         <source>Suggested adjustments</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-subform/assessment-subform.component.html</context>
-          <context context-type="linenumber">100</context>
+          <context context-type="linenumber">108</context>
         </context-group>
       </trans-unit>
       <trans-unit id="631938289599141900" datatype="html">
         <source> No adjustments available. Select an assessment form first. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-subform/assessment-subform.component.html</context>
-          <context context-type="linenumber">110</context>
+          <context context-type="linenumber">118</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3284381017849042813" datatype="html">
@@ -351,7 +351,7 @@
         <source> Click the bars below to see examples of ways in which students may use GenAI for this assessment form. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-subform/known-uses-examples/known-uses-examples.component.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7499111879816798213" datatype="html">
@@ -481,42 +481,42 @@
         <source> Select the options below that you would like to include in your summary report. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">73</context>
+          <context context-type="linenumber">77</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6730431658914549250" datatype="html">
         <source>No examples found.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">98</context>
+          <context context-type="linenumber">106</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7819314041543176992" datatype="html">
         <source>Close</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">117</context>
+          <context context-type="linenumber">125</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8702591476857460684" datatype="html">
         <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://www.uu.nl/en/organisation/ai-policy/teachers/for-teachers/ai-index&quot; i18n-href=&quot;url&quot; target=&quot;_blank&quot; &gt;"/> AI Index <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;ms-2 fst-italic&quot; &gt;"/>(Link will open in a new tab.)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span &gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">132</context>
+          <context context-type="linenumber">140</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7006751082102407318" datatype="html">
         <source>Back to Step 2</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.ts</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3921775545795444225" datatype="html">
         <source>Go to Step 4</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.ts</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="803131845720356706" datatype="html">
@@ -962,7 +962,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
-          <context context-type="linenumber">132</context>
+          <context context-type="linenumber">140</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1061681533624882341" datatype="html">
@@ -977,6 +977,45 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/ai-scale-select/ai-scale-select.component.ts</context>
           <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2834029339840963501" datatype="html">
+        <source> You are welcome to send your own examples of students&apos; GenAI usages to <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:genaitool@uu.nl&quot;&gt;"/>genaitool@uu.nl<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/assessments/assessment-subform/known-uses-examples/known-uses-examples.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6071143038976843042" datatype="html">
+        <source> Would you like to share your own examples? </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/assessments/assessment-subform/known-uses-examples/known-uses-examples.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7004509894453603914" datatype="html">
+        <source> You are welcome to send your own suggestions for adjustments to <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:genaitool@uu.nl&quot;&gt;"/>genaitool@uu.nl<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/assessments/assessment-subform/assessment-subform.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8173592148325878921" datatype="html">
+        <source> Would you like to share your own suggestions? </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/assessments/assessment-subform/assessment-subform.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9059562274664569381" datatype="html">
+        <source> You are welcome to send your own examples for AI usages to <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:genaitool@uu.nl&quot;&gt;"/>genaitool@uu.nl<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
+          <context context-type="linenumber">73</context>
         </context-group>
       </trans-unit>
     </body>
