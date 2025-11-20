@@ -42,7 +42,6 @@ class Migration(migrations.Migration):
                 to="formdata.assessmentform",
             ),
         ),
-        # Then migrate the data
         migrations.RunPython(
             migrate_assessment_form_to_m2m,
             reverse_code=migrate_m2m_to_assessment_form,
