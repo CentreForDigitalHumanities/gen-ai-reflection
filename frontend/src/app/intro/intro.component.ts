@@ -16,17 +16,19 @@ import { Router } from "@angular/router";
 })
 export class IntroComponent {
     private router = inject(Router);
+    private formService = inject(FormService);
+    public form = this.formService.form;
+
     public navButtons: NavButton[] = [
         {
             label: $localize`Go to Step 1`,
             direction: "next",
-            link: "/learning-outcomes"
+            link: "/learning-outcomes",
+            requiredControl: this.form.controls.course,
         },
     ];
 
-    private formService = inject(FormService);
 
-    public form = this.formService.form;
 
     // The user can navigate by hitting Enter (which submits the form)
     // or by pressing the navigation button.

@@ -1,21 +1,23 @@
-import { Component, DestroyRef, inject } from '@angular/core';
+import { Component, DestroyRef, inject, OnInit } from '@angular/core';
 import { FormService } from "../services/form.service";
 import { NavButton, NavButtonsComponent } from "../nav-buttons/nav-buttons.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { ApiService } from "../services/api.service";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { AskForLeaveService } from "../services/ask-for-leave.service";
+import { RouterLinkWithHref } from '@angular/router';
 
 @Component({
     selector: 'gr-done',
     imports: [
         NavButtonsComponent,
         ReactiveFormsModule,
+        RouterLinkWithHref
     ],
     templateUrl: './summary.component.html',
     styleUrl: './summary.component.scss'
 })
-export class SummaryComponent {
+export class SummaryComponent implements OnInit {
     private formService = inject(FormService);
     private apiService = inject(ApiService);
     private askForLeaveService = inject(AskForLeaveService);
@@ -39,10 +41,19 @@ export class SummaryComponent {
             }
         },
     ];
-    generateReport() {
+
+    ngOnInit() {
         this.formService.form.valueChanges.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => {
             this.formChanged = true;
         });
+    }
+
+    public generateReport(): void {
+        console.log("Generating report...");
+        this.form.markAllAsTouched();
+        if (!this.form.valid) {
+            return;
+        }
         this.apiService.generateReport(this.formService.form.getRawValue()).pipe(takeUntilDestroyed(this.destroyRef)).subscribe(reportData => {
             this.formChanged = false;
             this.reportHtml = reportData.html;
@@ -51,7 +62,8 @@ export class SummaryComponent {
             this.askForLeaveService.allowLeave();
         });
     }
-    downloadReport() {
+
+    public downloadReport() {
         if (!this.reportPdf) {
             return;
         }

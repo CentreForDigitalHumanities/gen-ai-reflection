@@ -1,11 +1,13 @@
 import { Component, computed, input } from "@angular/core";
 import { RouterLink } from "@angular/router";
+import { FormControl } from "@angular/forms";
 
 export interface NavButton {
     label: string;
     direction: "next" | "back";
     link: string;
     action?: () => void;
+    requiredControl?: FormControl;
 }
 
 @Component({

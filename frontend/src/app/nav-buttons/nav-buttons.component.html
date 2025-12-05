@@ -6,16 +6,16 @@
             : 'justify-content-between'
     "
 >
-    @for (navButton of sorted(); track $index) {
+    @for (navButton of sorted(); track $index) { 
+    @let invalid = navButton.requiredControl ? navButton.requiredControl.invalid : false;
     <a
-        class="btn btn-secondary"
-        [class]="
-            navButton.direction === 'next'
-                ? 'btn-arrow-right'
-                : 'btn-arrow-left'
-        "
-        [routerLink]="navButton.link"
-        (click)="navButton.action?.()"
+        class="btn btn-secondary pe-auto"
+        [class.btn-arrow-right]="navButton.direction === 'next'"
+        [class.btn-arrow-left]="navButton.direction === 'back'"
+        [class.disabled]="invalid"
+        [attr.aria-disabled]="invalid"
+        [routerLink]="invalid ? null : navButton.link"
+        (click)="navButton.requiredControl?.markAllAsTouched()"
     >
         {{ navButton.label }}
     </a>
