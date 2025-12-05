@@ -1,14 +1,16 @@
-<h1>GenAI Reflection – Report</h1>
+{% load i18n %}
+
+<h1>GenAI Reflection – {% translate "Report" %}</h1>
 
 <p>
-    Course name: {{ raw_data.course }}<br />
-    Department: {{ raw_data.department }}<br />
-    Filled in by: {{ raw_data.name }}<br />
-    Date of generation: {{ current_date|date }}
+    {% translate "Course name:" %} {{ raw_data.course }}<br />
+    {% translate "Department:" %} {{ raw_data.department }}<br />
+    {% translate "Filled in by:" %} {{ raw_data.name }}<br />
+    {% translate "Date of generation:" %} {{ current_date|date }}
 </p>
 
 <p>
-    This report summarizes your reflection about the role of GenAI in the above
+    {% blocktranslate %}This report summarizes your reflection about the role of GenAI in the above
     mentioned course. The aim of this report is to stimulate reflection on the
     impact of generative AI on academic teaching. Students can use generative AI
     for almost all assignments. The question whether assessment forms need to be
@@ -17,21 +19,21 @@
     link between assessment forms and learning outcomes. Wherever the use of
     generative AI is considered problematic, the tool provides alternative
     assessment forms, or stimulates you to consider changing the learning
-    outcomes.
+    outcomes.{% endblocktranslate %}
 </p>
 
-<h2>Step 1: Learning Outcomes</h2>
+<h2>{% translate "Step 1: Learning Outcomes" %}</h2>
 
 {% for outcome in learning_outcomes %}
 <h3>{{ outcome.text }}</h3>
-<p>Dublin indicator: {{ outcome.dublin_indicator }}</p>
-<h4>AI Challenges</h4>
+<p>{% translate "Dublin descriptor:" %} {{ outcome.dublin_indicator }}</p>
+<h4>{% translate "AI Challenges" %}</h4>
 <ul>
     {% for challenge in outcome.challenges %}
     <li>{{ challenge }}</li>
     {% endfor %}
 </ul>
-<h4>AI Opportunities</h4>
+<h4>{% translate "AI Opportunities" %}</h4>
 <ul>
     {% for opportunity in outcome.opportunities %}
     <li>{{ opportunity }}</li>
@@ -39,12 +41,12 @@
 </ul>
 {% endfor %}
 
-<h2>Step 2: Assessment Forms</h2>
+<h2>{% translate "Step 2: Assessment Forms" %}</h2>
 
 {% for assessment in assessments %}
 <h3>{{ assessment.assessment_form }}</h3>
 
-<h4>Known AI Uses</h4>
+<h4>{% translate "Known AI Uses" %}</h4>
 
 <ul>
     {% for use in assessment.known_ai_uses %}
@@ -59,7 +61,7 @@
     {% endfor %}
 </ul>
 
-<h4>Connected learning outcomes</h4>
+<h4>{% translate "Connected learning outcomes" %}</h4>
 
 <ul>
     {% for ilo in assessment.learning_outcomes %}
@@ -67,12 +69,12 @@
     {% endfor %}
 </ul>
 
-<h4>Impact of AI on assessment</h4>
+<h4>{% translate "Impact of AI on assessment" %}</h4>
 
 {% if assessment.affected %}
 <p>
-    The use of AI <strong>does</strong> affect the extent to which this learning
-    goal can be tested by this assignment. Suggested adjustments:
+    {% blocktranslate %}The use of AI <strong>does</strong> affect the extent to which this learning
+    goal can be tested by this assignment. Suggested adjustments:{% endblocktranslate %}
 </p>
 
 <ul>
@@ -83,12 +85,12 @@
 
 {% else %}
 <p>
-    The use of AI <strong>does not</strong> affect the extent to which this
-    learning goal can be tested by this assignment.
+    {% blocktranslate %}The use of AI <strong>does not</strong> affect the extent to which this
+    learning goal can be tested by this assignment.{% endblocktranslate %}
 </p>
 {% endif %} {% endfor %}
 
-<h2>Step 3: Course Integration</h2>
+<h2>{% translate "Step 3: Rethinking Courses" %}</h2>
 
 {% for scale in course_integration %} {% if scale.examples %}
 <h3>{{ scale.scale }}</h3>
@@ -101,11 +103,11 @@
 {% endif %} {% endfor %}
 
 <p>
-    If you need further information about GenAI in education at Utrecht
+    {% blocktranslate %}If you need further information about GenAI in education at Utrecht
     University, check out
     <a
         href="https://intranet.uu.nl/en/generative-ai-in-education"
         target="_blank"
         >Generative AI in Education - Intranet</a
-    >.
+    >.{% endblocktranslate %}
 </p>
