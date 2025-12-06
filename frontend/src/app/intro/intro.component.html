@@ -62,11 +62,20 @@
                 id="course"
                 type="text"
                 class="form-control"
+                [class.is-invalid]="
+                    form.controls.course.invalid && form.controls.course.touched
+                "
                 [formControl]="form.controls.course"
                 placeholder="Enter the name of your course..."
                 i18n-placeholder
             />
         </form>
+        @if (form.controls.course.invalid && (form.controls.course.touched ||
+        form.controls.course.dirty)) {
+        <p class="invalid-feedback always-block my-1" i18n>
+            Please enter a course name in the field above.
+        </p>
+        }
     </section>
 </article>
 

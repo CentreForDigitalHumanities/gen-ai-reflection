@@ -2,34 +2,56 @@
     <h1 i18n>✨ Step 4: Report</h1>
 
     <p i18n>
-        You have completed the <strong>GenAI reflection tool</strong>! To generate the report,
-        please enter your name and click the button below.
+        You have completed the <strong>GenAI reflection tool</strong>! To
+        generate the report, please enter your name and click the button below.
     </p>
 
-    <form [formGroup]="form" (ngSubmit)="generateReport()" class="mb-5">
+    <form [formGroup]="form" (ngSubmit)="generateReport()">
         <label for="name" class="form-label" i18n>Your name:</label>
         <input
             id="name"
             type="text"
             class="form-control"
+            [class.is-invalid]="
+                form.controls.name.invalid && form.controls.name.touched
+            "
             [formControl]="form.controls.name"
             placeholder="Enter your name..."
             i18n-placeholder
         />
     </form>
+    @if (form.invalid && (form.controls.name.touched ||
+    form.controls.name.dirty)) { @if (form.controls.name.hasError('required')) {
+    <p class="invalid-feedback always-block my-1" i18n>
+        Please enter your name in the field above.
+    </p>
+    } @if (form.controls.course.hasError('required')) {
+    <p class="invalid-feedback always-block my-1" i18n>
+        Please enter a course name (on the
+        <a [routerLink]="['/', 'intro']">introduction page</a>).
+    </p>
+    } }
 
-    <div class="btn-group">
-        <button (click)="generateReport()" class="btn btn-secondary" [disabled]="!formChanged" i18n>Generate report</button>
+    <div class="btn-group mt-4">
+        <button
+            (click)="generateReport()"
+            class="btn btn-secondary pe-auto"
+            [class.disabled]="form.invalid"
+            [disabled]="!formChanged"
+            i18n
+        >
+            Generate report
+        </button>
         @if (reportHtml) {
-            <button (click)="downloadReport()" class="btn btn-secondary" i18n>Download report</button>
+        <button (click)="downloadReport()" class="btn btn-secondary" i18n>
+            Download report
+        </button>
         }
     </div>
 
     @if (reportHtml) {
-        <div class="report-container" [innerHTML]="reportHtml">
-        </div>
+    <div class="report-container" [innerHTML]="reportHtml"></div>
     }
-
 </article>
 
 <gr-nav-buttons [navButtons]="navButtons" />
