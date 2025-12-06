@@ -49,7 +49,6 @@ export class SummaryComponent implements OnInit {
     }
 
     public generateReport(): void {
-        console.log("Generating report...");
         this.form.markAllAsTouched();
         if (!this.form.valid) {
             return;

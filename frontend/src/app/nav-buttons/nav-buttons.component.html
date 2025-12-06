@@ -15,6 +15,7 @@
         [class.disabled]="invalid"
         [attr.aria-disabled]="invalid"
         [routerLink]="invalid ? null : navButton.link"
+        [attr.tabindex]="invalid ? -1 : 0"
         (click)="navButton.requiredControl?.markAllAsTouched()"
     >
         {{ navButton.label }}
