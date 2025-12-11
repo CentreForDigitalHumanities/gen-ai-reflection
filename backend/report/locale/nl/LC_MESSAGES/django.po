@@ -1,0 +1,139 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# SPDX-FileCopyrightText: 2025 tijmen <tijmenbaarda@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-05 15:12+0100\n"
+"PO-Revision-Date: 2025-12-05 15:10+0100\n"
+"Last-Translator: tijmen <tijmenbaarda@gmail.com>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.04.0\n"
+
+#: report/templates/report/inner_html.html:3
+msgid "Report"
+msgstr "Rapport"
+
+#: report/templates/report/inner_html.html:6
+msgid "Course name:"
+msgstr "Naam cursus:"
+
+#: report/templates/report/inner_html.html:7
+msgid "Department:"
+msgstr "Departement:"
+
+#: report/templates/report/inner_html.html:8
+msgid "Filled in by:"
+msgstr "Ingevuld door:"
+
+#: report/templates/report/inner_html.html:9
+msgid "Date of generation:"
+msgstr "Aanmaakdatum:"
+
+#: report/templates/report/inner_html.html:13
+msgid ""
+"This report summarizes your reflection about the role of GenAI in the above\n"
+"    mentioned course. The aim of this report is to stimulate reflection on "
+"the\n"
+"    impact of generative AI on academic teaching. Students can use "
+"generative AI\n"
+"    for almost all assignments. The question whether assessment forms need "
+"to be\n"
+"    adapted as a consequence of this, depends on the intended learning "
+"outcomes\n"
+"    that the assignments test. This is why this report aims to make an "
+"explicit\n"
+"    link between assessment forms and learning outcomes. Wherever the use "
+"of\n"
+"    generative AI is considered problematic, the tool provides alternative\n"
+"    assessment forms, or stimulates you to consider changing the learning\n"
+"    outcomes."
+msgstr ""
+"Dit rapport is een samenvatting van de rol van generatieve AI bij de "
+"bovengenoemde cursus. Met dit rapport wordt reflectie op de impact van "
+"generatieve AI op academisch onderwijs gestimuleerd. Studenten kunnen "
+"generatieve AI voor bijna alle opdrachten gebruiken. Het antwoord op de "
+"vraag of daarom toetsvormen aangepast moeten worden hangt af van de beoogde "
+"leerdoelen van de toetsvorm. In dit rapport wordt daarom een expliciete "
+"koppeling gemaakt tussen toetsvormen en leerdoelen. Als het gebruik van "
+"generatieve AI als problematisch wordt beschouwd stelt de tool alternatieve "
+"toetsvormen voor, of moedigt de tool aan om een aanpassing aan de leerdoelen "
+"te overwegen."
+
+#: report/templates/report/inner_html.html:25
+msgid "Step 1: Learning Outcomes"
+msgstr "Stap 1: Leerdoelen"
+
+#: report/templates/report/inner_html.html:29
+msgid "Dublin descriptor:"
+msgstr "Dublin-descriptor:"
+
+#: report/templates/report/inner_html.html:30
+msgid "AI Challenges"
+msgstr "AI-kansen"
+
+#: report/templates/report/inner_html.html:36
+msgid "AI Opportunities"
+msgstr "AI-uitdagingen"
+
+#: report/templates/report/inner_html.html:44
+msgid "Step 2: Assessment Forms"
+msgstr "Stap 2: Beoordelingen"
+
+#: report/templates/report/inner_html.html:49
+msgid "Known AI Uses"
+msgstr "Bekende AI-gebruikswijzen"
+
+#: report/templates/report/inner_html.html:64
+msgid "Connected learning outcomes"
+msgstr "Verbonden leerdoelen"
+
+#: report/templates/report/inner_html.html:72
+msgid "Impact of AI on assessment"
+msgstr "Impact van AI op beoordeling"
+
+#: report/templates/report/inner_html.html:76
+msgid ""
+"The use of AI <strong>does</strong> affect the extent to which this "
+"learning\n"
+"    goal can be tested by this assignment. Suggested adjustments:"
+msgstr ""
+"Het gebruik van AI <strong>heeft invloed</strong> op de mate waarin dit "
+"leerdoel getoetst kan worden door deze toetsvorm. Voorgestelde aanpassingen:"
+
+#: report/templates/report/inner_html.html:88
+msgid ""
+"The use of AI <strong>does not</strong> affect the extent to which this\n"
+"    learning goal can be tested by this assignment."
+msgstr ""
+"Het gebruik van AI heeft <strong>geen</strong> invloed op de mate waarin dit "
+"leerdoel getoetst kan worden door deze toetsvorm."
+
+#: report/templates/report/inner_html.html:93
+msgid "Step 3: Rethinking Courses"
+msgstr "Stap 3: Cursussen heroverwegen"
+
+#: report/templates/report/inner_html.html:106
+msgid ""
+"If you need further information about GenAI in education at Utrecht\n"
+"    University, check out\n"
+"    <a\n"
+"        href=\"https://intranet.uu.nl/en/generative-ai-in-education\"\n"
+"        target=\"_blank\"\n"
+"        >Generative AI in Education - Intranet</a\n"
+"    >."
+msgstr ""
+"Kijk voor meer informatie over generatieve AI in het onderwijs aan de "
+"Universiteit Utrecht op <a href=\"https://intranet.uu.nl/generatieve-ai-in-"
+"het-onderwijs\" target=\"_blank\">Generatieve AI in het Onderwijs - "
+"Intranet</a>."
+
+#~ msgid "Step 3: Course Integration"
+#~ msgstr "Stap 3: Cursussen heroverwegen"
