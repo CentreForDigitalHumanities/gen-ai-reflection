@@ -337,7 +337,7 @@
       </trans-unit>
       <trans-unit id="2433299293992288618" datatype="html">
         <source> Assessment form: </source>
-        <target state="translated"> Beoordelingsvorm: </target>
+        <target state="translated"> Toetsvorm: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-form-select/assessment-form-select.component.html</context>
           <context context-type="linenumber">3</context>
@@ -345,7 +345,7 @@
       </trans-unit>
       <trans-unit id="4091554869276612379" datatype="html">
         <source> Select an assessment form </source>
-        <target state="translated"> Selecteer een beoordelingsvorm </target>
+        <target state="translated"> Selecteer een toetsvorm </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-form-select/assessment-form-select.component.html</context>
           <context context-type="linenumber">14</context>
@@ -353,7 +353,7 @@
       </trans-unit>
       <trans-unit id="3028315461551290856" datatype="html">
         <source>No assessment forms available</source>
-        <target state="translated">Geen beoordelingsvormen beschikbaar</target>
+        <target state="translated">Geen toetsvormen beschikbaar</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-form-select/assessment-form-select.component.html</context>
           <context context-type="linenumber">21</context>
@@ -361,7 +361,7 @@
       </trans-unit>
       <trans-unit id="3740316623407933815" datatype="html">
         <source> Remove assessment form </source>
-        <target state="translated"> Verwijder beoordelingsvorm </target>
+        <target state="translated"> Verwijder toetsvorm </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-subform/assessment-subform.component.html</context>
           <context context-type="linenumber">19</context>
@@ -369,7 +369,7 @@
       </trans-unit>
       <trans-unit id="8082396782637148201" datatype="html">
         <source> Which ILOs are tested with this assessment? Select one or multiple. </source>
-        <target state="translated"> Welke leerdoelen (ILO's) worden met deze beoordelingsvorm getoetst? Kies er een of meerdere. </target>
+        <target state="translated"> Welke leerdoelen (ILO's) worden met deze toetsvormen getoetst? Kies er een of meerdere. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-subform/assessment-subform.component.html</context>
           <context context-type="linenumber">33</context>
@@ -417,7 +417,7 @@
       </trans-unit>
       <trans-unit id="631938289599141900" datatype="html">
         <source> No adjustments available. Select an assessment form first. </source>
-        <target state="translated"> Geen aanpassingen beschikbaar. Kies eerst een beoordelingsvorm uit de lijst. </target>
+        <target state="translated"> Geen aanpassingen beschikbaar. Kies eerst een toetsvorm uit de lijst. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-subform/assessment-subform.component.html</context>
           <context context-type="linenumber">118</context>
@@ -425,7 +425,7 @@
       </trans-unit>
       <trans-unit id="3284381017849042813" datatype="html">
         <source> Known AI Uses for this assessment form </source>
-        <target state="translated"> Bekende gebruikswijzen generatieve AI voor deze beoordelingsvorm </target>
+        <target state="translated"> Bekende gebruikswijzen generatieve AI voor deze toetsvorm </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-subform/known-uses-examples/known-uses-examples.component.html</context>
           <context context-type="linenumber">3</context>
@@ -433,7 +433,7 @@
       </trans-unit>
       <trans-unit id="2391158681990264844" datatype="html">
         <source> Click the bars below to see examples of ways in which students may use GenAI for this assessment form. </source>
-        <target state="translated"> Klik op de balken hieronder om manieren te zien waarop studenten generatieve AI voor deze beoordelingsvorm kunnen gebruiken. </target>
+        <target state="translated"> Klik op de balken hieronder om manieren te zien waarop studenten generatieve AI voor deze toetsvorm kunnen gebruiken. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-subform/known-uses-examples/known-uses-examples.component.html</context>
           <context context-type="linenumber">12</context>
@@ -441,7 +441,7 @@
       </trans-unit>
       <trans-unit id="6052869456670945218" datatype="html">
         <source> In this step, you will receive information on how students can make use of GenAI for the assessments in your course. </source>
-        <target state="translated"> In deze stap vind je meer informatie over hoe studenten generatieve AI kunnen gebruiken voor de beoordelingen in je cursus. </target>
+        <target state="translated"> In deze stap vind je meer informatie over hoe studenten generatieve AI kunnen gebruiken voor de toetsmomenten in je cursus. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessments.component.html</context>
           <context context-type="linenumber">5</context>
@@ -825,7 +825,7 @@
       </trans-unit>
       <trans-unit id="4288258189522495536" datatype="html">
         <source>Remove assessment form</source>
-        <target state="translated">Verwijder beoordelingsvorm</target>
+        <target state="translated">Verwijder toetsvorm</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-subform/assessment-subform.component.html</context>
           <context context-type="linenumber">10</context>
@@ -873,7 +873,7 @@
       </trans-unit>
       <trans-unit id="6983853825305241155" datatype="html">
         <source> Please select one type of assessment. You can add more below. </source>
-        <target state="translated"> Selecteer een beoordelingsvorm. Je kunt er hieronder meerdere toevoegen. </target>
+        <target state="translated"> Selecteer een toetsvorm. Je kunt er hieronder meerdere toevoegen. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessments.component.html</context>
           <context context-type="linenumber">22</context>
@@ -1053,7 +1053,7 @@
       </trans-unit>
       <trans-unit id="421922331610990855" datatype="html">
         <source> No known AI uses available for this assessment form. </source>
-        <target state="translated"> Er zijn geen bekende gebruikswijzen voor generatieve AI voor deze beoordelingsvorm. </target>
+        <target state="translated"> Er zijn geen bekende gebruikswijzen voor generatieve AI voor deze toetsvorm. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/assessments/assessment-subform/known-uses-examples/known-uses-examples.component.html</context>
           <context context-type="linenumber">7</context>

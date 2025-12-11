@@ -85,7 +85,7 @@ msgstr "AI-uitdagingen"
 
 #: report/templates/report/inner_html.html:44
 msgid "Step 2: Assessment Forms"
-msgstr "Stap 2: Beoordelingen"
+msgstr "Stap 2: Toetsvormen"
 
 #: report/templates/report/inner_html.html:49
 msgid "Known AI Uses"
@@ -97,7 +97,7 @@ msgstr "Verbonden leerdoelen"
 
 #: report/templates/report/inner_html.html:72
 msgid "Impact of AI on assessment"
-msgstr "Impact van AI op beoordeling"
+msgstr "Impact van AI op toetsvorm"
 
 #: report/templates/report/inner_html.html:76
 msgid ""
