@@ -61,9 +61,8 @@ body {
 }
 
 .share-examples {
-    border: 1px solid #c00a35;
-    border-radius: 3px;
-    padding: 0 1px;
-    white-space: preserve nowrap;
-    background-color: white;
+    font-size: 0.875em;
+    line-height: 1em;
+    vertical-align: baseline;
+    padding: .1rem .25rem 0.1rem .25rem;
 }

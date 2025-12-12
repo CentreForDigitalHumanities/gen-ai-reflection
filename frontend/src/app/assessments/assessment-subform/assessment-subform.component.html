@@ -51,20 +51,27 @@
                     learning goal} other {these learning goals}} can be tested?
                 </label>
                 <ng-template #popContent i18n>
-                    You are welcome to send your own suggestions for adjustments to <a href="mailto:genaitool@uu.nl">genaitool&#64;uu.nl</a>.
+                    You are welcome to send your own suggestions for adjustments
+                    to <a href="mailto:genaitool@uu.nl">genaitool&#64;uu.nl</a>.
                 </ng-template>
                 <p class="text-muted small">
                     <span i18n>
                         In other words, evaluate whether you think
                         {form.controls.iloIds.value.length, plural, =1 {the ILO}
-                        other {the ILOs}} can still be tested with the chosen type
-                        of assignment, assuming that students will use GenAI in the
-                        ways listed above and, potentially, more. If you select
-                        ‘No’, your assessment is GenAI resilient. Congratulations!
-                        If you select ‘Yes’, you will be presented some suggestions
-                        to make your assessment more resilient.
+                        other {the ILOs}} can still be tested with the chosen
+                        type of assignment, assuming that students will use
+                        GenAI in the ways listed above and, potentially, more.
+                        If you select ‘No’, your assessment is GenAI resilient.
+                        Congratulations! If you select ‘Yes’, you will be
+                        presented some suggestions to make your assessment more
+                        resilient.
                     </span>
-                    <a href="javascript:void(0)" i18n class="share-examples" [ngbPopover]="popContent">
+                    <a
+                        href="javascript:void(0)"
+                        i18n
+                        class="share-examples btn btn-sm btn-outline-secondary"
+                        [ngbPopover]="popContent"
+                    >
                         Would you like to share your own suggestions?
                     </a>
                 </p>

@@ -3,19 +3,25 @@
         Known AI Uses for this assessment form
     </label>
     @if (knownAiUses().length === 0) {
-        <p class="text-muted small" i18n>
-            No known AI uses available for this assessment form.
-        </p>
+    <p class="text-muted small" i18n>
+        No known AI uses available for this assessment form.
+    </p>
     } @else {
     <p class="text-muted small">
         <span i18n>
-            Click the bars below to see examples of ways in which students may use
-            GenAI for this assessment form.
+            Click the bars below to see examples of ways in which students may
+            use GenAI for this assessment form.
         </span>
         <ng-template #popContent i18n>
-            You are welcome to send your own examples of students' GenAI usages to <a href="mailto:genaitool@uu.nl">genaitool&#64;uu.nl</a>.
+            You are welcome to send your own examples of students' GenAI usages
+            to <a href="mailto:genaitool@uu.nl">genaitool&#64;uu.nl</a>.
         </ng-template>
-        <a href="javascript:void(0)" i18n class="share-examples" [ngbPopover]="popContent">
+        <a
+            href="javascript:void(0)"
+            i18n
+            class="btn btn-sm btn-outline-secondary share-examples"
+            [ngbPopover]="popContent"
+        >
             Would you like to share your own examples?
         </a>
     </p>
