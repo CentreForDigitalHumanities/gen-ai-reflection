@@ -17,7 +17,7 @@
 
     <p i18n>Click here to begin</p>
 
-    <a class="btn btn-outline-secondary" [routerLink]="['/', 'intro']" i18n>
+    <a class="btn btn-outline-secondary" [routerLink]="['/', 'intro']" (click)="markAsStarted()" i18n>
         Start
     </a>
 

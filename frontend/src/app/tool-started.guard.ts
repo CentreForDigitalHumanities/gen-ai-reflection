@@ -4,5 +4,5 @@ import {FormService} from "./services/form.service";
 
 export const toolStartedGuard: CanActivateFn = (route, state) => {
     const formService = inject(FormService);
-    return !!formService.form.controls.department.value;
+    return formService.isStarted();
 };

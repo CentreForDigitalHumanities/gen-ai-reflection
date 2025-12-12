@@ -4,6 +4,7 @@ import { RouterLinkWithHref } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { LanguageInfo, LanguageService } from "../services/language.service";
+import {FormService} from "../services/form.service";
 
 @Component({
     selector: "gr-home",
@@ -16,6 +17,7 @@ export class HomeComponent implements OnInit {
     private destroyRef = inject(DestroyRef);
     private localeId = inject(LOCALE_ID);
     private languageService = inject(LanguageService);
+    private formService = inject(FormService);
 
     loading = false;
 
@@ -55,5 +57,9 @@ export class HomeComponent implements OnInit {
                 // to the different language version
                 document.location.reload();
             });
+    }
+
+    markAsStarted(): void {
+        this.formService.start();
     }
 }
