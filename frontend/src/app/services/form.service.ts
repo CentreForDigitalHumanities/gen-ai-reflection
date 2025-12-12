@@ -28,6 +28,8 @@ export type AssessmentForm = FormGroup<{
     providedIn: "root",
 })
 export class FormService {
+    started: boolean = false;
+
     form: GRForm = new FormGroup({
         course: new FormControl<string | null>(null, {
             validators: [Validators.required],
@@ -41,7 +43,6 @@ export class FormService {
             nonNullable: true,
         }),
     });
-
 
     addNewLearningOutcome(): void {
         // Math.random() is not cryptographically secure, but it suffices
@@ -79,5 +80,13 @@ export class FormService {
 
     removeAssessment(index: number): void {
         this.form.controls.assessments.removeAt(index);
+    }
+
+    start(): void {
+        this.started = true;
+    }
+
+    isStarted(): boolean {
+        return this.started;
     }
 }

@@ -6,7 +6,7 @@
             : 'justify-content-between'
     "
 >
-    @for (navButton of sorted(); track $index) { 
+    @for (navButton of sorted(); track $index) {
     @let invalid = navButton.requiredControl ? navButton.requiredControl.invalid : false;
     <a
         class="btn btn-secondary pe-auto"
