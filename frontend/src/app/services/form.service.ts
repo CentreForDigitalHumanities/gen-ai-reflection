@@ -2,17 +2,9 @@ import { Injectable } from "@angular/core";
 import { FormArray, FormControl, FormGroup, Validators } from "@angular/forms";
 import { DublinIndicator } from "../shared/types";
 
-export enum Department {
-    TLC = "TLC",
-    GKG = "GKG",
-    MCW = "MCW",
-    "F&R" = "F&R",
-}
-
 export type GRForm = FormGroup<{
     course: FormControl<string | null>;
     name: FormControl<string | null>;
-    department: FormControl<Department | null>;
     learningOutcomes: FormArray<LearningOutcomesForm>;
     assessments: FormArray<AssessmentForm>;
     chosenAiUses: FormControl<number[]>;
@@ -43,7 +35,6 @@ export class FormService {
         name: new FormControl<string | null>(null, {
             validators: [Validators.required],
         }),
-        department: new FormControl<Department | null>(null),
         learningOutcomes: new FormArray<LearningOutcomesForm>([]),
         assessments: new FormArray<AssessmentForm>([]),
         chosenAiUses: new FormControl<number[]>([], {

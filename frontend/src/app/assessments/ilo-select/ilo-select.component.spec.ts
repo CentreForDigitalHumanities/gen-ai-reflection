@@ -35,7 +35,6 @@ describe('IloSelectComponent', () => {
         const formServiceSpy = jasmine.createSpyObj('FormService', [], {
             form: new FormGroup({
                 course: new FormControl<string | null>(null),
-                department: new FormControl(null),
                 learningOutcomes: new FormArray(mockLearningOutcomes),
                 assessmentForms: new FormArray([]),
                 chosenAiUses: new FormControl<number[]>([])

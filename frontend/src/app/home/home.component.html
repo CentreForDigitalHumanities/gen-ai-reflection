@@ -15,16 +15,11 @@
 
     <h2>🌍 🚀 🌙 ✨</h2>
 
-    <p i18n>Select your department to begin</p>
+    <p i18n>Click here to begin</p>
 
-    <button
-        class="btn btn-outline-secondary"
-        type="button"
-        (click)="startGkg()"
-        i18n
-    >
-        GKG
-    </button>
+    <a class="btn btn-outline-secondary" [routerLink]="['/', 'intro']" i18n>
+        Start
+    </a>
 
     @if (languages && !loading) {
     <div class="btn-group mt-4" role="group" aria-label="Language selection">
@@ -54,9 +49,10 @@
     <p i18n>
         This application has been developed by
         <a href="mailto:p.huijnen@uu.nl">Pim Huijnen</a> and
-        <a href="mailto:s.falcke@uu.nl">Swantje Falcke</a> in collaboration with the
-        <a href="https://cdh.uu.nl/">Centre for Digital Humanities</a> within the
-        context of the USO project
+        <a href="mailto:s.falcke@uu.nl">Swantje Falcke</a> in collaboration with
+        the
+        <a href="https://cdh.uu.nl/">Centre for Digital Humanities</a> within
+        the context of the USO project
         <a
             href="https://teaching-and-learning-collection.sites.uu.nl/project/ai-in-higher-education/"
             >"AI in Higher Education: Building reflective awareness through
@@ -64,7 +60,20 @@
         >.
     </p>
     <p class="mb-0 mt-1">
-        <img src="../../assets/images/by-nc.eu.svg" alt="CC BY-NC" class="me-2 cc-logo" />
-        <small i18n>You are free to share and adapt the contents of this site, if you give appropriate credit and use it non-commercially. More on <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">Creative Commons</a>.</small>
+        <img
+            src="../../assets/images/by-nc.eu.svg"
+            alt="CC BY-NC"
+            class="me-2 cc-logo"
+        />
+        <small i18n
+            >You are free to share and adapt the contents of this site, if you
+            give appropriate credit and use it non-commercially. More on
+            <a
+                href="https://creativecommons.org/licenses/by-nc/4.0/"
+                target="_blank"
+                rel="noopener"
+                >Creative Commons</a
+            >.</small
+        >
     </p>
 </div>

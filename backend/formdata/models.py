@@ -1,5 +1,7 @@
 from django.db import models
 
+from django.utils.translation import gettext_lazy as _
+
 
 class ChallengeOpportunity(models.Model):
     class Meta:
@@ -10,22 +12,22 @@ class ChallengeOpportunity(models.Model):
     class DublinIndicator(models.TextChoices):
         KNOWLEDGE_AND_UNDERSTANDING = (
             "knowledge_and_understanding",
-            "Knowledge and Understanding",
+            _("Knowledge and Understanding"),
         )
         APPLYING_KNOWLEDGE_AND_UNDERSTANDING = (
             "applying_knowledge_and_understanding",
-            "Applying Knowledge and Understanding",
+            _("Applying Knowledge and Understanding"),
         )
-        MAKING_JUDGEMENTS = "making_judgements", "Making Judgements"
-        COMMUNICATION = "communication", "Communication"
+        MAKING_JUDGEMENTS = "making_judgements", _("Making Judgements")
+        COMMUNICATION = "communication", _("Communication")
         LIFELONG_LEARNING_SKILLS = (
             "lifelong_learning_skills",
-            "Lifelong Learning Skills",
+            _("Lifelong Learning Skills"),
         )
 
     class Category(models.TextChoices):
-        CHALLENGE = "challenge", "Challenge"
-        OPPORTUNITY = "opportunity", "Opportunity"
+        CHALLENGE = "challenge", _("Challenge")
+        OPPORTUNITY = "opportunity", _("Opportunity")
 
     text = models.TextField()
     dublin_indicator = models.CharField(max_length=50, choices=DublinIndicator)
@@ -65,11 +67,11 @@ class UseExample(models.Model):
         ordering = ("text",)
 
     class ScaleLevel(models.TextChoices):
-        NO_AI = "no AI", "No AI"
-        AI_PLANNING = "AI planning", "AI Planning"
-        AI_EDIT = "AI edit", "AI Edit"
-        AI_SPECIFIC = "AI specific", "AI Specific"
-        FULL_AI = "full AI", "Full AI"
+        NO_AI = "no AI", _("No AI")
+        AI_PLANNING = "AI planning", _("AI planning")
+        AI_EDIT = "AI edit", _("AI editing and feedback")
+        AI_SPECIFIC = "AI specific", _("AI for specific tasks")
+        FULL_AI = "full AI", _("Full AI")
 
     scale_level = models.CharField(max_length=50, choices=ScaleLevel)
     text = models.TextField()
