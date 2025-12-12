@@ -1,11 +1,10 @@
-import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CourseIntegrationComponent } from './course-integration.component';
 import { provideRouter } from '@angular/router';
 import { ApiService } from '../services/api.service';
-import { FormService } from '../services/form.service';
+import { FormService, LearningOutcomesForm } from '../services/form.service';
 import { FormArray, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { AiAssessmentScaleLevel, ApiResponse } from '../shared/types';
-import { resource, signal, WritableSignal } from '@angular/core';
 import { By } from '@angular/platform-browser';
 import { AiScaleSelectComponent } from './ai-scale-select/ai-scale-select.component';
 
@@ -43,8 +42,7 @@ class MockApiService {
 class MockFormService {
     form = new FormGroup({
         course: new FormControl(null),
-        department: new FormControl(null),
-        learningOutcomes: new FormArray([]),
+        learningOutcomes: new FormArray<LearningOutcomesForm>([]),
         assessmentForms: new FormArray([]),
         chosenAiUses: new FormControl<number[]>([])
     });

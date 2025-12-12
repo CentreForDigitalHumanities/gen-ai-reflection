@@ -100,7 +100,6 @@ class CreateReportTestCase(TestCase):
         """Test that create_report generates HTML with basic course info"""
         data = {
             "course": "Introduction to AI",
-            "department": "Computer Science",
             "name": "John Doe",
             "learningOutcomes": [],
             "assessments": [],
@@ -110,7 +109,6 @@ class CreateReportTestCase(TestCase):
         html = create_report(data)
 
         self.assertIn("Introduction to AI", html)
-        self.assertIn("Computer Science", html)
         self.assertIn("John Doe", html)
         self.assertIn("GenAI Reflection – Report", html)
 
@@ -118,7 +116,6 @@ class CreateReportTestCase(TestCase):
         """Test that learning outcomes are included in the report"""
         data = {
             "course": "Test Course",
-            "department": "Test Dept",
             "name": "Test User",
             "learningOutcomes": [
                 {
@@ -143,7 +140,6 @@ class CreateReportTestCase(TestCase):
         intended_outcome_text = "Test outcome"
         data = {
             "course": "Test Course",
-            "department": "Test Dept",
             "name": "Test User",
             "learningOutcomes": [
                 {
@@ -185,7 +181,6 @@ class CreateReportTestCase(TestCase):
         """Test that course integration examples are included"""
         data = {
             "course": "Test Course",
-            "department": "Test Dept",
             "name": "Test User",
             "learningOutcomes": [],
             "assessments": [],
@@ -201,7 +196,6 @@ class CreateReportTestCase(TestCase):
         """Test that unaffected assessments are displayed correctly"""
         data = {
             "course": "Test Course",
-            "department": "Test Dept",
             "name": "Test User",
             "learningOutcomes": [],
             "assessments": [
@@ -232,7 +226,6 @@ class CreateReportTestCase(TestCase):
 
         data = {
             "course": "Test Course",
-            "department": "Test Dept",
             "name": "Test User",
             "learningOutcomes": [],
             "assessments": [

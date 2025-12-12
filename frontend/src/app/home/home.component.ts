@@ -1,7 +1,6 @@
 import { NgOptimizedImage } from "@angular/common";
 import { Component, DestroyRef, inject, LOCALE_ID, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
-import { Department, FormService } from "../services/form.service";
+import { RouterLinkWithHref } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { LanguageInfo, LanguageService } from "../services/language.service";
@@ -10,17 +9,15 @@ import { LanguageInfo, LanguageService } from "../services/language.service";
     selector: "gr-home",
     templateUrl: "./home.component.html",
     styleUrls: ["./home.component.scss"],
-    imports: [NgOptimizedImage, ReactiveFormsModule],
+    imports: [NgOptimizedImage, ReactiveFormsModule, RouterLinkWithHref],
     standalone: true,
 })
 export class HomeComponent implements OnInit {
     private destroyRef = inject(DestroyRef);
     private localeId = inject(LOCALE_ID);
-    private formService = inject(FormService);
     private languageService = inject(LanguageService);
-    private router = inject(Router);
 
-    loading: boolean = false;
+    loading = false;
 
     currentLanguage: string;
 
@@ -33,11 +30,6 @@ export class HomeComponent implements OnInit {
         this.currentLanguage = this.localeId;
     }
 
-    public startGkg(): void {
-        this.formService.form.controls.department.setValue(Department.GKG);
-        this.router.navigate(["/intro"]);
-    }
-
     ngOnInit(): void {
         // allow switching even when the current locale is different
         // this should really only be the case in development:
@@ -45,9 +37,9 @@ export class HomeComponent implements OnInit {
         this.languageService.languageInfo$
             .pipe(takeUntilDestroyed(this.destroyRef))
             .subscribe((languageInfo) => {
-            this.currentLanguage = languageInfo.current || this.localeId;
-            this.languages = languageInfo.supported;
-        });
+                this.currentLanguage = languageInfo.current || this.localeId;
+                this.languages = languageInfo.supported;
+            });
     }
 
     setLanguage(language: string): void {
