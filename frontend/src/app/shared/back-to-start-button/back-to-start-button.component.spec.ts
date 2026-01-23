@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BackToStartButtonComponent } from './back-to-start-button.component';
+import { provideRouter } from '@angular/router';
 
 describe('BackToStartButtonComponent', () => {
   let component: BackToStartButtonComponent;
@@ -8,7 +9,8 @@ describe('BackToStartButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BackToStartButtonComponent]
+      imports: [BackToStartButtonComponent],
+      providers: [provideRouter([])]
     })
       .compileComponents();
 
