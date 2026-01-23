@@ -1,8 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faArrowRotateLeft } from '@fortawesome/free-solid-svg-icons';
-import { FormService } from '../../services/form.service';
 
 @Component({
   selector: 'gr-back-to-start-button',
@@ -19,5 +18,4 @@ export class BackToStartButtonComponent {
     // This triggers the beforeunload event.
     window.location.href = '/';
   }
-
 }
