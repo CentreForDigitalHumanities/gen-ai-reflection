@@ -1,0 +1,10 @@
+<!-- The routerLink is here for UX reasons. It allows the user to see the 
+ target URL in their browser and open the link in a new tab. -->
+<a
+    class="start-over-button"
+    [routerLink]="['/']"
+    (click)="navigateToHome($event)"
+>
+    <fa-icon [icon]="faArrowRotateLeft" aria-hidden="true" focusable="false" />
+    <span class="ms-2" i18n>Start over</span>
+</a>
