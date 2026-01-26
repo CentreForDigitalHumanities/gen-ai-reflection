@@ -7,18 +7,21 @@
     "
 >
     @for (navButton of sorted(); track $index) {
-    @let invalid = navButton.requiredControl ? navButton.requiredControl.invalid : false;
-    <a
-        class="btn btn-secondary pe-auto"
-        [class.btn-arrow-right]="navButton.direction === 'next'"
-        [class.btn-arrow-left]="navButton.direction === 'back'"
-        [class.disabled]="invalid"
-        [attr.aria-disabled]="invalid"
-        [routerLink]="invalid ? null : navButton.link"
-        [attr.tabindex]="invalid ? -1 : 0"
-        (click)="navButton.requiredControl?.markAllAsTouched()"
-    >
-        {{ navButton.label }}
-    </a>
+        @let invalid =
+            navButton.requiredControl
+                ? navButton.requiredControl.invalid
+                : false;
+        <a
+            class="btn btn-secondary pe-auto"
+            [class.btn-arrow-right]="navButton.direction === 'next'"
+            [class.btn-arrow-left]="navButton.direction === 'back'"
+            [class.disabled]="invalid"
+            [attr.aria-disabled]="invalid"
+            [routerLink]="invalid ? null : navButton.link"
+            [attr.tabindex]="invalid ? -1 : 0"
+            (click)="performAction($event, navButton)"
+        >
+            {{ navButton.label }}
+        </a>
     }
 </div>

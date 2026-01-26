@@ -1,12 +1,12 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 
-import { RouterModule } from "@angular/router";
+import { Router, RouterModule } from "@angular/router";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
-import { DarkModeToggleComponent } from "../dark-mode-toggle/dark-mode-toggle.component";
 import {
     NgbCollapseModule,
     NgbDropdownModule,
 } from "@ng-bootstrap/ng-bootstrap";
+import { BackToStartButtonComponent } from "../shared/back-to-start-button/back-to-start-button.component";
 
 @Component({
     selector: "gr-menu",
@@ -14,16 +14,21 @@ import {
     styleUrls: ["./menu.component.scss"],
     imports: [
         FontAwesomeModule,
-        DarkModeToggleComponent,
         NgbCollapseModule,
         RouterModule,
         NgbDropdownModule,
+        BackToStartButtonComponent
     ],
 })
 export class MenuComponent {
+    private router = inject(Router);
     burgerActive = false;
 
     toggleBurger() {
         this.burgerActive = !this.burgerActive;
+    }
+
+    isHomePage(): boolean {
+        return this.router.url === '' || this.router.url === '/';
     }
 }
