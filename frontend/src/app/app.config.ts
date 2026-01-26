@@ -12,13 +12,15 @@ import { provideRouter } from "@angular/router";
 
 import { routes } from "./app.routes";
 import { platformInterceptor } from "./interceptors/platformInterceptor";
+import { provideMatomo, withRouter } from 'ngx-matomo-client';
+import { environment } from "../environments/environment";
 
 export const appConfig: ApplicationConfig = {
     providers: [
         provideAnimations(),
         provideZoneChangeDetection({ eventCoalescing: true }),
         provideRouter(routes),
-        provideClientHydration(),
+        // provideClientHydration(),
         provideHttpClient(
             withFetch(),
             withInterceptors([platformInterceptor]),
@@ -26,6 +28,13 @@ export const appConfig: ApplicationConfig = {
                 cookieName: "csrftoken",
                 headerName: "X-CSRFToken",
             }),
+        ),
+        provideMatomo({
+            trackerUrl: environment.matomo.url,
+            siteId: environment.matomo.siteId,
+            acceptDoNotTrack: false,
+        },
+            withRouter()
         ),
         // The language is used as the base_path for finding the right
         // static-files. For example /nl/static/main.js
