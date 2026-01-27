@@ -10,10 +10,11 @@ export const environment = {
     buildTime,
     version,
     sourceUrl,
-    matomo: {
-        siteId: "2",
-        url: "http://127.0.0.1:8080/"
-    }
+    // Uncomment if using a local Matomo instance for development.
+    // matomo: {
+    //     siteId: "2",
+    //     url: "http://localhost:8080/"
+    // }
 };
 
 /*

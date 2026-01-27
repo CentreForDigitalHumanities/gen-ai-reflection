@@ -29,13 +29,13 @@ export const appConfig: ApplicationConfig = {
                 headerName: "X-CSRFToken",
             }),
         ),
-        provideMatomo({
-            trackerUrl: environment.matomo.url,
-            siteId: environment.matomo.siteId,
-            acceptDoNotTrack: false,
-        },
-            withRouter()
-        ),
+        ...('matomo' in environment ? [
+            provideMatomo({
+                siteId: environment.matomo.siteId,
+                trackerUrl: environment.matomo.url,
+                acceptDoNotTrack: false,
+            }, withRouter()),
+        ] : []),
         // The language is used as the base_path for finding the right
         // static-files. For example /nl/static/main.js
         // However the routing is done from a base path starting from
