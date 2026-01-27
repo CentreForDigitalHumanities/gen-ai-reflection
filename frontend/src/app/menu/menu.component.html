@@ -22,9 +22,11 @@
             [ngbCollapse]="!burgerActive"
         >
             <ul class="navbar-nav ms-auto text-secondary">
-                <li class="nav-item">
-                    <gr-dark-mode-toggle role="listitem" class="nav-item" />
-                </li>
+                @if (!isHomePage()) {
+                    <li class="nav-item">
+                        <gr-back-to-start-button />
+                    </li>
+                }
             </ul>
         </div>
     </div>

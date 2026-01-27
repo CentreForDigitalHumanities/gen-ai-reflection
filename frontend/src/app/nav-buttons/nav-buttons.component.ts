@@ -6,7 +6,7 @@ export interface NavButton {
     label: string;
     direction: "next" | "back";
     link: string;
-    action?: () => void;
+    action?: (event?: Event) => void;
     requiredControl?: FormControl;
 }
 
@@ -31,4 +31,11 @@ export class NavButtonsComponent {
             return 0;
         });
     });
+
+    public performAction(event: Event, navButton: NavButton): void {
+        navButton.requiredControl?.markAllAsTouched();
+        if (navButton.action) {
+            navButton.action(event);
+        }
+    }
 }

@@ -36,8 +36,10 @@ export class SummaryComponent implements OnInit {
             label: $localize`Start over`,
             direction: "next",
             link: "/",
-            action: () => {
-                this.form.reset();
+            action: (event) => {
+                event?.preventDefault();
+                window.location.href = '/';
+
             }
         },
     ];

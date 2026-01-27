@@ -1,0 +1,13 @@
+.start-over-button {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+    line-height: 1.5;
+    vertical-align: middle;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

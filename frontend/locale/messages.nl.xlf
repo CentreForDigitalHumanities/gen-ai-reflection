@@ -26,14 +26,6 @@
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4608015944298801142" datatype="html">
-        <source>Switch to light mode</source>
-        <target state="translated">Schakel lichte modus in</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/dark-mode-toggle/dark-mode-toggle.component.html</context>
-          <context context-type="linenumber">14</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="5417042396026061851" datatype="html">
         <source>GenAI Reflection</source>
         <target state="translated">GenAI Reflectietool</target>
@@ -56,14 +48,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/footer/footer.component.html</context>
           <context context-type="linenumber">15</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="803131845720356706" datatype="html">
-        <source>Switch to dark mode</source>
-        <target state="translated">Schakel donkere modus in</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/dark-mode-toggle/dark-mode-toggle.component.html</context>
-          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dateFormat" datatype="html">
@@ -967,6 +951,10 @@
         <source>Start over</source>
         <target state="translated">Opnieuw beginnen</target>
         <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/back-to-start-button/back-to-start-button.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
           <context context-type="sourcefile">src/app/summary/summary.component.ts</context>
           <context context-type="linenumber">36</context>
         </context-group>
@@ -1012,12 +1000,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="3477178736438431184" datatype="html">
-        <source>You are free to share and adapt the contents of this site, if you give appropriate credit and use it non-commercially. More on <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://creativecommons.org/licenses/by-nc/4.0/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; >"/>Creative Commons<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/>.</source>
-        <target state="translated">Je kunt de inhoud van deze website vrij hergebruiken, mits je bronvermelding geeft en het gaat om niet-commercieel gebruik. Meer informatie op <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://creativecommons.org/licenses/by-nc/4.0/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>"/>Creative Commons<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/>.</target>
-=======
         <source>You are free to share and adapt the contents of this site, if you give appropriate credit and use it non-commercially. More on <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://creativecommons.org/licenses/by-nc/4.0/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; &gt;"/>Creative Commons<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a &gt;"/>.</source>
         <target state="translated">Je kunt de inhoud van deze website vrij hergebruiken, mits je bronvermelding geeft en het gaat om niet-commercieel gebruik. Meer informatie op <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://creativecommons.org/licenses/by-nc/4.0/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;"/>Creative Commons<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</target>
->>>>>>> Stashed changes
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
           <context context-type="linenumber">69</context>
@@ -1048,8 +1032,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="6985637185353060861" datatype="html">
-        <source> Below you will find a scale with five options of AI integration in educational assessments, based on the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://www.uu.nl/en/organisation/ai-policy/teachers/for-teachers/ai-index&quot; target=&quot;_blank&quot; i18n-href=&quot;url&quot; >"/>AI Index<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/> for teachers, as adopted by Utrecht University. Additional information regarding the university policy on generative AI can be found <x id="START_LINK_1" equiv-text="&lt;a href=&quot;https://www.uu.nl/en/organisation/ai-policy&quot; i18n-href=&quot;url&quot; target=&quot;_blank&quot; >"/>here<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/>. (Both links will open in a new tab). </source>
-        <target state="translated"> Hieronder vind je een schaal met vijf manieren waarop generatieve AI in educatieve opdrachten geïntegreerd kan worden, gebaseerd op de <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://www.uu.nl/en/organisation/ai-policy/teachers/for-teachers/ai-index&quot; target=&quot;_blank&quot; i18n-href=&quot;url&quot; >"/>AI-index<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/> voor docenten, zoals aangenomen door de Universiteit Utrecht. Meer informatie over het universiteitsbeleid ten opzichte van generatieve AI vind je <x id="START_LINK_1" equiv-text="&lt;a href=&quot;https://www.uu.nl/en/organisation/ai-policy&quot; i18n-href=&quot;url&quot; target=&quot;_blank&quot; >"/>hier<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a >"/>. (Beide links openen in een nieuw tabblad). </target>
+        <source> Below you will find a scale with five options of AI integration in educational assessments, based on the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://www.uu.nl/en/organisation/ai-policy/teachers/for-teachers/ai-index&quot; target=&quot;_blank&quot; i18n-href=&quot;url&quot; &gt;"/>AI Index<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a &gt;"/> for teachers, as adopted by Utrecht University. Additional information regarding the university policy on generative AI can be found <x id="START_LINK_1" equiv-text="&lt;a href=&quot;https://www.uu.nl/en/organisation/ai-policy&quot; i18n-href=&quot;url&quot; target=&quot;_blank&quot; &gt;"/>here<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a &gt;"/>. (Both links will open in a new tab). </source>
+        <target state="translated"> Hieronder vind je een schaal met vijf manieren waarop generatieve AI in educatieve opdrachten geïntegreerd kan worden, gebaseerd op de <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://www.uu.nl/en/organisation/ai-policy/teachers/for-teachers/ai-index&quot; target=&quot;_blank&quot; i18n-href=&quot;url&quot; &gt;"/>AI-index<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a &gt;"/> voor docenten, zoals aangenomen door de Universiteit Utrecht. Meer informatie over het universiteitsbeleid ten opzichte van generatieve AI vind je <x id="START_LINK_1" equiv-text="&lt;a href=&quot;https://www.uu.nl/en/organisation/ai-policy&quot; i18n-href=&quot;url&quot; target=&quot;_blank&quot; &gt;"/>hier<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a &gt;"/>. (Beide links openen in een nieuw tabblad). </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course-integration/course-integration.component.html</context>
           <context context-type="linenumber">17</context>
