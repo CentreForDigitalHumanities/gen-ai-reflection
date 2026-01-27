@@ -1,13 +1,25 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
 cff-version: 1.2.0
-title: 'GenAI Reflection'
+title: GenAI Reflection
 message: >-
   If you use this software, please cite it using the
   metadata from this file.
 type: software
 authors:
-  - name: 'Portal Development, Centre for Digital Humanities, Utrecht University'
+  - name: >-
+      Portal Development, Centre for Digital Humanities,
+      Utrecht University
     website: 'https://cdh.uu.nl/about/humanities-it-services/'
-repository-code: 'https://github.com/CentreForDigitalHumanities/gen-ai-reflection'
+repository-code: >-
+  https://github.com/CentreForDigitalHumanities/gen-ai-reflection
+url: 'https://gen-ai-reflection.hum.uu.nl/'
 abstract: >-
-  A reflection tool about the use of generative AI by students and instructors, aimed at instructors at Utrecht University.
-license: BSD-3
+  A reflection tool about the use of generative AI by
+  students and instructors, aimed at instructors at Utrecht
+  University.
+license: BSD-3-Clause
+commit: b0c30a7
+version: 1.1.0
+date-released: '2026-01-27'
