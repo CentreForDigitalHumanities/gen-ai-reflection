@@ -1,4 +1,5 @@
 import { buildTime, version, sourceUrl } from "./version";
+import { Environment } from "./environment.interface";
 
 export const environment = {
     production: true,
@@ -10,6 +11,7 @@ export const environment = {
     sourceUrl,
     matomo: {
         siteId: "2",
-        url: "http://127.0.0.1:8080/"
+        trackerUrl: "http://127.0.0.1:8080/",
+        acceptDoNotTrack: true,
     }
-};
+} satisfies Environment;

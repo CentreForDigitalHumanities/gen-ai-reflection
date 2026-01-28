@@ -2,8 +2,9 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 import { buildTime, version, sourceUrl } from "./version";
+import { Environment } from "./environment.interface";
 
-export const environment = {
+export const environment: Environment = {
     production: false,
     assets: "assets",
     baseUrl: "http://127.0.0.1:8000",
@@ -13,7 +14,7 @@ export const environment = {
     // Uncomment if using a local Matomo instance for development.
     // matomo: {
     //     siteId: "2",
-    //     url: "http://localhost:8080/"
+    //     trackerUrl: "http://localhost:8080/"
     // }
 };
 
