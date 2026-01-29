@@ -1,14 +1,14 @@
 import { Component, forwardRef, input } from '@angular/core';
 import { AssessmentForm } from '../../shared/types';
 import {
-    ControlValueAccessor,
+    ControlValueAccessor, FormsModule,
     NG_VALUE_ACCESSOR,
     ReactiveFormsModule,
 } from '@angular/forms';
 
 @Component({
     selector: 'gr-assessment-form-select',
-    imports: [ReactiveFormsModule],
+    imports: [ReactiveFormsModule, FormsModule],
     templateUrl: './assessment-form-select.component.html',
     styleUrl: './assessment-form-select.component.scss',
     providers: [

@@ -6,7 +6,7 @@
         #selectEle
         id="assessment-form"
         class="form-select"
-        [value]="value"
+        [ngModel]="value"
         [disabled]="disabled"
         (change)="onSelectionChange(selectEle.value)"
     >
