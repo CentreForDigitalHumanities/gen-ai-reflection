@@ -3804,6 +3804,13 @@ ng-extract-i18n-merge@^3.1.0:
     "@schematics/angular" "^20.0.0"
     xmldoc "^1.1.3"
 
+ngx-matomo-client@8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-matomo-client/-/ngx-matomo-client-8.0.0.tgz#1f2aac28e9e0da9b42d313c29919b04b45a1aaec"
+  integrity sha512-ztZankR5dfSjMYBn4n19w5yNJUZvpvTKZot+nvzxMO+0FUHbZz97rsJVBwA2Hg2wv6YvqU2GZ6KSMS4Fz0XoVg==
+  dependencies:
+    tslib "^2.3.0"
+
 node-addon-api@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-6.1.0.tgz#ac8470034e58e67d0c6f1204a18ae6995d9c0d76"
