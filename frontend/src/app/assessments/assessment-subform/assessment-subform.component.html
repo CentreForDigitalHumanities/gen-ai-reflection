@@ -23,7 +23,7 @@
         <form [formGroup]="form">
             <gr-assessment-form-select
                 [options]="allAssessmentFormOptions()"
-                [formControl]="form.controls.assessmentId"
+                [control]="form.controls.assessmentId"
             />
             @if (form.controls.assessmentId.value; as assId) {
             <gr-known-uses-examples [assessmentFormId]="assId" />
