@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AssessmentFormSelectComponent } from './assessment-form-select.component';
 import { AssessmentForm } from '../../shared/types';
 import { ComponentRef } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 const mockOptions: AssessmentForm[] = [{
     id: 1,
@@ -43,6 +44,7 @@ describe('AssessmentFormSelectComponent', () => {
         component = fixture.componentInstance;
         componentRef = fixture.componentRef;
         componentRef.setInput('options', mockOptions);
+        componentRef.setInput('control', new FormControl<number | null>(null));
         fixture.detectChanges();
     });
 
