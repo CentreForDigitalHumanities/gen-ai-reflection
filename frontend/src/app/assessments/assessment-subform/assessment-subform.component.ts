@@ -6,7 +6,6 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { AssessmentForm, FormService } from '../../services/form.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from '../../services/api.service';
-import { expandIn } from '../../shared/animations';
 import { KnownUsesExamplesComponent } from './known-uses-examples/known-uses-examples.component';
 import { NgbPopover } from "@ng-bootstrap/ng-bootstrap";
 
@@ -14,8 +13,7 @@ import { NgbPopover } from "@ng-bootstrap/ng-bootstrap";
     selector: 'gr-assessment-subform',
     imports: [AssessmentFormSelectComponent, IloSelectComponent, FontAwesomeModule, ReactiveFormsModule, KnownUsesExamplesComponent, NgbPopover],
     templateUrl: './assessment-subform.component.html',
-    styleUrl: './assessment-subform.component.scss',
-    animations: [expandIn]
+    styleUrl: './assessment-subform.component.scss'
 })
 export class AssessmentSubformComponent {
     private apiService = inject(ApiService);

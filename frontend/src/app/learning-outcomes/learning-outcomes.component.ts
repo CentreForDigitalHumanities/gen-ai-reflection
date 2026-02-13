@@ -8,7 +8,6 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { Challenges, DublinIndicator, Opportunities } from "../shared/types";
 import { ApiService } from "../services/api.service";
-import { expandIn } from "../shared/animations";
 
 interface DublinIndicatorOption {
     value: DublinIndicator | null;
@@ -20,8 +19,7 @@ interface DublinIndicatorOption {
     templateUrl: "./learning-outcomes.component.html",
     styleUrls: ["./learning-outcomes.component.scss"],
     standalone: true,
-    imports: [NavButtonsComponent, ReactiveFormsModule, CommonModule],
-    animations: [expandIn],
+    imports: [NavButtonsComponent, ReactiveFormsModule, CommonModule]
 })
 export class LearningOutcomesComponent {
     private apiService = inject(ApiService);
