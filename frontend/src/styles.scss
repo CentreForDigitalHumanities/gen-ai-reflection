@@ -64,5 +64,25 @@ body {
     font-size: 0.875em;
     line-height: 1em;
     vertical-align: baseline;
-    padding: .1rem .25rem 0.1rem .25rem;
+    padding: 0.1rem 0.25rem 0.1rem 0.25rem;
+}
+
+// Animations
+
+@keyframes expandIn {
+    from {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+    to {
+        max-height: 1000px;
+        opacity: 1;
+        overflow: visible;
+    }
+}
+
+.expand-in {
+    animation: expandIn 400ms ease-in-out;
+    transform-origin: top;
 }

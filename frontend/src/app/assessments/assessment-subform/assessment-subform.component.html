@@ -26,17 +26,18 @@
                 [formControl]="form.controls.assessmentId"
             />
             @if (form.controls.assessmentId.value; as assId) {
-            <gr-known-uses-examples [assessmentFormId]="assId" />
-
-            <div [@expandIn] class="animated-row mt-4">
-                <label class="form-label fw-bold" i18n>
-                    Which ILOs are tested with this assessment? Select one or
-                    multiple.
-                </label>
-                <gr-ilo-select
-                    [subFormId]="subFormId()"
-                    [formControl]="form.controls.iloIds"
-                />
+            <div class="expand-in">
+                <gr-known-uses-examples [assessmentFormId]="assId" />
+                <div class="mt-4">
+                    <label class="form-label fw-bold" i18n>
+                        Which ILOs are tested with this assessment? Select one or
+                        multiple.
+                    </label>
+                    <gr-ilo-select
+                        [subFormId]="subFormId()"
+                        [formControl]="form.controls.iloIds"
+                    />
+                </div>
             </div>
             } @if (form.controls.iloIds.value.length > 0) {
             <div class="mt-4">
