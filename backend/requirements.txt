@@ -4,15 +4,15 @@
 #
 #    pip-compile
 #
-asgiref==3.10.0
+asgiref==3.12.1
     # via django
-brotli==1.1.0
+brotli==1.2.0
     # via fonttools
-cffi==2.0.0
+cffi==2.1.1
     # via weasyprint
-cssselect2==0.8.0
+cssselect2==0.9.0
     # via weasyprint
-django==5.2.8
+django==5.2.17
     # via
     #   -r requirements.in
     #   django-livereload-server
@@ -21,61 +21,63 @@ django==5.2.8
     #   djangorestframework
 django-livereload-server==0.5.1
     # via -r requirements.in
-django-modeltranslation==0.19.17
+django-modeltranslation==0.20.3
     # via -r requirements.in
 django-revproxy==0.13.0
     # via -r requirements.in
-djangorestframework==3.16.1
+djangorestframework==3.18.0
     # via -r requirements.in
-execnet==2.1.1
+execnet==2.1.2
     # via pytest-xdist
-fonttools[woff]==4.60.1
+fonttools[woff]==4.63.0
     # via weasyprint
 iniconfig==2.3.0
     # via pytest
-packaging==25.0
+packaging==26.3
     # via pytest
-pillow==12.0.0
+pillow==12.3.0
     # via weasyprint
 pluggy==1.6.0
     # via pytest
-psycopg2==2.9.11
+psycopg2==2.9.12
     # via -r requirements.in
-pycparser==2.23
+pycparser==3.0
     # via cffi
-pydyf==0.11.0
+pydyf==0.12.1
     # via weasyprint
-pygments==2.19.2
+pygments==2.21.0
     # via pytest
-pyphen==0.17.2
+pyphen==0.18.1
     # via weasyprint
-pytest==8.4.2
+pytest==9.1.1
     # via
     #   -r requirements.in
     #   pytest-django
     #   pytest-xdist
-pytest-django==4.11.1
+pytest-django==4.14.0
     # via -r requirements.in
 pytest-xdist==3.8.0
     # via -r requirements.in
-sqlparse==0.5.3
+sqlparse==0.6.0
     # via django
-tinycss2==1.4.0
+tinycss2==1.5.1
     # via
     #   cssselect2
     #   weasyprint
-tinyhtml5==2.0.0
+tinyhtml5==2.1.0
     # via weasyprint
-tornado==6.5.2
+tornado==6.5.8
     # via django-livereload-server
-urllib3==2.5.0
+typing-extensions==4.16.0
+    # via django-modeltranslation
+urllib3==2.7.0
     # via django-revproxy
-weasyprint==66.0
+weasyprint==69.0
     # via -r requirements.in
-webencodings==0.5.1
+webencodings==0.6.1
     # via
     #   cssselect2
     #   tinycss2
     #   tinyhtml5
-zopfli==0.2.3.post1
+zopfli==0.4.3
     # via fonttools
