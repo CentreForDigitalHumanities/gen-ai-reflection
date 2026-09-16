@@ -20,6 +20,6 @@ abstract: >-
   students and instructors, aimed at instructors at Utrecht
   University.
 license: BSD-3-Clause
-commit: b0c30a7
-version: 1.2.0
-date-released: '2026-04-13'
+commit: 4441c6a
+version: 1.3.0
+date-released: '2026-09-16'
