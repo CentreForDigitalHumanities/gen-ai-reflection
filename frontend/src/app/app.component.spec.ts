@@ -1,5 +1,4 @@
 import { TestBed, waitForAsync } from "@angular/core/testing";
-import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { provideHttpClientTesting } from "@angular/common/http/testing";
 
 import { AppComponent } from "./app.component";
@@ -12,7 +11,7 @@ import { ActivatedRoute } from "@angular/router";
 describe("AppComponent", () => {
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
-            imports: [AppComponent, NoopAnimationsModule],
+            imports: [AppComponent],
             providers: [
                 provideHttpClient(withInterceptorsFromDi()),
                 provideHttpClientTesting(),
