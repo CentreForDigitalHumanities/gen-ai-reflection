@@ -4,15 +4,15 @@
 #
 #    pip-compile
 #
-asgiref==3.12.1
+asgiref==3.13.0
     # via django
-brotli==1.2.0
+brotli==1.2.1
     # via fonttools
 cffi==2.1.1
     # via weasyprint
-cssselect2==0.9.0
+cssselect2==0.10.1
     # via weasyprint
-django==5.2.17
+django==5.2.18
     # via
     #   -r requirements.in
     #   django-livereload-server
@@ -21,35 +21,35 @@ django==5.2.17
     #   djangorestframework
 django-livereload-server==0.5.1
     # via -r requirements.in
-django-modeltranslation==0.20.3
+django-modeltranslation==0.20.6
     # via -r requirements.in
 django-revproxy==0.13.0
     # via -r requirements.in
-djangorestframework==3.18.0
+djangorestframework==3.18.3
     # via -r requirements.in
 execnet==2.1.2
     # via pytest-xdist
-fonttools[woff]==4.63.0
+fonttools[woff]==4.68.0
     # via weasyprint
-iniconfig==2.3.0
+iniconfig==2.3.1
     # via pytest
 packaging==26.3
     # via pytest
-pillow==12.3.0
+pillow==13.0.0
     # via weasyprint
-pluggy==1.6.0
+pluggy==1.7.0
     # via pytest
-psycopg2==2.9.12
+psycopg2==2.9.13
     # via -r requirements.in
-pycparser==3.0
+pycparser==3.12
     # via cffi
-pydyf==0.12.1
+pydyf==0.13.0
     # via weasyprint
 pygments==2.21.0
     # via pytest
 pyphen==0.18.1
     # via weasyprint
-pytest==9.1.1
+pytest==9.2.0
     # via
     #   -r requirements.in
     #   pytest-django
@@ -66,13 +66,13 @@ tinycss2==1.5.1
     #   weasyprint
 tinyhtml5==2.1.0
     # via weasyprint
-tornado==6.5.8
+tornado==6.6
     # via django-livereload-server
 typing-extensions==4.16.0
     # via django-modeltranslation
-urllib3==2.7.0
+urllib3==2.8.0
     # via django-revproxy
-weasyprint==69.0
+weasyprint==70.0
     # via -r requirements.in
 webencodings==0.6.1
     # via

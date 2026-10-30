@@ -4,7 +4,6 @@ import {
     NavButtonsComponent,
 } from "../nav-buttons/nav-buttons.component";
 import { FormService } from "../services/form.service";
-import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule } from "@angular/forms";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
@@ -15,7 +14,7 @@ import { AssessmentSubformComponent } from "./assessment-subform/assessment-subf
     templateUrl: "./assessments.component.html",
     styleUrls: ["./assessments.component.scss"],
     standalone: true,
-    imports: [NavButtonsComponent, CommonModule, ReactiveFormsModule, FontAwesomeModule, AssessmentSubformComponent],
+    imports: [NavButtonsComponent, ReactiveFormsModule, FontAwesomeModule, AssessmentSubformComponent],
 })
 export class AssessmentsComponent {
     private formService = inject(FormService);

@@ -5,7 +5,6 @@ import {
 } from "../nav-buttons/nav-buttons.component";
 import { FormService } from "../services/form.service";
 import { ReactiveFormsModule } from "@angular/forms";
-import { CommonModule } from "@angular/common";
 import { Challenges, DublinIndicator, Opportunities } from "../shared/types";
 import { ApiService } from "../services/api.service";
 
@@ -19,7 +18,7 @@ interface DublinIndicatorOption {
     templateUrl: "./learning-outcomes.component.html",
     styleUrls: ["./learning-outcomes.component.scss"],
     standalone: true,
-    imports: [NavButtonsComponent, ReactiveFormsModule, CommonModule]
+    imports: [NavButtonsComponent, ReactiveFormsModule]
 })
 export class LearningOutcomesComponent {
     private apiService = inject(ApiService);

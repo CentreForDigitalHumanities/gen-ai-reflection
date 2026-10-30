@@ -1,5 +1,4 @@
 import { Component, afterEveryRender, DOCUMENT, inject, DestroyRef } from "@angular/core";
-import { CommonModule } from "@angular/common";
 import { MenuComponent } from "./menu/menu.component";
 import { DarkModeService } from "./services/dark-mode.service";
 import { FooterComponent } from "./footer/footer.component";
@@ -10,7 +9,7 @@ import { FormService } from "./services/form.service";
 
 @Component({
     selector: "gr-root",
-    imports: [CommonModule, MenuComponent, FooterComponent, RouterOutlet],
+    imports: [MenuComponent, FooterComponent, RouterOutlet],
     templateUrl: "./app.component.html",
     styleUrl: "./app.component.scss",
 })
